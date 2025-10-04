@@ -80,15 +80,13 @@ console.log(address) // "New York"
 import { faker } from 'nanofaker'
 
 // Set locale globally
-faker.locale = 'es' // Spanish
+faker.setLocale('es') // Spanish
 console.log(faker.person.fullName()) // "María García"
 
-// Or use a specific locale instance
-import { es, ja, zh } from 'nanofaker/locales'
-
-const spanishFaker = faker.locale('es')
-const japaneseFaker = faker.locale('ja')
-const chineseFaker = faker.locale('zh')
+// Or create a new instance with a specific locale
+const spanishFaker = new Faker({ locale: 'es' })
+const japaneseFaker = new Faker({ locale: 'ja' })
+const chineseFaker = new Faker({ locale: 'zh' })
 
 console.log(spanishFaker.person.fullName()) // "Carlos López"
 console.log(japaneseFaker.person.fullName()) // "田中太郎"
@@ -221,6 +219,75 @@ faker.science.unit()            // Random unit of measurement
 faker.science.constant()        // Random scientific constant
 faker.science.field()           // Random scientific field
 ```
+
+## Command Line Interface
+
+nanofaker includes a powerful CLI for generating fake data from the terminal.
+
+### Installation
+
+```bash
+# Global installation
+npm install -g nanofaker
+
+# Or use with npx
+npx nanofaker [command]
+```
+
+### Quick Examples
+
+```bash
+# Generate a random name
+nanofaker generate person fullName
+
+# Generate 5 emails in Spanish
+nanofaker generate internet email --locale es --count 5
+
+# Generate 10 test users as JSON
+nanofaker batch 10
+
+# List all available categories
+nanofaker categories
+
+# List methods for a category
+nanofaker methods food
+```
+
+### Available Commands
+
+- `generate <category> <method>` - Generate random data
+- `batch <count>` - Generate multiple complete records
+- `categories` - List all available categories
+- `methods <category>` - List methods for a category
+- `locales` - List all supported locales
+- `seed <seed>` - Generate reproducible data with a seed
+- `version` - Show version
+
+### Options
+
+- `--locale <locale>` - Use a specific locale (en, es, fr, de, it, pt, ja, tl, zh)
+- `--count <count>` - Number of items to generate
+- `--seed <seed>` - Seed for reproducible results
+- `--json` - Output as JSON
+- `--template <template>` - Template for batch: user, product, address, company
+
+### More Examples
+
+```bash
+# Reproducible data with seed
+nanofaker generate person fullName --seed 12345
+
+# Generate products in JSON
+nanofaker batch 5 --template product --json
+
+# Generate Japanese food items
+nanofaker generate food dish --locale ja --count 10
+
+# Save to file
+nanofaker batch 100 --template user > users.json
+```
+
+See the [CLI documentation](https://nanofaker.stacksjs.org/cli) for complete details.
 
 ## Testing
 

@@ -13,7 +13,26 @@
   "bugs": {
     "url": "https://github.com/stacksjs/nanofaker/issues"
   },
-  "keywords": ["typescript", "faker", "bun", "package"],
+  "keywords": [
+    "faker",
+    "fake-data",
+    "test-data",
+    "mock-data",
+    "typescript",
+    "locale",
+    "i18n",
+    "internationalization",
+    "seeding",
+    "testing",
+    "fixtures",
+    "random",
+    "generator",
+    "mock",
+    "bun",
+    "performance",
+    "lightweight",
+    "cli"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

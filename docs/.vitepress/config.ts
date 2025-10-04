@@ -58,6 +58,7 @@ const sidebar = [
       { text: 'Install', link: '/install' },
       { text: 'Usage', link: '/usage' },
       { text: 'Config', link: '/config' },
+      { text: 'CLI', link: '/cli' },
     ],
   },
   {
@@ -67,6 +68,7 @@ const sidebar = [
       { text: 'Data Categories', link: '/features/categories' },
       { text: 'Performance', link: '/features/performance' },
       { text: 'TypeScript Support', link: '/features/typescript' },
+      { text: 'Helpers', link: '/features/helpers' },
     ],
   },
   {
@@ -78,7 +80,15 @@ const sidebar = [
       { text: 'API Reference', link: '/advanced/api-reference' },
     ],
   },
-  { text: 'Showcase', link: '/Showcase' },
+  {
+    text: 'Resources',
+    items: [
+      { text: 'Examples', link: '/examples' },
+      { text: 'Migration Guide', link: '/migration' },
+      { text: 'Comparison', link: '/comparison' },
+      { text: 'Showcase', link: '/Showcase' },
+    ],
+  },
 ]
 const description = 'A performance-focused and lightweight faker library for TypeScript with comprehensive locale support.'
 const title = 'nanofaker | A performance-focused and lightweight faker library for TypeScript'
