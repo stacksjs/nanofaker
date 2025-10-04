@@ -4,6 +4,7 @@ import { Faker } from './faker'
 export * from './config'
 export * from './faker'
 export * from './locale-loader'
+export * from './utils/package-manager'
 export { AddressModule } from './modules/address'
 export { AnimalModule } from './modules/animal'
 

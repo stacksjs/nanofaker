@@ -1,6 +1,6 @@
 import { CAC } from 'cac'
 import { version } from '../package.json'
-import { Faker } from '../src/index'
+import { Faker, faker } from '../src/index'
 import process from 'node:process'
 
 const cli = new CAC('nanofaker')
@@ -34,13 +34,15 @@ cli
       const fakerMethod = fakerCategory[method]
       if (!fakerMethod || typeof fakerMethod !== 'function') {
         console.error(`Error: Method '${method}' not found in category '${category}'`)
-        console.log(`\nAvailable methods in ${category}:`, Object.keys(fakerCategory).filter(key => typeof fakerCategory[key] === 'function').join(', '))
+        const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(fakerCategory))
+          .filter(key => key !== 'constructor' && typeof fakerCategory[key] === 'function')
+        console.error(`\nAvailable methods in ${category}:`, methods.join(', '))
         process.exit(1)
       }
 
       // Generate data
       const count = Number(options.count) || 1
-      const results = Array.from({ length: count }, () => fakerMethod())
+      const results = Array.from({ length: count }, () => fakerMethod.call(fakerCategory))
 
       // Output
       if (options.json) {
@@ -97,13 +99,23 @@ cli
       process.exit(1)
     }
 
-    const methods = Object.keys(fakerCategory).filter(key => typeof fakerCategory[key] === 'function')
+    const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(fakerCategory))
+      .filter(key => key !== 'constructor' && typeof fakerCategory[key] === 'function')
 
     console.log(`\nAvailable methods in '${category}':\n`)
-    methods.forEach((method) => {
-      const example = fakerCategory[method]()
-      console.log(`  ${method.padEnd(20)} // "${example}"`)
-    })
+
+    if (methods.length === 0) {
+      console.log('  No methods found')
+    } else {
+      methods.forEach((method) => {
+        try {
+          const example = fakerCategory[method].call(fakerCategory)
+          console.log(`  ${method.padEnd(20)} // "${example}"`)
+        } catch (e) {
+          console.log(`  ${method.padEnd(20)} // Error: ${e}`)
+        }
+      })
+    }
   })
 
 // Locales command - list all available locales
@@ -196,11 +208,11 @@ cli
   .example('nanofaker batch 10')
   .example('nanofaker batch 5 --template product --locale es')
   .example('nanofaker batch 3 --template user --seed 12345')
-  .action((count: string, options: any) => {
+  .action(async (count: string, options: any) => {
     try {
       // Set locale
-      if (options.locale) {
-        faker.setLocale(options.locale)
+      if (options.locale && options.locale !== 'en') {
+        await faker.setLocale(options.locale)
       }
 
       // Set seed if provided
@@ -262,22 +274,29 @@ cli
 cli
   .command('seed <seed>', 'Generate data with a specific seed (reproducible)')
   .option('--category <category>', 'Category to use', { default: 'person' })
-  .option('--method <method>', 'Method to use', { default: 'fullName' })
+  .option('--method <method>', 'Method to use')
   .option('--count <count>', 'Number of items to generate', { default: 5 })
   .example('nanofaker seed 12345')
   .example('nanofaker seed 42 --category food --method dish --count 3')
-  .action((seed: string, options: any) => {
+  .action(async (seed: string, options: any) => {
     try {
       faker.seed(Number(seed))
 
       const category = options.category || 'person'
-      const method = options.method || 'fullName'
       const count = Number(options.count) || 5
 
       const fakerCategory = (faker as any)[category]
       if (!fakerCategory) {
         console.error(`Error: Category '${category}' not found`)
         process.exit(1)
+      }
+
+      // Get default method or use provided one
+      let method = options.method
+      if (!method) {
+        const availableMethods = Object.getOwnPropertyNames(Object.getPrototypeOf(fakerCategory))
+          .filter(key => key !== 'constructor' && typeof fakerCategory[key] === 'function')
+        method = category === 'person' ? 'fullName' : (availableMethods[0] || 'toString')
       }
 
       const fakerMethod = fakerCategory[method]
@@ -287,7 +306,7 @@ cli
       }
 
       console.log(`\nGenerating with seed ${seed}:\n`)
-      const results = Array.from({ length: count }, () => fakerMethod())
+      const results = Array.from({ length: count }, () => fakerMethod.call(fakerCategory))
       results.forEach((result, i) => console.log(`${i + 1}. ${result}`))
       console.log(`\nRun the same command again to get the same results!`)
     }

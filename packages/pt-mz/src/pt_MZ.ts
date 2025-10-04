@@ -1,0 +1,97 @@
+import type { LocaleDefinition } from 'nanofaker'
+
+/**
+ * Portuguese (Mozambique) locale
+ * Extends the base 'pt' locale with Mozambique-specific data
+ */
+export const pt_MZ: Partial<LocaleDefinition> = {
+  title: 'Portuguese (Mozambique)',
+
+  // Mozambique-specific person names
+  person: {
+    firstNameMale: [
+      'João', 'António', 'José', 'Manuel', 'Francisco', 'Carlos', 'Pedro', 'Paulo',
+      'Alberto', 'Fernando', 'Armando', 'Eduardo', 'Joaquim', 'Samuel', 'Daniel',
+      'David', 'Filipe', 'Gabriel', 'Rafael', 'Miguel', 'Lucas', 'Mateus',
+    ],
+    firstNameFemale: [
+      'Maria', 'Ana', 'Isabel', 'Teresa', 'Helena', 'Rosa', 'Beatriz', 'Luísa',
+      'Catarina', 'Margarida', 'Sofia', 'Sara', 'Clara', 'Joana', 'Paula',
+      'Fernanda', 'Eduarda', 'Júlia', 'Laura', 'Marta', 'Vitória', 'Alice',
+    ],
+    lastName: [
+      'Machel', 'Mondlane', 'Chissano', 'Guebuza', 'Cossa', 'Mutola', 'Komati',
+      'Dos Santos', 'Silva', 'Pereira', 'Fernandes', 'Sousa', 'Costa', 'Ribeiro',
+      'Martins', 'Gomes', 'Lopes', 'Carvalho', 'Almeida', 'Nunes', 'Rodrigues',
+      'Santos', 'Oliveira', 'Ferreira', 'Pinto', 'Marques', 'Alves', 'Teixeira',
+    ],
+  },
+
+  // Mozambique cities and regions
+  address: {
+    city: [
+      'Maputo', 'Matola', 'Nampula', 'Beira', 'Chimoio', 'Nacala', 'Quelimane',
+      'Tete', 'Lichinga', 'Pemba', 'Xai-Xai', 'Maxixe', 'Inhambane', 'Angoche',
+      'Montepuez', 'Cuamba', 'Dondo', 'Mocuba', 'Chokwe', 'Ressano Garcia',
+    ],
+    state: [
+      'Maputo Província', 'Gaza', 'Inhambane', 'Sofala', 'Manica', 'Tete',
+      'Zambézia', 'Nampula', 'Cabo Delgado', 'Niassa',
+    ],
+    stateAbbr: [
+      'MPM', 'GAZ', 'INH', 'SOF', 'MAN', 'TET',
+      'ZAM', 'NAM', 'CBD', 'NIA',
+    ],
+    country: ['Moçambique', 'Mozambique'],
+    countryCode: ['MZ'],
+    zipCode: ['####'],
+  },
+
+  // Mozambican phone formats
+  phone: {
+    formats: [
+      '8# ### ####',
+      '+258 8# ### ####',
+      '2# ### ####',
+      '+258 2# ### ####',
+    ],
+  },
+
+  // Mozambican cuisine
+  food: {
+    dish: [
+      'Matapa', 'Xima', 'Piri-Piri Chicken', 'Chamussas', 'Rissóis',
+      'Caril de Galinha', 'Caril de Camarão', 'Frango à Zambeziana',
+      'Peixe Grelhado', 'Lagosta Grelhada', 'Camarão à Laurentina',
+      'Feijoada Moçambicana', 'Arroz de Coco', 'Mucapata',
+      'Espetada de Camarão', 'Caldeirada de Peixe', 'Chanfana',
+      'Feijão Nhemba', 'Mandioca Frita', 'Batata Doce',
+    ],
+    ingredient: [
+      'Mandioca', 'Folha de Mandioca', 'Amendoim', 'Coco', 'Camarão',
+      'Piri-Piri', 'Castanha de Caju', 'Feijão Nhemba', 'Batata Doce',
+      'Milho', 'Arroz', 'Peixe', 'Frango', 'Leite de Coco', 'Alho',
+      'Cebola', 'Tomate', 'Óleo de Palma', 'Coentros', 'Limão',
+    ],
+    dessert: [
+      'Bolo Polana', 'Cocada', 'Pudim de Coco', 'Banana Frita',
+      'Mandioca Doce', 'Doce de Caju', 'Papaia com Açúcar',
+      'Gelado de Castanha de Caju', 'Pudim de Batata Doce',
+    ],
+    fruit: [
+      'Manga', 'Papaia', 'Banana', 'Caju', 'Ananás', 'Coco',
+      'Maracujá', 'Abacate', 'Goiaba', 'Tangerina', 'Laranja',
+      'Melancia', 'Melão', 'Mamão', 'Lichia',
+    ],
+    cuisine: [
+      'Moçambicana', 'Portuguesa', 'Indiana', 'Árabe', 'Swahili',
+      'Africana', 'Mediterrânea',
+    ],
+  },
+
+  // Mozambican internet domains
+  internet: {
+    domainSuffix: ['mz', 'co.mz', 'org.mz', 'gov.mz', 'com'],
+    freeEmail: ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com'],
+  },
+}

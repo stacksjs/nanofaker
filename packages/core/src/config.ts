@@ -4,6 +4,7 @@ import { loadConfig } from 'bunfig'
 export const defaultConfig: FakerConfig = {
   verbose: false,
   locale: 'en',
+  autoInstallLocales: false,
 }
 
 // eslint-disable-next-line antfu/no-top-level-await

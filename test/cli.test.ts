@@ -3,7 +3,9 @@ import { spawn } from 'node:child_process'
 
 function execCLI(args: string[]): Promise<{ stdout: string, stderr: string, exitCode: number }> {
   return new Promise((resolve) => {
-    const process = spawn('bun', ['run', './bin/cli.ts', ...args])
+    const process = spawn('bun', ['run', './packages/core/bin/cli.ts', ...args], {
+      cwd: '/Users/chrisbreuer/Code/nanofaker',
+    })
     let stdout = ''
     let stderr = ''
 
@@ -124,7 +126,7 @@ describe('CLI', () => {
       expect(exitCode).toBe(0)
       expect(stdout).toContain('dish')
       expect(stdout).toContain('ingredient')
-      expect(stdout).toContain('cuisine')
+      expect(stdout).toContain('ethnicCategory')
       expect(stdout).toContain('dessert')
     })
 

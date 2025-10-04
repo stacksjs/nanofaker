@@ -7,6 +7,7 @@ import { spawnSync } from 'node:child_process'
 const packagesDir = join(import.meta.dir, '../packages')
 const packages = [
   'core',
+  // Base locales
   'cs',
   'da',
   'de',
@@ -27,6 +28,11 @@ const packages = [
   'tr',
   'uk',
   'zh',
+  // Locale variants
+  'en-us',
+  'en-gb',
+  'es-mx',
+  'pt-mz',
 ]
 
 for (const pkg of packages) {
@@ -42,7 +48,7 @@ for (const pkg of packages) {
 
   const result = spawnSync('bun', ['--bun', 'build.ts'], {
     cwd: pkgDir,
-    stdio: 'inherit',
+    stdio: pkg === 'core' ? 'inherit' : 'pipe',
   })
 
   if (result.status !== 0) {

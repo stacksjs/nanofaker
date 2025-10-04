@@ -2,6 +2,11 @@ export interface FakerConfig {
   verbose: boolean
   locale: string
   seed?: number
+  /**
+   * Automatically install missing locale packages when needed
+   * @default false
+   */
+  autoInstallLocales?: boolean
 }
 
 export type FakerOptions = Partial<FakerConfig>

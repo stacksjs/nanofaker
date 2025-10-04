@@ -80,8 +80,47 @@
         "nanofaker": "workspace:*",
       },
     },
+    "packages/en-gb": {
+      "name": "@nanofaker/locale-en-gb",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/en-us": {
+      "name": "@nanofaker/locale-en-us",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
     "packages/es": {
       "name": "@nanofaker/locale-es",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/es-mx": {
+      "name": "@nanofaker/locale-es-mx",
       "version": "0.0.0",
       "devDependencies": {
         "@types/bun": "^1.2.23",
@@ -681,7 +720,13 @@
 
     "@nanofaker/locale-en": ["@nanofaker/locale-en@workspace:packages/en"],
 
+    "@nanofaker/locale-en-gb": ["@nanofaker/locale-en-gb@workspace:packages/en-gb"],
+
+    "@nanofaker/locale-en-us": ["@nanofaker/locale-en-us@workspace:packages/en-us"],
+
     "@nanofaker/locale-es": ["@nanofaker/locale-es@workspace:packages/es"],
+
+    "@nanofaker/locale-es-mx": ["@nanofaker/locale-es-mx@workspace:packages/es-mx"],
 
     "@nanofaker/locale-fi": ["@nanofaker/locale-fi@workspace:packages/fi"],
 

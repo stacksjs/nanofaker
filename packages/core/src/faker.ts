@@ -43,6 +43,7 @@ import { Random } from './random'
 export class Faker {
   private _random: Random
   private _locale: LocaleDefinition
+  private _autoInstallLocales: boolean
 
   public readonly person: PersonModule
   public readonly address: AddressModule
@@ -74,6 +75,7 @@ export class Faker {
   constructor(options?: FakerOptions) {
     const locale = options?.locale ?? 'en'
     const seed = options?.seed
+    this._autoInstallLocales = options?.autoInstallLocales ?? false
 
     // For non-English locales, warn about async loading
     if (locale !== 'en' && !LocaleLoader.isCached(locale)) {
@@ -124,10 +126,8 @@ export class Faker {
   static async create(options?: FakerOptions): Promise<Faker> {
     const locale = options?.locale ?? 'en'
 
-    // Preload the locale if needed
-    if (!LocaleLoader.isCached(locale)) {
-      await LocaleLoader.load(locale)
-    }
+    // Preload the locale if needed (this handles normalization internally)
+    await LocaleLoader.load(locale)
 
     return new Faker(options)
   }
