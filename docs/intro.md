@@ -6,7 +6,7 @@
 
 # nanofaker
 
-nanofaker is a modern, lightweight TypeScript library for generating fake data. Built with performance and developer experience in mind, it provides comprehensive locale support across 9 languages with complete translations for all data categories.
+nanofaker is a modern, lightweight TypeScript library for generating fake data. Built with performance and developer experience in mind, it provides comprehensive locale support across 16 languages with complete translations for all data categories.
 
 ## Why nanofaker?
 
@@ -14,7 +14,7 @@ nanofaker is a modern, lightweight TypeScript library for generating fake data. 
 Built with performance as a top priority, nanofaker is optimized for speed and efficiency with minimal overhead.
 
 ### Comprehensive Locale Support
-Unlike other faker libraries with limited or incomplete translations, nanofaker provides **complete** translations across all 16 data categories for 9 different languages:
+Unlike other faker libraries with limited or incomplete translations, nanofaker provides **complete** translations across all 16 data categories for 16 different languages:
 
 - **English (en)** - Full coverage
 - **Spanish (es)** - Full coverage
@@ -25,6 +25,13 @@ Unlike other faker libraries with limited or incomplete translations, nanofaker 
 - **Japanese (ja)** - Full coverage
 - **Filipino (tl)** - Full coverage
 - **Chinese (zh)** - Full coverage
+- **Dutch (nl)** - Full coverage
+- **Korean (ko)** - Full coverage
+- **Norwegian (no)** - Full coverage
+- **Swedish (sv)** - Full coverage
+- **Danish (da)** - Full coverage
+- **Ukrainian (uk)** - Full coverage
+- **Hindi (hi)** - Full coverage
 
 ### Rich Data Categories
 

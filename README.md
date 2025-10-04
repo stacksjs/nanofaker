@@ -13,7 +13,7 @@ A performance-focused and lightweight faker library for TypeScript with comprehe
 ## Features
 
 - ⚡️ **Performance-focused** - Built with speed and efficiency in mind
-- 🌍 **Multi-locale Support** - Complete translations for 9 languages:
+- 🌍 **Multi-locale Support** - Complete translations for 16 languages:
   - English (en)
   - Spanish (es)
   - French (fr)
@@ -23,6 +23,13 @@ A performance-focused and lightweight faker library for TypeScript with comprehe
   - Japanese (ja)
   - Filipino (tl)
   - Chinese (zh)
+  - Dutch (nl)
+  - Korean (ko)
+  - Norwegian (no)
+  - Swedish (sv)
+  - Danish (da)
+  - Ukrainian (uk)
+  - Hindi (hi)
 - 📦 **Lightweight** - Minimal dependencies and small bundle size
 - 💪 **Fully Typed** - Written in TypeScript with comprehensive type definitions
 - 🎯 **Comprehensive Data** - 16+ data categories including:
@@ -104,6 +111,13 @@ console.log(chineseFaker.person.fullName())  // "王伟"
 - `ja` - Japanese
 - `tl` - Filipino
 - `zh` - Chinese
+- `nl` - Dutch
+- `ko` - Korean
+- `no` - Norwegian
+- `sv` - Swedish
+- `da` - Danish
+- `uk` - Ukrainian
+- `hi` - Hindi
 
 ### API Examples
 

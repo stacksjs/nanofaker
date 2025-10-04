@@ -58,6 +58,13 @@ nanofaker supports the following locales with complete translations across all c
 - `ja` - Japanese
 - `tl` - Filipino
 - `zh` - Chinese
+- `nl` - Dutch
+- `ko` - Korean
+- `no` - Norwegian
+- `sv` - Swedish
+- `da` - Danish
+- `uk` - Ukrainian
+- `hi` - Hindi
 
 All locales have full coverage across all 16 data categories.
 

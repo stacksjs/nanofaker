@@ -8,6 +8,13 @@ import { pt } from './pt'
 import { ja } from './ja'
 import { tl } from './tl'
 import { zh } from './zh'
+import { nl } from './nl'
+import { ko } from './ko'
+import { no } from './no'
+import { sv } from './sv'
+import { da } from './da'
+import { uk } from './uk'
+import { hi } from './hi'
 
 export const locales: Record<string, LocaleDefinition> = {
   en,
@@ -19,6 +26,13 @@ export const locales: Record<string, LocaleDefinition> = {
   ja,
   tl,
   zh,
+  nl,
+  ko,
+  no,
+  sv,
+  da,
+  uk,
+  hi,
 }
 
-export { en, es, fr, de, it, pt, ja, tl, zh }
+export { en, es, fr, de, it, pt, ja, tl, zh, nl, ko, no, sv, da, uk, hi }

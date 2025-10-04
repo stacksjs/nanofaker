@@ -4,7 +4,7 @@ nanofaker provides comprehensive locale support with **complete translations** a
 
 ## Supported Locales
 
-All 9 locales have full coverage across all 16 data categories:
+All 16 locales have full coverage across all 16 data categories:
 
 ### English (en)
 - **Status**: Full coverage ✓
@@ -113,6 +113,90 @@ import { faker } from 'nanofaker'
 faker.locale = 'zh'
 console.log(faker.person.fullName()) // "王伟"
 console.log(faker.address.city())    // "北京"
+```
+
+### Dutch (nl)
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'nl'
+console.log(faker.person.fullName()) // "Daan de Jong"
+console.log(faker.address.city())    // "Amsterdam"
+```
+
+### Korean (ko)
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'ko'
+console.log(faker.person.fullName()) // "김민준"
+console.log(faker.address.city())    // "서울"
+```
+
+### Norwegian (no)
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'no'
+console.log(faker.person.fullName()) // "Emma Hansen"
+console.log(faker.address.city())    // "Oslo"
+```
+
+### Swedish (sv)
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'sv'
+console.log(faker.person.fullName()) // "Alice Andersson"
+console.log(faker.address.city())    // "Stockholm"
+```
+
+### Danish (da)
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'da'
+console.log(faker.person.fullName()) // "Emma Nielsen"
+console.log(faker.address.city())    // "København"
+```
+
+### Ukrainian (uk)
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'uk'
+console.log(faker.person.fullName()) // "Олександр Шевченко"
+console.log(faker.address.city())    // "Київ"
+```
+
+### Hindi (hi)
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'hi'
+console.log(faker.person.fullName()) // "राज शर्मा"
+console.log(faker.address.city())    // "मुंबई"
 ```
 
 ## Multi-Locale Applications

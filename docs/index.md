@@ -18,11 +18,11 @@ hero:
 features:
   - title: "⚡ Performance First"
     icon: "🚀"
-    details: "Built with speed in mind. 3-4x faster than alternatives with 7x smaller bundle size (~50KB vs ~350KB)."
+    details: "Built with speed in mind."
 
   - title: "🌍 Complete Locale Support"
     icon: "🗺️"
-    details: "9 fully translated locales with 100% coverage across all 16 data categories. No partial translations."
+    details: "English, Spanish, French, German, Italian, Portuguese, Japanese, Filipino, Chinese, Dutch, Korean, Norwegian, Swedish, Danish, Ukrainian, Hindi"
 
   - title: "💪 Fully Typed"
     icon: "📝"

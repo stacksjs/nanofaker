@@ -51,6 +51,13 @@ console.log(chineseFaker.person.fullName())  // "王伟"
 - `ja` - Japanese
 - `tl` - Filipino
 - `zh` - Chinese
+- `nl` - Dutch
+- `ko` - Korean
+- `no` - Norwegian
+- `sv` - Swedish
+- `da` - Danish
+- `uk` - Ukrainian
+- `hi` - Hindi
 
 ## API Examples
 

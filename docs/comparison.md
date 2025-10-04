@@ -9,7 +9,7 @@ How nanofaker compares to other popular faker libraries.
 | **Bundle Size** | ~50KB | ~200-500KB | N/A (PHP) | ~100KB | ~80KB |
 | **Performance** | ⚡️ Fastest | Medium | N/A | Medium | Medium |
 | **TypeScript** | ✅ Native | ✅ Yes | ❌ No (PHP) | ⚠️ Types available | ⚠️ Types available |
-| **Locales** | 9 (complete) | 70+ (partial) | 50+ | Limited | Limited |
+| **Locales** | 16 (complete) | 70+ (partial) | 50+ | Limited | Limited |
 | **Locale Coverage** | 100% | 30-80% | Varies | N/A | N/A |
 | **CLI Tool** | ✅ Yes | ❌ No | ❌ No | ❌ No | ❌ No |
 | **Tree Shaking** | ✅ Yes | ⚠️ Partial | N/A | ❌ No | ❌ No |
@@ -88,7 +88,7 @@ Chance.js:          ~150ms   ███████████████
 
 | Library | Locales | Coverage |
 |---------|---------|----------|
-| **nanofaker** | 9 | 100% for all |
+| **nanofaker** | 16 | 100% for all |
 | @faker-js/faker | 70+ | 30-80% varies by locale |
 | Laravel Faker | 50+ | 50-90% varies by locale |
 | Chance.js | 1 | EN only |

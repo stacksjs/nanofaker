@@ -436,7 +436,7 @@ After migrating to nanofaker, you'll get:
 
 ✅ **Smaller bundle size** - Significantly lighter than faker.js
 ✅ **Better performance** - Faster data generation
-✅ **Complete locale coverage** - All 9 locales fully translated
+✅ **Complete locale coverage** - All 16 locales fully translated
 ✅ **Full TypeScript support** - Better IDE autocomplete
 ✅ **Simpler API** - Less configuration needed
 ✅ **CLI tool** - Command-line data generation
