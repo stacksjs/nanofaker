@@ -112,12 +112,14 @@ nanofaker provides **complete** translations for all categories in all locales:
 | Vehicles | ✅ 100% | ⚠️ 40% | ⚠️ 30% |
 
 **Example**: In @faker-js/faker Spanish locale:
+
 - ❌ No food translations (uses English)
 - ❌ No music data
 - ❌ No sports data
 - ⚠️ Partial company data
 
 **In nanofaker Spanish locale**:
+
 - ✅ Full food translations (Paella, Gazpacho, etc.)
 - ✅ Full music data
 - ✅ Full sports data
@@ -159,6 +161,7 @@ nanofaker provides **complete** translations for all categories in all locales:
 ### Type Safety
 
 **nanofaker**:
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -171,6 +174,7 @@ faker.person.invalidMethod() // ✗ TypeScript error
 ```
 
 **@faker-js/faker**:
+
 ```ts
 import { faker } from '@faker-js/faker'
 
@@ -183,6 +187,7 @@ const name: string = faker.person.fullName()
 ### IDE Performance
 
 Due to smaller codebase, nanofaker provides:
+
 - ✅ Faster autocomplete
 - ✅ Quicker type checking
 - ✅ Better IntelliSense performance
@@ -192,6 +197,7 @@ Due to smaller codebase, nanofaker provides:
 ### Creating Instances
 
 **nanofaker**:
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -203,6 +209,7 @@ const esFaker = new Faker({ locale: 'es' })
 ```
 
 **@faker-js/faker**:
+
 ```ts
 import { faker } from '@faker-js/faker'
 import { es } from '@faker-js/faker/locale/es'
@@ -230,7 +237,7 @@ faker.address.city()
 
 ## Use Case Recommendations
 
-### Choose nanofaker if you need:
+### Choose nanofaker if you need
 
 ✅ **Performance** - Fastest faker library
 ✅ **Small bundle size** - Minimize your app size
@@ -239,14 +246,14 @@ faker.address.city()
 ✅ **CLI tool** - Generate data from terminal
 ✅ **Modern DX** - Clean, simple API
 
-### Choose @faker-js/faker if you need:
+### Choose @faker-js/faker if you need
 
 ✅ **More locales** - 70+ locales (though partial coverage)
 ✅ **Specific features** - Some specialized generators
 ✅ **Large ecosystem** - More community plugins
 ✅ **Migration from faker.js** - Drop-in replacement
 
-### Choose Chance.js if you need:
+### Choose Chance.js if you need
 
 ✅ **Simple API** - Very straightforward
 ⚠️ **English only** - No localization needed
@@ -340,6 +347,7 @@ Test suite with 500 test cases using faker:
 ## Conclusion
 
 nanofaker is the **best choice** when you need:
+
 - ⚡ **Performance**
 - 📦 **Small bundle size**
 - 🌍 **Complete locale coverage**

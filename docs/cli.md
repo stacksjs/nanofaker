@@ -27,6 +27,7 @@ nanofaker generate <category> <method> [options]
 ```
 
 **Options:**
+
 - `--locale <locale>` - Locale to use (en, es, fr, de, it, pt, ja, tl, zh, nl, ko, no, sv, da, uk, hi)
 - `--count <count>` - Number of items to generate (default: 1)
 - `--seed <seed>` - Seed for reproducible results
@@ -57,6 +58,7 @@ nanofaker categories
 ```
 
 Shows all 16 categories:
+
 - person - Names, genders, job titles, prefixes, suffixes
 - address - Streets, cities, states, countries, postal codes
 - company - Names, industries, buzzwords, descriptors
@@ -93,6 +95,7 @@ nanofaker methods food
 ```
 
 Shows each method with a live example:
+
 ```
 Available methods in 'person':
 
@@ -114,6 +117,7 @@ nanofaker locales
 ```
 
 Shows all 16 supported locales:
+
 - en - English
 - es - Spanish
 - fr - French
@@ -140,6 +144,7 @@ nanofaker batch <count> [options]
 ```
 
 **Options:**
+
 - `--template <template>` - Template to use: user, product, address, company (default: user)
 - `--locale <locale>` - Locale to use
 - `--seed <seed>` - Seed for reproducible results
@@ -160,6 +165,7 @@ nanofaker batch 3 --template user --seed 12345
 **Templates:**
 
 #### user
+
 ```json
 {
   "name": "John Doe",
@@ -171,6 +177,7 @@ nanofaker batch 3 --template user --seed 12345
 ```
 
 #### product
+
 ```json
 {
   "name": "Ergonomic Wooden Chair",
@@ -182,6 +189,7 @@ nanofaker batch 3 --template user --seed 12345
 ```
 
 #### address
+
 ```json
 {
   "street": "Main Street",
@@ -193,6 +201,7 @@ nanofaker batch 3 --template user --seed 12345
 ```
 
 #### company
+
 ```json
 {
   "name": "Tech Innovations Inc.",
@@ -212,6 +221,7 @@ nanofaker seed <seed> [options]
 ```
 
 **Options:**
+
 - `--category <category>` - Category to use (default: person)
 - `--method <method>` - Method to use (default: fullName)
 - `--count <count>` - Number of items to generate (default: 5)

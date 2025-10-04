@@ -163,6 +163,7 @@ const email: string = faker.internet.email()  // ✓ No null/undefined
 ### Visual Studio Code
 
 Full IntelliSense support:
+
 - Method autocomplete
 - Parameter hints
 - Type information on hover
@@ -172,6 +173,7 @@ Full IntelliSense support:
 ### WebStorm/IntelliJ IDEA
 
 Complete TypeScript integration:
+
 - Smart autocomplete
 - Type checking
 - Refactoring support
@@ -180,6 +182,7 @@ Complete TypeScript integration:
 ### Other Editors
 
 Any editor with TypeScript support will work:
+
 - Sublime Text with LSP
 - Vim/Neovim with coc.nvim
 - Emacs with tide

@@ -19,11 +19,13 @@ npm install nanofaker
 ### Import Changes
 
 **Before (faker.js):**
+
 ```ts
 import { faker } from '@faker-js/faker'
 ```
 
 **After (nanofaker):**
+
 ```ts
 import { faker } from 'nanofaker'
 ```
@@ -35,6 +37,7 @@ Most APIs are compatible, but here are the key differences:
 #### Locale Setting
 
 **Before:**
+
 ```ts
 import { faker } from '@faker-js/faker'
 import { es } from '@faker-js/faker/locale/es'
@@ -43,6 +46,7 @@ faker.locale = es
 ```
 
 **After:**
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -54,11 +58,13 @@ const esFaker = new Faker({ locale: 'es' })
 #### Seeding
 
 **Before:**
+
 ```ts
 faker.seed(123)
 ```
 
 **After:**
+
 ```ts
 faker.seed(123) // Same!
 ```
@@ -82,6 +88,7 @@ Most methods work the same:
 ### Migration Example
 
 **Before (faker.js):**
+
 ```ts
 import { faker } from '@faker-js/faker'
 
@@ -96,6 +103,7 @@ const user = {
 ```
 
 **After (nanofaker):**
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -123,6 +131,7 @@ Some faker.js features aren't in nanofaker yet:
 ### Basic Usage
 
 **Before (Laravel/PHP):**
+
 ```php
 $faker = Faker\Factory::create();
 $name = $faker->name;
@@ -130,6 +139,7 @@ $email = $faker->email;
 ```
 
 **After (nanofaker/TypeScript):**
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -140,11 +150,13 @@ const email = faker.internet.email()
 ### Locale
 
 **Before:**
+
 ```php
 $faker = Faker\Factory::create('es_ES');
 ```
 
 **After:**
+
 ```ts
 const faker = new Faker({ locale: 'es' })
 ```
@@ -170,6 +182,7 @@ const faker = new Faker({ locale: 'es' })
 ### Formatters
 
 **Before:**
+
 ```php
 $faker->numerify('###-###');
 $faker->lexify('???');
@@ -177,6 +190,7 @@ $faker->bothify('##??##');
 ```
 
 **After:**
+
 ```ts
 faker.helpers.numerify('###-###')
 faker.helpers.lexify('???')
@@ -186,6 +200,7 @@ faker.helpers.bothify('##??##')
 ### Database Seeding
 
 **Before (Laravel):**
+
 ```php
 User::factory()->count(50)->create();
 
@@ -199,6 +214,7 @@ for ($i = 0; $i < 50; $i++) {
 ```
 
 **After (TypeScript/Node.js):**
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -244,6 +260,7 @@ npm install nanofaker
 ### Basic Usage
 
 **Before (Casual):**
+
 ```ts
 import casual from 'casual'
 
@@ -252,6 +269,7 @@ const email = casual.email
 ```
 
 **After (nanofaker):**
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -278,6 +296,7 @@ const email = faker.internet.email()
 ### Factory Pattern
 
 **Before (any library):**
+
 ```ts
 class UserFactory {
   static create() {
@@ -290,6 +309,7 @@ class UserFactory {
 ```
 
 **After:**
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -306,6 +326,7 @@ class UserFactory {
 ### Seeding Databases
 
 **Before:**
+
 ```ts
 const users = []
 for (let i = 0; i < 100; i++) {
@@ -317,6 +338,7 @@ for (let i = 0; i < 100; i++) {
 ```
 
 **After:**
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -329,6 +351,7 @@ const users = Array.from({ length: 100 }, () => ({
 ### Test Fixtures
 
 **Before:**
+
 ```ts
 beforeEach(() => {
   testUser = {
@@ -339,6 +362,7 @@ beforeEach(() => {
 ```
 
 **After:**
+
 ```ts
 import { faker } from 'nanofaker'
 
@@ -356,6 +380,7 @@ beforeEach(() => {
 ### 1. Start with Core Data
 
 Migrate your most common data first:
+
 - Names → `faker.person.*`
 - Emails → `faker.internet.email()`
 - Addresses → `faker.address.*`
@@ -363,6 +388,7 @@ Migrate your most common data first:
 ### 2. Use Find & Replace
 
 Most migrations can be done with find & replace:
+
 - `faker.name.` → `faker.person.`
 - `faker.datatype.number` → `faker.number.int`
 - `faker.random.arrayElement` → `faker.helpers.arrayElement`

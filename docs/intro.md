@@ -11,9 +11,11 @@ nanofaker is a modern, lightweight TypeScript library for generating fake data. 
 ## Why nanofaker?
 
 ### Performance First
+
 Built with performance as a top priority, nanofaker is optimized for speed and efficiency with minimal overhead.
 
 ### Comprehensive Locale Support
+
 Unlike other faker libraries with limited or incomplete translations, nanofaker provides **complete** translations across all 16 data categories for 16 different languages:
 
 - **English (en)** - Full coverage
@@ -55,6 +57,7 @@ nanofaker includes 16+ comprehensive data categories:
 16. **Science** - Chemical elements, units, constants, scientific fields
 
 ### Fully Typed
+
 Written in TypeScript with comprehensive type definitions for excellent IDE support and type safety.
 
 ## Get Started

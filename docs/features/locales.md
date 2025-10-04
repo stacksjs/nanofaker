@@ -4,9 +4,10 @@ nanofaker provides comprehensive locale support with **complete translations** a
 
 ## Supported Locales
 
-All 16 locales have full coverage across all 16 data categories:
+All 20 locales have full coverage across all 16 data categories:
 
 ### English (en)
+
 - **Status**: Full coverage ✓
 - **Default locale**: Yes
 - **Categories**: All 16 categories fully translated
@@ -20,6 +21,7 @@ console.log(faker.address.city())    // "New York"
 ```
 
 ### Spanish (es)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -32,6 +34,7 @@ console.log(faker.address.city())    // "Madrid"
 ```
 
 ### French (fr)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -44,6 +47,7 @@ console.log(faker.address.city())    // "Paris"
 ```
 
 ### German (de)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -56,6 +60,7 @@ console.log(faker.address.city())    // "Berlin"
 ```
 
 ### Italian (it)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -68,6 +73,7 @@ console.log(faker.address.city())    // "Roma"
 ```
 
 ### Portuguese (pt)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -80,6 +86,7 @@ console.log(faker.address.city())    // "Lisboa"
 ```
 
 ### Japanese (ja)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -92,6 +99,7 @@ console.log(faker.address.city())    // "東京"
 ```
 
 ### Filipino (tl)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -104,6 +112,7 @@ console.log(faker.address.city())    // "Manila"
 ```
 
 ### Chinese (zh)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -116,6 +125,7 @@ console.log(faker.address.city())    // "北京"
 ```
 
 ### Dutch (nl)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -128,6 +138,7 @@ console.log(faker.address.city())    // "Amsterdam"
 ```
 
 ### Korean (ko)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -140,6 +151,7 @@ console.log(faker.address.city())    // "서울"
 ```
 
 ### Norwegian (no)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -152,6 +164,7 @@ console.log(faker.address.city())    // "Oslo"
 ```
 
 ### Swedish (sv)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -164,6 +177,7 @@ console.log(faker.address.city())    // "Stockholm"
 ```
 
 ### Danish (da)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -176,6 +190,7 @@ console.log(faker.address.city())    // "København"
 ```
 
 ### Ukrainian (uk)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -188,6 +203,7 @@ console.log(faker.address.city())    // "Київ"
 ```
 
 ### Hindi (hi)
+
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
 
@@ -197,6 +213,58 @@ import { faker } from 'nanofaker'
 faker.locale = 'hi'
 console.log(faker.person.fullName()) // "राज शर्मा"
 console.log(faker.address.city())    // "मुंबई"
+```
+
+### Finnish (fi)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'fi'
+console.log(faker.person.fullName()) // "Juhani Virtanen"
+console.log(faker.address.city())    // "Helsinki"
+```
+
+### Turkish (tr)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'tr'
+console.log(faker.person.fullName()) // "Mehmet Yılmaz"
+console.log(faker.address.city())    // "İstanbul"
+```
+
+### Polish (pl)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'pl'
+console.log(faker.person.fullName()) // "Jan Kowalski"
+console.log(faker.address.city())    // "Warszawa"
+```
+
+### Czech (cs)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'cs'
+console.log(faker.person.fullName()) // "Jan Novák"
+console.log(faker.address.city())    // "Praha"
 ```
 
 ## Multi-Locale Applications
