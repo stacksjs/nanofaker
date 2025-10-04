@@ -1,18 +1,28 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class SystemModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a file name
    * @example faker.system.fileName() // 'report.pdf'
    */
   fileName(options?: { extension?: string }): string {
-    const names = [
-      'document', 'report', 'presentation', 'spreadsheet', 'image', 'video', 'audio',
-      'backup', 'archive', 'data', 'config', 'settings', 'log', 'cache', 'temp',
-      'index', 'main', 'app', 'script', 'style', 'layout', 'component', 'module',
-    ]
+    let names: string[]
+    if (this.locale?.system?.fileName) {
+      names = this.locale.system.fileName
+    }
+    else {
+      names = [
+        'document', 'report', 'presentation', 'spreadsheet', 'image', 'video', 'audio',
+        'backup', 'archive', 'data', 'config', 'settings', 'log', 'cache', 'temp',
+        'index', 'main', 'app', 'script', 'style', 'layout', 'component', 'module',
+      ]
+    }
     const name = this.random.arrayElement(names)
     const ext = options?.extension ?? this.fileExtension()
     return `${name}.${ext}`
@@ -80,6 +90,10 @@ export class SystemModule {
    * @example faker.system.fileType() // 'image'
    */
   fileType(): string {
+    if (this.locale?.system?.fileType) {
+      return this.random.arrayElement(this.locale.system.fileType)
+    }
+
     const types = [
       'audio', 'image', 'text', 'video', 'application', 'document', 'spreadsheet',
       'presentation', 'archive', 'code', 'data', 'font', 'executable',

@@ -1,23 +1,27 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class CommerceModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a product name
    * @example faker.commerce.product() // 'Ergonomic Wooden Chair'
    */
   product(): string {
-    const adjectives = [
+    const adjectives = this.locale?.commerce?.productAdjective ?? [
       'Small', 'Ergonomic', 'Rustic', 'Intelligent', 'Gorgeous', 'Incredible', 'Fantastic',
       'Practical', 'Sleek', 'Awesome', 'Generic', 'Handcrafted', 'Handmade', 'Licensed',
       'Refined', 'Unbranded', 'Tasty', 'Premium', 'Luxury', 'Professional', 'Durable',
     ]
-    const materials = [
+    const materials = this.locale?.commerce?.productMaterial ?? [
       'Steel', 'Wooden', 'Concrete', 'Plastic', 'Cotton', 'Granite', 'Rubber', 'Metal',
       'Soft', 'Fresh', 'Frozen', 'Silk', 'Leather', 'Glass', 'Carbon', 'Aluminum',
     ]
-    const products = [
+    const products = this.locale?.commerce?.product ?? [
       'Chair', 'Table', 'Lamp', 'Keyboard', 'Mouse', 'Computer', 'Shoes', 'Shirt', 'Pants',
       'Hat', 'Gloves', 'Towel', 'Soap', 'Bike', 'Ball', 'Book', 'Wallet', 'Watch', 'Phone',
       'Desk', 'Bottle', 'Plate', 'Cup', 'Bag', 'Pen', 'Notebook', 'Backpack', 'Sunglasses',
@@ -39,6 +43,10 @@ export class CommerceModule {
    * @example faker.commerce.department() // 'Electronics'
    */
   department(): string {
+    if (this.locale?.commerce?.department) {
+      return this.random.arrayElement(this.locale.commerce.department)
+    }
+
     const departments = [
       'Books', 'Movies', 'Music', 'Games', 'Electronics', 'Computers', 'Home', 'Garden',
       'Tools', 'Grocery', 'Health', 'Beauty', 'Toys', 'Kids', 'Baby', 'Clothing', 'Shoes',
@@ -66,6 +74,10 @@ export class CommerceModule {
    * @example faker.commerce.productAdjective() // 'Ergonomic'
    */
   productAdjective(): string {
+    if (this.locale?.commerce?.productAdjective) {
+      return this.random.arrayElement(this.locale.commerce.productAdjective)
+    }
+
     const adjectives = [
       'Small', 'Ergonomic', 'Rustic', 'Intelligent', 'Gorgeous', 'Incredible', 'Fantastic',
       'Practical', 'Sleek', 'Awesome', 'Generic', 'Handcrafted', 'Handmade', 'Licensed',
@@ -80,6 +92,10 @@ export class CommerceModule {
    * @example faker.commerce.productMaterial() // 'Wooden'
    */
   productMaterial(): string {
+    if (this.locale?.commerce?.productMaterial) {
+      return this.random.arrayElement(this.locale.commerce.productMaterial)
+    }
+
     const materials = [
       'Steel', 'Wooden', 'Concrete', 'Plastic', 'Cotton', 'Granite', 'Rubber', 'Metal',
       'Soft', 'Fresh', 'Frozen', 'Silk', 'Leather', 'Glass', 'Carbon', 'Aluminum',

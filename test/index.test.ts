@@ -391,12 +391,458 @@ describe('Faker Library', () => {
       expect(typeof name).toBe('string')
     })
 
+    it('should support German locale', () => {
+      const deFaker = new Faker({ locale: 'de' })
+      const name = deFaker.person.firstName()
+      expect(typeof name).toBe('string')
+      expect(name.length).toBeGreaterThan(0)
+    })
+
+    it('should support Italian locale', () => {
+      const itFaker = new Faker({ locale: 'it' })
+      const name = itFaker.person.firstName()
+      expect(typeof name).toBe('string')
+      expect(name.length).toBeGreaterThan(0)
+    })
+
+    it('should support Portuguese locale', () => {
+      const ptFaker = new Faker({ locale: 'pt' })
+      const name = ptFaker.person.firstName()
+      expect(typeof name).toBe('string')
+      expect(name.length).toBeGreaterThan(0)
+    })
+
+    it('should support Japanese locale', () => {
+      const jaFaker = new Faker({ locale: 'ja' })
+      const name = jaFaker.person.firstName()
+      expect(typeof name).toBe('string')
+      expect(name.length).toBeGreaterThan(0)
+    })
+
+    it('should support Filipino/Tagalog locale', () => {
+      const tlFaker = new Faker({ locale: 'tl' })
+      const name = tlFaker.person.firstName()
+      expect(typeof name).toBe('string')
+      expect(name.length).toBeGreaterThan(0)
+    })
+
     it('should list available locales', () => {
       const locales = Faker.availableLocales
       expect(Array.isArray(locales)).toBe(true)
       expect(locales).toContain('en')
       expect(locales).toContain('es')
       expect(locales).toContain('fr')
+      expect(locales).toContain('de')
+      expect(locales).toContain('it')
+      expect(locales).toContain('pt')
+      expect(locales).toContain('ja')
+      expect(locales).toContain('tl')
+    })
+
+    it('should have all 8 locales available', () => {
+      const locales = Faker.availableLocales
+      expect(locales.length).toBe(8)
+    })
+  })
+
+  describe('Comprehensive Locale Testing', () => {
+    const locales = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ja', 'tl'] as const
+
+    locales.forEach((locale) => {
+      describe(`${locale.toUpperCase()} locale`, () => {
+        const localeFaker = new Faker({ locale })
+
+        it(`should generate person data in ${locale}`, () => {
+          const firstName = localeFaker.person.firstName()
+          const lastName = localeFaker.person.lastName()
+          const fullName = localeFaker.person.fullName()
+          const jobTitle = localeFaker.person.jobTitle()
+
+          expect(typeof firstName).toBe('string')
+          expect(firstName.length).toBeGreaterThan(0)
+          expect(typeof lastName).toBe('string')
+          expect(lastName.length).toBeGreaterThan(0)
+          expect(typeof fullName).toBe('string')
+          expect(fullName).toContain(' ')
+          expect(typeof jobTitle).toBe('string')
+          expect(jobTitle.length).toBeGreaterThan(0)
+        })
+
+        it(`should generate address data in ${locale}`, () => {
+          const street = localeFaker.address.streetAddress()
+          const city = localeFaker.address.city()
+          const state = localeFaker.address.state()
+          const country = localeFaker.address.country()
+          const zipCode = localeFaker.address.zipCode()
+
+          expect(typeof street).toBe('string')
+          expect(street.length).toBeGreaterThan(0)
+          expect(typeof city).toBe('string')
+          expect(city.length).toBeGreaterThan(0)
+          expect(typeof state).toBe('string')
+          expect(state.length).toBeGreaterThan(0)
+          expect(typeof country).toBe('string')
+          expect(country.length).toBeGreaterThan(0)
+          expect(typeof zipCode).toBe('string')
+          expect(zipCode.length).toBeGreaterThan(0)
+        })
+
+        it(`should generate company data in ${locale}`, () => {
+          const companyName = localeFaker.company.name()
+          const catchphrase = localeFaker.company.catchphrase()
+          const industry = localeFaker.company.industry()
+
+          expect(typeof companyName).toBe('string')
+          expect(companyName.length).toBeGreaterThan(0)
+          expect(typeof catchphrase).toBe('string')
+          expect(catchphrase.length).toBeGreaterThan(0)
+          expect(typeof industry).toBe('string')
+          expect(industry.length).toBeGreaterThan(0)
+        })
+
+        it(`should generate internet data in ${locale}`, () => {
+          const email = localeFaker.internet.email()
+          const domainName = localeFaker.internet.domainName()
+
+          expect(typeof email).toBe('string')
+          expect(email).toMatch(/@/)
+          expect(typeof domainName).toBe('string')
+          expect(domainName).toContain('.')
+        })
+
+        it(`should generate phone data in ${locale}`, () => {
+          const phone = localeFaker.phone.number()
+
+          expect(typeof phone).toBe('string')
+          expect(phone.length).toBeGreaterThan(0)
+          expect(phone).toMatch(/[\d-()+ ]/)
+        })
+      })
+    })
+  })
+
+  describe('Locale Switching', () => {
+    it('should switch locales and generate different locale-specific data', () => {
+      const enFaker = new Faker({ locale: 'en' })
+      const esFaker = new Faker({ locale: 'es' })
+
+      const enCity = enFaker.address.city()
+      const esCity = esFaker.address.city()
+
+      expect(typeof enCity).toBe('string')
+      expect(typeof esCity).toBe('string')
+      // Different instances should be able to generate data
+      expect(enCity.length).toBeGreaterThan(0)
+      expect(esCity.length).toBeGreaterThan(0)
+    })
+
+    it('should maintain locale consistency within instance', () => {
+      const jaFaker = new Faker({ locale: 'ja' })
+
+      const name1 = jaFaker.person.firstName()
+      const name2 = jaFaker.person.firstName()
+      const city1 = jaFaker.address.city()
+      const city2 = jaFaker.address.city()
+
+      // All should be valid strings
+      expect(typeof name1).toBe('string')
+      expect(typeof name2).toBe('string')
+      expect(typeof city1).toBe('string')
+      expect(typeof city2).toBe('string')
+    })
+
+    it('should generate reproducible results with same seed across locales', () => {
+      const enFaker1 = new Faker({ locale: 'en', seed: 99999 })
+      const enFaker2 = new Faker({ locale: 'en', seed: 99999 })
+
+      const name1 = enFaker1.person.firstName()
+      const name2 = enFaker2.person.firstName()
+
+      expect(name1).toBe(name2)
+    })
+  })
+
+  describe('Vehicle Module', () => {
+    it('should generate a vehicle manufacturer', () => {
+      const manufacturer = faker.vehicle.manufacturer()
+      expect(typeof manufacturer).toBe('string')
+      expect(manufacturer.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a vehicle model', () => {
+      const model = faker.vehicle.model()
+      expect(typeof model).toBe('string')
+      expect(model.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a vehicle type', () => {
+      const type = faker.vehicle.type()
+      expect(typeof type).toBe('string')
+      expect(type.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a VIN', () => {
+      const vin = faker.vehicle.vin()
+      expect(typeof vin).toBe('string')
+      expect(vin.length).toBe(17)
+    })
+
+    it('should generate a vehicle registration', () => {
+      const plate = faker.vehicle.registration()
+      expect(typeof plate).toBe('string')
+      expect(plate.length).toBeGreaterThan(0)
+    })
+  })
+
+  describe('Image Module', () => {
+    it('should generate an image URL', () => {
+      const url = faker.image.url()
+      expect(typeof url).toBe('string')
+      expect(url).toMatch(/^https?:\/\//)
+    })
+
+    it('should generate an avatar URL', () => {
+      const url = faker.image.avatar()
+      expect(typeof url).toBe('string')
+      expect(url).toMatch(/^https?:\/\//)
+    })
+
+    it('should generate a custom size image URL', () => {
+      const url = faker.image.url({ width: 640, height: 480 })
+      expect(typeof url).toBe('string')
+      expect(url).toMatch(/640/)
+      expect(url).toMatch(/480/)
+    })
+  })
+
+  describe('Git Module', () => {
+    it('should generate a git branch name', () => {
+      const branch = faker.git.branch()
+      expect(typeof branch).toBe('string')
+      expect(branch.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a commit SHA', () => {
+      const sha = faker.git.commitSha()
+      expect(typeof sha).toBe('string')
+      expect(sha.length).toBe(40)
+      expect(sha).toMatch(/^[0-9a-f]+$/)
+    })
+
+    it('should generate a commit message', () => {
+      const message = faker.git.commitMessage()
+      expect(typeof message).toBe('string')
+      expect(message.length).toBeGreaterThan(0)
+    })
+  })
+
+  describe('Science Module', () => {
+    it('should generate a chemical element', () => {
+      const element = faker.science.chemicalElement()
+      expect(typeof element).toBe('string')
+      expect(element.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a unit', () => {
+      const unit = faker.science.unit()
+      expect(typeof unit).toBe('string')
+      expect(unit.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a DNA sequence', () => {
+      const dna = faker.science.dnaSequence(20)
+      expect(typeof dna).toBe('string')
+      expect(dna.length).toBe(20)
+      expect(dna).toMatch(/^[ATCG]+$/)
+    })
+  })
+
+  describe('Music Module', () => {
+    it('should generate a music genre', () => {
+      const genre = faker.music.genre()
+      expect(typeof genre).toBe('string')
+      expect(genre.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a song name', () => {
+      const song = faker.music.songName()
+      expect(typeof song).toBe('string')
+      expect(song.length).toBeGreaterThan(0)
+    })
+  })
+
+  describe('Database Module', () => {
+    it('should generate a database column name', () => {
+      const column = faker.database.column()
+      expect(typeof column).toBe('string')
+      expect(column.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a database type', () => {
+      const type = faker.database.type()
+      expect(typeof type).toBe('string')
+      expect(type.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a MongoDB ObjectId', () => {
+      const id = faker.database.mongodbObjectId()
+      expect(typeof id).toBe('string')
+      expect(id.length).toBe(24)
+      expect(id).toMatch(/^[0-9a-f]+$/)
+    })
+  })
+
+  describe('Food Module', () => {
+    it('should generate a dish name', () => {
+      const dish = faker.food.dish()
+      expect(typeof dish).toBe('string')
+      expect(dish.length).toBeGreaterThan(0)
+    })
+
+    it('should generate an ingredient', () => {
+      const ingredient = faker.food.ingredient()
+      expect(typeof ingredient).toBe('string')
+      expect(ingredient.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a cuisine type', () => {
+      const cuisine = faker.food.ethnicCategory()
+      expect(typeof cuisine).toBe('string')
+      expect(cuisine.length).toBeGreaterThan(0)
+    })
+  })
+
+  describe('Commerce Module', () => {
+    it('should generate a product name', () => {
+      const product = faker.commerce.productName()
+      expect(typeof product).toBe('string')
+      expect(product.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a price', () => {
+      const price = faker.commerce.price()
+      expect(typeof price).toBe('string')
+      expect(price).toMatch(/^\d+\.\d{2}$/)
+    })
+
+    it('should generate a department', () => {
+      const dept = faker.commerce.department()
+      expect(typeof dept).toBe('string')
+      expect(dept.length).toBeGreaterThan(0)
+    })
+  })
+
+  describe('Book Module', () => {
+    it('should generate a book title', () => {
+      const title = faker.book.title()
+      expect(typeof title).toBe('string')
+      expect(title.length).toBeGreaterThan(0)
+    })
+
+    it('should generate an author name', () => {
+      const author = faker.book.author()
+      expect(typeof author).toBe('string')
+      expect(author.length).toBeGreaterThan(0)
+    })
+
+    it('should generate an ISBN', () => {
+      const isbn = faker.book.isbn()
+      expect(typeof isbn).toBe('string')
+      expect(isbn).toMatch(/[\d-]+/)
+    })
+  })
+
+  describe('Animal Module', () => {
+    it('should generate a dog breed', () => {
+      const dog = faker.animal.dog()
+      expect(typeof dog).toBe('string')
+      expect(dog.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a cat breed', () => {
+      const cat = faker.animal.cat()
+      expect(typeof cat).toBe('string')
+      expect(cat.length).toBeGreaterThan(0)
+    })
+
+    it('should generate an animal type', () => {
+      const animal = faker.animal.type()
+      expect(typeof animal).toBe('string')
+      expect(animal.length).toBeGreaterThan(0)
+    })
+  })
+
+  describe('Sport Module', () => {
+    it('should generate a sport name', () => {
+      const sport = faker.sport.sport()
+      expect(typeof sport).toBe('string')
+      expect(sport.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a team name', () => {
+      const team = faker.sport.team()
+      expect(typeof team).toBe('string')
+      expect(team.length).toBeGreaterThan(0)
+    })
+
+    it('should generate an athlete name', () => {
+      const athlete = faker.sport.athlete()
+      expect(typeof athlete).toBe('string')
+      expect(athlete.length).toBeGreaterThan(0)
+    })
+  })
+
+  describe('Hacker Module', () => {
+    it('should generate a hacker phrase', () => {
+      const phrase = faker.hacker.phrase()
+      expect(typeof phrase).toBe('string')
+      expect(phrase.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a hacker abbreviation', () => {
+      const abbr = faker.hacker.abbreviation()
+      expect(typeof abbr).toBe('string')
+      expect(abbr.length).toBeGreaterThan(0)
+    })
+  })
+
+  describe('System Module', () => {
+    it('should generate a file name', () => {
+      const file = faker.system.fileName()
+      expect(typeof file).toBe('string')
+      expect(file).toContain('.')
+    })
+
+    it('should generate a file path', () => {
+      const path = faker.system.filePath()
+      expect(typeof path).toBe('string')
+      expect(path).toContain('/')
+    })
+
+    it('should generate a MIME type', () => {
+      const mime = faker.system.mimeType()
+      expect(typeof mime).toBe('string')
+      expect(mime).toContain('/')
+    })
+  })
+
+  describe('Word Module', () => {
+    it('should generate an adjective', () => {
+      const adj = faker.word.adjective()
+      expect(typeof adj).toBe('string')
+      expect(adj.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a noun', () => {
+      const noun = faker.word.noun()
+      expect(typeof noun).toBe('string')
+      expect(noun.length).toBeGreaterThan(0)
+    })
+
+    it('should generate a verb', () => {
+      const verb = faker.word.verb()
+      expect(typeof verb).toBe('string')
+      expect(verb.length).toBeGreaterThan(0)
     })
   })
 

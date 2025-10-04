@@ -1,13 +1,21 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class HackerModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a hacker abbreviation
    * @example faker.hacker.abbreviation() // 'TCP'
    */
   abbreviation(): string {
+    if (this.locale?.hacker?.abbreviation) {
+      return this.random.arrayElement(this.locale.hacker.abbreviation)
+    }
+
     const abbreviations = [
       'TCP', 'HTTP', 'SDD', 'RAM', 'GB', 'CSS', 'SSL', 'AGP', 'SQL', 'CLI', 'IB', 'UX',
       'UI', 'FTP', 'AI', 'ADP', 'RSS', 'XML', 'EXE', 'COM', 'HDD', 'THX', 'MP3', 'GPU',
@@ -21,6 +29,10 @@ export class HackerModule {
    * @example faker.hacker.adjective() // 'auxiliary'
    */
   adjective(): string {
+    if (this.locale?.hacker?.adjective) {
+      return this.random.arrayElement(this.locale.hacker.adjective)
+    }
+
     const adjectives = [
       'auxiliary', 'primary', 'back-end', 'digital', 'open-source', 'virtual', 'cross-platform',
       'redundant', 'online', 'haptic', 'multi-byte', 'bluetooth', 'wireless', 'mobile',
@@ -34,6 +46,10 @@ export class HackerModule {
    * @example faker.hacker.noun() // 'protocol'
    */
   noun(): string {
+    if (this.locale?.hacker?.noun) {
+      return this.random.arrayElement(this.locale.hacker.noun)
+    }
+
     const nouns = [
       'driver', 'protocol', 'bandwidth', 'panel', 'microchip', 'program', 'port', 'card',
       'array', 'interface', 'system', 'sensor', 'firewall', 'hard drive', 'pixel', 'alarm',
@@ -48,6 +64,10 @@ export class HackerModule {
    * @example faker.hacker.verb() // 'bypass'
    */
   verb(): string {
+    if (this.locale?.hacker?.verb) {
+      return this.random.arrayElement(this.locale.hacker.verb)
+    }
+
     const verbs = [
       'back up', 'bypass', 'hack', 'override', 'compress', 'copy', 'navigate', 'index',
       'connect', 'generate', 'quantify', 'calculate', 'synthesize', 'input', 'transmit',
@@ -62,6 +82,10 @@ export class HackerModule {
    * @example faker.hacker.ingverb() // 'bypassing'
    */
   ingverb(): string {
+    if (this.locale?.hacker?.ingverb) {
+      return this.random.arrayElement(this.locale.hacker.ingverb)
+    }
+
     const verbs = [
       'backing up', 'bypassing', 'hacking', 'overriding', 'compressing', 'copying', 'navigating',
       'indexing', 'connecting', 'generating', 'quantifying', 'calculating', 'synthesizing',
@@ -76,6 +100,10 @@ export class HackerModule {
    * @example faker.hacker.phrase() // 'Try to hack the TCP protocol, maybe it will override the wireless sensor!'
    */
   phrase(): string {
+    if (this.locale?.hacker?.phrase) {
+      return this.random.arrayElement(this.locale.hacker.phrase)
+    }
+
     const patterns = [
       'If we {verb} the {noun}, we can get to the {abbreviation} {noun} through the {adjective} {abbreviation} {noun}!',
       'We need to {verb} the {adjective} {abbreviation} {noun}!',

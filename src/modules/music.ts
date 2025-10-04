@@ -1,13 +1,21 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class MusicModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a music genre
    * @example faker.music.genre() // 'Rock'
    */
   genre(): string {
+    if (this.locale?.music?.genre) {
+      return this.random.arrayElement(this.locale.music.genre)
+    }
+
     const genres = [
       'Rock', 'Pop', 'Jazz', 'Blues', 'Classical', 'Hip Hop', 'R&B', 'Country', 'Electronic', 'Dance',
       'Metal', 'Punk', 'Reggae', 'Soul', 'Funk', 'Disco', 'House', 'Techno', 'Dubstep', 'Indie',
@@ -21,6 +29,10 @@ export class MusicModule {
    * @example faker.music.songName() // 'Dancing in the Moonlight'
    */
   songName(): string {
+    if (this.locale?.music?.song) {
+      return this.random.arrayElement(this.locale.music.song)
+    }
+
     const songs = [
       'Dancing in the Moonlight', 'Bohemian Rhapsody', 'Stairway to Heaven', 'Hotel California',
       'Imagine', 'Yesterday', 'Hey Jude', 'Sweet Child O\' Mine', 'Smells Like Teen Spirit',
@@ -51,6 +63,10 @@ export class MusicModule {
    * @example faker.music.artist() // 'The Beatles'
    */
   artist(): string {
+    if (this.locale?.music?.artist) {
+      return this.random.arrayElement(this.locale.music.artist)
+    }
+
     const artists = [
       'The Beatles', 'Led Zeppelin', 'Pink Floyd', 'Queen', 'The Rolling Stones', 'Elvis Presley',
       'Michael Jackson', 'Madonna', 'David Bowie', 'Nirvana', 'Radiohead', 'U2', 'AC/DC',
@@ -66,6 +82,10 @@ export class MusicModule {
    * @example faker.music.instrument() // 'Guitar'
    */
   instrument(): string {
+    if (this.locale?.music?.instrument) {
+      return this.random.arrayElement(this.locale.music.instrument)
+    }
+
     const instruments = [
       'Guitar', 'Piano', 'Drums', 'Bass', 'Violin', 'Saxophone', 'Trumpet', 'Flute', 'Clarinet',
       'Cello', 'Harp', 'Keyboard', 'Harmonica', 'Accordion', 'Ukulele', 'Banjo', 'Mandolin',

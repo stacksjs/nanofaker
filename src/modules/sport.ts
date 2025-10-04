@@ -1,13 +1,21 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class SportModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a sport name
    * @example faker.sport.sport() // 'Basketball'
    */
   sport(): string {
+    if (this.locale?.sport?.sport) {
+      return this.random.arrayElement(this.locale.sport.sport)
+    }
+
     const sports = [
       'Football', 'Basketball', 'Baseball', 'Soccer', 'Tennis', 'Golf', 'Hockey', 'Boxing',
       'Wrestling', 'Swimming', 'Track and Field', 'Volleyball', 'Cricket', 'Rugby', 'Lacrosse',
@@ -23,6 +31,10 @@ export class SportModule {
    * @example faker.sport.team() // 'Lakers'
    */
   team(): string {
+    if (this.locale?.sport?.team) {
+      return this.random.arrayElement(this.locale.sport.team)
+    }
+
     const teams = [
       'Lakers', 'Warriors', 'Bulls', 'Celtics', 'Knicks', 'Heat', 'Spurs', 'Mavericks',
       'Yankees', 'Red Sox', 'Dodgers', 'Cubs', 'Giants', 'Astros', 'Braves', 'Phillies',
@@ -38,6 +50,10 @@ export class SportModule {
    * @example faker.sport.athlete() // 'Michael Jordan'
    */
   athlete(): string {
+    if (this.locale?.sport?.athlete) {
+      return this.random.arrayElement(this.locale.sport.athlete)
+    }
+
     const athletes = [
       'Michael Jordan', 'LeBron James', 'Tom Brady', 'Serena Williams', 'Tiger Woods',
       'Muhammad Ali', 'Babe Ruth', 'Wayne Gretzky', 'Pelé', 'Cristiano Ronaldo',

@@ -1,13 +1,21 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class WordModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate an adjective
    * @example faker.word.adjective() // 'beautiful'
    */
   adjective(): string {
+    if (this.locale?.word?.adjective) {
+      return this.random.arrayElement(this.locale.word.adjective)
+    }
+
     const adjectives = [
       'beautiful', 'happy', 'sad', 'quick', 'slow', 'big', 'small', 'tall', 'short', 'long',
       'wide', 'narrow', 'thick', 'thin', 'heavy', 'light', 'hard', 'soft', 'hot', 'cold',
@@ -23,6 +31,10 @@ export class WordModule {
    * @example faker.word.adverb() // 'quickly'
    */
   adverb(): string {
+    if (this.locale?.word?.adverb) {
+      return this.random.arrayElement(this.locale.word.adverb)
+    }
+
     const adverbs = [
       'quickly', 'slowly', 'carefully', 'easily', 'hardly', 'loudly', 'quietly', 'suddenly',
       'finally', 'really', 'very', 'completely', 'absolutely', 'perfectly', 'badly', 'well',
@@ -37,6 +49,10 @@ export class WordModule {
    * @example faker.word.conjunction() // 'and'
    */
   conjunction(): string {
+    if (this.locale?.word?.conjunction) {
+      return this.random.arrayElement(this.locale.word.conjunction)
+    }
+
     const conjunctions = [
       'and', 'but', 'or', 'nor', 'for', 'yet', 'so', 'although', 'because', 'since',
       'unless', 'while', 'where', 'if', 'than', 'when', 'after', 'before', 'until',
@@ -49,6 +65,10 @@ export class WordModule {
    * @example faker.word.interjection() // 'wow'
    */
   interjection(): string {
+    if (this.locale?.word?.interjection) {
+      return this.random.arrayElement(this.locale.word.interjection)
+    }
+
     const interjections = [
       'wow', 'oh', 'ah', 'hey', 'oops', 'ouch', 'yay', 'hooray', 'alas', 'bravo',
       'hello', 'goodbye', 'yes', 'no', 'well', 'hmm', 'uh', 'er', 'um',
@@ -61,6 +81,10 @@ export class WordModule {
    * @example faker.word.noun() // 'table'
    */
   noun(): string {
+    if (this.locale?.word?.noun) {
+      return this.random.arrayElement(this.locale.word.noun)
+    }
+
     const nouns = [
       'table', 'chair', 'book', 'pen', 'computer', 'phone', 'door', 'window', 'car', 'house',
       'tree', 'flower', 'dog', 'cat', 'bird', 'fish', 'water', 'air', 'fire', 'earth',
@@ -76,6 +100,10 @@ export class WordModule {
    * @example faker.word.preposition() // 'in'
    */
   preposition(): string {
+    if (this.locale?.word?.preposition) {
+      return this.random.arrayElement(this.locale.word.preposition)
+    }
+
     const prepositions = [
       'in', 'on', 'at', 'by', 'for', 'with', 'from', 'to', 'of', 'about', 'under', 'over',
       'above', 'below', 'between', 'through', 'during', 'before', 'after', 'against', 'among',
@@ -89,6 +117,10 @@ export class WordModule {
    * @example faker.word.verb() // 'run'
    */
   verb(): string {
+    if (this.locale?.word?.verb) {
+      return this.random.arrayElement(this.locale.word.verb)
+    }
+
     const verbs = [
       'run', 'walk', 'jump', 'swim', 'fly', 'eat', 'drink', 'sleep', 'work', 'play',
       'read', 'write', 'speak', 'listen', 'watch', 'look', 'see', 'hear', 'think', 'know',

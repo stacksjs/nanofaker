@@ -1,13 +1,21 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class ScienceModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a chemical element
    * @example faker.science.chemicalElement() // 'Hydrogen'
    */
   chemicalElement(): string {
+    if (this.locale?.science?.chemicalElement) {
+      return this.random.arrayElement(this.locale.science.chemicalElement)
+    }
+
     const elements = [
       'Hydrogen', 'Helium', 'Lithium', 'Beryllium', 'Boron', 'Carbon', 'Nitrogen', 'Oxygen',
       'Fluorine', 'Neon', 'Sodium', 'Magnesium', 'Aluminum', 'Silicon', 'Phosphorus', 'Sulfur',
@@ -34,6 +42,10 @@ export class ScienceModule {
    * @example faker.science.unit() // 'meter'
    */
   unit(): string {
+    if (this.locale?.science?.unit) {
+      return this.random.arrayElement(this.locale.science.unit)
+    }
+
     const units = [
       'meter', 'kilogram', 'second', 'ampere', 'kelvin', 'mole', 'candela',
       'newton', 'pascal', 'joule', 'watt', 'coulomb', 'volt', 'ohm', 'farad',
@@ -48,6 +60,10 @@ export class ScienceModule {
    * @example faker.science.constant() // 'Speed of Light'
    */
   constant(): string {
+    if (this.locale?.science?.constant) {
+      return this.random.arrayElement(this.locale.science.constant)
+    }
+
     const constants = [
       'Speed of Light', 'Gravitational Constant', 'Planck Constant', 'Boltzmann Constant',
       'Avogadro Constant', 'Elementary Charge', 'Magnetic Constant', 'Electric Constant',
@@ -61,6 +77,10 @@ export class ScienceModule {
    * @example faker.science.field() // 'Physics'
    */
   field(): string {
+    if (this.locale?.science?.field) {
+      return this.random.arrayElement(this.locale.science.field)
+    }
+
     const fields = [
       'Physics', 'Chemistry', 'Biology', 'Astronomy', 'Geology', 'Ecology', 'Genetics',
       'Neuroscience', 'Quantum Mechanics', 'Thermodynamics', 'Electromagnetism', 'Biochemistry',

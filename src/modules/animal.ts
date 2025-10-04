@@ -1,13 +1,21 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class AnimalModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate an animal type
    * @example faker.animal.type() // 'Mammal'
    */
   type(): string {
+    if (this.locale?.animal?.type) {
+      return this.random.arrayElement(this.locale.animal.type)
+    }
+
     const types = [
       'Mammal', 'Bird', 'Reptile', 'Amphibian', 'Fish', 'Invertebrate', 'Insect', 'Arachnid',
     ]
@@ -19,6 +27,10 @@ export class AnimalModule {
    * @example faker.animal.dog() // 'Golden Retriever'
    */
   dog(): string {
+    if (this.locale?.animal?.dog) {
+      return this.random.arrayElement(this.locale.animal.dog)
+    }
+
     const breeds = [
       'Golden Retriever', 'Labrador Retriever', 'German Shepherd', 'Bulldog', 'Beagle', 'Poodle',
       'Rottweiler', 'Yorkshire Terrier', 'Boxer', 'Dachshund', 'Siberian Husky', 'Great Dane',
@@ -34,6 +46,10 @@ export class AnimalModule {
    * @example faker.animal.cat() // 'Persian'
    */
   cat(): string {
+    if (this.locale?.animal?.cat) {
+      return this.random.arrayElement(this.locale.animal.cat)
+    }
+
     const breeds = [
       'Persian', 'Maine Coon', 'Ragdoll', 'British Shorthair', 'Siamese', 'Scottish Fold',
       'Sphynx', 'Abyssinian', 'Devon Rex', 'American Shorthair', 'Bengal', 'Russian Blue',
@@ -48,6 +64,10 @@ export class AnimalModule {
    * @example faker.animal.bird() // 'Eagle'
    */
   bird(): string {
+    if (this.locale?.animal?.bird) {
+      return this.random.arrayElement(this.locale.animal.bird)
+    }
+
     const birds = [
       'Eagle', 'Hawk', 'Falcon', 'Owl', 'Parrot', 'Macaw', 'Cockatoo', 'Parakeet', 'Canary',
       'Finch', 'Sparrow', 'Robin', 'Blue Jay', 'Cardinal', 'Crow', 'Raven', 'Pigeon', 'Dove',
@@ -62,6 +82,10 @@ export class AnimalModule {
    * @example faker.animal.fish() // 'Goldfish'
    */
   fish(): string {
+    if (this.locale?.animal?.fish) {
+      return this.random.arrayElement(this.locale.animal.fish)
+    }
+
     const fish = [
       'Goldfish', 'Betta', 'Guppy', 'Angelfish', 'Neon Tetra', 'Molly', 'Platy', 'Swordtail',
       'Clownfish', 'Tang', 'Damselfish', 'Lionfish', 'Grouper', 'Snapper', 'Tuna', 'Marlin',
@@ -99,6 +123,10 @@ export class AnimalModule {
    * @example faker.animal.horse() // 'Arabian'
    */
   horse(): string {
+    if (this.locale?.animal?.horse) {
+      return this.random.arrayElement(this.locale.animal.horse)
+    }
+
     const breeds = [
       'Arabian', 'Thoroughbred', 'Quarter Horse', 'Morgan', 'Appaloosa', 'Paint Horse',
       'Tennessee Walker', 'Standardbred', 'Mustang', 'Andalusian', 'Friesian', 'Clydesdale',
@@ -112,6 +140,10 @@ export class AnimalModule {
    * @example faker.animal.insect() // 'Butterfly'
    */
   insect(): string {
+    if (this.locale?.animal?.insect) {
+      return this.random.arrayElement(this.locale.animal.insect)
+    }
+
     const insects = [
       'Butterfly', 'Moth', 'Bee', 'Wasp', 'Ant', 'Beetle', 'Dragonfly', 'Grasshopper',
       'Cricket', 'Ladybug', 'Firefly', 'Mosquito', 'Fly', 'Cockroach', 'Termite', 'Flea',
@@ -134,6 +166,10 @@ export class AnimalModule {
    * @example faker.animal.rabbit() // 'Holland Lop'
    */
   rabbit(): string {
+    if (this.locale?.animal?.rabbit) {
+      return this.random.arrayElement(this.locale.animal.rabbit)
+    }
+
     const rabbits = [
       'Holland Lop', 'Netherland Dwarf', 'Mini Rex', 'Lionhead', 'Flemish Giant', 'English Lop',
       'Mini Lop', 'Dutch', 'Himalayan', 'Californian', 'New Zealand', 'Rex', 'Angora',

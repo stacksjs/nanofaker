@@ -1,8 +1,11 @@
-import type { ColorOptions } from '../types'
+import type { ColorOptions, LocaleDefinition } from '../types'
 import type { Random } from '../random'
 
 export class ColorModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a random hex color
@@ -81,6 +84,10 @@ export class ColorModule {
    * @example faker.color.name() // 'Red'
    */
   name(): string {
+    if (this.locale?.commerce?.color) {
+      return this.random.arrayElement(this.locale.commerce.color)
+    }
+
     const colors = [
       'Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Pink', 'Brown',
       'Black', 'White', 'Gray', 'Cyan', 'Magenta', 'Lime', 'Navy', 'Teal',

@@ -1,13 +1,21 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class FoodModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a dish/meal name
    * @example faker.food.dish() // 'Spaghetti Carbonara'
    */
   dish(): string {
+    if (this.locale?.food?.dish) {
+      return this.random.arrayElement(this.locale.food.dish)
+    }
+
     const dishes = [
       'Spaghetti Carbonara', 'Chicken Alfredo', 'Beef Tacos', 'Margherita Pizza', 'Caesar Salad',
       'Pad Thai', 'Chicken Tikka Masala', 'Sushi Roll', 'Beef Burger', 'Fish and Chips',
@@ -24,6 +32,10 @@ export class FoodModule {
    * @example faker.food.ingredient() // 'Garlic'
    */
   ingredient(): string {
+    if (this.locale?.food?.ingredient) {
+      return this.random.arrayElement(this.locale.food.ingredient)
+    }
+
     const ingredients = [
       'Garlic', 'Onion', 'Tomato', 'Basil', 'Oregano', 'Thyme', 'Rosemary', 'Cilantro', 'Parsley',
       'Salt', 'Pepper', 'Olive Oil', 'Butter', 'Flour', 'Sugar', 'Eggs', 'Milk', 'Cheese',
@@ -39,6 +51,10 @@ export class FoodModule {
    * @example faker.food.spice() // 'Paprika'
    */
   spice(): string {
+    if (this.locale?.food?.spice) {
+      return this.random.arrayElement(this.locale.food.spice)
+    }
+
     const spices = [
       'Basil', 'Oregano', 'Thyme', 'Rosemary', 'Sage', 'Cilantro', 'Parsley', 'Mint', 'Dill',
       'Paprika', 'Cumin', 'Turmeric', 'Coriander', 'Cardamom', 'Cinnamon', 'Nutmeg', 'Cloves',
@@ -53,6 +69,10 @@ export class FoodModule {
    * @example faker.food.vegetable() // 'Broccoli'
    */
   vegetable(): string {
+    if (this.locale?.food?.vegetable) {
+      return this.random.arrayElement(this.locale.food.vegetable)
+    }
+
     const vegetables = [
       'Broccoli', 'Carrot', 'Celery', 'Lettuce', 'Spinach', 'Kale', 'Cabbage', 'Cauliflower',
       'Brussels Sprouts', 'Asparagus', 'Green Beans', 'Peas', 'Corn', 'Potato', 'Sweet Potato',
@@ -67,6 +87,10 @@ export class FoodModule {
    * @example faker.food.fruit() // 'Mango'
    */
   fruit(): string {
+    if (this.locale?.food?.fruit) {
+      return this.random.arrayElement(this.locale.food.fruit)
+    }
+
     const fruits = [
       'Apple', 'Banana', 'Orange', 'Grape', 'Strawberry', 'Blueberry', 'Raspberry', 'Blackberry',
       'Mango', 'Pineapple', 'Watermelon', 'Cantaloupe', 'Honeydew', 'Peach', 'Plum', 'Cherry',
@@ -81,6 +105,10 @@ export class FoodModule {
    * @example faker.food.meat() // 'Beef'
    */
   meat(): string {
+    if (this.locale?.food?.meat) {
+      return this.random.arrayElement(this.locale.food.meat)
+    }
+
     const meats = [
       'Beef', 'Chicken', 'Pork', 'Lamb', 'Turkey', 'Duck', 'Veal', 'Venison', 'Bison',
       'Rabbit', 'Goat', 'Quail', 'Pheasant', 'Bacon', 'Sausage', 'Ham', 'Salami',
@@ -106,6 +134,10 @@ export class FoodModule {
    * @example faker.food.dessert() // 'Chocolate Cake'
    */
   dessert(): string {
+    if (this.locale?.food?.dessert) {
+      return this.random.arrayElement(this.locale.food.dessert)
+    }
+
     const desserts = [
       'Chocolate Cake', 'Cheesecake', 'Apple Pie', 'Ice Cream', 'Brownies', 'Cookies',
       'Tiramisu', 'Crème Brûlée', 'Panna Cotta', 'Macarons', 'Cupcakes', 'Donuts',
@@ -120,6 +152,10 @@ export class FoodModule {
    * @example faker.food.ethnicCategory() // 'Italian'
    */
   ethnicCategory(): string {
+    if (this.locale?.food?.cuisine) {
+      return this.random.arrayElement(this.locale.food.cuisine)
+    }
+
     const categories = [
       'Italian', 'Chinese', 'Japanese', 'Mexican', 'Thai', 'Indian', 'French', 'Greek',
       'Spanish', 'Korean', 'Vietnamese', 'Lebanese', 'Turkish', 'Brazilian', 'Moroccan',

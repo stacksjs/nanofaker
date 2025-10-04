@@ -1,4 +1,5 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 const MANUFACTURERS = [
   'Toyota', 'Ford', 'Chevrolet', 'Honda', 'Nissan', 'BMW', 'Mercedes-Benz', 'Audi', 'Volkswagen', 'Hyundai',
@@ -28,13 +29,19 @@ const COLORS = [
 ]
 
 export class VehicleModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a random vehicle manufacturer
    * @example faker.vehicle.manufacturer() // 'Toyota'
    */
   manufacturer(): string {
+    if (this.locale?.vehicle?.manufacturer) {
+      return this.random.arrayElement(this.locale.vehicle.manufacturer)
+    }
     return this.random.arrayElement(MANUFACTURERS)
   }
 
@@ -43,6 +50,9 @@ export class VehicleModule {
    * @example faker.vehicle.model() // 'Camry'
    */
   model(): string {
+    if (this.locale?.vehicle?.model) {
+      return this.random.arrayElement(this.locale.vehicle.model)
+    }
     return this.random.arrayElement(MODELS)
   }
 
@@ -51,6 +61,9 @@ export class VehicleModule {
    * @example faker.vehicle.type() // 'SUV'
    */
   type(): string {
+    if (this.locale?.vehicle?.type) {
+      return this.random.arrayElement(this.locale.vehicle.type)
+    }
     return this.random.arrayElement(TYPES)
   }
 
@@ -59,6 +72,9 @@ export class VehicleModule {
    * @example faker.vehicle.fuel() // 'Gasoline'
    */
   fuel(): string {
+    if (this.locale?.vehicle?.fuel) {
+      return this.random.arrayElement(this.locale.vehicle.fuel)
+    }
     return this.random.arrayElement(FUEL_TYPES)
   }
 
@@ -67,6 +83,10 @@ export class VehicleModule {
    * @example faker.vehicle.color() // 'Blue'
    */
   color(): string {
+    // Use commerce color if available since it's the same
+    if (this.locale?.commerce?.color) {
+      return this.random.arrayElement(this.locale.commerce.color)
+    }
     return this.random.arrayElement(COLORS)
   }
 
@@ -117,6 +137,10 @@ export class VehicleModule {
    * @example faker.vehicle.bicycle() // 'Mountain Bike'
    */
   bicycle(): string {
+    if (this.locale?.vehicle?.bicycle) {
+      return this.random.arrayElement(this.locale.vehicle.bicycle)
+    }
+
     const types = [
       'Mountain Bike', 'Road Bike', 'BMX', 'Cruiser', 'Hybrid', 'Electric Bike',
       'Folding Bike', 'Touring Bike', 'Cyclocross', 'Gravel Bike', 'Track Bike', 'Recumbent',

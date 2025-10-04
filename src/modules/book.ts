@@ -1,13 +1,21 @@
 import type { Random } from '../random'
+import type { LocaleDefinition } from '../types'
 
 export class BookModule {
-  constructor(private random: Random) {}
+  constructor(
+    private random: Random,
+    private locale?: LocaleDefinition,
+  ) {}
 
   /**
    * Generate a book title
    * @example faker.book.title() // 'To Kill a Mockingbird'
    */
   title(): string {
+    if (this.locale?.book?.title) {
+      return this.random.arrayElement(this.locale.book.title)
+    }
+
     const titles = [
       'To Kill a Mockingbird', '1984', 'Pride and Prejudice', 'The Great Gatsby', 'Moby Dick',
       'War and Peace', 'The Odyssey', 'The Catcher in the Rye', 'The Lord of the Rings',
@@ -25,6 +33,10 @@ export class BookModule {
    * @example faker.book.author() // 'Ernest Hemingway'
    */
   author(): string {
+    if (this.locale?.book?.author) {
+      return this.random.arrayElement(this.locale.book.author)
+    }
+
     const authors = [
       'Ernest Hemingway', 'F. Scott Fitzgerald', 'Jane Austen', 'Charles Dickens', 'Mark Twain',
       'Leo Tolstoy', 'Fyodor Dostoevsky', 'George Orwell', 'J.R.R. Tolkien', 'J.K. Rowling',
@@ -41,6 +53,10 @@ export class BookModule {
    * @example faker.book.publisher() // 'Penguin Random House'
    */
   publisher(): string {
+    if (this.locale?.book?.publisher) {
+      return this.random.arrayElement(this.locale.book.publisher)
+    }
+
     const publishers = [
       'Penguin Random House', 'HarperCollins', 'Simon & Schuster', 'Macmillan', 'Hachette',
       'Scholastic', 'Oxford University Press', 'Cambridge University Press', 'Pearson',
@@ -54,6 +70,10 @@ export class BookModule {
    * @example faker.book.genre() // 'Mystery'
    */
   genre(): string {
+    if (this.locale?.book?.genre) {
+      return this.random.arrayElement(this.locale.book.genre)
+    }
+
     const genres = [
       'Fiction', 'Non-Fiction', 'Mystery', 'Thriller', 'Romance', 'Science Fiction', 'Fantasy',
       'Horror', 'Historical Fiction', 'Biography', 'Autobiography', 'Self-Help', 'Poetry',
@@ -68,6 +88,10 @@ export class BookModule {
    * @example faker.book.series() // 'Harry Potter'
    */
   series(): string {
+    if (this.locale?.book?.series) {
+      return this.random.arrayElement(this.locale.book.series)
+    }
+
     const series = [
       'Harry Potter', 'The Lord of the Rings', 'A Song of Ice and Fire', 'The Hunger Games',
       'Twilight', 'The Chronicles of Narnia', 'Percy Jackson', 'The Maze Runner',
@@ -118,6 +142,10 @@ export class BookModule {
    * @example faker.book.review() // 'A masterpiece of modern literature!'
    */
   review(): string {
+    if (this.locale?.book?.review) {
+      return this.random.arrayElement(this.locale.book.review)
+    }
+
     const reviews = [
       'A masterpiece of modern literature!',
       'Gripping from start to finish.',

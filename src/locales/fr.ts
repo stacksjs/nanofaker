@@ -88,4 +88,209 @@ export const fr: LocaleDefinition = {
       '+33-#-##-##-##-##',
     ],
   },
+  food: {
+    dish: ['Croissant', 'Baguette', 'Ratatouille', 'Coq au Vin', 'Bouillabaisse', 'Quiche Lorraine', 'Crêpes', 'Escargots', 'Foie Gras', 'Cassoulet', 'Boeuf Bourguignon', 'Soupe à l\'Oignon', 'Tarte Tatin', 'Croque Monsieur', 'Salade Niçoise'],
+    ingredient: ['Beurre', 'Fromage', 'Ail', 'Oignon', 'Tomate', 'Farine', 'Sucre', 'Sel', 'Poivre', 'Huile d\'Olive', 'Vin', 'Crème', 'Lait', 'Œufs', 'Herbes de Provence'],
+    cuisine: ['Française', 'Italienne', 'Chinoise', 'Japonaise', 'Marocaine', 'Libanaise', 'Indienne', 'Thaïlandaise', 'Espagnole', 'Grecque'],
+    dessert: ['Macaron', 'Éclair', 'Crème Brûlée', 'Mousse au Chocolat', 'Profiterole', 'Mille-feuille', 'Tarte aux Pommes', 'Clafoutis', 'Charlotte', 'Paris-Brest'],
+    fruit: ['Pomme', 'Poire', 'Fraise', 'Framboise', 'Cerise', 'Pêche', 'Abricot', 'Prune', 'Raisin', 'Orange', 'Citron'],
+    vegetable: ['Tomate', 'Carotte', 'Oignon', 'Ail', 'Poireau', 'Courgette', 'Aubergine', 'Haricot Vert', 'Champignon', 'Épinard'],
+    meat: ['Bœuf', 'Porc', 'Poulet', 'Agneau', 'Canard', 'Veau', 'Lapin', 'Jambon', 'Saucisse', 'Bacon'],
+    spice: ['Thym', 'Romarin', 'Basilic', 'Persil', 'Estragon', 'Ciboulette', 'Laurier', 'Muscade', 'Cannelle', 'Poivre'],
+  },
+  animal: {
+    dog: ['Berger Allemand', 'Labrador', 'Golden Retriever', 'Bouledogue Français', 'Caniche', 'Beagle', 'Yorkshire Terrier', 'Boxer', 'Rottweiler', 'Berger Belge'],
+    cat: ['Persan', 'Siamois', 'Maine Coon', 'Bengal', 'Ragdoll', 'British Shorthair', 'Sphynx', 'Abyssin', 'Birman', 'Chartreux'],
+    bird: ['Aigle', 'Faucon', 'Hibou', 'Perroquet', 'Canari', 'Moineau', 'Pigeon', 'Colombe', 'Rossignol', 'Mésange'],
+    fish: ['Poisson Rouge', 'Betta', 'Guppy', 'Tetra', 'Carpe', 'Truite', 'Saumon', 'Thon', 'Bar', 'Dorade'],
+    horse: ['Arabe', 'Pur-sang', 'Quarter Horse', 'Frison', 'Percheron', 'Shire', 'Appaloosa', 'Andalou', 'Selle Français'],
+    rabbit: ['Bélier', 'Nain', 'Rex', 'Angora', 'Géant des Flandres', 'Hollandais', 'Californien', 'Néo-Zélandais'],
+    insect: ['Papillon', 'Abeille', 'Fourmi', 'Scarabée', 'Coccinelle', 'Libellule', 'Sauterelle', 'Grillon', 'Luciole', 'Mante'],
+    type: ['Chien', 'Chat', 'Oiseau', 'Poisson', 'Lapin', 'Hamster', 'Cochon d\'Inde', 'Souris', 'Tortue', 'Lézard'],
+  },
+  sport: {
+    sport: ['Football', 'Tennis', 'Rugby', 'Cyclisme', 'Natation', 'Athlétisme', 'Basket-ball', 'Volleyball', 'Handball', 'Golf', 'Ski', 'Escrime'],
+    team: ['PSG', 'Marseille', 'Lyon', 'Monaco', 'Stade Français', 'Racing 92', 'Toulouse', 'Bordeaux'],
+    athlete: ['Zinédine Zidane', 'Kylian Mbappé', 'Thierry Henry', 'Michel Platini', 'Tony Parker', 'Teddy Riner', 'Renaud Lavillenie'],
+  },
+  music: {
+    genre: ['Chanson Française', 'Variété', 'Pop', 'Rock', 'Jazz', 'Rap', 'Électro', 'Classique', 'R&B', 'Reggae'],
+    artist: ['Édith Piaf', 'Jacques Brel', 'Charles Aznavour', 'Serge Gainsbourg', 'Johnny Hallyday', 'Daft Punk', 'Stromae', 'Zaz'],
+    song: ['La Vie en Rose', 'Ne Me Quitte Pas', 'La Bohème', 'Je t\'aime... moi non plus', 'Les Champs-Élysées', 'Sous le Ciel de Paris'],
+    instrument: ['Piano', 'Guitare', 'Violon', 'Batterie', 'Saxophone', 'Trompette', 'Flûte', 'Accordéon', 'Harpe', 'Violoncelle'],
+  },
+  commerce: {
+    product: ['Chaise', 'Table', 'Lampe', 'Canapé', 'Lit', 'Bureau', 'Ordinateur', 'Téléphone', 'Montre', 'Chaussures'],
+    productAdjective: ['Petit', 'Grand', 'Ergonomique', 'Rustique', 'Moderne', 'Élégant', 'Pratique', 'Incroyable', 'Fantastique', 'Durable'],
+    productMaterial: ['Acier', 'Bois', 'Plastique', 'Coton', 'Cuir', 'Verre', 'Aluminium', 'Métal', 'Soie', 'Laine'],
+    department: ['Électronique', 'Vêtements', 'Maison et Jardin', 'Sports', 'Livres', 'Jouets', 'Santé et Beauté', 'Alimentation'],
+    color: ['Rouge', 'Bleu', 'Vert', 'Jaune', 'Noir', 'Blanc', 'Gris', 'Rose', 'Orange', 'Violet'],
+  },
+  book: {
+    title: [
+      'Les Misérables', 'Le Petit Prince', 'Candide', 'L\'Étranger', 'Germinal', 'Madame Bovary',
+      'Le Comte de Monte-Cristo', 'Les Trois Mousquetaires', 'Notre-Dame de Paris', 'Le Rouge et le Noir',
+      'À la recherche du temps perdu', 'Nana', 'Bel-Ami', 'L\'Assommoir', 'Le Père Goriot',
+      'Les Fleurs du mal', 'Thérèse Raquin', 'La Peste', 'Voyage au bout de la nuit', 'Bonjour tristesse',
+    ],
+    author: [
+      'Victor Hugo', 'Antoine de Saint-Exupéry', 'Voltaire', 'Albert Camus', 'Émile Zola', 'Gustave Flaubert',
+      'Alexandre Dumas', 'Stendhal', 'Marcel Proust', 'Guy de Maupassant', 'Honoré de Balzac', 'Charles Baudelaire',
+      'Jean-Paul Sartre', 'Simone de Beauvoir', 'Jules Verne', 'Molière', 'Françoise Sagan', 'Louis-Ferdinand Céline',
+      'Marguerite Duras', 'Michel Houellebecq', 'Amélie Nothomb', 'Guillaume Musso',
+    ],
+    publisher: [
+      'Gallimard', 'Hachette', 'Flammarion', 'Le Seuil', 'Grasset', 'Albin Michel', 'Éditions de Minuit',
+      'Actes Sud', 'Robert Laffont', 'Fayard', 'POL', 'Éditions de l\'Olivier', 'La Table Ronde',
+      'Mercure de France', 'Belfond', 'Plon', 'Stock', 'Calmann-Lévy',
+    ],
+    genre: [
+      'Roman', 'Poésie', 'Théâtre', 'Essai', 'Nouvelle', 'Biographie', 'Science-Fiction', 'Polar',
+      'Fantastique', 'Romance', 'Thriller', 'Histoire', 'Philosophie', 'Aventure', 'Jeunesse',
+    ],
+    series: [
+      'Arsène Lupin', 'Les Rougon-Macquart', 'Maigret', 'Les Fourmis', 'Les Aventures de Tintin',
+      'Astérix', 'San-Antonio', 'Le Cycle de Fondation', 'Les Annales du Disque-monde',
+    ],
+    review: [
+      'Un chef-d\'œuvre absolu', 'Captivant du début à la fin', 'Une lecture incontournable',
+      'Magnifiquement écrit', 'Profond et émouvant', 'Une plume exceptionnelle', 'Bouleversant',
+      'Un classique indémodable', 'Fascinant et original', 'Une expérience littéraire unique',
+      'Impossible à lâcher', 'D\'une rare intensité', 'Sublime et poétique',
+    ],
+  },
+  vehicle: {
+    manufacturer: [
+      'Peugeot', 'Renault', 'Citroën', 'Bugatti', 'Alpine', 'DS Automobiles', 'Venturi',
+      'Volkswagen', 'Mercedes-Benz', 'BMW', 'Audi', 'Toyota', 'Ford', 'Fiat', 'Opel',
+    ],
+    model: [
+      '208', '308', '3008', '5008', 'Clio', 'Mégane', 'Captur', 'Kadjar', 'C3', 'C4', 'Berlingo',
+      'Golf', 'Polo', 'Tiguan', 'Classe A', 'Série 3', 'A3', 'Corolla', 'Fiesta', '500',
+    ],
+    type: [
+      'Berline', 'Break', 'SUV', 'Coupé', 'Cabriolet', 'Monospace', 'Citadine', 'Utilitaire',
+      '4x4', 'Sportive', 'Compacte', 'Routière', 'Familiale',
+    ],
+    fuel: [
+      'Essence', 'Diesel', 'Électrique', 'Hybride', 'Hybride Rechargeable', 'GPL', 'GNV',
+      'Bioéthanol', 'Hydrogène',
+    ],
+    bicycle: [
+      'VTT', 'Vélo de Route', 'Vélo de Ville', 'VTC', 'Vélo Électrique', 'BMX', 'Vélo Pliant',
+      'Vélo de Course', 'Tandem', 'Tricycle', 'Draisienne',
+    ],
+  },
+  word: {
+    adjective: [
+      'grand', 'petit', 'bon', 'mauvais', 'beau', 'joli', 'nouveau', 'ancien', 'jeune', 'vieux',
+      'rapide', 'lent', 'fort', 'faible', 'haut', 'bas', 'long', 'court', 'large', 'étroit',
+      'chaud', 'froid', 'clair', 'sombre', 'dur', 'doux', 'léger', 'lourd', 'riche', 'pauvre',
+      'content', 'triste', 'heureux', 'malheureux', 'intelligent', 'stupide', 'facile', 'difficile',
+      'important', 'simple', 'compliqué', 'merveilleux', 'terrible', 'magnifique', 'horrible',
+    ],
+    adverb: [
+      'très', 'bien', 'mal', 'souvent', 'toujours', 'jamais', 'parfois', 'rarement', 'rapidement',
+      'lentement', 'facilement', 'difficilement', 'heureusement', 'malheureusement', 'certainement',
+      'probablement', 'vraiment', 'seulement', 'aussi', 'beaucoup', 'peu', 'trop', 'assez',
+      'ensemble', 'maintenant', 'hier', 'demain', 'aujourd\'hui', 'bientôt', 'tard', 'tôt',
+    ],
+    conjunction: [
+      'et', 'ou', 'mais', 'donc', 'or', 'ni', 'car', 'comme', 'si', 'que', 'quand', 'lorsque',
+      'puisque', 'parce que', 'bien que', 'quoique', 'tandis que', 'alors que', 'pendant que',
+      'avant que', 'après que', 'pour que', 'afin que', 'sans que', 'jusqu\'à ce que',
+    ],
+    interjection: [
+      'ah', 'oh', 'eh', 'hé', 'hélas', 'zut', 'ouf', 'aïe', 'bravo', 'chut', 'hourra',
+      'allô', 'bof', 'hein', 'bah', 'tiens', 'dis donc', 'ma foi', 'tant pis', 'tant mieux',
+      'attention', 'silence', 'stop', 'salut', 'coucou', 'oups',
+    ],
+    noun: [
+      'maison', 'chat', 'chien', 'arbre', 'fleur', 'livre', 'table', 'chaise', 'porte', 'fenêtre',
+      'voiture', 'vélo', 'route', 'ville', 'pays', 'monde', 'temps', 'jour', 'nuit', 'eau',
+      'feu', 'terre', 'air', 'soleil', 'lune', 'étoile', 'montagne', 'mer', 'rivière', 'forêt',
+      'homme', 'femme', 'enfant', 'famille', 'ami', 'travail', 'école', 'musique', 'art', 'science',
+    ],
+    preposition: [
+      'à', 'de', 'par', 'pour', 'avec', 'sans', 'dans', 'sur', 'sous', 'devant', 'derrière',
+      'entre', 'parmi', 'chez', 'vers', 'contre', 'depuis', 'pendant', 'avant', 'après',
+      'selon', 'malgré', 'sauf', 'excepté', 'hormis', 'outre', 'durant', 'moyennant',
+    ],
+    verb: [
+      'être', 'avoir', 'faire', 'aller', 'venir', 'dire', 'pouvoir', 'vouloir', 'devoir', 'savoir',
+      'voir', 'prendre', 'donner', 'mettre', 'parler', 'demander', 'trouver', 'passer', 'regarder',
+      'aimer', 'croire', 'suivre', 'vivre', 'porter', 'rester', 'tenir', 'comprendre', 'écouter',
+      'lire', 'écrire', 'jouer', 'manger', 'boire', 'dormir', 'courir', 'marcher', 'ouvrir', 'fermer',
+    ],
+  },
+  hacker: {
+    abbreviation: [
+      'TCP', 'IP', 'HTTP', 'HTTPS', 'FTP', 'SSH', 'SSL', 'TLS', 'DNS', 'VPN', 'API', 'SQL',
+      'XML', 'JSON', 'HTML', 'CSS', 'JS', 'PHP', 'SQL', 'RAM', 'CPU', 'GPU', 'SSD', 'HDD',
+      'USB', 'AI', 'ML', 'IoT', 'P2P', 'CDN', 'DDoS', 'XSS', 'CSRF',
+    ],
+    adjective: [
+      'numérique', 'virtuel', 'crypté', 'décrypté', 'sécurisé', 'vulnérable', 'anonyme', 'distribué',
+      'parallèle', 'séquentiel', 'asynchrone', 'synchrone', 'binaire', 'hexadécimal', 'optique',
+      'quantique', 'cloud', 'local', 'distant', 'embarqué', 'temps réel', 'automatisé',
+    ],
+    noun: [
+      'protocole', 'algorithme', 'interface', 'serveur', 'client', 'réseau', 'système', 'processus',
+      'thread', 'cache', 'buffer', 'socket', 'port', 'paquet', 'firewall', 'proxy', 'routeur',
+      'switch', 'pare-feu', 'virus', 'malware', 'ransomware', 'exploit', 'patch', 'backdoor',
+      'bug', 'pixel', 'octet', 'bit', 'byte', 'terminal', 'shell', 'kernel', 'driver',
+    ],
+    verb: [
+      'compiler', 'exécuter', 'déboguer', 'crypter', 'décrypter', 'hacher', 'authentifier',
+      'autoriser', 'connecter', 'déconnecter', 'télécharger', 'uploader', 'synchroniser',
+      'sauvegarder', 'restaurer', 'parser', 'scanner', 'monitorer', 'déployer', 'patcher',
+    ],
+    ingverb: [
+      'compilation', 'exécution', 'débogage', 'cryptage', 'décryptage', 'hachage', 'authentification',
+      'autorisation', 'connexion', 'déconnexion', 'téléchargement', 'upload', 'synchronisation',
+      'sauvegarde', 'restauration', 'parsing', 'scan', 'monitoring', 'déploiement', 'patching',
+    ],
+    phrase: [
+      'Je suis entré', 'Brèche de sécurité détectée', 'Accès refusé', 'Connexion établie',
+      'Serveur compromis', 'Données exfiltrées', 'Pare-feu contourné', 'Exploit réussi',
+      'Système piraté', 'Vulnérabilité zero-day', 'Injection SQL réussie', 'Shell inversé actif',
+      'Clé de chiffrement trouvée', 'Mot de passe cracké', 'Réseau infiltré',
+    ],
+  },
+  system: {
+    fileName: [
+      'rapport', 'document', 'facture', 'contrat', 'présentation', 'budget', 'planning', 'notes',
+      'compte-rendu', 'projet', 'données', 'sauvegarde', 'archive', 'brouillon', 'final',
+      'version', 'copie', 'image', 'photo', 'vidéo', 'musique', 'audio', 'configuration',
+    ],
+    fileType: [
+      'audio', 'image', 'texte', 'vidéo', 'application', 'document', 'feuille de calcul', 'présentation', 'archive', 'code',
+    ],
+  },
+  science: {
+    chemicalElement: [
+      'Hydrogène', 'Hélium', 'Lithium', 'Béryllium', 'Bore', 'Carbone', 'Azote', 'Oxygène',
+      'Fluor', 'Néon', 'Sodium', 'Magnésium', 'Aluminium', 'Silicium', 'Phosphore', 'Soufre',
+      'Chlore', 'Argon', 'Potassium', 'Calcium', 'Fer', 'Cuivre', 'Zinc', 'Argent', 'Or',
+      'Mercure', 'Plomb', 'Uranium', 'Plutonium',
+    ],
+    unit: [
+      'mètre', 'kilomètre', 'centimètre', 'millimètre', 'gramme', 'kilogramme', 'tonne',
+      'litre', 'millilitre', 'seconde', 'minute', 'heure', 'jour', 'année', 'Kelvin', 'Celsius',
+      'Fahrenheit', 'Pascal', 'bar', 'joule', 'watt', 'volt', 'ampère', 'ohm', 'hertz',
+      'newton', 'mole', 'candela', 'lux', 'becquerel',
+    ],
+    constant: [
+      'Vitesse de la lumière', 'Constante de Planck', 'Constante gravitationnelle',
+      'Nombre d\'Avogadro', 'Constante de Boltzmann', 'Charge élémentaire',
+      'Masse de l\'électron', 'Masse du proton', 'Permittivité du vide', 'Perméabilité du vide',
+      'Constante de Faraday', 'Nombre d\'or', 'Pi', 'Nombre d\'Euler',
+    ],
+    field: [
+      'Physique', 'Chimie', 'Biologie', 'Mathématiques', 'Astronomie', 'Géologie', 'Météorologie',
+      'Océanographie', 'Écologie', 'Génétique', 'Botanique', 'Zoologie', 'Microbiologie',
+      'Neurologie', 'Paléontologie', 'Archéologie', 'Géophysique', 'Astrophysique',
+      'Biochimie', 'Physique quantique', 'Thermodynamique', 'Optique', 'Acoustique',
+    ],
+  },
 }
