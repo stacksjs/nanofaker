@@ -1,19 +1,19 @@
 {
-  "name": "bun-ts-starter",
+  "name": "nanofaker",
   "type": "module",
-  "version": "0.4.0",
-  "description": "A simple TypeScript starter kit using Bun.",
+  "version": "0.0.0",
+  "description": "nanofaker is a performance-focused and lightweight faker library for TypeScript.",
   "author": "Chris Breuer <chris@stacksjs.org>",
   "license": "MIT",
-  "homepage": "https://github.com/stacksjs/ts-starter#readme",
+  "homepage": "https://github.com/stacksjs/nanofaker#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stacksjs/ts-starter.git"
+    "url": "git+https://github.com/stacksjs/nanofaker.git"
   },
   "bugs": {
-    "url": "https://github.com/stacksjs/ts-starter/issues"
+    "url": "https://github.com/stacksjs/nanofaker/issues"
   },
-  "keywords": ["typescript", "starter", "kit", "bun", "package"],
+  "keywords": ["typescript", "faker", "bun", "package"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -26,25 +26,25 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "bin-name": "./dist/bin/cli.js"
+    "nanofaker": "./dist/bin/cli.js"
   },
   "files": ["README.md", "dist"],
   "scripts": {
     "build": "bun --bun build.ts && bun run compile",
-    "compile": "bun build ./bin/cli.ts --compile --minify --outfile bin/bin-name",
+    "compile": "bun build ./bin/cli.ts --compile --minify --outfile bin/nanofaker",
     "compile:all": "bun run compile:linux-x64 && bun run compile:linux-arm64 && bun run compile:windows-x64 && bun run compile:darwin-x64 && bun run compile:darwin-arm64",
-    "compile:linux-x64": "bun build ./bin/cli.ts --compile --minify --target=bun-linux-x64 --outfile bin/bin-name-linux-x64",
-    "compile:linux-arm64": "bun build ./bin/cli.ts --compile --minify --target=bun-linux-arm64 --outfile bin/bin-name-linux-arm64",
-    "compile:windows-x64": "bun build ./bin/cli.ts --compile --minify --target=bun-windows-x64 --outfile bin/bin-name-windows-x64.exe",
-    "compile:darwin-x64": "bun build ./bin/cli.ts --compile --minify --target=bun-darwin-x64 --outfile bin/bin-name-darwin-x64",
-    "compile:darwin-arm64": "bun build ./bin/cli.ts --compile --minify --target=bun-darwin-arm64 --outfile bin/bin-name-darwin-arm64",
+    "compile:linux-x64": "bun build ./bin/cli.ts --compile --minify --target=bun-linux-x64 --outfile bin/nanofaker-linux-x64",
+    "compile:linux-arm64": "bun build ./bin/cli.ts --compile --minify --target=bun-linux-arm64 --outfile bin/nanofaker-linux-arm64",
+    "compile:windows-x64": "bun build ./bin/cli.ts --compile --minify --target=bun-windows-x64 --outfile bin/nanofaker-windows-x64.exe",
+    "compile:darwin-x64": "bun build ./bin/cli.ts --compile --minify --target=bun-darwin-x64 --outfile bin/nanofaker-darwin-x64",
+    "compile:darwin-arm64": "bun build ./bin/cli.ts --compile --minify --target=bun-darwin-arm64 --outfile bin/nanofaker-darwin-arm64",
     "zip": "bun run zip:all",
     "zip:all": "bun run zip:linux-x64 && bun run zip:linux-arm64 && bun run zip:windows-x64 && bun run zip:darwin-x64 && bun run zip:darwin-arm64",
-    "zip:linux-x64": "zip -j bin/bin-name-linux-x64.zip bin/bin-name-linux-x64",
-    "zip:linux-arm64": "zip -j bin/bin-name-linux-arm64.zip bin/bin-name-linux-arm64",
-    "zip:windows-x64": "zip -j bin/bin-name-windows-x64.zip bin/bin-name-windows-x64.exe",
-    "zip:darwin-x64": "zip -j bin/bin-name-darwin-x64.zip bin/bin-name-darwin-x64",
-    "zip:darwin-arm64": "zip -j bin/bin-name-darwin-arm64.zip bin/bin-name-darwin-arm64",
+    "zip:linux-x64": "zip -j bin/nanofaker-linux-x64.zip bin/nanofaker-linux-x64",
+    "zip:linux-arm64": "zip -j bin/nanofaker-linux-arm64.zip bin/nanofaker-linux-arm64",
+    "zip:windows-x64": "zip -j bin/nanofaker-windows-x64.zip bin/nanofaker-windows-x64.exe",
+    "zip:darwin-x64": "zip -j bin/nanofaker-darwin-x64.zip bin/nanofaker-darwin-x64",
+    "zip:darwin-arm64": "zip -j bin/nanofaker-darwin-arm64.zip bin/nanofaker-darwin-arm64",
     "fresh": "bunx rimraf node_modules/ bun.lock && bun i",
     "prepublishOnly": "bun --bun run build && bun run compile:all && bun run zip",
     "test": "bun test",
