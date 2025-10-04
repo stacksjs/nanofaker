@@ -6,41 +6,144 @@
 <!-- [![npm downloads][npm-downloads-src]][npm-downloads-href] -->
 <!-- [![Codecov][codecov-src]][codecov-href] -->
 
-# bun-ts-starter
+# nanofaker
 
-This is an opinionated TypeScript Starter kit to help kick-start development of your next Bun package.
+A performance-focused and lightweight faker library for TypeScript with comprehensive locale support.
 
 ## Features
 
-This Starter Kit comes pre-configured with the following:
+- ⚡️ **Performance-focused** - Built with speed and efficiency in mind
+- 🌍 **Multi-locale Support** - Complete translations for 9 languages:
+  - English (en)
+  - Spanish (es)
+  - French (fr)
+  - German (de)
+  - Italian (it)
+  - Portuguese (pt)
+  - Japanese (ja)
+  - Filipino (tl)
+  - Chinese (zh)
+- 📦 **Lightweight** - Minimal dependencies and small bundle size
+- 💪 **Fully Typed** - Written in TypeScript with comprehensive type definitions
+- 🎯 **Comprehensive Data** - 16+ data categories including:
+  - Person (names, job titles, genders)
+  - Address (streets, cities, countries)
+  - Company (names, industries, buzzwords)
+  - Internet (emails, domains)
+  - Phone numbers
+  - Food (dishes, ingredients, cuisines)
+  - Animals (dogs, cats, birds, fish, etc.)
+  - Sports (teams, athletes)
+  - Music (genres, artists, songs)
+  - Commerce (products, colors, materials)
+  - Books (titles, authors, publishers)
+  - Vehicles (manufacturers, models, types)
+  - Words (adjectives, verbs, nouns, etc.)
+  - Hacker/Tech (abbreviations, phrases)
+  - System (file names, file types)
+  - Science (elements, units, constants)
 
-- 🛠️ [Powerful Build Process](https://github.com/oven-sh/bun) - via Bun
-- 💪🏽 [Fully Typed APIs](https://www.typescriptlang.org/) - via TypeScript
-- 📚 [Documentation-ready](https://vitepress.dev/) - via VitePress
-- ⌘ [CLI & Binary](https://www.npmjs.com/package/bunx) - via Bun & CAC
-- 🧪 [Built With Testing In Mind](https://bun.sh/docs/cli/test) - pre-configured unit-testing powered by [Bun](https://bun.sh/docs/cli/test)
-- 🤖 [Renovate](https://renovatebot.com/) - optimized & automated PR dependency updates
-- 🎨 [ESLint](https://eslint.org/) - for code linting _(and formatting)_
-- 📦️ [pkg.pr.new](https://pkg.pr.new) - Continuous (Preview) Releases for your libraries
-- 🐙 [GitHub Actions](https://github.com/features/actions) - runs your CI _(fixes code style issues, tags releases & creates its changelogs, runs the test suite, etc.)_
-
-## Get Started
-
-It's rather simple to get your package development started:
+## Installation
 
 ```bash
-# you may use this GitHub template or the following command:
-bunx degit stacksjs/ts-starter my-pkg
-cd my-pkg
+# npm
+npm install nanofaker
 
-bun i # install all deps
-bun run build # builds the library for production-ready use
+# pnpm
+pnpm add nanofaker
 
-# after you have successfully committed, you may create a "release"
-bun run release # automates git commits, versioning, and changelog generations
+# bun
+bun add nanofaker
+
+# yarn
+yarn add nanofaker
 ```
 
-_Check out the package.json scripts for more commands._
+## Usage
+
+```typescript
+import { faker } from 'nanofaker'
+
+// Generate random data with default locale (English)
+const name = faker.person.fullName()
+const email = faker.internet.email()
+const address = faker.address.city()
+
+console.log(name)    // "John Doe"
+console.log(email)   // "john.doe@example.com"
+console.log(address) // "New York"
+```
+
+### Using Different Locales
+
+```typescript
+import { faker } from 'nanofaker'
+
+// Set locale globally
+faker.locale = 'es' // Spanish
+console.log(faker.person.fullName()) // "María García"
+
+// Or use a specific locale instance
+import { es, ja, zh } from 'nanofaker/locales'
+
+const spanishFaker = faker.locale('es')
+const japaneseFaker = faker.locale('ja')
+const chineseFaker = faker.locale('zh')
+
+console.log(spanishFaker.person.fullName()) // "Carlos López"
+console.log(japaneseFaker.person.fullName()) // "田中太郎"
+console.log(chineseFaker.person.fullName())  // "王伟"
+```
+
+### Available Locales
+
+- `en` - English
+- `es` - Spanish
+- `fr` - French
+- `de` - German
+- `it` - Italian
+- `pt` - Portuguese
+- `ja` - Japanese
+- `tl` - Filipino
+- `zh` - Chinese
+
+### API Examples
+
+```typescript
+import { faker } from 'nanofaker'
+
+// Person
+faker.person.firstName()       // Random first name
+faker.person.lastName()        // Random last name
+faker.person.fullName()        // Random full name
+faker.person.gender()          // Random gender
+faker.person.jobTitle()        // Random job title
+faker.person.prefix()          // Random prefix (Mr., Mrs., etc.)
+faker.person.suffix()          // Random suffix (Jr., Sr., etc.)
+
+// Address
+faker.address.street()         // Random street name
+faker.address.city()           // Random city
+faker.address.state()          // Random state/province
+faker.address.country()        // Random country
+faker.address.zipCode()        // Random ZIP/postal code
+faker.address.direction()      // Random direction (North, South, etc.)
+
+// Company
+faker.company.name()           // Random company name
+faker.company.industry()       // Random industry
+faker.company.buzzword()       // Random business buzzword
+
+// Internet
+faker.internet.email()         // Random email address
+faker.internet.domainName()    // Random domain name
+faker.internet.url()           // Random URL
+
+// Phone
+faker.phone.number()           // Random phone number
+
+// And many more...
+```
 
 ## Testing
 
@@ -48,19 +151,35 @@ _Check out the package.json scripts for more commands._
 bun test
 ```
 
+## Development
+
+```bash
+# Install dependencies
+bun install
+
+# Run tests
+bun test
+
+# Build the library
+bun run build
+
+# Lint code
+bun run lint
+```
+
 ## Changelog
 
-Please see our [releases](https://github.com/stackjs/bun-ts-starter/releases) page for more information on what has changed recently.
+Please see our [releases](https://github.com/stacksjs/nanofaker/releases) page for more information on what has changed recently.
 
 ## Contributing
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+We welcome contributions! Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Community
 
 For help, discussion about best practices, or any other conversation that would benefit from being searchable:
 
-[Discussions on GitHub](https://github.com/stacksjs/ts-starter/discussions)
+[Discussions on GitHub](https://github.com/stacksjs/nanofaker/discussions)
 
 For casual chit-chat with others using this package:
 
@@ -86,10 +205,10 @@ The MIT License (MIT). Please see [LICENSE](LICENSE.md) for more information.
 Made with 💙
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/bun-ts-starter?style=flat-square
-[npm-version-href]: https://npmjs.com/package/bun-ts-starter
-[github-actions-src]: https://img.shields.io/github/actions/workflow/status/stacksjs/ts-starter/ci.yml?style=flat-square&branch=main
-[github-actions-href]: https://github.com/stacksjs/ts-starter/actions?query=workflow%3Aci
+[npm-version-src]: https://img.shields.io/npm/v/nanofaker?style=flat-square
+[npm-version-href]: https://npmjs.com/package/nanofaker
+[github-actions-src]: https://img.shields.io/github/actions/workflow/status/stacksjs/nanofaker/ci.yml?style=flat-square&branch=main
+[github-actions-href]: https://github.com/stacksjs/nanofaker/actions?query=workflow%3Aci
 
-<!-- [codecov-src]: https://img.shields.io/codecov/c/gh/stacksjs/ts-starter/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/stacksjs/ts-starter -->
+<!-- [codecov-src]: https://img.shields.io/codecov/c/gh/stacksjs/nanofaker/main?style=flat-square
+[codecov-href]: https://codecov.io/gh/stacksjs/nanofaker -->

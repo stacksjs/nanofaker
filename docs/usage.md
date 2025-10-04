@@ -1,85 +1,214 @@
-# Get Started
+# Usage
 
-There are two ways of using this reverse proxy: _as a library or as a CLI._
+There are two main ways of using nanofaker: _with the default locale or with a specific locale._
 
-## Library
+## Basic Usage
 
 Given the npm package is installed:
 
 ```ts
-import type { TlsConfig } from '@stacksjs/rpx'
-import { startProxy } from '@stacksjs/rpx'
+import { faker } from 'nanofaker'
 
-export interface CleanupConfig {
-  hosts: boolean // clean up /etc/hosts, defaults to false
-  certs: boolean // clean up certificates, defaults to false
-}
+// Generate random data with default locale (English)
+const name = faker.person.fullName()
+const email = faker.internet.email()
+const city = faker.address.city()
 
-export interface ReverseProxyConfig {
-  from: string // domain to proxy from, defaults to localhost:3000
-  to: string // domain to proxy to, defaults to stacks.localhost
-  cleanUrls?: boolean // removes the .html extension from URLs, defaults to false
-  https: boolean | TlsConfig // automatically uses https, defaults to true, also redirects http to https
-  cleanup?: boolean | CleanupConfig // automatically cleans up /etc/hosts, defaults to false
-  verbose: boolean // log verbose output, defaults to false
-}
-
-const config: ReverseProxyOptions = {
-  from: 'localhost:3000',
-  to: 'my-docs.localhost',
-  cleanUrls: true,
-  https: true,
-  cleanup: false,
-}
-
-startProxy(config)
+console.log(name)  // "John Doe"
+console.log(email) // "john.doe@example.com"
+console.log(city)  // "New York"
 ```
 
-In case you are trying to start multiple proxies, you may use this configuration:
+## Using Different Locales
+
+You can set the locale globally or use a specific locale instance:
 
 ```ts
-// reverse-proxy.config.{ts,js}
-import type { ReverseProxyOptions } from '@stacksjs/rpx'
-import os from 'node:os'
-import path from 'node:path'
+import { faker } from 'nanofaker'
 
-const config: ReverseProxyOptions = {
-  https: { // https: true -> also works with sensible defaults
-    caCertPath: path.join(os.homedir(), '.stacks', 'ssl', `stacks.localhost.ca.crt`),
-    certPath: path.join(os.homedir(), '.stacks', 'ssl', `stacks.localhost.crt`),
-    keyPath: path.join(os.homedir(), '.stacks', 'ssl', `stacks.localhost.crt.key`),
-  },
+// Set locale globally
+faker.locale = 'es' // Spanish
+console.log(faker.person.fullName()) // "María García"
 
-  cleanup: {
-    hosts: true,
-    certs: false,
-  },
+// Or create a locale-specific instance
+const spanishFaker = faker.locale('es')
+const japaneseFaker = faker.locale('ja')
+const chineseFaker = faker.locale('zh')
 
-  proxies: [
-    {
-      from: 'localhost:5173',
-      to: 'my-app.localhost',
-      cleanUrls: true,
-    },
-    {
-      from: 'localhost:5174',
-      to: 'my-api.local',
-    },
-  ],
-
-  verbose: true,
-}
-
-export default config
+console.log(spanishFaker.person.fullName())  // "Carlos López"
+console.log(japaneseFaker.person.fullName()) // "田中太郎"
+console.log(chineseFaker.person.fullName())  // "王伟"
 ```
 
-## CLI
+## Available Locales
 
-```bash
-rpx --from localhost:3000 --to my-project.localhost
-rpx --from localhost:8080 --to my-project.test --keyPath ./key.pem --certPath ./cert.pem
-rpx --help
-rpx --version
+- `en` - English
+- `es` - Spanish
+- `fr` - French
+- `de` - German
+- `it` - Italian
+- `pt` - Portuguese
+- `ja` - Japanese
+- `tl` - Filipino
+- `zh` - Chinese
+
+## API Examples
+
+### Person Data
+
+```ts
+faker.person.firstName()  // Random first name
+faker.person.lastName()   // Random last name
+faker.person.fullName()   // Random full name
+faker.person.gender()     // Random gender
+faker.person.jobTitle()   // Random job title
+faker.person.prefix()     // Random prefix (Mr., Mrs., etc.)
+faker.person.suffix()     // Random suffix (Jr., Sr., etc.)
+```
+
+### Address Data
+
+```ts
+faker.address.street()    // Random street name
+faker.address.city()      // Random city
+faker.address.state()     // Random state/province
+faker.address.country()   // Random country
+faker.address.zipCode()   // Random ZIP/postal code
+faker.address.direction() // Random direction (North, South, etc.)
+```
+
+### Company Data
+
+```ts
+faker.company.name()      // Random company name
+faker.company.industry()  // Random industry
+faker.company.buzzword()  // Random business buzzword
+```
+
+### Internet Data
+
+```ts
+faker.internet.email()      // Random email address
+faker.internet.domainName() // Random domain name
+faker.internet.url()        // Random URL
+```
+
+### Phone Numbers
+
+```ts
+faker.phone.number()  // Random phone number
+```
+
+### Food Data
+
+```ts
+faker.food.dish()       // Random dish name
+faker.food.ingredient() // Random ingredient
+faker.food.cuisine()    // Random cuisine type
+faker.food.dessert()    // Random dessert
+faker.food.fruit()      // Random fruit
+faker.food.vegetable()  // Random vegetable
+faker.food.meat()       // Random meat
+faker.food.spice()      // Random spice
+```
+
+### Animal Data
+
+```ts
+faker.animal.dog()    // Random dog breed
+faker.animal.cat()    // Random cat breed
+faker.animal.bird()   // Random bird species
+faker.animal.fish()   // Random fish species
+faker.animal.horse()  // Random horse breed
+faker.animal.rabbit() // Random rabbit breed
+faker.animal.insect() // Random insect
+```
+
+### Sports Data
+
+```ts
+faker.sport.sport()   // Random sport name
+faker.sport.team()    // Random team name
+faker.sport.athlete() // Random athlete name
+```
+
+### Music Data
+
+```ts
+faker.music.genre()      // Random music genre
+faker.music.artist()     // Random artist name
+faker.music.song()       // Random song title
+faker.music.instrument() // Random instrument
+```
+
+### Commerce Data
+
+```ts
+faker.commerce.product()    // Random product name
+faker.commerce.adjective()  // Random product adjective
+faker.commerce.material()   // Random material
+faker.commerce.department() // Random department
+faker.commerce.color()      // Random color
+```
+
+### Book Data
+
+```ts
+faker.book.title()     // Random book title
+faker.book.author()    // Random author name
+faker.book.publisher() // Random publisher
+faker.book.genre()     // Random book genre
+faker.book.series()    // Random book series
+faker.book.review()    // Random book review
+```
+
+### Vehicle Data
+
+```ts
+faker.vehicle.manufacturer() // Random vehicle manufacturer
+faker.vehicle.model()        // Random vehicle model
+faker.vehicle.type()         // Random vehicle type
+faker.vehicle.fuel()         // Random fuel type
+faker.vehicle.bicycle()      // Random bicycle type
+```
+
+### Word Data
+
+```ts
+faker.word.adjective()    // Random adjective
+faker.word.adverb()       // Random adverb
+faker.word.conjunction()  // Random conjunction
+faker.word.interjection() // Random interjection
+faker.word.noun()         // Random noun
+faker.word.preposition()  // Random preposition
+faker.word.verb()         // Random verb
+```
+
+### Tech/Hacker Data
+
+```ts
+faker.hacker.abbreviation() // Random tech abbreviation
+faker.hacker.adjective()    // Random tech adjective
+faker.hacker.noun()         // Random tech noun
+faker.hacker.verb()         // Random tech verb
+faker.hacker.ingverb()      // Random tech -ing verb
+faker.hacker.phrase()       // Random tech phrase
+```
+
+### System Data
+
+```ts
+faker.system.fileName() // Random file name
+faker.system.fileType() // Random file type
+```
+
+### Science Data
+
+```ts
+faker.science.chemicalElement() // Random chemical element
+faker.science.unit()            // Random unit of measurement
+faker.science.constant()        // Random scientific constant
+faker.science.field()           // Random scientific field
 ```
 
 ## Testing

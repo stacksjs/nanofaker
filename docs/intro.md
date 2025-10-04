@@ -1,53 +1,62 @@
-<p align="center"><img src="https://github.com/stacksjs/rpx/blob/main/.github/art/cover.jpg?raw=true" alt="Social Card of this repo"></p>
+<p align="center"><img src="https://github.com/stacksjs/nanofaker/blob/main/.github/art/cover.jpg?raw=true" alt="Social Card of this repo"></p>
 
-# A Better Developer Experience
+# Introduction
 
-> A TypeScript Starter Kit that will help you bootstrap your next project without minimal opinion.
+> A performance-focused and lightweight faker library for TypeScript with comprehensive locale support.
 
-# bun-ts-starter
+# nanofaker
 
-This is an opinionated TypeScript Starter kit to help kick-start development of your next Bun package.
+nanofaker is a modern, lightweight TypeScript library for generating fake data. Built with performance and developer experience in mind, it provides comprehensive locale support across 9 languages with complete translations for all data categories.
+
+## Why nanofaker?
+
+### Performance First
+Built with performance as a top priority, nanofaker is optimized for speed and efficiency with minimal overhead.
+
+### Comprehensive Locale Support
+Unlike other faker libraries with limited or incomplete translations, nanofaker provides **complete** translations across all 16 data categories for 9 different languages:
+
+- **English (en)** - Full coverage
+- **Spanish (es)** - Full coverage
+- **French (fr)** - Full coverage
+- **German (de)** - Full coverage
+- **Italian (it)** - Full coverage
+- **Portuguese (pt)** - Full coverage
+- **Japanese (ja)** - Full coverage
+- **Filipino (tl)** - Full coverage
+- **Chinese (zh)** - Full coverage
+
+### Rich Data Categories
+
+nanofaker includes 16+ comprehensive data categories:
+
+1. **Person** - Names, genders, job titles, prefixes, suffixes
+2. **Address** - Streets, cities, states, countries, postal codes
+3. **Company** - Names, industries, buzzwords, descriptors
+4. **Internet** - Email addresses, domains, URLs
+5. **Phone** - Phone numbers with locale-specific formats
+6. **Food** - Dishes, ingredients, cuisines, desserts, fruits, vegetables, meats, spices
+7. **Animals** - Dogs, cats, birds, fish, horses, rabbits, insects
+8. **Sports** - Sports names, teams, athletes
+9. **Music** - Genres, artists, songs, instruments
+10. **Commerce** - Products, adjectives, materials, departments, colors
+11. **Books** - Titles, authors, publishers, genres, series, reviews
+12. **Vehicles** - Manufacturers, models, types, fuel types, bicycles
+13. **Words** - Adjectives, adverbs, conjunctions, interjections, nouns, prepositions, verbs
+14. **Hacker/Tech** - Technical abbreviations, terms, phrases
+15. **System** - File names, file types
+16. **Science** - Chemical elements, units, constants, scientific fields
+
+### Fully Typed
+Written in TypeScript with comprehensive type definitions for excellent IDE support and type safety.
 
 ## Get Started
 
-It's rather simple to get your package development started:
-
-```bash
-# you may use this GitHub template or the following command:
-bunx degit stacksjs/ts-starter my-pkg
-cd my-pkg
-
- # if you don't have pnpm installed, run `npm i -g pnpm`
-bun i # install all deps
-bun run build # builds the library for production-ready use
-
-# after you have successfully committed, you may create a "release"
-bun run release # automates git commits, versioning, and changelog generations
-```
-
-_Check out the package.json scripts for more commands._
-
-### Developer Experience (DX)
-
-This Starter Kit comes pre-configured with the following:
-
-- [Powerful Build Process](https://github.com/oven-sh/bun) - via Bun
-- [Fully Typed APIs](https://www.typescriptlang.org/) - via TypeScript
-- [Documentation-ready](https://vitepress.dev/) - via VitePress
-- [CLI & Binary](https://www.npmjs.com/package/bunx) - via Bun & CAC
-- [Be a Good Commitizen](https://www.npmjs.com/package/git-cz) - pre-configured Commitizen & git-cz setup to simplify semantic git commits, versioning, and changelog generations
-- [Built With Testing In Mind](https://bun.sh/docs/cli/test) - pre-configured unit-testing powered by [Bun](https://bun.sh/docs/cli/test)
-- [Renovate](https://renovatebot.com/) - optimized & automated PR dependency updates
-- [ESLint](https://eslint.org/) - for code linting _(and formatting)_
-- [GitHub Actions](https://github.com/features/actions) - runs your CI _(fixes code style issues, tags releases & creates its changelogs, runs the test suite, etc.)_
+Check out the [Installation Guide](/install) to get started with nanofaker.
 
 ## Changelog
 
-Please see our [releases](https://github.com/stacksjs/stacks/releases) page for more information on what has changed recently.
-
-## Stargazers
-
-[![Stargazers](https://starchart.cc/stacksjs/ts-starter.svg?variant=adaptive)](https://starchart.cc/stacksjs/ts-starter)
+Please see our [releases](https://github.com/stacksjs/nanofaker/releases) page for more information on what has changed recently.
 
 ## Contributing
 
@@ -57,17 +66,11 @@ Please review the [Contributing Guide](https://github.com/stacksjs/contributing)
 
 For help, discussion about best practices, or any other conversation that would benefit from being searchable:
 
-[Discussions on GitHub](https://github.com/stacksjs/stacks/discussions)
+[Discussions on GitHub](https://github.com/stacksjs/nanofaker/discussions)
 
 For casual chit-chat with others using this package:
 
 [Join the Stacks Discord Server](https://discord.gg/stacksjs)
-
-## Postcardware
-
-Two things are true: Stacks OSS will always stay open-source, and we do love to receive postcards from wherever Stacks is used! 🌍 _We also publish them on our website. And thank you, Spatie_
-
-Our address: Stacks.js, 12665 Village Ln #2306, Playa Vista, CA 90094
 
 ## Sponsors
 
@@ -76,18 +79,8 @@ We would like to extend our thanks to the following sponsors for funding Stacks 
 - [JetBrains](https://www.jetbrains.com/)
 - [The Solana Foundation](https://solana.com/)
 
-## Credits
-
-- [Chris Breuer](https://github.com/chrisbbreuer)
-- [All Contributors](https://github.com/stacksjs/rpx/graphs/contributors)
-
 ## License
 
-The MIT License (MIT). Please see [LICENSE](https://github.com/stacksjs/ts-starter/tree/main/LICENSE.md) for more information.
+The MIT License (MIT). Please see [LICENSE](https://github.com/stacksjs/nanofaker/tree/main/LICENSE.md) for more information.
 
 Made with 💙
-
-<!-- Badges -->
-
-<!-- [codecov-src]: https://img.shields.io/codecov/c/gh/stacksjs/rpx/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/stacksjs/rpx -->
