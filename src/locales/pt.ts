@@ -3,16 +3,26 @@ import type { LocaleDefinition } from '../types'
 export const pt: LocaleDefinition = {
   title: 'Portuguese',
   person: {
-    firstName: [
+    firstNameMale: [
       'Miguel', 'João', 'Francisco', 'Rodrigo', 'Gabriel', 'Santiago', 'Tomás', 'Afonso', 'Gonçalo', 'Diogo',
       'Pedro', 'Tiago', 'Martim', 'Lucas', 'Rafael', 'Henrique', 'Guilherme', 'Duarte', 'Vicente', 'Dinis',
       'André', 'Bernardo', 'Eduardo', 'Felipe', 'Bruno', 'Carlos', 'Daniel', 'Fernando', 'Gustavo', 'Hugo',
       'Igor', 'José', 'Leonardo', 'Manuel', 'Nuno', 'Paulo', 'Ricardo', 'Sérgio', 'Vítor', 'Alexandre',
+      'António', 'Cristiano', 'David', 'Fábio', 'Gonçalo', 'Ivo', 'Joaquim', 'Lourenço', 'Marco', 'Mateus',
+      'Nelson', 'Renato', 'Rui', 'Samuel', 'Simão', 'Telmo', 'Vasco', 'Xavier',
+    ],
+    firstNameFemale: [
       'Maria', 'Leonor', 'Matilde', 'Beatriz', 'Carolina', 'Mariana', 'Ana', 'Inês', 'Sofia', 'Lara',
       'Francisca', 'Alice', 'Joana', 'Laura', 'Marta', 'Rita', 'Sara', 'Diana', 'Catarina', 'Isabel',
       'Gabriela', 'Juliana', 'Patrícia', 'Raquel', 'Teresa', 'Vera', 'Adriana', 'Carla', 'Cristina', 'Helena',
       'Luísa', 'Mónica', 'Paula', 'Sandra', 'Sónia', 'Susana', 'Andreia', 'Cláudia', 'Filipa', 'Ines',
       'Lúcia', 'Margarida', 'Melissa', 'Olivia', 'Rafaela', 'Tatiana', 'Vanessa', 'Vitória', 'Yara', 'Zara',
+      'Amélia', 'Benedita', 'Camila', 'Daniela', 'Emília', 'Fátima', 'Graça', 'Joana', 'Lídia', 'Manuela',
+      'Natália', 'Piedade', 'Rosa', 'Sílvia', 'Tânia', 'Vânia',
+    ],
+    firstNameNeutral: [
+      'Alex', 'Ariel', 'Casey', 'Dominique', 'Eden', 'Gabi', 'Jô', 'Kim', 'Lou', 'Morgan',
+      'Nico', 'Pat', 'Quinn', 'Rafa', 'Sam', 'Taylor', 'Val',
     ],
     lastName: [
       'Silva', 'Santos', 'Ferreira', 'Pereira', 'Oliveira', 'Costa', 'Rodrigues', 'Martins', 'Jesus', 'Sousa',

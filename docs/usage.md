@@ -58,19 +58,33 @@ console.log(chineseFaker.person.fullName())  // "王伟"
 - `da` - Danish
 - `uk` - Ukrainian
 - `hi` - Hindi
+- `fi` - Finnish
+- `tr` - Turkish
+- `pl` - Polish
+- `cs` - Czech
 
 ## API Examples
 
 ### Person Data
 
 ```ts
-faker.person.firstName()  // Random first name
-faker.person.lastName()   // Random last name
-faker.person.fullName()   // Random full name
-faker.person.gender()     // Random gender
-faker.person.jobTitle()   // Random job title
-faker.person.prefix()     // Random prefix (Mr., Mrs., etc.)
-faker.person.suffix()     // Random suffix (Jr., Sr., etc.)
+faker.person.firstName()                        // Random first name
+faker.person.firstName({ gender: 'male' })      // Random male first name
+faker.person.firstName({ gender: 'female' })    // Random female first name
+faker.person.firstName({ gender: 'neutral' })   // Random neutral first name
+faker.person.firstNameMale()                    // Random male first name
+faker.person.firstNameFemale()                  // Random female first name
+faker.person.firstNameNeutral()                 // Random neutral first name
+faker.person.lastName()                         // Random last name
+faker.person.fullName()                         // Random full name
+faker.person.fullName({ gender: 'male' })       // Random full name with male first name
+faker.person.fullName({ gender: 'female' })     // Random full name with female first name
+faker.person.fullName({ prefix: true })         // Random full name with prefix
+faker.person.fullName({ suffix: true })         // Random full name with suffix
+faker.person.gender()                           // Random gender
+faker.person.jobTitle()                         // Random job title
+faker.person.prefix()                           // Random prefix (Mr., Mrs., etc.)
+faker.person.suffix()                           // Random suffix (Jr., Sr., etc.)
 ```
 
 ### Address Data

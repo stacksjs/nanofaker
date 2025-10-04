@@ -3,20 +3,27 @@ import type { LocaleDefinition } from '../types'
 export const de: LocaleDefinition = {
   title: 'German',
   person: {
-    firstName: [
+    firstNameMale: [
       'Alexander', 'Andreas', 'Anton', 'Benjamin', 'Christian', 'Daniel', 'David', 'Elias', 'Emil', 'Felix',
       'Finn', 'Friedrich', 'Gabriel', 'Georg', 'Hans', 'Heinrich', 'Jakob', 'Johannes', 'Jonas', 'Jonathan',
       'Josef', 'Julius', 'Karl', 'Konstantin', 'Leon', 'Levi', 'Liam', 'Louis', 'Luca', 'Lukas',
       'Markus', 'Martin', 'Matthias', 'Maximilian', 'Michael', 'Moritz', 'Niklas', 'Noah', 'Oliver', 'Oskar',
       'Paul', 'Peter', 'Philipp', 'Rafael', 'Robert', 'Samuel', 'Sebastian', 'Simon', 'Stefan', 'Theodor',
-      'Thomas', 'Tim', 'Tobias', 'Valentin', 'Vincent', 'Wilhelm', 'Wolfgang',
+      'Thomas', 'Tim', 'Tobias', 'Valentin', 'Vincent', 'Wilhelm', 'Wolfgang', 'Klaus', 'Günther', 'Helmut',
+      'Werner', 'Ralf', 'Jörg', 'Bernd', 'Dieter', 'Uwe', 'Rainer', 'Horst', 'Jürgen', 'Manfred',
+    ],
+    firstNameFemale: [
       'Alexandra', 'Amelie', 'Andrea', 'Angela', 'Anita', 'Anja', 'Anna', 'Anne', 'Barbara', 'Birgit',
       'Britta', 'Charlotte', 'Christina', 'Christine', 'Claudia', 'Diana', 'Doris', 'Elisabeth', 'Ella', 'Emma',
       'Emilia', 'Eva', 'Franziska', 'Gisela', 'Hannah', 'Heike', 'Helena', 'Helga', 'Ingrid', 'Irmgard',
       'Isabella', 'Jana', 'Johanna', 'Julia', 'Karin', 'Katharina', 'Katrin', 'Laura', 'Lea', 'Lena',
       'Lina', 'Lisa', 'Luisa', 'Maria', 'Marie', 'Martina', 'Melanie', 'Mia', 'Monika', 'Nadine',
       'Nicole', 'Nina', 'Petra', 'Rosa', 'Sabine', 'Sandra', 'Sara', 'Sarah', 'Silke', 'Sofia',
-      'Sophia', 'Sophie', 'Stefanie', 'Susanne', 'Tanja', 'Theresa', 'Ursula', 'Vanessa', 'Vera',
+      'Sophia', 'Sophie', 'Stefanie', 'Susanne', 'Tanja', 'Theresa', 'Ursula', 'Vanessa', 'Vera', 'Renate',
+      'Gabriele', 'Kerstin', 'Ute', 'Christa', 'Erika', 'Bettina', 'Simone', 'Margit', 'Ilse', 'Greta',
+    ],
+    firstNameNeutral: [
+      'Kim', 'Sasha', 'Alex', 'Toni', 'Robin', 'Jona', 'Luca', 'Noah', 'Andrea', 'Nicola',
     ],
     lastName: [
       'Müller', 'Schmidt', 'Schneider', 'Fischer', 'Weber', 'Meyer', 'Wagner', 'Becker', 'Schulz', 'Hoffmann',

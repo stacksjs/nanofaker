@@ -54,15 +54,54 @@ faker.seed(12345)
 
 Methods for generating personal data.
 
-### faker.person.firstName()
+### faker.person.firstName(options?)
 
 Generate a random first name.
 
 ```ts
 faker.person.firstName() // "John"
+faker.person.firstName({ gender: 'male' }) // "Michael"
+faker.person.firstName({ gender: 'female' }) // "Sarah"
+faker.person.firstName({ gender: 'neutral' }) // "Alex"
+```
+
+**Parameters**:
+- `options?: PersonNameOptions` - Optional gender configuration
+  - `gender?: 'male' | 'female' | 'neutral'` - Gender of the name
+
+**Returns**: `string`
+
+### faker.person.firstNameMale()
+
+Generate a random male first name.
+
+```ts
+faker.person.firstNameMale() // "Michael"
 ```
 
 **Returns**: `string`
+
+### faker.person.firstNameFemale()
+
+Generate a random female first name.
+
+```ts
+faker.person.firstNameFemale() // "Sarah"
+```
+
+**Returns**: `string`
+
+### faker.person.firstNameNeutral()
+
+Generate a random gender-neutral first name.
+
+```ts
+faker.person.firstNameNeutral() // "Alex"
+```
+
+**Returns**: `string`
+
+**Note**: If the locale doesn't have neutral names defined, it will return a random name from the combined male and female names list.
 
 ### faker.person.lastName()
 
@@ -74,13 +113,24 @@ faker.person.lastName() // "Doe"
 
 **Returns**: `string`
 
-### faker.person.fullName()
+### faker.person.fullName(options?)
 
 Generate a random full name.
 
 ```ts
 faker.person.fullName() // "John Doe"
+faker.person.fullName({ gender: 'male' }) // "Michael Smith"
+faker.person.fullName({ gender: 'female' }) // "Sarah Johnson"
+faker.person.fullName({ prefix: true }) // "Mr. John Doe"
+faker.person.fullName({ suffix: true }) // "John Doe Jr."
+faker.person.fullName({ gender: 'female', prefix: true, suffix: true }) // "Ms. Sarah Johnson III"
 ```
+
+**Parameters**:
+- `options?: PersonFullNameOptions` - Optional configuration
+  - `gender?: 'male' | 'female' | 'neutral'` - Gender of the first name
+  - `prefix?: boolean` - Include a prefix (Mr., Mrs., etc.)
+  - `suffix?: boolean` - Include a suffix (Jr., Sr., etc.)
 
 **Returns**: `string`
 

@@ -3,16 +3,21 @@ import type { LocaleDefinition } from '../types'
 export const it: LocaleDefinition = {
   title: 'Italian',
   person: {
-    firstName: [
+    firstNameMale: [
       'Francesco', 'Alessandro', 'Andrea', 'Matteo', 'Lorenzo', 'Gabriele', 'Mattia', 'Leonardo', 'Davide', 'Riccardo',
       'Federico', 'Tommaso', 'Giuseppe', 'Antonio', 'Marco', 'Giovanni', 'Luca', 'Pietro', 'Paolo', 'Carlo',
       'Stefano', 'Massimo', 'Roberto', 'Fabio', 'Simone', 'Daniele', 'Emanuele', 'Filippo', 'Nicola', 'Alessio',
       'Michele', 'Vincenzo', 'Giorgio', 'Sergio', 'Mario', 'Angelo', 'Salvatore', 'Luigi', 'Franco', 'Enrico',
+    ],
+    firstNameFemale: [
       'Sofia', 'Giulia', 'Aurora', 'Alice', 'Ginevra', 'Emma', 'Giorgia', 'Greta', 'Beatrice', 'Anna',
       'Chiara', 'Sara', 'Martina', 'Francesca', 'Alessia', 'Elisa', 'Valentina', 'Silvia', 'Elena', 'Laura',
       'Federica', 'Ilaria', 'Arianna', 'Camilla', 'Serena', 'Cristina', 'Claudia', 'Michela', 'Antonella', 'Daniela',
       'Maria', 'Lucia', 'Paola', 'Roberta', 'Giovanna', 'Teresa', 'Monica', 'Barbara', 'Simona', 'Elisabetta',
       'Vittoria', 'Ludovica', 'Bianca', 'Matilde', 'Viola', 'Nicole', 'Rebecca', 'Eleonora', 'Margherita', 'Caterina',
+    ],
+    firstNameNeutral: [
+      'Andrea', 'Celeste', 'Diamante',
     ],
     lastName: [
       'Rossi', 'Russo', 'Ferrari', 'Esposito', 'Bianchi', 'Romano', 'Colombo', 'Ricci', 'Marino', 'Greco',

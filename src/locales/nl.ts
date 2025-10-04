@@ -3,11 +3,20 @@ import type { LocaleDefinition } from '../types'
 export const nl: LocaleDefinition = {
   title: 'Dutch',
   person: {
-    firstName: [
+    firstNameMale: [
       'Daan', 'Sem', 'Lucas', 'Milan', 'Levi', 'Luuk', 'Bram', 'Jayden', 'Lars', 'Thomas',
-      'Emma', 'Sophie', 'Julia', 'Anna', 'Lisa', 'Saar', 'Eva', 'Isa', 'Tess', 'Fleur',
       'Noah', 'Max', 'Jesse', 'Tim', 'Tom', 'Nick', 'Kevin', 'Thijs', 'Ruben', 'Sam',
+      'Stijn', 'Finn', 'Sven', 'Bas', 'Mees', 'Jasper', 'Wouter', 'Casper', 'Teun', 'Julian',
+      'Jan', 'Pieter', 'Kees', 'Henk', 'Dirk', 'Joop', 'Bart', 'Mark', 'Peter', 'Johan',
+    ],
+    firstNameFemale: [
+      'Emma', 'Sophie', 'Julia', 'Anna', 'Lisa', 'Saar', 'Eva', 'Isa', 'Tess', 'Fleur',
       'Sara', 'Mila', 'Luna', 'Noa', 'Lotte', 'Femke', 'Liv', 'Zoey', 'Nina', 'Roos',
+      'Fenna', 'Lieke', 'Lauren', 'Evi', 'Olivia', 'Yara', 'Amy', 'Lynn', 'Floor', 'Sanne',
+      'Anne', 'Marie', 'Els', 'Anja', 'Ingrid', 'Petra', 'Maria', 'Marieke', 'Esther', 'Linda',
+    ],
+    firstNameNeutral: [
+      'Robin', 'Kim', 'Alex', 'Sam', 'Dani', 'Charlie', 'Janne', 'Remy', 'Lou', 'Jip',
     ],
     lastName: [
       'de Jong', 'Jansen', 'de Vries', 'van den Berg', 'van Dijk', 'Bakker', 'Visser', 'Smit',

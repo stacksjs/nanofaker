@@ -12,7 +12,13 @@ export class InternetModule {
    * @example faker.internet.email() // 'john.doe@example.com'
    */
   email(options?: { firstName?: string, lastName?: string, provider?: string }): string {
-    const firstName = options?.firstName ?? this.random.arrayElement(this.locale.person.firstName).toLowerCase()
+    // Use all gendered names combined for email generation
+    const allFirstNames = [
+      ...this.locale.person.firstNameMale,
+      ...this.locale.person.firstNameFemale,
+      ...(this.locale.person.firstNameNeutral || []),
+    ]
+    const firstName = options?.firstName ?? this.random.arrayElement(allFirstNames).toLowerCase()
     const lastName = options?.lastName ?? this.random.arrayElement(this.locale.person.lastName).toLowerCase()
     const provider = options?.provider ?? this.random.arrayElement(this.locale.internet.domainSuffix)
 
@@ -35,7 +41,13 @@ export class InternetModule {
    * @example faker.internet.freeEmail() // 'john.doe@gmail.com'
    */
   freeEmail(): string {
-    const firstName = this.random.arrayElement(this.locale.person.firstName).toLowerCase()
+    // Use all gendered names combined for email generation
+    const allFirstNames = [
+      ...this.locale.person.firstNameMale,
+      ...this.locale.person.firstNameFemale,
+      ...(this.locale.person.firstNameNeutral || []),
+    ]
+    const firstName = this.random.arrayElement(allFirstNames).toLowerCase()
     const lastName = this.random.arrayElement(this.locale.person.lastName).toLowerCase()
     const provider = this.random.arrayElement(this.locale.internet.freeEmail)
 
@@ -50,7 +62,13 @@ export class InternetModule {
    * @example faker.internet.username() // 'john_doe123'
    */
   username(options?: { firstName?: string, lastName?: string }): string {
-    const firstName = options?.firstName ?? this.random.arrayElement(this.locale.person.firstName).toLowerCase()
+    // Use all gendered names combined for username generation
+    const allFirstNames = [
+      ...this.locale.person.firstNameMale,
+      ...this.locale.person.firstNameFemale,
+      ...(this.locale.person.firstNameNeutral || []),
+    ]
+    const firstName = options?.firstName ?? this.random.arrayElement(allFirstNames).toLowerCase()
     const lastName = options?.lastName ?? this.random.arrayElement(this.locale.person.lastName).toLowerCase()
 
     const patterns = [
@@ -75,9 +93,15 @@ export class InternetModule {
 
     if (memorable) {
       // Generate a memorable password using words
+      // Use all gendered names combined
+      const allFirstNames = [
+        ...this.locale.person.firstNameMale,
+        ...this.locale.person.firstNameFemale,
+        ...(this.locale.person.firstNameNeutral || []),
+      ]
       const words = []
       for (let i = 0; i < 3; i++) {
-        words.push(this.random.arrayElement(this.locale.person.firstName))
+        words.push(this.random.arrayElement(allFirstNames))
       }
       return prefix + words.join('-') + this.random.int(10, 999)
     }

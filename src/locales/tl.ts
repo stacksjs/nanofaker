@@ -3,17 +3,28 @@ import type { LocaleDefinition } from '../types'
 export const tl: LocaleDefinition = {
   title: 'Filipino',
   person: {
-    firstName: [
-      'Jose', 'Juan', 'Pedro', 'Maria', 'Ana', 'Antonio', 'Francisco', 'Jesus', 'Manuel', 'Carlos',
+    firstNameMale: [
+      'Jose', 'Juan', 'Pedro', 'Antonio', 'Francisco', 'Jesus', 'Manuel', 'Carlos',
       'Miguel', 'Angelo', 'Gabriel', 'Rafael', 'Luis', 'Diego', 'Andres', 'Daniel', 'Roberto', 'Fernando',
       'Ricardo', 'Eduardo', 'Ramon', 'Emilio', 'Alejandro', 'Enrique', 'Pablo', 'Jorge', 'Raul', 'Sergio',
-      'Rosa', 'Carmen', 'Luz', 'Cristina', 'Isabel', 'Teresa', 'Lourdes', 'Gloria', 'Mercedes', 'Rosario',
-      'Josefina', 'Angela', 'Beatriz', 'Elena', 'Patricia', 'Sofia', 'Catalina', 'Remedios', 'Dolores', 'Esperanza',
-      'John', 'Mark', 'Paul', 'James', 'Joshua', 'Christian', 'Carlo', 'Angelo', 'Ryan', 'Michael',
+      'John', 'Mark', 'Paul', 'James', 'Joshua', 'Christian', 'Carlo', 'Ryan', 'Michael',
       'Kenneth', 'Kevin', 'Adrian', 'Carl', 'Emmanuel', 'Joseph', 'Anthony', 'Jonathan', 'Christopher', 'Francis',
-      'Mary', 'Angel', 'Princess', 'Angelica', 'Michelle', 'Nicole', 'Stephanie', 'Christine', 'Clarisse', 'Kristine',
+      'Marlon', 'Ronaldo', 'Ferdinand', 'Rodrigo', 'Benigno', 'Manny',
+      'Lorenzo', 'Vicente', 'Mateo', 'Sebastian', 'Joaquin', 'Salvador', 'Ignacio', 'Gregorio', 'Benito', 'Tomas',
+      'Alfonso', 'Domingo', 'Marcos', 'Felipe', 'Esteban', 'Nestor', 'Renato', 'Ruben', 'Romeo', 'Gilbert',
+    ],
+    firstNameFemale: [
+      'Maria', 'Ana', 'Rosa', 'Carmen', 'Luz', 'Cristina', 'Isabel', 'Teresa', 'Lourdes', 'Gloria', 'Mercedes', 'Rosario',
+      'Josefina', 'Angela', 'Beatriz', 'Elena', 'Patricia', 'Sofia', 'Catalina', 'Remedios', 'Dolores', 'Esperanza',
+      'Mary', 'Princess', 'Angelica', 'Michelle', 'Nicole', 'Stephanie', 'Christine', 'Clarisse', 'Kristine',
       'April', 'Mae', 'Joy', 'Grace', 'Faith', 'Hope', 'Love', 'Precious', 'Divine', 'Lovely',
-      'Marlon', 'Ronaldo', 'Ferdinand', 'Rodrigo', 'Benigno', 'Corazon', 'Imelda', 'Gloria', 'Lea', 'Manny',
+      'Corazon', 'Imelda', 'Lea',
+      'Concepcion', 'Pilar', 'Milagros', 'Soledad', 'Estrella', 'Aida', 'Norma', 'Violeta', 'Clarita', 'Marina',
+      'Rosalinda', 'Luisa', 'Caridad', 'Trinidad', 'Victoria', 'Presentacion', 'Francisca', 'Felicidad', 'Aurora', 'Lucia',
+    ],
+    firstNameNeutral: [
+      'Angel', 'Alex', 'Kim', 'Rae', 'Sam', 'Jesse', 'Jordan', 'Casey', 'Pat', 'Drew',
+      'Riley', 'Kai', 'Quinn', 'Reese', 'Morgan', 'Sky', 'Dominique', 'Jamie', 'Chris', 'Nikki',
     ],
     lastName: [
       'Santos', 'Reyes', 'Cruz', 'Bautista', 'Ocampo', 'Garcia', 'Mendoza', 'Torres', 'Gonzales', 'Lopez',

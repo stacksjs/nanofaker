@@ -3,12 +3,28 @@ import type { LocaleDefinition } from '../types'
 export const sv: LocaleDefinition = {
   title: 'Swedish',
   person: {
-    firstName: ['Alice', 'Elsa', 'Maja', 'Ella', 'Wilma', 'Alma', 'Ebba', 'Lilly', 'Astrid', 'Saga', 'Agnes', 'Freja', 'Stella', 'Clara', 'Selma', 'Oscar', 'William', 'Liam', 'Noah', 'Lucas', 'Oliver', 'Elias', 'Hugo', 'Alexander', 'Isak', 'Leo', 'Axel', 'Emil', 'Vincent', 'Alfred', 'Erik', 'Anton', 'Viktor', 'Karl', 'Johan', 'Anna', 'Maria', 'Linnéa', 'Sofia', 'Elin', 'Emma', 'Hanna', 'Sara', 'Ida', 'Johanna', 'Lisa', 'Karin', 'Eva', 'Lena', 'Kristina'],
+    firstNameMale: [
+      'Oscar', 'William', 'Liam', 'Noah', 'Lucas', 'Oliver', 'Elias', 'Hugo', 'Alexander', 'Isak',
+      'Leo', 'Axel', 'Emil', 'Vincent', 'Alfred', 'Erik', 'Anton', 'Viktor', 'Karl', 'Johan',
+      'Anders', 'Lars', 'Per', 'Mikael', 'Gustav', 'Nils', 'Magnus', 'Sven', 'Olle', 'Fredrik',
+      'Henrik', 'Peter', 'Daniel', 'Andreas', 'Martin', 'Stefan', 'Mattias', 'Niklas', 'Patrik', 'Tomas',
+      'Jan', 'Göran', 'Bengt', 'Ulf', 'Björn', 'Lennart', 'Christer', 'Leif', 'Kjell', 'Rolf',
+    ],
+    firstNameFemale: [
+      'Alice', 'Elsa', 'Maja', 'Ella', 'Wilma', 'Alma', 'Ebba', 'Lilly', 'Astrid', 'Saga',
+      'Agnes', 'Freja', 'Stella', 'Clara', 'Selma', 'Anna', 'Maria', 'Linnéa', 'Sofia', 'Elin',
+      'Emma', 'Hanna', 'Sara', 'Ida', 'Johanna', 'Lisa', 'Karin', 'Eva', 'Lena', 'Kristina',
+      'Ingrid', 'Birgitta', 'Margareta', 'Elisabeth', 'Annika', 'Monica', 'Gunilla', 'Susanne', 'Katarina', 'Anita',
+      'Ylva', 'Frida', 'Kerstin', 'Cecilia', 'Malin', 'Viktoria', 'Therese', 'Marie', 'Charlotte', 'Camilla',
+    ],
+    firstNameNeutral: [
+      'Kim', 'Alex', 'Charlie', 'Sam', 'Robin', 'Morgan', 'Casey', 'Riley', 'Jamie', 'Taylor',
+    ],
     lastName: ['Andersson', 'Johansson', 'Karlsson', 'Nilsson', 'Eriksson', 'Larsson', 'Olsson', 'Persson', 'Svensson', 'Gustafsson', 'Pettersson', 'Jonsson', 'Jansson', 'Hansson', 'Bengtsson', 'Jönsson', 'Lindberg', 'Jakobsson', 'Magnusson', 'Olofsson', 'Lindström', 'Lindqvist', 'Lindgren', 'Berg', 'Axelsson', 'Bergström', 'Lundberg', 'Lund', 'Lundgren', 'Mattsson', 'Berglund', 'Fredriksson', 'Sandberg', 'Henriksson', 'Forsberg', 'Sjöberg', 'Wallin', 'Engström', 'Danielsson', 'Håkansson'],
-    gender: ['Man', 'Kvinna', 'Annat'],
-    jobTitle: ['Mjukvaruutvecklare', 'Projektledare', 'Designer', 'Marknadschef', 'Försäljningschef', 'Revisor', 'Jurist', 'Läkare', 'Sjuksköterska', 'Lärare', 'Professor', 'Forskare', 'Dataanalytiker', 'Produktchef', 'HR-chef', 'Konsult', 'Arkitekt', 'Ingenjör', 'Tekniker', 'Kock', 'Författare', 'Journalist', 'Fotograf', 'Konstnär', 'Musiker'],
     prefix: ['Herr', 'Fru', 'Fröken', 'Dr.', 'Prof.', 'Ing.'],
     suffix: ['Jr.', 'Sr.', 'II', 'III', 'IV'],
+    gender: ['Man', 'Kvinna', 'Annat'],
+    jobTitle: ['Mjukvaruutvecklare', 'Projektledare', 'Designer', 'Marknadschef', 'Försäljningschef', 'Revisor', 'Jurist', 'Läkare', 'Sjuksköterska', 'Lärare', 'Professor', 'Forskare', 'Dataanalytiker', 'Produktchef', 'HR-chef', 'Konsult', 'Arkitekt', 'Ingenjör', 'Tekniker', 'Kock', 'Författare', 'Journalist', 'Fotograf', 'Konstnär', 'Musiker'],
   },
   address: {
     street: ['Drottninggatan', 'Kungsgatan', 'Storgatan', 'Sveavägen', 'Götgatan', 'Vasagatan', 'Birger Jarlsgatan', 'Hornsgatan', 'Folkungagatan', 'Kungsholmsgatan', 'Hamngatan', 'Regeringsgatan', 'Karlavägen', 'Strandvägen', 'Narvavägen', 'Valhallavägen', 'Odengatan', 'Östermalmsgatan', 'Norrtullsgatan', 'Södermalmsallén', 'Skånegatan', 'Ringvägen', 'Norrlandsgatan', 'Biblioteksgatan', 'Smålandsgatan', 'Linnégatan', 'Artillerigatan', 'Brahegatan', 'Engelbrektsgatan', 'Rådmansgatan'],

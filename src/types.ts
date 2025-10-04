@@ -28,12 +28,23 @@ export interface LocaleDefinition {
 }
 
 export interface PersonLocale {
-  firstName: string[]
+  firstNameMale: string[]
+  firstNameFemale: string[]
+  firstNameNeutral?: string[]
   lastName: string[]
   prefix: string[]
   suffix: string[]
   gender: string[]
   jobTitle: string[]
+}
+
+export interface PersonNameOptions {
+  gender?: 'male' | 'female' | 'neutral'
+}
+
+export interface PersonFullNameOptions extends PersonNameOptions {
+  prefix?: boolean
+  suffix?: boolean
 }
 
 export interface AddressLocale {

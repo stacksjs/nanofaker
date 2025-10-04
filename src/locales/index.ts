@@ -15,6 +15,10 @@ import { sv } from './sv'
 import { da } from './da'
 import { uk } from './uk'
 import { hi } from './hi'
+import { fi } from './fi'
+import { tr } from './tr'
+import { pl } from './pl'
+import { cs } from './cs'
 
 export const locales: Record<string, LocaleDefinition> = {
   en,
@@ -33,6 +37,10 @@ export const locales: Record<string, LocaleDefinition> = {
   da,
   uk,
   hi,
+  fi,
+  tr,
+  pl,
+  cs,
 }
 
-export { en, es, fr, de, it, pt, ja, tl, zh, nl, ko, no, sv, da, uk, hi }
+export { en, es, fr, de, it, pt, ja, tl, zh, nl, ko, no, sv, da, uk, hi, fi, tr, pl, cs }

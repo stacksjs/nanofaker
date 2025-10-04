@@ -3,10 +3,23 @@ import type { LocaleDefinition } from '../types'
 export const fr: LocaleDefinition = {
   title: 'French',
   person: {
-    firstName: [
-      'Marie', 'Nathalie', 'Isabelle', 'Anne', 'Christine', 'Sophie', 'Catherine', 'Françoise', 'Monique', 'Julie',
+    firstNameMale: [
       'Jean', 'Pierre', 'Michel', 'André', 'Philippe', 'Alain', 'Bernard', 'Jacques', 'Louis', 'Nicolas',
-      'Emma', 'Louise', 'Chloé', 'Camille', 'Léa', 'Manon', 'Clara', 'Sarah', 'Inès', 'Zoé',
+      'François', 'Patrick', 'Christian', 'Daniel', 'Claude', 'Gérard', 'René', 'Paul', 'Marc', 'Olivier',
+      'Julien', 'Éric', 'Laurent', 'Thomas', 'Antoine', 'Alexandre', 'Sébastien', 'Maxime', 'Vincent', 'David',
+      'Lucas', 'Hugo', 'Nathan', 'Léo', 'Gabriel', 'Arthur', 'Raphaël', 'Louis', 'Jules', 'Adam',
+      'Mathis', 'Noah', 'Théo', 'Tom', 'Ethan', 'Paul', 'Timéo', 'Enzo', 'Liam', 'Mathéo',
+    ],
+    firstNameFemale: [
+      'Marie', 'Nathalie', 'Isabelle', 'Anne', 'Christine', 'Sophie', 'Catherine', 'Françoise', 'Monique', 'Julie',
+      'Sylvie', 'Patricia', 'Martine', 'Sandrine', 'Valérie', 'Hélène', 'Nicole', 'Stéphanie', 'Véronique', 'Corinne',
+      'Emma', 'Louise', 'Chloé', 'Léa', 'Manon', 'Clara', 'Sarah', 'Inès', 'Zoé', 'Jade',
+      'Lina', 'Léna', 'Lucie', 'Alice', 'Rose', 'Anna', 'Charlotte', 'Juliette', 'Ambre', 'Anaïs',
+      'Éloïse', 'Margaux', 'Pauline', 'Céline', 'Mélanie', 'Laura', 'Marina', 'Océane', 'Éva', 'Nina',
+    ],
+    firstNameNeutral: [
+      'Camille', 'Dominique', 'Claude', 'Sacha', 'Charlie', 'Alex', 'Lou', 'Morgan', 'Eden', 'Noa',
+      'Andrea', 'Maxime', 'Alix', 'Sasha', 'Stéphane', 'Andréa', 'Yael', 'Kim',
     ],
     lastName: [
       'Martin', 'Bernard', 'Dubois', 'Thomas', 'Robert', 'Richard', 'Petit', 'Durand', 'Leroy', 'Moreau',

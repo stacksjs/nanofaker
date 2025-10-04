@@ -439,9 +439,9 @@ describe('Faker Library', () => {
       expect(locales).toContain('tl')
     })
 
-    it('should have all 8 locales available', () => {
+    it('should have all 20 locales available', () => {
       const locales = Faker.availableLocales
-      expect(locales.length).toBe(8)
+      expect(locales.length).toBe(20)
     })
   })
 

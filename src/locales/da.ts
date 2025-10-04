@@ -3,7 +3,24 @@ import type { LocaleDefinition } from '../types'
 export const da: LocaleDefinition = {
   title: 'Danish',
   person: {
-    firstName: ['Emma', 'Ida', 'Clara', 'Laura', 'Anna', 'Sofie', 'Freja', 'Ella', 'Isabella', 'Alma', 'Sofia', 'Karla', 'Josefine', 'Caroline', 'Maja', 'William', 'Oliver', 'Noah', 'Lucas', 'Oscar', 'Emil', 'Victor', 'Magnus', 'Frederik', 'Malthe', 'Alfred', 'Aksel', 'August', 'Elias', 'Carl', 'Christian', 'Mads', 'Rasmus', 'Kasper', 'Simon', 'Maria', 'Anne', 'Mette', 'Louise', 'Camilla', 'Julie', 'Katrine', 'Line', 'Sarah', 'Mathilde', 'Nanna', 'Cecilie', 'Rebecca', 'Emilie', 'Natasha'],
+    firstNameMale: [
+      'William', 'Oliver', 'Noah', 'Lucas', 'Oscar', 'Emil', 'Victor', 'Magnus', 'Frederik', 'Malthe',
+      'Alfred', 'Aksel', 'August', 'Elias', 'Carl', 'Christian', 'Mads', 'Rasmus', 'Mikkel', 'Kasper',
+      'Simon', 'Anders', 'Nikolaj', 'Mathias', 'Søren', 'Peter', 'Lars', 'Thomas', 'Jens', 'Henrik',
+      'Niels', 'Jesper', 'Martin', 'Jakob', 'Kristian', 'Daniel', 'Jonas', 'Sebastian', 'Benjamin', 'Alexander',
+      'Marcus', 'Anton', 'Tobias', 'Lasse', 'Phillip', 'Marcus', 'Casper', 'David', 'Emil', 'Johan',
+    ],
+    firstNameFemale: [
+      'Emma', 'Ida', 'Clara', 'Laura', 'Anna', 'Sofie', 'Freja', 'Ella', 'Isabella', 'Alma',
+      'Sofia', 'Karla', 'Josefine', 'Caroline', 'Maja', 'Maria', 'Anne', 'Mette', 'Louise', 'Camilla',
+      'Julie', 'Katrine', 'Line', 'Sarah', 'Mathilde', 'Nanna', 'Cecilie', 'Rebecca', 'Emilie', 'Natasha',
+      'Lærke', 'Signe', 'Liv', 'Agnes', 'Ellen', 'Katrine', 'Eva', 'Rikke', 'Hanne', 'Charlotte',
+      'Maja', 'Victoria', 'Filippa', 'Olivia', 'Alberte', 'Astrid', 'Nora', 'Vigga', 'Frida', 'Lea',
+    ],
+    firstNameNeutral: [
+      'Andrea', 'Kim', 'Mika', 'Alex', 'Robin', 'Sasha', 'Jamie', 'Charlie', 'Morgan', 'Ari',
+      'Sage', 'River', 'Kai', 'Phoenix', 'Skyler', 'Riley', 'Casey', 'Taylor', 'Jordan', 'Quinn',
+    ],
     lastName: ['Nielsen', 'Jensen', 'Hansen', 'Pedersen', 'Andersen', 'Christensen', 'Larsen', 'Sørensen', 'Rasmussen', 'Jørgensen', 'Petersen', 'Madsen', 'Kristensen', 'Olsen', 'Thomsen', 'Christiansen', 'Poulsen', 'Johansen', 'Møller', 'Mortensen', 'Knudsen', 'Jacobsen', 'Laursen', 'Lund', 'Schmidt', 'Eriksen', 'Holm', 'Berg', 'Frederiksen', 'Jakobsen', 'Kjær', 'Simonsen', 'Mogensen', 'Iversen', 'Jeppesen', 'Mikkelsen', 'Frandsen', 'Koch', 'Vestergaard', 'Jespersen'],
     gender: ['Mand', 'Kvinde', 'Andet'],
     jobTitle: ['Softwareudvikler', 'Projektleder', 'Designer', 'Marketingchef', 'Salgschef', 'Revisor', 'Advokat', 'Læge', 'Sygeplejerske', 'Lærer', 'Professor', 'Forsker', 'Dataanalytiker', 'Produktchef', 'HR-chef', 'Konsulent', 'Arkitekt', 'Ingeniør', 'Tekniker', 'Kok', 'Forfatter', 'Journalist', 'Fotograf', 'Kunstner', 'Musiker'],

@@ -3,10 +3,20 @@ import type { LocaleDefinition } from '../types'
 export const es: LocaleDefinition = {
   title: 'Spanish',
   person: {
-    firstName: [
-      'María', 'Carmen', 'Josefa', 'Isabel', 'Dolores', 'Pilar', 'Teresa', 'Ana', 'Francisca', 'Laura',
+    firstNameMale: [
       'Antonio', 'José', 'Manuel', 'Francisco', 'Juan', 'David', 'Carlos', 'Miguel', 'Pedro', 'Luis',
+      'Jesús', 'Javier', 'Fernando', 'Daniel', 'Pablo', 'Rafael', 'Alejandro', 'Ángel', 'Sergio', 'Alberto',
+      'Diego', 'Jorge', 'Andrés', 'Rubén', 'Adrián', 'Raúl', 'Enrique', 'Óscar', 'Marcos', 'Iván',
+      'Santiago', 'Mateo', 'Sebastián', 'Nicolás', 'Gabriel', 'Lucas', 'Martín', 'Hugo', 'Bruno', 'Leo',
+    ],
+    firstNameFemale: [
+      'María', 'Carmen', 'Josefa', 'Isabel', 'Dolores', 'Pilar', 'Teresa', 'Ana', 'Francisca', 'Laura',
+      'Rosa', 'Cristina', 'Marta', 'Elena', 'Patricia', 'Raquel', 'Beatriz', 'Sara', 'Silvia', 'Mercedes',
       'Sofía', 'Isabella', 'Valentina', 'Camila', 'Valeria', 'Lucía', 'Martina', 'Emma', 'Victoria', 'Gabriela',
+      'Paula', 'Claudia', 'Natalia', 'Andrea', 'Lorena', 'Mónica', 'Ángela', 'Rocío', 'Verónica', 'Alicia',
+    ],
+    firstNameNeutral: [
+      'Ariel', 'Alex', 'Cruz', 'Guadalupe', 'Jesús María', 'Trinidad', 'Asunción', 'Montserrat', 'Azul', 'Mar',
     ],
     lastName: [
       'García', 'Martínez', 'López', 'González', 'Rodríguez', 'Fernández', 'Pérez', 'Sánchez', 'Ramírez', 'Torres',
