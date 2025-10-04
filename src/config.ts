@@ -2,7 +2,8 @@ import type { FakerConfig } from './types'
 import { loadConfig } from 'bunfig'
 
 export const defaultConfig: FakerConfig = {
-  verbose: true,
+  verbose: false,
+  locale: 'en',
 }
 
 // eslint-disable-next-line antfu/no-top-level-await
