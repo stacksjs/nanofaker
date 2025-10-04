@@ -12,6 +12,20 @@ import { StringModule } from './modules/string'
 import { ColorModule } from './modules/color'
 import { FinanceModule } from './modules/finance'
 import { HelpersModule } from './modules/helpers'
+import { VehicleModule } from './modules/vehicle'
+import { ImageModule } from './modules/image'
+import { GitModule } from './modules/git'
+import { ScienceModule } from './modules/science'
+import { MusicModule } from './modules/music'
+import { DatabaseModule } from './modules/database'
+import { FoodModule } from './modules/food'
+import { CommerceModule } from './modules/commerce'
+import { BookModule } from './modules/book'
+import { AnimalModule } from './modules/animal'
+import { SportModule } from './modules/sport'
+import { HackerModule } from './modules/hacker'
+import { SystemModule } from './modules/system'
+import { WordModule } from './modules/word'
 import { locales } from './locales'
 
 /**
@@ -42,6 +56,20 @@ export class Faker {
   public readonly color: ColorModule
   public readonly finance: FinanceModule
   public readonly helpers: HelpersModule
+  public readonly vehicle: VehicleModule
+  public readonly image: ImageModule
+  public readonly git: GitModule
+  public readonly science: ScienceModule
+  public readonly music: MusicModule
+  public readonly database: DatabaseModule
+  public readonly food: FoodModule
+  public readonly commerce: CommerceModule
+  public readonly book: BookModule
+  public readonly animal: AnimalModule
+  public readonly sport: SportModule
+  public readonly hacker: HackerModule
+  public readonly system: SystemModule
+  public readonly word: WordModule
 
   constructor(options?: FakerOptions) {
     const locale = options?.locale ?? 'en'
@@ -63,6 +91,20 @@ export class Faker {
     this.color = new ColorModule(this._random)
     this.finance = new FinanceModule(this._random)
     this.helpers = new HelpersModule(this._random)
+    this.vehicle = new VehicleModule(this._random)
+    this.image = new ImageModule(this._random)
+    this.git = new GitModule(this._random)
+    this.science = new ScienceModule(this._random)
+    this.music = new MusicModule(this._random)
+    this.database = new DatabaseModule(this._random)
+    this.food = new FoodModule(this._random)
+    this.commerce = new CommerceModule(this._random)
+    this.book = new BookModule(this._random)
+    this.animal = new AnimalModule(this._random)
+    this.sport = new SportModule(this._random)
+    this.hacker = new HackerModule(this._random)
+    this.system = new SystemModule(this._random)
+    this.word = new WordModule(this._random)
   }
 
   /**
@@ -85,6 +127,20 @@ export class Faker {
     Object.assign(this.color, new ColorModule(this._random))
     Object.assign(this.finance, new FinanceModule(this._random))
     Object.assign(this.helpers, new HelpersModule(this._random))
+    Object.assign(this.vehicle, new VehicleModule(this._random))
+    Object.assign(this.image, new ImageModule(this._random))
+    Object.assign(this.git, new GitModule(this._random))
+    Object.assign(this.science, new ScienceModule(this._random))
+    Object.assign(this.music, new MusicModule(this._random))
+    Object.assign(this.database, new DatabaseModule(this._random))
+    Object.assign(this.food, new FoodModule(this._random))
+    Object.assign(this.commerce, new CommerceModule(this._random))
+    Object.assign(this.book, new BookModule(this._random))
+    Object.assign(this.animal, new AnimalModule(this._random))
+    Object.assign(this.sport, new SportModule(this._random))
+    Object.assign(this.hacker, new HackerModule(this._random))
+    Object.assign(this.system, new SystemModule(this._random))
+    Object.assign(this.word, new WordModule(this._random))
 
     return this
   }
