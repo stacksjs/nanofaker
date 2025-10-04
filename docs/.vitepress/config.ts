@@ -60,6 +60,24 @@ const sidebar = [
       { text: 'Config', link: '/config' },
     ],
   },
+  {
+    text: 'Features',
+    items: [
+      { text: 'Locale Support', link: '/features/locales' },
+      { text: 'Data Categories', link: '/features/categories' },
+      { text: 'Performance', link: '/features/performance' },
+      { text: 'TypeScript Support', link: '/features/typescript' },
+    ],
+  },
+  {
+    text: 'Advanced',
+    items: [
+      { text: 'Seeding', link: '/advanced/seeding' },
+      { text: 'Extending', link: '/advanced/extending' },
+      { text: 'Testing', link: '/advanced/testing' },
+      { text: 'API Reference', link: '/advanced/api-reference' },
+    ],
+  },
   { text: 'Showcase', link: '/Showcase' },
 ]
 const description = 'A performance-focused and lightweight faker library for TypeScript with comprehensive locale support.'
