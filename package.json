@@ -13,7 +13,26 @@
   "bugs": {
     "url": "https://github.com/stacksjs/nanofaker/issues"
   },
-  "keywords": ["typescript", "faker", "bun", "package"],
+  "keywords": [
+    "faker",
+    "fake-data",
+    "test-data",
+    "mock-data",
+    "typescript",
+    "locale",
+    "i18n",
+    "internationalization",
+    "seeding",
+    "testing",
+    "fixtures",
+    "random",
+    "generator",
+    "mock",
+    "bun",
+    "performance",
+    "lightweight",
+    "cli"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -66,10 +85,10 @@
     "@stacksjs/gitlint": "^0.1.5",
     "@stacksjs/logsmith": "^0.1.18",
     "@types/bun": "^1.2.23",
-    "buddy-bot": "^0.8.10",
+    "buddy-bot": "^0.9.7",
     "bun-git-hooks": "^0.2.19",
-    "bun-plugin-dtsx": "^0.21.12",
-    "bunfig": "^0.10.1",
+    "bun-plugin-dtsx": "0.21.12",
+    "bunfig": "^0.15.0",
     "typescript": "^5.9.3"
   },
   "overrides": {
