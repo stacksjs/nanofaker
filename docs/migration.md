@@ -438,7 +438,7 @@ export const legacyFaker = {
 Ensure your tests work with the new library:
 
 ```ts
-import { describe, test, expect } from 'bun:test'
+import { describe, expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 describe('Migration tests', () => {

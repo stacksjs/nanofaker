@@ -1,0 +1,39 @@
+// Default faker instance for convenience
+import { Faker } from './faker'
+
+export * from './config'
+export * from './faker'
+export * from './locale-loader'
+export { AddressModule } from './modules/address'
+export { AnimalModule } from './modules/animal'
+
+export { BookModule } from './modules/book'
+export { ColorModule } from './modules/color'
+export { CommerceModule } from './modules/commerce'
+export { CompanyModule } from './modules/company'
+export { DatabaseModule } from './modules/database'
+export { DateModule } from './modules/date'
+export { FinanceModule } from './modules/finance'
+export { FoodModule } from './modules/food'
+export { GitModule } from './modules/git'
+export { HackerModule } from './modules/hacker'
+export { HelpersModule } from './modules/helpers'
+export { ImageModule } from './modules/image'
+export { InternetModule } from './modules/internet'
+export { LoremModule } from './modules/lorem'
+export { MusicModule } from './modules/music'
+export { NumberModule } from './modules/number'
+export { PersonModule } from './modules/person'
+export { PhoneModule } from './modules/phone'
+export { ScienceModule } from './modules/science'
+export { SportModule } from './modules/sport'
+export { StringModule } from './modules/string'
+export { SystemModule } from './modules/system'
+export { VehicleModule } from './modules/vehicle'
+export { WordModule } from './modules/word'
+export * from './random'
+export * from './types'
+export const faker: Faker = new Faker()
+
+// Default export
+export default faker

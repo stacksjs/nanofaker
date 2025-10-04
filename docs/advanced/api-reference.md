@@ -979,8 +979,8 @@ The main faker interface.
 ```ts
 interface Faker {
   locale: string
-  locale(locale: string): Faker
-  seed(seed?: number): void
+  locale: (locale: string) => Faker
+  seed: (seed?: number) => void
   person: PersonMethods
   address: AddressMethods
   company: CompanyMethods

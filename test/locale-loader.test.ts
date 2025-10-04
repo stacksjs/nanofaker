@@ -1,6 +1,6 @@
-import { describe, expect, it, beforeEach } from 'bun:test'
-import { LocaleLoader } from '../src/locale-loader'
-import { Faker } from '../src/faker'
+import { beforeEach, describe, expect, it } from 'bun:test'
+import { Faker } from '../packages/core/src/faker'
+import { LocaleLoader } from '../packages/core/src/locale-loader'
 
 describe('LocaleLoader', () => {
   beforeEach(() => {

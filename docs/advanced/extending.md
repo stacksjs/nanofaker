@@ -74,9 +74,9 @@ import { faker } from 'nanofaker'
 
 interface ExtendedFaker {
   fantasy: {
-    dragon(): string
-    spell(): string
-    kingdom(): string
+    dragon: () => string
+    spell: () => string
+    kingdom: () => string
   }
 }
 
@@ -98,7 +98,7 @@ extendedFaker.fantasy = {
 }
 
 console.log(extendedFaker.fantasy.dragon()) // "Smaug"
-console.log(extendedFaker.fantasy.spell())  // "Fireball"
+console.log(extendedFaker.fantasy.spell()) // "Fireball"
 ```
 
 ## Wrapper Functions
@@ -150,8 +150,7 @@ import { faker } from 'nanofaker'
 // Credit card formatter
 function generateCreditCard() {
   const cardNumber = Array.from({ length: 16 }, () =>
-    Math.floor(Math.random() * 10)
-  ).join('')
+    Math.floor(Math.random() * 10)).join('')
 
   return {
     number: cardNumber.match(/.{1,4}/g)?.join('-'),
@@ -358,6 +357,10 @@ const users = ['en', 'es', 'fr', 'de'].map(locale => ({
 
 ```ts
 // extensions/gaming.ts
+// main.ts
+import { faker } from 'nanofaker'
+import { gamingExtension } from './extensions/gaming'
+
 export const gamingExtension = {
   gamertag: () => {
     // Implementation
@@ -370,10 +373,6 @@ export const financeExtension = {
     // Implementation
   },
 }
-
-// main.ts
-import { faker } from 'nanofaker'
-import { gamingExtension } from './extensions/gaming'
 
 Object.assign(faker, { gaming: gamingExtension })
 ```
@@ -407,7 +406,7 @@ faker.CustomCategory.MethodName()
 ### 4. Test Your Extensions
 
 ```ts
-import { describe, test, expect } from 'bun:test'
+import { describe, expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 describe('Custom extensions', () => {

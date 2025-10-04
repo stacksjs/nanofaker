@@ -24,11 +24,11 @@ nanofaker exports comprehensive type definitions:
 
 ```ts
 import type {
+  AddressDefinition,
+  CompanyDefinition,
   Faker,
   LocaleDefinition,
   PersonDefinition,
-  AddressDefinition,
-  CompanyDefinition,
   // ... all other types
 } from 'nanofaker'
 ```
@@ -41,13 +41,13 @@ Locales are strongly typed:
 import { faker } from 'nanofaker'
 
 // Type-safe locale setting
-faker.locale = 'en'  // ✓ Valid
-faker.locale = 'es'  // ✓ Valid
+faker.locale = 'en' // ✓ Valid
+faker.locale = 'es' // ✓ Valid
 faker.locale = 'invalid' // ✗ TypeScript error
 
 // Type-safe locale creation
-const enFaker = faker.locale('en')  // ✓ Valid
-const esFaker = faker.locale('es')  // ✓ Valid
+const enFaker = faker.locale('en') // ✓ Valid
+const esFaker = faker.locale('es') // ✓ Valid
 const badFaker = faker.locale('xx') // ✗ TypeScript error
 ```
 
@@ -61,7 +61,7 @@ import type { Faker } from 'nanofaker'
 // Extend with your custom types
 interface ExtendedFaker extends Faker {
   custom: {
-    myMethod(): string
+    myMethod: () => string
   }
 }
 
@@ -155,7 +155,7 @@ import { faker } from 'nanofaker'
 
 // All methods return non-nullable strings
 const name: string = faker.person.fullName() // ✓ No null/undefined
-const email: string = faker.internet.email()  // ✓ No null/undefined
+const email: string = faker.internet.email() // ✓ No null/undefined
 ```
 
 ## IDE Support

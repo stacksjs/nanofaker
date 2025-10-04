@@ -15,7 +15,7 @@ Learn how to use nanofaker effectively in your test suites for unit tests, integ
 ### Basic Example
 
 ```ts
-import { describe, test, expect } from 'bun:test'
+import { describe, expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 describe('User validation', () => {
@@ -36,7 +36,7 @@ describe('User validation', () => {
 ### Seeded Tests for Consistency
 
 ```ts
-import { describe, test, expect, beforeEach } from 'bun:test'
+import { beforeEach, describe, expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 describe('User service', () => {
@@ -71,7 +71,7 @@ describe('User service', () => {
 ### Database Testing
 
 ```ts
-import { describe, test, expect, beforeEach, afterEach } from 'bun:test'
+import { afterEach, beforeEach, describe, expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 describe('User repository', () => {
@@ -116,7 +116,7 @@ describe('User repository', () => {
 ### API Testing
 
 ```ts
-import { describe, test, expect } from 'bun:test'
+import { describe, expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 describe('User API', () => {
@@ -243,7 +243,7 @@ test('product pricing', () => {
 ### Basic Snapshots
 
 ```ts
-import { test, expect } from 'bun:test'
+import { expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 test('user profile matches snapshot', () => {
@@ -262,7 +262,7 @@ test('user profile matches snapshot', () => {
 ### Dynamic Snapshots
 
 ```ts
-import { test, expect } from 'bun:test'
+import { expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 test('generates consistent user list', () => {
@@ -329,18 +329,17 @@ test('memory usage remains stable', () => {
 ### Testing with Edge Data
 
 ```ts
-import { test, expect } from 'bun:test'
+import { expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 test('handles various name formats', () => {
   faker.seed(1)
 
   const names = Array.from({ length: 100 }, () =>
-    faker.person.fullName()
-  )
+    faker.person.fullName())
 
   // Test that all names are valid
-  names.forEach(name => {
+  names.forEach((name) => {
     expect(name.length).toBeGreaterThan(0)
     expect(name).not.toContain('undefined')
     expect(name).not.toContain('null')
@@ -350,7 +349,7 @@ test('handles various name formats', () => {
 test('handles all locales', () => {
   const locales = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ja', 'tl', 'zh']
 
-  locales.forEach(locale => {
+  locales.forEach((locale) => {
     faker.locale = locale as any
     const name = faker.person.fullName()
 
@@ -434,7 +433,7 @@ afterEach(async () => {
 
 ```ts
 test('handles international users', () => {
-  ['en', 'es', 'ja'].forEach(locale => {
+  ['en', 'es', 'ja'].forEach((locale) => {
     faker.locale = locale as any
     const user = createUser()
     expect(validateUser(user)).toBe(true)
@@ -449,10 +448,9 @@ import { faker } from 'nanofaker'
 
 test('email validation works for all generated emails', () => {
   const emails = Array.from({ length: 100 }, () =>
-    faker.internet.email()
-  )
+    faker.internet.email())
 
-  emails.forEach(email => {
+  emails.forEach((email) => {
     expect(validateEmail(email)).toBe(true)
   })
 })

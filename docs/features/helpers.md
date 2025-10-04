@@ -219,13 +219,11 @@ const uniqueEmail = faker.helpers.unique(() => faker.internet.email())
 ```ts
 // Generate 10 unique names
 const uniqueNames = Array.from({ length: 10 }, () =>
-  faker.helpers.unique(() => faker.person.firstName())
-)
+  faker.helpers.unique(() => faker.person.firstName()))
 
 // Generate 5 unique emails
 const uniqueEmails = Array.from({ length: 5 }, () =>
-  faker.helpers.unique(() => faker.internet.email())
-)
+  faker.helpers.unique(() => faker.internet.email()))
 ```
 
 **Note**: The unique helper tracks values and retries up to 50 times. If it can't find a unique value, it throws an error.
@@ -234,9 +232,9 @@ const uniqueEmails = Array.from({ length: 5 }, () =>
 // This might fail if the source data is too small
 try {
   const names = Array.from({ length: 100 }, () =>
-    faker.helpers.unique(() => faker.helpers.arrayElement(['A', 'B', 'C']))
-  )
-} catch (error) {
+    faker.helpers.unique(() => faker.helpers.arrayElement(['A', 'B', 'C'])))
+}
+catch (error) {
   console.error('Failed to generate unique values')
 }
 ```
@@ -395,8 +393,7 @@ const shuffled = faker.helpers.shuffle([1, 2, 3, 4, 5])
 
 // Always returns same unique values with same seed
 const unique = Array.from({ length: 3 }, () =>
-  faker.helpers.unique(() => faker.person.firstName())
-)
+  faker.helpers.unique(() => faker.person.firstName()))
 ```
 
 ### With Locales
@@ -418,7 +415,7 @@ const shuffledCities = faker.helpers.shuffle([
 ### In Tests
 
 ```ts
-import { describe, test, expect } from 'bun:test'
+import { describe, expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 describe('User tests', () => {
@@ -431,7 +428,7 @@ describe('User tests', () => {
     }), 10)
 
     expect(users).toHaveLength(10)
-    users.forEach(user => {
+    users.forEach((user) => {
       expect(user.email).toContain('@')
       expect(['admin', 'user', 'guest']).toContain(user.role)
     })

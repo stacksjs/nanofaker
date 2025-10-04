@@ -1,8 +1,7 @@
-import { describe, test, expect, beforeEach } from 'bun:test'
+import { describe, expect, test } from 'bun:test'
 import { spawn } from 'node:child_process'
-import { promisify } from 'node:util'
 
-const execCLI = (args: string[]): Promise<{ stdout: string, stderr: string, exitCode: number }> => {
+function execCLI(args: string[]): Promise<{ stdout: string, stderr: string, exitCode: number }> {
   return new Promise((resolve) => {
     const process = spawn('bun', ['run', './bin/cli.ts', ...args])
     let stdout = ''
@@ -409,9 +408,12 @@ describe('CLI', () => {
         'generate',
         'person',
         'fullName',
-        '--locale', 'es',
-        '--count', '3',
-        '--seed', '12345',
+        '--locale',
+        'es',
+        '--count',
+        '3',
+        '--seed',
+        '12345',
         '--json',
       ])
       expect(exitCode).toBe(0)

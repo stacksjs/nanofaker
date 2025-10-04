@@ -1,0 +1,334 @@
+import type { LocaleDefinition } from '../types'
+
+export const en: LocaleDefinition = {
+  title: 'English',
+  person: {
+    firstNameMale: [
+      'James', 'John', 'Robert', 'Michael', 'William', 'David', 'Richard', 'Joseph', 'Thomas', 'Charles',
+      'Christopher', 'Daniel', 'Matthew', 'Anthony', 'Mark', 'Donald', 'Steven', 'Paul', 'Andrew', 'Joshua',
+      'Kenneth', 'Kevin', 'Brian', 'George', 'Timothy', 'Ronald', 'Edward', 'Jason', 'Jeffrey', 'Ryan',
+      'Jacob', 'Gary', 'Nicholas', 'Eric', 'Jonathan', 'Stephen', 'Larry', 'Justin', 'Scott', 'Brandon',
+      'Benjamin', 'Samuel', 'Raymond', 'Gregory', 'Frank', 'Alexander', 'Patrick', 'Jack', 'Dennis', 'Jerry',
+      'Liam', 'Noah', 'Oliver', 'Elijah', 'Lucas', 'Mason', 'Logan', 'Ethan',
+      'Henry', 'Jackson', 'Sebastian', 'Aiden', 'Carter', 'Owen', 'Wyatt', 'Luke', 'Jayden',
+      'Dylan', 'Grayson', 'Levi', 'Isaac', 'Gabriel', 'Julian', 'Mateo', 'Jaxon', 'Lincoln',
+    ],
+    firstNameFemale: [
+      'Mary', 'Patricia', 'Jennifer', 'Linda', 'Elizabeth', 'Barbara', 'Susan', 'Jessica', 'Sarah', 'Karen',
+      'Lisa', 'Nancy', 'Betty', 'Margaret', 'Sandra', 'Ashley', 'Kimberly', 'Emily', 'Donna', 'Michelle',
+      'Dorothy', 'Carol', 'Amanda', 'Melissa', 'Deborah', 'Stephanie', 'Rebecca', 'Sharon', 'Laura', 'Cynthia',
+      'Kathleen', 'Amy', 'Angela', 'Shirley', 'Anna', 'Brenda', 'Pamela', 'Emma', 'Nicole', 'Helen',
+      'Olivia', 'Ava', 'Isabella', 'Sophia', 'Mia', 'Charlotte', 'Amelia', 'Harper', 'Evelyn', 'Abigail',
+      'Sofia', 'Ella', 'Scarlett', 'Grace', 'Chloe', 'Victoria',
+      'Aria', 'Lily', 'Aubrey', 'Zoey', 'Penelope', 'Lillian', 'Addison', 'Layla', 'Natalie', 'Camila',
+    ],
+    firstNameNeutral: [
+      'Taylor', 'Jordan', 'Alex', 'Riley', 'Casey', 'Morgan', 'Avery', 'Quinn', 'Blake', 'Cameron',
+      'Sage', 'River', 'Phoenix', 'Rowan', 'Skyler', 'Charlie', 'Finley', 'Peyton', 'Reese', 'Kai',
+    ],
+    lastName: [
+      'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez',
+      'Hernandez', 'Lopez', 'Gonzalez', 'Wilson', 'Anderson', 'Thomas', 'Taylor', 'Moore', 'Jackson', 'Martin',
+      'Lee', 'Perez', 'Thompson', 'White', 'Harris', 'Sanchez', 'Clark', 'Ramirez', 'Lewis', 'Robinson',
+      'Walker', 'Young', 'Allen', 'King', 'Wright', 'Scott', 'Torres', 'Nguyen', 'Hill', 'Flores',
+      'Green', 'Adams', 'Nelson', 'Baker', 'Hall', 'Rivera', 'Campbell', 'Mitchell', 'Carter', 'Roberts',
+      'Gomez', 'Phillips', 'Evans', 'Turner', 'Diaz', 'Parker', 'Cruz', 'Edwards', 'Collins', 'Reyes',
+      'Stewart', 'Morris', 'Morales', 'Murphy', 'Cook', 'Rogers', 'Gutierrez', 'Ortiz', 'Morgan', 'Cooper',
+      'Peterson', 'Bailey', 'Reed', 'Kelly', 'Howard', 'Ramos', 'Kim', 'Cox', 'Ward', 'Richardson',
+      'Watson', 'Brooks', 'Chavez', 'Wood', 'James', 'Bennett', 'Gray', 'Mendoza', 'Ruiz', 'Hughes',
+      'Price', 'Alvarez', 'Castillo', 'Sanders', 'Patel', 'Myers', 'Long', 'Ross', 'Foster', 'Jimenez',
+    ],
+    prefix: ['Mr.', 'Mrs.', 'Ms.', 'Miss', 'Dr.', 'Prof.'],
+    suffix: ['Jr.', 'Sr.', 'I', 'II', 'III', 'IV', 'V', 'MD', 'PhD', 'DDS'],
+    gender: ['Male', 'Female', 'Non-binary', 'Agender', 'Bigender', 'Genderfluid', 'Genderqueer'],
+    jobTitle: [
+      'Software Engineer', 'Product Manager', 'Designer', 'Data Scientist', 'DevOps Engineer',
+      'Marketing Manager', 'Sales Representative', 'Accountant', 'Human Resources Manager', 'CEO',
+      'CTO', 'CFO', 'COO', 'Director', 'Manager', 'Analyst', 'Consultant', 'Administrator',
+      'Coordinator', 'Specialist', 'Developer', 'Architect', 'Engineer', 'Technician', 'Assistant',
+      'Project Manager', 'Business Analyst', 'Quality Assurance Engineer', 'UX Designer', 'UI Designer',
+      'Backend Developer', 'Frontend Developer', 'Full Stack Developer', 'Mobile Developer', 'Cloud Architect',
+      'Security Engineer', 'Network Engineer', 'Database Administrator', 'Systems Administrator', 'Technical Writer',
+      'Scrum Master', 'Product Owner', 'Release Manager', 'Content Manager', 'Social Media Manager',
+      'SEO Specialist', 'Digital Marketing Specialist', 'Growth Hacker', 'Brand Manager', 'Creative Director',
+      'Financial Analyst', 'Investment Banker', 'Risk Analyst', 'Compliance Officer', 'Tax Consultant',
+      'Legal Counsel', 'Paralegal', 'Executive Assistant', 'Operations Manager', 'Supply Chain Manager',
+      'Logistics Coordinator', 'Customer Success Manager', 'Account Executive', 'Sales Engineer', 'Technical Support',
+    ],
+  },
+  address: {
+    street: [
+      'Main', 'Oak', 'Maple', 'Cedar', 'Elm', 'Washington', 'Lake', 'Hill', 'Park', 'River',
+      'Sunset', 'Pine', 'Walnut', 'Highland', 'Madison', 'Lincoln', 'Jackson', 'Franklin',
+    ],
+    city: [
+      'New York', 'Los Angeles', 'Chicago', 'Playa Vista', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio',
+      'San Diego', 'Dallas', 'San Jose', 'Austin', 'Jacksonville', 'Fort Worth', 'Columbus',
+      'Charlotte', 'San Francisco', 'Indianapolis', 'Seattle', 'Denver', 'Boston', 'Nashville',
+      'Detroit', 'Memphis', 'Portland', 'Oklahoma City', 'Las Vegas', 'Louisville', 'Baltimore', 'Milwaukee',
+      'Albuquerque', 'Tucson', 'Fresno', 'Sacramento', 'Mesa', 'Kansas City', 'Atlanta', 'Long Beach',
+      'Colorado Springs', 'Raleigh', 'Miami', 'Virginia Beach', 'Omaha', 'Oakland', 'Minneapolis', 'Tulsa',
+      'Arlington', 'Tampa', 'New Orleans', 'Wichita', 'Cleveland', 'Bakersfield', 'Aurora', 'Anaheim',
+      'Honolulu', 'Santa Ana', 'Riverside', 'Corpus Christi', 'Lexington', 'Stockton', 'Henderson', 'Saint Paul',
+      'Cincinnati', 'Pittsburgh', 'Greensboro', 'Anchorage', 'Plano', 'Lincoln', 'Orlando', 'Irvine',
+      'Newark', 'Durham', 'Chula Vista', 'Toledo', 'Fort Wayne', 'St. Petersburg', 'Laredo', 'Jersey City',
+    ],
+    state: [
+      'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
+      'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
+      'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan',
+      'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+      'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio',
+      'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
+      'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia',
+      'Wisconsin', 'Wyoming',
+    ],
+    stateAbbr: [
+      'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA',
+      'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+      'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT',
+      'VA', 'WA', 'WV', 'WI', 'WY',
+    ],
+    country: [
+      'United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 'France', 'Spain',
+      'Italy', 'Japan', 'China', 'India', 'Brazil', 'Mexico', 'Russia', 'South Korea',
+    ],
+    countryCode: ['US', 'CA', 'GB', 'AU', 'DE', 'FR', 'ES', 'IT', 'JP', 'CN', 'IN', 'BR', 'MX', 'RU', 'KR'],
+    zipCode: ['#####', '#####-####'],
+    buildingNumber: ['###', '####', '#', '##'],
+    direction: ['North', 'East', 'South', 'West', 'Northeast', 'Northwest', 'Southeast', 'Southwest'],
+    streetSuffix: [
+      'Street', 'Avenue', 'Road', 'Boulevard', 'Drive', 'Court', 'Circle', 'Lane', 'Way',
+      'Place', 'Terrace', 'Parkway', 'Commons', 'Trail', 'Square', 'Run', 'Crossing',
+    ],
+  },
+  company: {
+    name: [
+      'TechCorp', 'GlobalSoft', 'DataSystems', 'CloudNet', 'Innovate Inc', 'Digital Solutions',
+      'NextGen Tech', 'FutureTech', 'SmartSystems', 'CoreTech', 'PrimeSoft', 'AlphaTech',
+    ],
+    suffix: ['Inc', 'LLC', 'Corp', 'Group', 'Ltd', 'Co', 'Technologies', 'Solutions', 'Systems'],
+    industry: [
+      'Technology', 'Finance', 'Healthcare', 'Education', 'Retail', 'Manufacturing',
+      'Telecommunications', 'Energy', 'Real Estate', 'Transportation', 'Media', 'Hospitality',
+    ],
+    buzzwords: [
+      'synergize', 'leverage', 'innovate', 'disrupt', 'optimize', 'streamline', 'transform',
+      'revolutionize', 'empower', 'enable', 'facilitate', 'orchestrate', 'integrate',
+    ],
+    adjective: [
+      'revolutionary', 'cutting-edge', 'innovative', 'next-generation', 'advanced', 'leading',
+      'premier', 'world-class', 'enterprise', 'scalable', 'robust', 'seamless',
+    ],
+    descriptor: [
+      'global', 'digital', 'cloud-based', 'AI-powered', 'data-driven', 'user-centric',
+      'agile', 'secure', 'efficient', 'intelligent', 'automated', 'integrated',
+    ],
+    noun: [
+      'solution', 'platform', 'system', 'service', 'technology', 'framework', 'infrastructure',
+      'application', 'network', 'portal', 'ecosystem', 'architecture', 'engine',
+    ],
+  },
+  internet: {
+    domainSuffix: ['com', 'net', 'org', 'io', 'co', 'app', 'dev', 'tech', 'ai', 'cloud'],
+    freeEmail: ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com', 'proton.me'],
+  },
+  phone: {
+    formats: [
+      '###-###-####',
+      '(###) ###-####',
+      '1-###-###-####',
+      '+1-###-###-####',
+      '###.###.####',
+    ],
+  },
+  food: {
+    dish: [
+      'Hamburger', 'Cheeseburger', 'Pizza', 'Hot Dog', 'Fried Chicken', 'BBQ Ribs', 'Mac and Cheese',
+      'Grilled Cheese', 'BLT Sandwich', 'Caesar Salad', 'Cobb Salad', 'Chicken Wings', 'Nachos',
+      'Tacos', 'Burrito', 'Quesadilla', 'Fish and Chips', 'Clam Chowder', 'Lobster Roll', 'Cheesesteak',
+      'Pulled Pork Sandwich', 'Buffalo Wings', 'Meatloaf', 'Pot Roast', 'Fried Catfish', 'Jambalaya',
+      'Gumbo', 'Po\' Boy', 'Corn Dog', 'Chili', 'Baked Beans', 'Cornbread', 'Biscuits and Gravy',
+    ],
+    ingredient: [
+      'Flour', 'Sugar', 'Salt', 'Pepper', 'Butter', 'Eggs', 'Milk', 'Cheese', 'Tomato', 'Onion',
+      'Garlic', 'Olive Oil', 'Chicken', 'Beef', 'Pork', 'Fish', 'Rice', 'Pasta', 'Bread', 'Potato',
+      'Carrot', 'Celery', 'Bell Pepper', 'Mushroom', 'Spinach', 'Broccoli', 'Lettuce', 'Avocado',
+      'Lemon', 'Lime', 'Basil', 'Oregano', 'Thyme', 'Rosemary', 'Parsley', 'Cilantro',
+    ],
+    cuisine: [
+      'American', 'Italian', 'Mexican', 'Chinese', 'Japanese', 'Thai', 'Indian', 'French',
+      'Greek', 'Spanish', 'Mediterranean', 'Vietnamese', 'Korean', 'Turkish', 'Lebanese',
+      'Brazilian', 'Argentinian', 'Peruvian', 'Caribbean', 'Moroccan', 'Ethiopian',
+    ],
+    dessert: [
+      'Apple Pie', 'Chocolate Cake', 'Ice Cream', 'Brownies', 'Cookies', 'Cheesecake', 'Donuts',
+      'Cupcakes', 'Tiramisu', 'Panna Cotta', 'Crème Brûlée', 'Macarons', 'Churros', 'Flan',
+      'Bread Pudding', 'Pecan Pie', 'Key Lime Pie', 'Banana Split', 'Sundae', 'Milkshake',
+    ],
+    fruit: [
+      'Apple', 'Banana', 'Orange', 'Strawberry', 'Grape', 'Watermelon', 'Pineapple', 'Mango',
+      'Peach', 'Pear', 'Cherry', 'Blueberry', 'Raspberry', 'Blackberry', 'Kiwi', 'Plum',
+      'Apricot', 'Cantaloupe', 'Honeydew', 'Papaya', 'Guava', 'Lychee', 'Dragon Fruit',
+    ],
+    vegetable: [
+      'Carrot', 'Broccoli', 'Cauliflower', 'Spinach', 'Kale', 'Lettuce', 'Cabbage', 'Cucumber',
+      'Tomato', 'Bell Pepper', 'Zucchini', 'Eggplant', 'Asparagus', 'Green Beans', 'Peas',
+      'Corn', 'Potato', 'Sweet Potato', 'Onion', 'Garlic', 'Celery', 'Radish', 'Beet',
+    ],
+    meat: [
+      'Beef', 'Chicken', 'Pork', 'Lamb', 'Turkey', 'Duck', 'Veal', 'Venison', 'Bison',
+      'Bacon', 'Sausage', 'Ham', 'Salami', 'Prosciutto', 'Ribeye', 'Sirloin', 'Tenderloin',
+    ],
+    spice: [
+      'Black Pepper', 'Cumin', 'Paprika', 'Cinnamon', 'Nutmeg', 'Ginger', 'Turmeric', 'Curry',
+      'Chili Powder', 'Cayenne', 'Oregano', 'Basil', 'Thyme', 'Rosemary', 'Sage', 'Coriander',
+      'Cardamom', 'Cloves', 'Allspice', 'Bay Leaf', 'Mustard Seed', 'Fennel', 'Star Anise',
+    ],
+  },
+  animal: {
+    dog: [
+      'Labrador Retriever', 'German Shepherd', 'Golden Retriever', 'French Bulldog', 'Bulldog',
+      'Poodle', 'Beagle', 'Rottweiler', 'German Shorthaired Pointer', 'Dachshund', 'Pembroke Welsh Corgi',
+      'Australian Shepherd', 'Yorkshire Terrier', 'Cavalier King Charles Spaniel', 'Doberman Pinscher',
+      'Boxer', 'Miniature Schnauzer', 'Great Dane', 'Siberian Husky', 'Bernese Mountain Dog',
+      'Pomeranian', 'Boston Terrier', 'Havanese', 'Shetland Sheepdog', 'Brittany', 'Cocker Spaniel',
+    ],
+    cat: [
+      'Persian', 'Maine Coon', 'Ragdoll', 'Bengal', 'Siamese', 'British Shorthair', 'Abyssinian',
+      'Birman', 'Oriental Shorthair', 'Sphynx', 'Devon Rex', 'American Shorthair', 'Scottish Fold',
+      'Exotic Shorthair', 'Russian Blue', 'Norwegian Forest Cat', 'Siberian', 'Burmese',
+      'Manx', 'Cornish Rex', 'Himalayan', 'Turkish Angora', 'Balinese', 'Tonkinese',
+    ],
+    bird: [
+      'Parakeet', 'Cockatiel', 'Lovebird', 'Canary', 'Finch', 'Parrot', 'Macaw', 'Cockatoo',
+      'African Grey', 'Conure', 'Budgie', 'Dove', 'Pigeon', 'Robin', 'Cardinal', 'Blue Jay',
+      'Sparrow', 'Crow', 'Raven', 'Hawk', 'Eagle', 'Owl', 'Hummingbird', 'Woodpecker',
+    ],
+    fish: [
+      'Goldfish', 'Betta', 'Guppy', 'Molly', 'Platy', 'Swordtail', 'Tetra', 'Angelfish',
+      'Discus', 'Gourami', 'Barb', 'Danio', 'Koi', 'Oscar', 'Cichlid', 'Clownfish',
+      'Tang', 'Damselfish', 'Wrasse', 'Goby', 'Blenny', 'Pufferfish', 'Lionfish',
+    ],
+    horse: [
+      'Arabian', 'Thoroughbred', 'Quarter Horse', 'Appaloosa', 'Paint', 'Tennessee Walker',
+      'Morgan', 'Andalusian', 'Friesian', 'Clydesdale', 'Percheron', 'Belgian', 'Mustang',
+      'Shetland Pony', 'Welsh Pony', 'Palomino', 'Buckskin', 'Pinto', 'Warmblood',
+    ],
+    rabbit: [
+      'Holland Lop', 'Netherland Dwarf', 'Mini Rex', 'Flemish Giant', 'English Lop',
+      'French Lop', 'Angora', 'Dutch', 'Lionhead', 'Rex', 'Polish', 'Himalayan',
+    ],
+    insect: [
+      'Butterfly', 'Bee', 'Ant', 'Beetle', 'Ladybug', 'Dragonfly', 'Grasshopper', 'Cricket',
+      'Moth', 'Firefly', 'Praying Mantis', 'Walking Stick', 'Caterpillar', 'Wasp',
+    ],
+    type: [
+      'Dog', 'Cat', 'Bird', 'Fish', 'Rabbit', 'Hamster', 'Guinea Pig', 'Mouse', 'Rat',
+      'Ferret', 'Chinchilla', 'Hedgehog', 'Turtle', 'Lizard', 'Snake', 'Frog',
+    ],
+  },
+  sport: {
+    sport: [
+      'Football', 'Basketball', 'Baseball', 'Soccer', 'Tennis', 'Golf', 'Hockey', 'Boxing',
+      'Wrestling', 'Swimming', 'Track and Field', 'Volleyball', 'Cricket', 'Rugby', 'Lacrosse',
+      'Badminton', 'Table Tennis', 'Bowling', 'Skiing', 'Snowboarding', 'Surfing', 'Skateboarding',
+    ],
+    team: [
+      'Lakers', 'Warriors', 'Bulls', 'Celtics', 'Yankees', 'Red Sox', 'Cowboys', 'Patriots',
+      '49ers', 'Packers', 'Steelers', 'Maple Leafs', 'Bruins', 'Canadiens', 'Blackhawks',
+    ],
+    athlete: [
+      'Michael Jordan', 'LeBron James', 'Tom Brady', 'Serena Williams', 'Tiger Woods',
+      'Muhammad Ali', 'Babe Ruth', 'Wayne Gretzky', 'Usain Bolt', 'Michael Phelps',
+    ],
+  },
+  music: {
+    genre: [
+      'Rock', 'Pop', 'Hip Hop', 'Jazz', 'Blues', 'Country', 'Electronic', 'Classical',
+      'R&B', 'Soul', 'Funk', 'Reggae', 'Metal', 'Punk', 'Indie', 'Alternative',
+      'Folk', 'Disco', 'House', 'Techno', 'Dubstep', 'Trap', 'Gospel', 'Opera',
+    ],
+    artist: [
+      'The Beatles', 'Elvis Presley', 'Michael Jackson', 'Madonna', 'Prince', 'Bob Dylan',
+      'Led Zeppelin', 'Pink Floyd', 'Queen', 'David Bowie', 'The Rolling Stones', 'Nirvana',
+      'Bruce Springsteen', 'Stevie Wonder', 'Aretha Franklin', 'Ray Charles', 'Johnny Cash',
+    ],
+    song: [
+      'Bohemian Rhapsody', 'Imagine', 'Hey Jude', 'Billie Jean', 'Like a Rolling Stone',
+      'Smells Like Teen Spirit', 'Hotel California', 'Sweet Child O\' Mine', 'Stairway to Heaven',
+      'Purple Haze', 'What\'s Going On', 'Respect', 'I Want to Hold Your Hand',
+    ],
+    instrument: [
+      'Guitar', 'Piano', 'Drums', 'Bass', 'Violin', 'Cello', 'Saxophone', 'Trumpet',
+      'Flute', 'Clarinet', 'Trombone', 'Harp', 'Banjo', 'Mandolin', 'Ukulele',
+      'Harmonica', 'Accordion', 'Xylophone', 'Synthesizer', 'Keyboard',
+    ],
+  },
+  commerce: {
+    product: [
+      'Chair', 'Table', 'Lamp', 'Sofa', 'Bed', 'Desk', 'Computer', 'Phone', 'Tablet',
+      'Watch', 'Shoes', 'Shirt', 'Pants', 'Jacket', 'Hat', 'Gloves', 'Bag', 'Wallet',
+      'Sunglasses', 'Bicycle', 'Car', 'Motorcycle', 'Camera', 'Headphones', 'Speaker',
+    ],
+    productAdjective: [
+      'Small', 'Medium', 'Large', 'Ergonomic', 'Rustic', 'Modern', 'Sleek', 'Lightweight',
+      'Durable', 'Handmade', 'Recycled', 'Refined', 'Gorgeous', 'Incredible', 'Practical',
+      'Fantastic', 'Awesome', 'Generic', 'Unbranded', 'Licensed', 'Intelligent', 'Tasty',
+    ],
+    productMaterial: [
+      'Steel', 'Wood', 'Concrete', 'Plastic', 'Cotton', 'Granite', 'Rubber', 'Metal',
+      'Soft', 'Fresh', 'Frozen', 'Aluminum', 'Leather', 'Silk', 'Wool', 'Linen',
+    ],
+    department: [
+      'Electronics', 'Clothing', 'Home & Garden', 'Sports', 'Automotive', 'Books', 'Toys',
+      'Health & Beauty', 'Grocery', 'Jewelry', 'Tools', 'Music', 'Movies', 'Baby', 'Pet Supplies',
+    ],
+    color: [
+      'Red', 'Blue', 'Green', 'Yellow', 'Black', 'White', 'Gray', 'Silver', 'Gold',
+      'Purple', 'Pink', 'Orange', 'Brown', 'Navy', 'Teal', 'Maroon', 'Olive',
+    ],
+  },
+  book: {
+    title: ['To Kill a Mockingbird', '1984', 'Pride and Prejudice', 'The Great Gatsby', 'Moby Dick', 'War and Peace', 'The Odyssey', 'The Catcher in the Rye', 'The Lord of the Rings', 'Harry Potter and the Sorcerer\'s Stone', 'The Hobbit', 'Brave New World', 'Crime and Punishment', 'The Brothers Karamazov', 'One Hundred Years of Solitude'],
+    author: ['Ernest Hemingway', 'F. Scott Fitzgerald', 'Jane Austen', 'Charles Dickens', 'Mark Twain', 'Leo Tolstoy', 'Fyodor Dostoevsky', 'George Orwell', 'J.R.R. Tolkien', 'J.K. Rowling', 'Stephen King', 'Agatha Christie', 'William Shakespeare', 'Edgar Allan Poe', 'Harper Lee'],
+    publisher: ['Penguin Random House', 'HarperCollins', 'Simon & Schuster', 'Macmillan', 'Hachette', 'Scholastic', 'Oxford University Press', 'Cambridge University Press', 'Bloomsbury', 'Vintage'],
+    genre: ['Fiction', 'Non-Fiction', 'Mystery', 'Thriller', 'Romance', 'Science Fiction', 'Fantasy', 'Horror', 'Historical Fiction', 'Biography', 'Self-Help', 'Poetry', 'Drama', 'Adventure', 'Young Adult'],
+    series: ['Harry Potter', 'The Lord of the Rings', 'A Song of Ice and Fire', 'The Hunger Games', 'Twilight', 'The Chronicles of Narnia', 'Percy Jackson', 'Discworld', 'Dune', 'Foundation'],
+    review: ['A masterpiece of modern literature!', 'Gripping from start to finish.', 'Couldn\'t put it down!', 'A must-read for everyone.', 'Beautifully written and deeply moving.', 'An unforgettable story.', 'Brilliant and thought-provoking.', 'One of the best books I\'ve ever read.'],
+  },
+  vehicle: {
+    manufacturer: ['Toyota', 'Ford', 'Chevrolet', 'Honda', 'Nissan', 'BMW', 'Mercedes-Benz', 'Audi', 'Volkswagen', 'Tesla', 'Volvo', 'Porsche', 'Jeep', 'Mazda', 'Subaru'],
+    model: ['Accord', 'Camry', 'Civic', 'Corolla', 'CR-V', 'F-150', 'RAV4', 'Model 3', 'Model Y', '3 Series', 'C-Class', 'A4', 'Golf', 'Mustang', 'Wrangler'],
+    type: ['Sedan', 'SUV', 'Truck', 'Coupe', 'Convertible', 'Hatchback', 'Wagon', 'Van', 'Minivan', 'Crossover', 'Sports Car', 'Electric', 'Hybrid'],
+    fuel: ['Gasoline', 'Diesel', 'Electric', 'Hybrid', 'Plug-in Hybrid', 'Hydrogen', 'Ethanol', 'Biodiesel'],
+    bicycle: ['Mountain Bike', 'Road Bike', 'BMX', 'Cruiser', 'Hybrid', 'Electric Bike', 'Folding Bike', 'Gravel Bike'],
+  },
+  word: {
+    adjective: ['beautiful', 'happy', 'sad', 'quick', 'slow', 'big', 'small', 'tall', 'short', 'long', 'wide', 'narrow', 'thick', 'thin', 'heavy', 'light', 'hard', 'soft', 'hot', 'cold'],
+    adverb: ['quickly', 'slowly', 'carefully', 'easily', 'hardly', 'loudly', 'quietly', 'suddenly', 'finally', 'really', 'very', 'completely', 'absolutely', 'perfectly', 'badly', 'well'],
+    conjunction: ['and', 'but', 'or', 'nor', 'for', 'yet', 'so', 'although', 'because', 'since', 'unless', 'while', 'when', 'if'],
+    interjection: ['wow', 'oh', 'ah', 'hey', 'oops', 'ouch', 'yay', 'hooray', 'hello', 'goodbye', 'yes', 'no'],
+    noun: ['table', 'chair', 'book', 'pen', 'computer', 'phone', 'door', 'window', 'car', 'house', 'tree', 'flower', 'dog', 'cat', 'bird', 'fish', 'water', 'fire', 'sun', 'moon'],
+    preposition: ['in', 'on', 'at', 'by', 'for', 'with', 'from', 'to', 'of', 'about', 'under', 'over', 'above', 'below', 'between', 'through'],
+    verb: ['run', 'walk', 'jump', 'swim', 'fly', 'eat', 'drink', 'sleep', 'work', 'play', 'read', 'write', 'speak', 'listen', 'watch', 'think', 'know', 'make', 'take', 'give'],
+  },
+  hacker: {
+    abbreviation: ['TCP', 'HTTP', 'RAM', 'GB', 'CSS', 'SSL', 'SQL', 'CLI', 'UI', 'UX', 'FTP', 'API', 'DNS', 'IP', 'LAN', 'WAN', 'VPN', 'SSH', 'JSON', 'REST'],
+    adjective: ['auxiliary', 'primary', 'back-end', 'digital', 'open-source', 'virtual', 'cross-platform', 'redundant', 'online', 'wireless', 'mobile', 'neural', 'optical', 'cloud', 'quantum'],
+    noun: ['driver', 'protocol', 'bandwidth', 'panel', 'microchip', 'program', 'port', 'card', 'interface', 'system', 'sensor', 'firewall', 'pixel', 'application', 'server', 'database', 'network'],
+    verb: ['bypass', 'hack', 'override', 'compress', 'copy', 'navigate', 'index', 'connect', 'generate', 'calculate', 'synthesize', 'transmit', 'program', 'parse', 'compile', 'encrypt', 'decrypt'],
+    ingverb: ['bypassing', 'hacking', 'overriding', 'compressing', 'copying', 'navigating', 'indexing', 'connecting', 'generating', 'calculating', 'synthesizing', 'transmitting', 'programming', 'parsing', 'compiling', 'encrypting'],
+    phrase: ['We need to bypass the digital firewall!', 'Try to hack the TCP protocol!', 'The SSL port is down, override the wireless system!', 'You can\'t compress the bandwidth without indexing the neural network!'],
+  },
+  system: {
+    fileName: ['document', 'report', 'presentation', 'spreadsheet', 'image', 'video', 'audio', 'backup', 'archive', 'data', 'config', 'settings', 'log', 'cache'],
+    fileType: ['audio', 'image', 'text', 'video', 'application', 'document', 'spreadsheet', 'presentation', 'archive', 'code'],
+  },
+  science: {
+    chemicalElement: ['Hydrogen', 'Helium', 'Lithium', 'Carbon', 'Nitrogen', 'Oxygen', 'Fluorine', 'Neon', 'Sodium', 'Magnesium', 'Aluminum', 'Silicon', 'Phosphorus', 'Sulfur', 'Chlorine', 'Iron', 'Copper', 'Zinc', 'Silver', 'Gold'],
+    unit: ['meter', 'kilogram', 'second', 'ampere', 'kelvin', 'mole', 'candela', 'newton', 'pascal', 'joule', 'watt', 'volt', 'ohm', 'hertz', 'celsius'],
+    constant: ['Speed of Light', 'Gravitational Constant', 'Planck Constant', 'Boltzmann Constant', 'Avogadro Constant', 'Elementary Charge', 'Gas Constant'],
+    field: ['Physics', 'Chemistry', 'Biology', 'Astronomy', 'Geology', 'Ecology', 'Genetics', 'Neuroscience', 'Biochemistry', 'Microbiology', 'Botany', 'Zoology'],
+  },
+}

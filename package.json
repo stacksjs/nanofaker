@@ -2,6 +2,10 @@
   "name": "nanofaker",
   "type": "module",
   "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "description": "nanofaker is a performance-focused and lightweight faker library for TypeScript.",
   "author": "Chris Breuer <chris@stacksjs.org>",
   "license": "MIT",
@@ -47,9 +51,13 @@
   "bin": {
     "nanofaker": "./dist/bin/cli.js"
   },
-  "files": ["README.md", "dist"],
+  "files": [
+    "README.md",
+    "dist"
+  ],
   "scripts": {
-    "build": "bun --bun build.ts && bun run compile",
+    "build": "bun run scripts/build-all.ts",
+    "build:old": "bun --bun build.ts && bun run compile",
     "compile": "bun build ./bin/cli.ts --compile --minify --outfile bin/nanofaker",
     "compile:all": "bun run compile:linux-x64 && bun run compile:linux-arm64 && bun run compile:windows-x64 && bun run compile:darwin-x64 && bun run compile:darwin-arm64",
     "compile:linux-x64": "bun build ./bin/cli.ts --compile --minify --target=bun-linux-x64 --outfile bin/nanofaker-linux-x64",

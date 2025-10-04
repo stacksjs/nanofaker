@@ -1,0 +1,47 @@
+{
+  "name": "@nanofaker/locale-nl",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "NL locale data for nanofaker",
+  "author": "Chris Breuer <chris@stacksjs.org>",
+  "license": "MIT",
+  "homepage": "https://github.com/stacksjs/nanofaker#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stacksjs/nanofaker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stacksjs/nanofaker/issues"
+  },
+  "keywords": [
+    "nanofaker",
+    "locale",
+    "nl",
+    "fake-data",
+    "test-data"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun --bun build.ts",
+    "typecheck": "bun --bun tsc --noEmit"
+  },
+  "peerDependencies": {
+    "nanofaker": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.23",
+    "bun-plugin-dtsx": "0.9.5",
+    "bunfig": "^0.15.0",
+    "typescript": "^5.9.3"
+  }
+}

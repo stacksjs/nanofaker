@@ -18,8 +18,8 @@ import { faker } from 'nanofaker'
 // Without seeding - different data each time
 test('user validation', () => {
   const user = {
-    name: faker.person.fullName(),    // Changes every run
-    email: faker.internet.email(),    // Changes every run
+    name: faker.person.fullName(), // Changes every run
+    email: faker.internet.email(), // Changes every run
   }
   // Test assertions...
 })
@@ -28,8 +28,8 @@ test('user validation', () => {
 test('user validation', () => {
   faker.seed(12345)
   const user = {
-    name: faker.person.fullName(),    // Always "John Doe"
-    email: faker.internet.email(),    // Always "john.doe@example.com"
+    name: faker.person.fullName(), // Always "John Doe"
+    email: faker.internet.email(), // Always "john.doe@example.com"
   }
   // Test assertions...
 })
@@ -239,7 +239,7 @@ test('generates user snapshot', () => {
 ```ts
 // Good - Meaningful seed values
 faker.seed(12345) // Easy to remember and type
-faker.seed(2024)  // Year-based seed
+faker.seed(2024) // Year-based seed
 
 // Avoid - Random or hard-to-remember seeds
 faker.seed(9384750291847502918) // Too long

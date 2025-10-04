@@ -65,7 +65,7 @@ import { faker, Faker } from 'nanofaker'
 async function seedInternationalUsers() {
   const locales = ['en', 'es', 'fr', 'de', 'ja']
 
-  const users = locales.flatMap(locale => {
+  const users = locales.flatMap((locale) => {
     const localeFaker = new Faker({ locale })
 
     return Array.from({ length: 20 }, () => ({
@@ -87,7 +87,7 @@ async function seedInternationalUsers() {
 ### Unit Test Fixtures
 
 ```ts
-import { describe, test, expect, beforeEach } from 'bun:test'
+import { beforeEach, describe, expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 describe('User service', () => {
@@ -121,7 +121,7 @@ describe('User service', () => {
 ### Integration Tests
 
 ```ts
-import { test, expect } from 'bun:test'
+import { expect, test } from 'bun:test'
 import { faker } from 'nanofaker'
 
 test('API creates user', async () => {
@@ -187,8 +187,8 @@ test('admin can delete users', () => {
 ### REST API Mock
 
 ```ts
-import { faker } from 'nanofaker'
 import express from 'express'
+import { faker } from 'nanofaker'
 
 const app = express()
 
@@ -235,9 +235,9 @@ app.listen(3000, () => {
 ### GraphQL Mock
 
 ```ts
-import { faker } from 'nanofaker'
 import { ApolloServer } from '@apollo/server'
 import { startStandaloneServer } from '@apollo/server/standalone'
+import { faker } from 'nanofaker'
 
 const typeDefs = `#graphql
   type User {
@@ -294,8 +294,8 @@ console.log(`Mock GraphQL API running at ${url}`)
 ### Simple CSV Export
 
 ```ts
+import { writeFileSync } from 'node:fs'
 import { faker } from 'nanofaker'
-import { writeFileSync } from 'fs'
 
 function generateCSV(rows: number) {
   const header = 'Name,Email,Phone,City,Company\n'
@@ -411,8 +411,7 @@ import { faker } from 'nanofaker'
 function generateProduct() {
   const basePrice = Number(faker.commerce.price({ min: 10, max: 1000 }))
   const discount = faker.helpers.maybe(() =>
-    faker.number.int({ min: 5, max: 50 }), 0.3
-  )
+    faker.number.int({ min: 5, max: 50 }), 0.3)
 
   return {
     id: crypto.randomUUID(),
@@ -458,8 +457,8 @@ const products = Array.from({ length: 50 }, generateProduct)
 ### Multi-Locale Data Generation
 
 ```ts
+import { writeFileSync } from 'node:fs'
 import { Faker } from 'nanofaker'
-import { writeFileSync } from 'fs'
 
 async function generateMultiLocaleData() {
   const locales = ['en', 'es', 'fr', 'de', 'ja']
@@ -576,16 +575,19 @@ main()
 ```ts
 import { faker } from 'nanofaker'
 
-export const mockUser = (overrides = {}) => ({
-  id: crypto.randomUUID(),
-  name: faker.person.fullName(),
-  email: faker.internet.email(),
-  avatar: `https://i.pravatar.cc/150?u=${crypto.randomUUID()}`,
-  ...overrides,
-})
+export function mockUser(overrides = {}) {
+  return {
+    id: crypto.randomUUID(),
+    name: faker.person.fullName(),
+    email: faker.internet.email(),
+    avatar: `https://i.pravatar.cc/150?u=${crypto.randomUUID()}`,
+    ...overrides,
+  }
+}
 
-export const mockUsers = (count: number) =>
-  Array.from({ length: count }, () => mockUser())
+export function mockUsers(count: number) {
+  return Array.from({ length: count }, () => mockUser())
+}
 
 // In your story
 export const Default = {
@@ -604,9 +606,9 @@ import { faker } from 'nanofaker'
 
 function generateWithDistribution() {
   const tier = faker.helpers.arrayElement([
-    ...Array(70).fill('free'),
-    ...Array(25).fill('pro'),
-    ...Array(5).fill('enterprise'),
+    ...Array.from({ length: 70 }).fill('free'),
+    ...Array.from({ length: 25 }).fill('pro'),
+    ...Array.from({ length: 5 }).fill('enterprise'),
   ])
 
   return {

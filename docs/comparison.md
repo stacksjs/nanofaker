@@ -35,8 +35,8 @@ For a typical web application:
 
 ```ts
 // Bundle size impact
-import { faker } from '@faker-js/faker'  // +350KB
-import { faker } from 'nanofaker'        // +50KB
+import { faker } from '@faker-js/faker' // +350KB
+import { faker } from 'nanofaker' // +50KB
 
 // Savings: 300KB = Faster page loads!
 ```
@@ -212,14 +212,14 @@ const esFaker = new Faker({ locale: 'es' })
 
 ```ts
 import { faker } from '@faker-js/faker'
+// Or import specific locale
+import { fakerES } from '@faker-js/faker'
+
 import { es } from '@faker-js/faker/locale/es'
 
 // Need to configure locale
 faker.locale = es
 faker.person.fullName()
-
-// Or import specific locale
-import { fakerES } from '@faker-js/faker'
 ```
 
 **nanofaker is simpler** with less configuration needed.

@@ -17,6 +17,10 @@ jobs:
 
       - name: Install Bun
         uses: oven-sh/setup-bun@v2
+        # env:
+        #   BUN_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        with:
+          bun-version: latest
 
       - name: Use cached node_modules
         uses: actions/cache@v4
@@ -30,7 +34,7 @@ jobs:
         run: bun install
 
       - name: Publish to npm
-        run: bun publish --access public
+        run: ./scripts/publish.sh
         env:
           BUN_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -43,10 +47,10 @@ jobs:
         uses: stacksjs/action-releaser@v1.1.0
         with:
           files: |
-            bin/bin-name-linux-x64
-            bin/bin-name-linux-arm64
-            bin/bin-name-windows-x64.exe
-            bin/bin-name-darwin-x64
-            bin/bin-name-darwin-arm64
+            packages/core/bin/nanofaker-linux-x64.zip
+            packages/core/bin/nanofaker-linux-arm64.zip
+            packages/core/bin/nanofaker-windows-x64.zip
+            packages/core/bin/nanofaker-darwin-x64.zip
+            packages/core/bin/nanofaker-darwin-arm64.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

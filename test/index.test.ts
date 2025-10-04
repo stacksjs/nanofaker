@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test'
-import { Faker, faker } from '../src'
+import { Faker, faker } from '../packages/core/src'
 
 describe('Faker Library', () => {
   describe('Person Module', () => {
@@ -70,7 +70,7 @@ describe('Faker Library', () => {
     it('should generate an email', () => {
       const email = faker.internet.email()
       expect(typeof email).toBe('string')
-      expect(email).toMatch(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)
+      expect(email).toMatch(/^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/)
     })
 
     it('should generate a URL', () => {
@@ -243,7 +243,7 @@ describe('Faker Library', () => {
       const str = faker.string.alphanumeric({ length: 10 })
       expect(typeof str).toBe('string')
       expect(str.length).toBe(10)
-      expect(str).toMatch(/^[a-zA-Z0-9]+$/)
+      expect(str).toMatch(/^[a-z0-9]+$/i)
     })
   })
 

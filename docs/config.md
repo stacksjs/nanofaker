@@ -14,7 +14,7 @@ faker.locale = 'es'
 
 // Now all operations will use Spanish locale
 const name = faker.person.fullName() // "María García"
-const city = faker.address.city()    // "Madrid"
+const city = faker.address.city() // "Madrid"
 ```
 
 ## Creating Locale-Specific Instances
@@ -29,8 +29,8 @@ const esFaker = faker.locale('es')
 const jaFaker = faker.locale('ja')
 
 // Use different locales in the same application
-const englishName = enFaker.person.fullName()  // "John Doe"
-const spanishName = esFaker.person.fullName()  // "María García"
+const englishName = enFaker.person.fullName() // "John Doe"
+const spanishName = esFaker.person.fullName() // "María García"
 const japaneseName = jaFaker.person.fullName() // "田中太郎"
 ```
 
@@ -39,8 +39,8 @@ const japaneseName = jaFaker.person.fullName() // "田中太郎"
 nanofaker is written in TypeScript and provides full type definitions. You can import types for better IDE support:
 
 ```ts
+import type { Faker, LocaleDefinition } from 'nanofaker'
 import { faker } from 'nanofaker'
-import type { LocaleDefinition, Faker } from 'nanofaker'
 
 const customFaker: Faker = faker.locale('en')
 ```
