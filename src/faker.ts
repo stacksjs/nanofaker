@@ -26,7 +26,7 @@ import { SportModule } from './modules/sport'
 import { HackerModule } from './modules/hacker'
 import { SystemModule } from './modules/system'
 import { WordModule } from './modules/word'
-import { locales } from './locales'
+import { LocaleLoader } from './locale-loader'
 
 /**
  * Main Faker class - the entry point for generating fake data
@@ -75,7 +75,17 @@ export class Faker {
     const locale = options?.locale ?? 'en'
     const seed = options?.seed
 
-    this._locale = locales[locale] ?? locales.en
+    // For non-English locales, warn about async loading
+    if (locale !== 'en' && !LocaleLoader.isCached(locale)) {
+      console.warn(
+        `[nanofaker] Locale '${locale}' requires async loading. Use 'await Faker.create({ locale: "${locale}" })' for better performance. Falling back to English.`,
+      )
+      this._locale = LocaleLoader.loadSync('en')
+    }
+    else {
+      this._locale = LocaleLoader.loadSync(locale)
+    }
+
     this._random = new Random(seed)
 
     // Initialize all modules
@@ -105,6 +115,21 @@ export class Faker {
     this.system = new SystemModule(this._random, this._locale)
     this.word = new WordModule(this._random, this._locale)
     this.vehicle = new VehicleModule(this._random, this._locale)
+  }
+
+  /**
+   * Create a Faker instance with async locale loading
+   * @example await Faker.create({ locale: 'es' })
+   */
+  static async create(options?: FakerOptions): Promise<Faker> {
+    const locale = options?.locale ?? 'en'
+
+    // Preload the locale if needed
+    if (!LocaleLoader.isCached(locale)) {
+      await LocaleLoader.load(locale)
+    }
+
+    return new Faker(options)
   }
 
   /**
@@ -146,13 +171,50 @@ export class Faker {
   }
 
   /**
-   * Set the locale
-   * @example faker.setLocale('es')
+   * Set the locale asynchronously (recommended for non-English locales)
+   * @example await faker.setLocale('es')
    */
-  setLocale(locale: string): this {
-    this._locale = locales[locale] ?? locales.en
+  async setLocale(locale: string): Promise<this> {
+    this._locale = await LocaleLoader.load(locale)
 
     // Reinitialize modules that depend on locale
+    this.reinitializeLocaleModules()
+
+    return this
+  }
+
+  /**
+   * Set the locale synchronously (only works for cached locales)
+   * @deprecated Use async setLocale() instead
+   * @example faker.setLocaleSync('es') // Only works if 'es' is already loaded
+   */
+  setLocaleSync(locale: string): this {
+    if (!LocaleLoader.isCached(locale) && locale !== 'en') {
+      console.warn(
+        `[nanofaker] Locale '${locale}' is not loaded. Use 'await faker.setLocale("${locale}")' or preload it first.`,
+      )
+      return this
+    }
+
+    this._locale = LocaleLoader.loadSync(locale)
+    this.reinitializeLocaleModules()
+
+    return this
+  }
+
+  /**
+   * Preload locales for offline usage
+   * @example await faker.preloadLocales(['es', 'fr', 'de'])
+   */
+  async preloadLocales(locales: string[]): Promise<this> {
+    await LocaleLoader.preload(locales)
+    return this
+  }
+
+  /**
+   * Reinitialize all modules that depend on locale
+   */
+  private reinitializeLocaleModules(): void {
     Object.assign(this.person, new PersonModule(this._random, this._locale))
     Object.assign(this.address, new AddressModule(this._random, this._locale))
     Object.assign(this.internet, new InternetModule(this._random, this._locale))
@@ -170,8 +232,6 @@ export class Faker {
     Object.assign(this.system, new SystemModule(this._random, this._locale))
     Object.assign(this.color, new ColorModule(this._random, this._locale))
     Object.assign(this.science, new ScienceModule(this._random, this._locale))
-
-    return this
   }
 
   /**
@@ -184,8 +244,23 @@ export class Faker {
   /**
    * Get available locales
    */
-  static get availableLocales(): string[] {
-    return Object.keys(locales)
+  static get availableLocales(): readonly string[] {
+    return LocaleLoader.getAvailableLocales()
+  }
+
+  /**
+   * Check if a locale is currently loaded/cached
+   */
+  static isLocaleLoaded(locale: string): boolean {
+    return LocaleLoader.isCached(locale)
+  }
+
+  /**
+   * Preload multiple locales statically
+   * @example await Faker.preloadLocales(['es', 'fr', 'de'])
+   */
+  static async preloadLocales(locales: string[]): Promise<void> {
+    await LocaleLoader.preload(locales)
   }
 
   /**

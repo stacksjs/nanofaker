@@ -2,9 +2,9 @@ export * from './config'
 export * from './types'
 export * from './faker'
 export * from './random'
-export { locales, en, es, fr, de, it, pt, ja, tl } from './locales'
+export * from './locale-loader'
+export { en } from './locales/en'
 
-// Re-export modules
 export { PersonModule } from './modules/person'
 export { AddressModule } from './modules/address'
 export { InternetModule } from './modules/internet'
@@ -34,7 +34,7 @@ export { WordModule } from './modules/word'
 
 // Default faker instance for convenience
 import { Faker } from './faker'
-export const faker = new Faker()
+export const faker: Faker = new Faker()
 
 // Default export
 export default faker

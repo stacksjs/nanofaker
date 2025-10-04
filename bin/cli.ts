@@ -1,5 +1,5 @@
 import { CAC } from 'cac'
-import { faker } from '../src/index'
+import { Faker, LocaleLoader } from '../src/index'
 import { version } from '../package.json'
 
 const cli = new CAC('nanofaker')
@@ -7,24 +7,20 @@ const cli = new CAC('nanofaker')
 // Generate command - generate random data
 cli
   .command('generate <category> <method>', 'Generate random data')
-  .option('--locale <locale>', 'Locale to use (en, es, fr, de, it, pt, ja, tl, zh)', { default: 'en' })
+  .option('--locale <locale>', 'Locale to use', { default: 'en' })
   .option('--count <count>', 'Number of items to generate', { default: 1 })
   .option('--seed <seed>', 'Seed for reproducible results')
   .option('--json', 'Output as JSON')
   .example('nanofaker generate person fullName')
   .example('nanofaker generate person fullName --locale es --count 5')
   .example('nanofaker generate address city --seed 12345 --json')
-  .action((category: string, method: string, options: any) => {
+  .action(async (category: string, method: string, options: any) => {
     try {
-      // Set locale
-      if (options.locale) {
-        faker.setLocale(options.locale)
-      }
-
-      // Set seed if provided
-      if (options.seed) {
-        faker.seed(Number(options.seed))
-      }
+      // Create faker with async locale loading
+      const faker = await Faker.create({
+        locale: options.locale || 'en',
+        seed: options.seed ? Number(options.seed) : undefined,
+      })
 
       // Get the category and method
       const fakerCategory = (faker as any)[category]
@@ -112,23 +108,82 @@ cli
 // Locales command - list all available locales
 cli
   .command('locales', 'List all available locales')
-  .action(() => {
-    const locales = [
-      'en - English',
-      'es - Spanish',
-      'fr - French',
-      'de - German',
-      'it - Italian',
-      'pt - Portuguese',
-      'ja - Japanese',
-      'tl - Filipino',
-      'zh - Chinese',
-    ]
+  .option('--loaded', 'Show only loaded locales')
+  .action((options: any) => {
+    if (options.loaded) {
+      const availableLocales = Faker.availableLocales
+      const loadedLocales = availableLocales.filter(locale => Faker.isLocaleLoaded(locale))
 
-    console.log('\nAvailable Locales:\n')
-    locales.forEach(locale => console.log(`  ${locale}`))
-    console.log('\nUse --locale <code> with the generate command to use a specific locale')
-    console.log('Example: nanofaker generate person fullName --locale es')
+      console.log('\nLoaded Locales:\n')
+      if (loadedLocales.length === 0) {
+        console.log('  No locales loaded yet')
+      }
+      else {
+        loadedLocales.forEach(locale => console.log(`  ✓ ${locale}`))
+      }
+    }
+    else {
+      const locales = [
+        'en - English',
+        'es - Spanish',
+        'fr - French',
+        'de - German',
+        'it - Italian',
+        'pt - Portuguese',
+        'ja - Japanese',
+        'tl - Filipino',
+        'zh - Chinese',
+        'nl - Dutch',
+        'ko - Korean',
+        'no - Norwegian',
+        'sv - Swedish',
+        'da - Danish',
+        'uk - Ukrainian',
+        'hi - Hindi',
+        'fi - Finnish',
+        'tr - Turkish',
+        'pl - Polish',
+        'cs - Czech',
+      ]
+
+      console.log('\nAvailable Locales (20 total):\n')
+      locales.forEach(locale => console.log(`  ${locale}`))
+      console.log('\nℹ️  Only English (en) is bundled by default.')
+      console.log('   Other locales are loaded dynamically when first used.')
+      console.log('\nUse --locale <code> with the generate command')
+      console.log('Example: nanofaker generate person fullName --locale es')
+    }
+  })
+
+// Preload locales command
+cli
+  .command('locales:preload [locales...]', 'Preload specific locales for faster access')
+  .example('nanofaker locales:preload es fr de')
+  .example('nanofaker locales:preload all')
+  .action(async (locales: string[]) => {
+    try {
+      const localesToLoad = locales.includes('all')
+        ? Faker.availableLocales.filter(l => l !== 'en')
+        : locales
+
+      if (localesToLoad.length === 0) {
+        console.error('Error: Please specify locales to preload or use "all"')
+        console.log('\nExample: nanofaker locales:preload es fr de')
+        console.log('Example: nanofaker locales:preload all')
+        process.exit(1)
+      }
+
+      console.log(`\nPreloading ${localesToLoad.length} locale(s)...`)
+
+      await Faker.preloadLocales(localesToLoad as string[])
+
+      console.log('✓ Locales preloaded successfully:')
+      localesToLoad.forEach(locale => console.log(`  ✓ ${locale}`))
+    }
+    catch (error) {
+      console.error('Error:', error instanceof Error ? error.message : error)
+      process.exit(1)
+    }
   })
 
 // Batch command - generate multiple records with multiple fields
