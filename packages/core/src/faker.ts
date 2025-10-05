@@ -1,4 +1,4 @@
-import type { MockOptions, LocaleDefinition } from './types'
+import type { LocaleDefinition, MockOptions } from './types'
 import { LocaleLoader } from './locale-loader'
 import { AddressModule } from './modules/address'
 import { AnimalModule } from './modules/animal'

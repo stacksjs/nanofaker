@@ -6,7 +6,7 @@ import Chance from 'chance'
 import { Bench } from 'tinybench'
 // @ts-expect-error ts-mocker is typed
 // eslint-disable-next-line antfu/no-import-dist
-import { faker as ts-mocker } from '../../core/dist/src/index.js'
+import { faker } from '../../core/dist/src/index.js'
 
 const chance = new Chance()
 
@@ -43,9 +43,9 @@ function printResults(bench: Bench, title: string) {
     if (!result)
       return
 
-    const ists-mocker = task.name.includes('ts-mocker')
+    const isTsMocker = task.name.includes('ts-mocker')
     const isFastest = task === fastest
-    const color = isFastest ? colors.green : ists-mocker ? colors.yellow : colors.reset
+    const color = isFastest ? colors.green : isTsMocker ? colors.yellow : colors.reset
 
     const opsPerSec = formatOpsPerSec(result.hz)
     const avgTime = `${(result.mean * 1000).toFixed(4)}ms`
@@ -73,7 +73,7 @@ async function runBenchmarks() {
   const nameBench = new Bench({ time: 750 })
   nameBench
     .add('ts-mocker', () => {
-      ts-mocker.person.fullName()
+      faker.person.fullName()
     })
     .add('@faker-js/faker', () => {
       fakerjs.person.fullName()
@@ -95,7 +95,7 @@ async function runBenchmarks() {
   const emailBench = new Bench({ time: 750 })
   emailBench
     .add('ts-mocker', () => {
-      ts-mocker.internet.email()
+      faker.internet.email()
     })
     .add('@faker-js/faker', () => {
       fakerjs.internet.email()
@@ -117,7 +117,7 @@ async function runBenchmarks() {
   const phoneBench = new Bench({ time: 750 })
   phoneBench
     .add('ts-mocker', () => {
-      ts-mocker.phone.number()
+      faker.phone.number()
     })
     .add('@faker-js/faker', () => {
       fakerjs.phone.number()
@@ -139,7 +139,7 @@ async function runBenchmarks() {
   const cityBench = new Bench({ time: 750 })
   cityBench
     .add('ts-mocker', () => {
-      ts-mocker.address.city()
+      faker.address.city()
     })
     .add('@faker-js/faker', () => {
       fakerjs.location.city()
@@ -161,7 +161,7 @@ async function runBenchmarks() {
   const countryBench = new Bench({ time: 750 })
   countryBench
     .add('ts-mocker', () => {
-      ts-mocker.address.country()
+      faker.address.country()
     })
     .add('@faker-js/faker', () => {
       fakerjs.location.country()
@@ -183,7 +183,7 @@ async function runBenchmarks() {
   const companyBench = new Bench({ time: 750 })
   companyBench
     .add('ts-mocker', () => {
-      ts-mocker.company.name()
+      faker.company.name()
     })
     .add('@faker-js/faker', () => {
       fakerjs.company.name()
@@ -205,7 +205,7 @@ async function runBenchmarks() {
   const productBench = new Bench({ time: 750 })
   productBench
     .add('ts-mocker', () => {
-      ts-mocker.commerce.product()
+      faker.commerce.product()
     })
     .add('@faker-js/faker', () => {
       fakerjs.commerce.product()
@@ -224,7 +224,7 @@ async function runBenchmarks() {
   const uuidBench = new Bench({ time: 750 })
   uuidBench
     .add('ts-mocker', () => {
-      ts-mocker.string.uuid()
+      faker.string.uuid()
     })
     .add('@faker-js/faker', () => {
       fakerjs.string.uuid()
@@ -252,11 +252,11 @@ async function runBenchmarks() {
   const nanoStart = performance.now()
   for (let i = 0; i < iterations; i++) {
     const _user = {
-      name: ts-mocker.person.fullName(),
-      email: ts-mocker.internet.email(),
-      phone: ts-mocker.phone.number(),
-      city: ts-mocker.address.city(),
-      country: ts-mocker.address.country(),
+      name: faker.person.fullName(),
+      email: faker.internet.email(),
+      phone: faker.phone.number(),
+      city: faker.address.city(),
+      country: faker.address.country(),
     }
   }
   const nanoDuration = performance.now() - nanoStart
@@ -322,9 +322,9 @@ async function runBenchmarks() {
   ].sort((a, b) => a.duration - b.duration)
 
   results.forEach((result, index) => {
-    const ists-mocker = result.name === 'ts-mocker'
+    const isTsMocker = result.name === 'ts-mocker'
     const isFastest = index === 0
-    const color = isFastest ? colors.green : ists-mocker ? colors.yellow : colors.reset
+    const color = isFastest ? colors.green : isTsMocker ? colors.yellow : colors.reset
 
     const speedup = results[0].duration / result.duration
     const speedupText = isFastest ? '(fastest)' : `(${speedup.toFixed(2)}x)`
