@@ -1,23 +1,30 @@
 import { describe, expect, test } from 'bun:test'
 import { spawn } from 'node:child_process'
+import { dirname, join } from 'node:path'
+import process from 'node:process'
+import { fileURLToPath } from 'node:url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const projectRoot = join(__dirname, '..')
 
 function execCLI(args: string[]): Promise<{ stdout: string, stderr: string, exitCode: number }> {
   return new Promise((resolve) => {
-    const process = spawn('bun', ['run', './packages/core/bin/cli.ts', ...args], {
-      cwd: '/Users/chrisbreuer/Code/nanofaker',
+    const child = spawn(process.execPath, ['run', './packages/core/bin/cli.ts', ...args], {
+      cwd: projectRoot,
     })
     let stdout = ''
     let stderr = ''
 
-    process.stdout.on('data', (data) => {
+    child.stdout.on('data', (data) => {
       stdout += data.toString()
     })
 
-    process.stderr.on('data', (data) => {
+    child.stderr.on('data', (data) => {
       stderr += data.toString()
     })
 
-    process.on('close', (code) => {
+    child.on('close', (code) => {
       resolve({ stdout, stderr, exitCode: code || 0 })
     })
   })
