@@ -12,7 +12,7 @@ Comprehensive benchmarks comparing nanofaker against other popular JavaScript/Ty
 
 ## Summary
 
-✅ **nanofaker won 9 out of 9 benchmarks** (100% win rate!)
+✅ **nanofaker won 9 out of 9 benchmarks**
 ⚡ **6.57x faster than @faker-js/faker on average**
 
 ## Detailed Results

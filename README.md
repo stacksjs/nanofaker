@@ -339,7 +339,7 @@ nanofaker is designed for performance and efficiency:
 
 **Performance:**
 
-- ✅ **9 out of 9 benchmarks won** (100% win rate!)
+- ✅ **9 out of 9 benchmarks won**
 - ⚡ **9.28x faster than @faker-js/faker** on average
 - 🚀 **34.04M ops/s** for country generation
 - 🔑 **20.50M ops/s** for UUID generation (41.2x faster!)
