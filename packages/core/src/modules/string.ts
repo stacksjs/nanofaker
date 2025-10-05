@@ -9,7 +9,12 @@ export class StringModule {
    * @example faker.string.uuid() // '550e8400-e29b-41d4-a716-446655440000'
    */
   uuid(): string {
-    // Optimized: avoid regex overhead with direct string building
+    // Optimized: use native crypto.randomUUID() when available and not seeded
+    if (this.random['seed'] === undefined && typeof crypto !== 'undefined' && crypto.randomUUID) {
+      return crypto.randomUUID()
+    }
+
+    // Fallback for seeded random or environments without crypto.randomUUID
     const hex = '0123456789abcdef'
     let result = ''
 
