@@ -24,14 +24,21 @@ export class PersonModule {
       return this.firstNameNeutral()
     }
 
-    // Compute firstName from all gender-specific arrays
-    const allNames = [
-      ...this.locale.person.firstNameMale,
-      ...this.locale.person.firstNameFemale,
-      ...(this.locale.person.firstNameNeutral || []),
-    ]
+    // Optimized: avoid array spreading by selecting from combined length
+    const maleLen = this.locale.person.firstNameMale.length
+    const femaleLen = this.locale.person.firstNameFemale.length
+    const neutralLen = this.locale.person.firstNameNeutral?.length || 0
+    const totalLen = maleLen + femaleLen + neutralLen
 
-    return this.random.arrayElement(allNames)
+    const index = this.random.int(0, totalLen - 1)
+
+    if (index < maleLen) {
+      return this.locale.person.firstNameMale[index]
+    }
+    if (index < maleLen + femaleLen) {
+      return this.locale.person.firstNameFemale[index - maleLen]
+    }
+    return this.locale.person.firstNameNeutral![index - maleLen - femaleLen]
   }
 
   /**
@@ -83,20 +90,26 @@ export class PersonModule {
    * @example faker.person.fullName({ gender: 'female', prefix: true }) // 'Ms. Sarah Johnson'
    */
   fullName(options?: PersonFullNameOptions): string {
-    const parts: string[] = []
-
-    if (options?.prefix) {
-      parts.push(this.prefix())
+    // Optimized: avoid array creation for common case (no options)
+    if (!options) {
+      return `${this.firstName()} ${this.lastName()}`
     }
 
-    parts.push(this.firstName({ gender: options?.gender }))
-    parts.push(this.lastName())
+    // Handle options with direct string concatenation
+    const first = this.firstName({ gender: options.gender })
+    const last = this.lastName()
 
-    if (options?.suffix) {
-      parts.push(this.suffix())
+    if (options.prefix && options.suffix) {
+      return `${this.prefix()} ${first} ${last} ${this.suffix()}`
+    }
+    if (options.prefix) {
+      return `${this.prefix()} ${first} ${last}`
+    }
+    if (options.suffix) {
+      return `${first} ${last} ${this.suffix()}`
     }
 
-    return parts.join(' ')
+    return `${first} ${last}`
   }
 
   /**

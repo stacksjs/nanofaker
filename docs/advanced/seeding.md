@@ -242,7 +242,7 @@ faker.seed(12345) // Easy to remember and type
 faker.seed(2024) // Year-based seed
 
 // Avoid - Random or hard-to-remember seeds
-faker.seed(9384750291847502918) // Too long
+faker.seed(938475029) // Too long and random
 ```
 
 ### 2. Document Your Seeds

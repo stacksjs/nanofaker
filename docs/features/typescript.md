@@ -15,7 +15,7 @@ const email: string = faker.internet.email()
 const city: string = faker.address.city()
 
 // Autocomplete works perfectly
-faker.person. // IDE shows: firstName, lastName, fullName, gender, jobTitle, etc.
+// faker.person. // IDE shows: firstName, lastName, fullName, gender, jobTitle, etc.
 ```
 
 ## Type Definitions
@@ -141,7 +141,7 @@ const customLocale: LocaleDefinition = {
 
 nanofaker works perfectly with strict null checks:
 
-```ts
+```json
 {
   "compilerOptions": {
     "strict": true,

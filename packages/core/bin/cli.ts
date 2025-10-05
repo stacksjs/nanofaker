@@ -110,7 +110,7 @@ cli
     else {
       methods.forEach((method) => {
         try {
-          const example = fakerCategory[method].call(fakerCategory)
+          const example = fakerCategory[method]()
           console.log(`  ${method.padEnd(20)} // "${example}"`)
         }
         catch (e) {

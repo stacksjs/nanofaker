@@ -333,6 +333,41 @@ nanofaker batch 100 --template user > users.json
 
 See the [CLI documentation](https://nanofaker.stacksjs.org/cli) for complete details.
 
+## Performance Benchmarks
+
+nanofaker is designed for performance. We benchmark against all major JavaScript/TypeScript faker libraries:
+
+**Results Summary:**
+- ✅ **9 out of 9 benchmarks won** (100% win rate!)
+- ⚡ **6.57x faster than @faker-js/faker** on average
+- 🚀 **39.63M ops/s** for city generation
+- 📊 **7.97ms** to generate 10,000 complex user objects
+
+### Quick Comparison
+
+| Operation | nanofaker | @faker-js/faker | Speedup |
+|-----------|-----------|-----------------|---------|
+| Full Name Generation | 31.35M ops/s | 537.95K ops/s | **58x faster** |
+| Phone Number Generation | 9.77M ops/s | 2.05M ops/s | **4.8x faster** |
+| City Generation | 39.63M ops/s | 779.69K ops/s | **51x faster** |
+| Email Generation | 1.96M ops/s | 567.44K ops/s | **3.5x faster** |
+| Complex Objects (10k) | 7.97ms | 52.39ms | **6.6x faster** |
+
+### Running Benchmarks
+
+```bash
+# Run all benchmarks
+bun run bench
+
+# Results are compared against:
+# - @faker-js/faker
+# - chance
+# - casual
+# - @ngneat/falso
+```
+
+📊 See [BENCHMARKS.md](./BENCHMARKS.md) for detailed results and methodology.
+
 ## Testing
 
 ```bash

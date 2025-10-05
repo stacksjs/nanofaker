@@ -3,6 +3,8 @@
  */
 export class Random {
   private seed: number | undefined
+  private static readonly ALPHABET = 'abcdefghijklmnopqrstuvwxyz'.split('')
+  private static readonly DIGITS = '0123456789'
 
   constructor(seed?: number) {
     this.seed = seed
@@ -41,6 +43,10 @@ export class Random {
   arrayElement<T>(array: readonly T[]): T {
     if (array.length === 0) {
       throw new Error('Cannot pick from empty array')
+    }
+    // Optimize for unseeded random - avoid int() overhead
+    if (this.seed === undefined) {
+      return array[Math.floor(Math.random() * array.length)]
     }
     return array[this.int(0, array.length - 1)]
   }
@@ -81,11 +87,30 @@ export class Random {
    * Replace # with random digits and ? with random letters
    */
   replaceSymbols(format: string): string {
+    // Optimized: avoid regex callback overhead for unseeded random
+    if (this.seed === undefined) {
+      let result = ''
+      for (let i = 0; i < format.length; i++) {
+        const char = format[i]
+        if (char === '#') {
+          result += Random.DIGITS[Math.floor(Math.random() * 10)]
+        }
+        else if (char === '?') {
+          result += Random.ALPHABET[Math.floor(Math.random() * 26)]
+        }
+        else {
+          result += char
+        }
+      }
+      return result
+    }
+
+    // Seeded version
     return format.replace(/[#?]/g, (match) => {
       if (match === '#') {
         return String(this.int(0, 9))
       }
-      return this.arrayElement('abcdefghijklmnopqrstuvwxyz'.split(''))
+      return this.arrayElement(Random.ALPHABET)
     })
   }
 

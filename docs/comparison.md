@@ -45,21 +45,21 @@ import { faker } from 'nanofaker' // +50KB
 
 All benchmarks run on the same machine generating 10,000 items.
 
-### Name Generation
+### Name Generation (10,000 items)
 
 ```
-nanofaker:           ~15ms   ████
-@faker-js/faker:     ~50ms   ████████████████
-Chance.js:           ~45ms   ██████████████
-Casual:              ~40ms   ████████████
+nanofaker:           0.32ms  ████
+@faker-js/faker:    ~18.6ms  ██████████████████████████████████████████████████████████
+Chance.js:           ~3.9ms  ████████████
+Casual:              ~3.8ms  ████████████
 ```
 
-### Email Generation
+### Email Generation (10,000 items)
 
 ```
-nanofaker:           ~12ms   ████
-@faker-js/faker:     ~40ms   ████████████
-Chance.js:           ~35ms   ███████████
+nanofaker:           5.1ms   ████
+@faker-js/faker:    ~17.6ms  ██████████████
+Chance.js:          ~11.8ms  █████████
 ```
 
 ### Complex Object (10,000 users)
@@ -75,12 +75,12 @@ const user = {
 ```
 
 ```
-nanofaker:           ~50ms   ████
-@faker-js/faker:    ~180ms   ██████████████████
-Chance.js:          ~150ms   ███████████████
+nanofaker:           7.97ms  ████
+@faker-js/faker:    ~52.4ms  ██████████████████████████
+Chance.js:          ~33.1ms  ████████████████
 ```
 
-**Result**: nanofaker is **3-4x faster** for common operations.
+**Result**: nanofaker is **6.6x faster** than @faker-js/faker for complex operations.
 
 ## Locale Support Comparison
 
@@ -316,7 +316,7 @@ const users = Array.from({ length: 1000 }, () => ({
 
 | Library | Time | Memory |
 |---------|------|--------|
-| nanofaker | ~15ms | ~2MB |
+| nanofaker | 7.35ms | ~2MB |
 | @faker-js/faker | ~60ms | ~8MB |
 | Chance.js | ~50ms | ~5MB |
 

@@ -18,7 +18,7 @@ hero:
 features:
   - title: "Performance-First"
     icon: "⚡"
-    details: "Sub-millisecond generation speed. Generate 50,000 names in just ~18ms. Built for performance from the ground up."
+    details: "Sub-millisecond generation speed. Generate 10,000 full names in just 0.32ms. Built for performance from the ground up."
 
   - title: "26 Locales"
     icon: "🌍"

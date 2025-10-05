@@ -307,8 +307,8 @@ import { faker } from 'nanofaker'
 declare module 'nanofaker' {
   interface Faker {
     custom: {
-      uuid(): string
-      slug(): string
+      uuid: () => string
+      slug: () => string
     }
   }
 }
