@@ -1,9 +1,9 @@
 {
-  "name": "@nanofaker/benchmarks",
+  "name": "@ts-mocker/benchmarks",
   "type": "module",
   "version": "0.1.1",
   "private": true,
-  "description": "Benchmarks comparing nanofaker against other faker libraries",
+  "description": "Benchmarks comparing ts-mocker against other faker libraries",
   "author": "Chris Breuer <chris@stacksjs.org>",
   "license": "MIT",
   "scripts": {
@@ -15,7 +15,7 @@
     "@ngneat/falso": "^8.0.2",
     "casual": "^1.6.2",
     "chance": "^1.1.13",
-    "nanofaker": "workspace:*",
+    "ts-mocker": "workspace:*",
     "tinybench": "^5.0.1"
   },
   "devDependencies": {
