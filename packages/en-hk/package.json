@@ -1,7 +1,7 @@
 {
   "name": "@nanofaker/locale-en-hk",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "English (Hong Kong) locale data for nanofaker",
   "author": "Chris Breuer <chris@stacksjs.org>",
   "license": "MIT",
@@ -13,7 +13,15 @@
   "bugs": {
     "url": "https://github.com/stacksjs/nanofaker/issues"
   },
-  "keywords": ["nanofaker", "locale", "en-hk", "english", "hong-kong", "fake-data", "test-data"],
+  "keywords": [
+    "nanofaker",
+    "locale",
+    "en-hk",
+    "english",
+    "hong-kong",
+    "fake-data",
+    "test-data"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -22,7 +30,9 @@
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "bun --bun build.ts",
     "typecheck": "bun --bun tsc --noEmit"
