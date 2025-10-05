@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * English (South Africa) locale
  * Extends the base 'en' locale with South Africa-specific data
  */
-export const en_ZA: Partial<LocaleDefinition> = {
+export const en_ZA: DeepPartial<LocaleDefinition> = {
   title: 'English (South Africa)',
 
   person: {

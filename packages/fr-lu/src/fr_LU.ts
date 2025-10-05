@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * French (Luxembourg) locale
  * Extends the base 'fr' locale with Luxembourg-specific data
  */
-export const fr_LU: Partial<LocaleDefinition> = {
+export const fr_LU: DeepPartial<LocaleDefinition> = {
   title: 'French (Luxembourg)',
 
   // Luxembourg-specific address data

@@ -133,7 +133,7 @@ const COLORS = [
 export class VehicleModule {
   constructor(
     private random: Random,
-    private locale?: LocaleDefinition,
+    private locale?: LocaleDefinition | undefined,
   ) {}
 
   /**

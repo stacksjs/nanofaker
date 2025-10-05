@@ -4,7 +4,7 @@ import type { LocaleDefinition } from '../types'
 export class SystemModule {
   constructor(
     private random: Random,
-    private locale?: LocaleDefinition,
+    private locale?: LocaleDefinition | undefined,
   ) {}
 
   /**

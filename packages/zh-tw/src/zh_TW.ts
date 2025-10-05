@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * Chinese (Traditional, Taiwan) locale
  * Extends the base 'zh' locale with Taiwan-specific data
  */
-export const zh_TW: Partial<LocaleDefinition> = {
+export const zh_TW: DeepPartial<LocaleDefinition> = {
   title: 'Chinese (Traditional, Taiwan)',
 
   // Taiwan-specific address data (Traditional Chinese)

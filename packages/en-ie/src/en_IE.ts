@@ -1,6 +1,6 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
-export const en_IE: Partial<LocaleDefinition> = {
+export const en_IE: DeepPartial<LocaleDefinition> = {
   title: 'English (Ireland)',
 
   person: {

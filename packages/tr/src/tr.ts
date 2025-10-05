@@ -1,4 +1,4 @@
-import type { LocaleDefinition } from '../types'
+import type { LocaleDefinition } from 'nanofaker'
 
 export const tr: LocaleDefinition = {
   title: 'Turkish',

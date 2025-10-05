@@ -11,6 +11,11 @@ export interface FakerConfig {
 
 export type FakerOptions = Partial<FakerConfig>
 
+// Deep partial type utility for locale variants
+export type DeepPartial<T> = T extends any[] ? T : {
+  [P in keyof T]?: T[P] extends any[] ? T[P] : T[P] extends object ? DeepPartial<T[P]> : T[P]
+}
+
 // Locale types
 export interface LocaleDefinition {
   title: string
@@ -30,6 +35,7 @@ export interface LocaleDefinition {
   hacker?: HackerLocale
   system?: SystemLocale
   science?: ScienceLocale
+  color?: ColorLocale
 }
 
 export interface PersonLocale {
@@ -56,123 +62,136 @@ export interface AddressLocale {
   street: string[]
   city: string[]
   state: string[]
-  stateAbbr: string[]
+  stateAbbr?: string[]
   country: string[]
-  countryCode: string[]
+  countryCode?: string[]
   zipCode: string[]
-  buildingNumber: string[]
-  direction: string[]
-  streetSuffix: string[]
+  buildingNumber?: string[]
+  direction?: string[]
+  streetSuffix?: string[]
 }
 
 export interface CompanyLocale {
-  name: string[]
-  suffix: string[]
-  industry: string[]
-  buzzwords: string[]
-  adjective: string[]
-  descriptor: string[]
-  noun: string[]
+  name?: string[]
+  suffix?: string[]
+  industry?: string[]
+  buzzwords?: string[]
+  buzzword?: string[] // Alias for buzzwords
+  adjective?: string[]
+  descriptor?: string[]
+  noun?: string[]
 }
 
 export interface InternetLocale {
-  domainSuffix: string[]
-  freeEmail: string[]
+  domainSuffix?: string[]
+  domainName?: string[] // Alias for domainSuffix
+  freeEmail?: string[]
+  exampleEmail?: string[] // Alias for freeEmail
 }
 
 export interface PhoneLocale {
-  formats: string[]
+  formats?: string[]
+  format?: string[] // Alias for formats
+  number?: string[] // Alias for formats
 }
 
 export interface FoodLocale {
-  dish: string[]
-  ingredient: string[]
-  cuisine: string[]
-  dessert: string[]
-  fruit: string[]
-  vegetable: string[]
-  meat: string[]
-  spice: string[]
+  dish?: string[]
+  ingredient?: string[]
+  cuisine?: string[]
+  dessert?: string[]
+  fruit?: string[]
+  vegetable?: string[]
+  meat?: string[]
+  spice?: string[]
 }
 
 export interface AnimalLocale {
-  dog: string[]
-  cat: string[]
-  bird: string[]
-  fish: string[]
-  horse: string[]
-  rabbit: string[]
-  insect: string[]
-  type: string[]
+  dog?: string[]
+  cat?: string[]
+  bird?: string[]
+  fish?: string[]
+  horse?: string[]
+  rabbit?: string[]
+  insect?: string[]
+  type?: string[]
 }
 
 export interface SportLocale {
-  sport: string[]
-  team: string[]
-  athlete: string[]
+  sport?: string[]
+  team?: string[]
+  athlete?: string[]
 }
 
 export interface MusicLocale {
-  genre: string[]
-  artist: string[]
-  song: string[]
-  instrument: string[]
+  genre?: string[]
+  artist?: string[]
+  song?: string[]
+  instrument?: string[]
 }
 
 export interface CommerceLocale {
-  product: string[]
-  productAdjective: string[]
-  productMaterial: string[]
-  department: string[]
-  color: string[]
+  product?: string[]
+  productName?: string[] // Alias for product
+  productAdjective?: string[]
+  adjective?: string[] // Alias for productAdjective
+  productMaterial?: string[]
+  material?: string[] // Alias for productMaterial
+  department?: string[]
+  color?: string[]
 }
 
 export interface BookLocale {
-  title: string[]
-  author: string[]
-  publisher: string[]
-  genre: string[]
-  series: string[]
-  review: string[]
+  title?: string[]
+  author?: string[]
+  publisher?: string[]
+  genre?: string[]
+  series?: string[]
+  review?: string[]
 }
 
 export interface VehicleLocale {
-  manufacturer: string[]
-  model: string[]
-  type: string[]
-  fuel: string[]
-  bicycle: string[]
+  manufacturer?: string[]
+  model?: string[]
+  type?: string[]
+  fuel?: string[]
+  bicycle?: string[]
 }
 
 export interface WordLocale {
-  adjective: string[]
-  adverb: string[]
-  conjunction: string[]
-  interjection: string[]
-  noun: string[]
-  preposition: string[]
-  verb: string[]
+  adjective?: string[]
+  adverb?: string[]
+  conjunction?: string[]
+  interjection?: string[]
+  noun?: string[]
+  preposition?: string[]
+  verb?: string[]
 }
 
 export interface HackerLocale {
-  abbreviation: string[]
-  adjective: string[]
-  noun: string[]
-  verb: string[]
-  ingverb: string[]
-  phrase: string[]
+  abbreviation?: string[]
+  adjective?: string[]
+  noun?: string[]
+  verb?: string[]
+  ingverb?: string[]
+  phrase?: string[]
 }
 
 export interface SystemLocale {
-  fileName: string[]
-  fileType: string[]
+  fileName?: string[]
+  fileType?: string[]
 }
 
 export interface ScienceLocale {
-  chemicalElement: string[]
-  unit: string[]
-  constant: string[]
-  field: string[]
+  chemicalElement?: string[]
+  unit?: string[]
+  constant?: string[]
+  field?: string[]
+}
+
+export interface ColorLocale {
+  human?: string[]
+  name?: string[] // Alias for human
 }
 
 // Module option types

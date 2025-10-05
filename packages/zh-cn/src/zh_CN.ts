@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * Chinese (Simplified, China) locale
  * Extends the base 'zh' locale with China-specific data
  */
-export const zh_CN: Partial<LocaleDefinition> = {
+export const zh_CN: DeepPartial<LocaleDefinition> = {
   title: 'Chinese (Simplified, China)',
 
   // China-specific address data (Simplified Chinese)

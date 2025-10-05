@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * German (Austria) locale
  * Extends the base 'de' locale with Austria-specific data
  */
-export const de_AT: Partial<LocaleDefinition> = {
+export const de_AT: DeepPartial<LocaleDefinition> = {
   title: 'German (Austria)',
 
   // Austria-specific address data

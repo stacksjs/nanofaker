@@ -4,7 +4,7 @@ import { randCity, randCompanyName, randCountry, randEmail, randFullName, randPh
 import casual from 'casual'
 import Chance from 'chance'
 import { Bench } from 'tinybench'
-// eslint-disable-next-line antfu/no-import-dist
+// @ts-expect-error nanofaker is typed
 import { faker as nanofaker } from '../../core/dist/src/index.js'
 
 const chance = new Chance()

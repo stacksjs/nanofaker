@@ -4,6 +4,9 @@
     "lib": [
       "esnext"
     ],
+    "paths": {
+      "nanofaker": ["./packages/core/src/index.ts"]
+    },
     "moduleDetection": "force",
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -24,5 +27,5 @@
     "verbatimModuleSyntax": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
-  }
+  },
 }

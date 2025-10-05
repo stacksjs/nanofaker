@@ -68,7 +68,7 @@ describe('Locale Variant Utilities', () => {
 
   describe('mergeLocales', () => {
     it('should merge variant into base', () => {
-      const base = {
+      const base: any = {
         title: 'Base',
         person: {
           firstName: ['John', 'Jane'],
@@ -79,7 +79,7 @@ describe('Locale Variant Utilities', () => {
         },
       }
 
-      const variant = {
+      const variant: any = {
         title: 'Variant',
         address: {
           city: ['London'],
@@ -87,7 +87,7 @@ describe('Locale Variant Utilities', () => {
         },
       }
 
-      const result = mergeLocales(base, variant)
+      const result: any = mergeLocales(base, variant)
 
       expect(result.title).toBe('Variant')
       expect(result.person.firstName).toEqual(['John', 'Jane']) // unchanged

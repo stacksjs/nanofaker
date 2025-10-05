@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * Spanish (Mexico) locale
  * Extends the base 'es' locale with Mexico-specific data
  */
-export const es_MX: Partial<LocaleDefinition> = {
+export const es_MX: DeepPartial<LocaleDefinition> = {
   title: 'Spanish (Mexico)',
 
   // Mexico-specific person names

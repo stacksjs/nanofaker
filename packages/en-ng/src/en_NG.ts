@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * English (Nigeria) locale
  * Extends the base 'en' locale with Nigeria-specific data
  */
-export const en_NG: Partial<LocaleDefinition> = {
+export const en_NG: DeepPartial<LocaleDefinition> = {
   title: 'English (Nigeria)',
 
   person: {

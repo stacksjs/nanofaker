@@ -1,6 +1,6 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
-export const af_ZA: Partial<LocaleDefinition> = {
+export const af_ZA: DeepPartial<LocaleDefinition> = {
   title: 'Afrikaans (South Africa)',
 
   address: {

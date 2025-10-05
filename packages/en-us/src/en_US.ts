@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * English (United States) locale
  * Extends the base 'en' locale with US-specific data
  */
-export const en_US: Partial<LocaleDefinition> = {
+export const en_US: DeepPartial<LocaleDefinition> = {
   title: 'English (United States)',
 
   // Override US-specific address data

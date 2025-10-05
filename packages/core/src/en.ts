@@ -1,4 +1,4 @@
-import type { LocaleDefinition } from '../types'
+import type { LocaleDefinition } from './types'
 
 export const en: LocaleDefinition = {
   title: 'English',

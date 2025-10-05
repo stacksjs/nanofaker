@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * French (Senegal) locale
  * Extends the base 'fr' locale with Senegal-specific data
  */
-export const fr_SN: Partial<LocaleDefinition> = {
+export const fr_SN: DeepPartial<LocaleDefinition> = {
   title: 'French (Senegal)',
 
   // Senegal-specific person names

@@ -22,7 +22,7 @@ export class AddressModule {
    * @example faker.address.streetSuffix() // 'Street'
    */
   streetSuffix(): string {
-    return this.random.arrayElement(this.locale.address.streetSuffix)
+    return this.random.arrayElement(this.locale.address.streetSuffix ?? ['Street', 'Avenue', 'Road', 'Boulevard', 'Drive', 'Lane', 'Way'])
   }
 
   /**
@@ -45,7 +45,7 @@ export class AddressModule {
    * @example faker.address.buildingNumber() // '123'
    */
   buildingNumber(): string {
-    const format = this.random.arrayElement(this.locale.address.buildingNumber)
+    const format = this.random.arrayElement(this.locale.address.buildingNumber ?? ["#", "##", "###"])
     return this.random.replaceSymbols(format)
   }
 
@@ -70,7 +70,7 @@ export class AddressModule {
    * @example faker.address.stateAbbr() // 'CA'
    */
   stateAbbr(): string {
-    return this.random.arrayElement(this.locale.address.stateAbbr)
+    return this.random.arrayElement(this.locale.address.stateAbbr ?? [])
   }
 
   /**
@@ -86,7 +86,7 @@ export class AddressModule {
    * @example faker.address.countryCode() // 'US'
    */
   countryCode(): string {
-    return this.random.arrayElement(this.locale.address.countryCode)
+    return this.random.arrayElement(this.locale.address.countryCode ?? [])
   }
 
   /**
@@ -103,7 +103,7 @@ export class AddressModule {
    * @example faker.address.direction() // 'North'
    */
   direction(): string {
-    return this.random.arrayElement(this.locale.address.direction)
+    return this.random.arrayElement(this.locale.address.direction ?? ["North", "South", "East", "West"])
   }
 
   /**

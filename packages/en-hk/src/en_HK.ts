@@ -1,6 +1,6 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
-export const en_HK: Partial<LocaleDefinition> = {
+export const en_HK: DeepPartial<LocaleDefinition> = {
   title: 'English (Hong Kong)',
 
   address: {

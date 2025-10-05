@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * Zulu (South Africa) locale
  * Extends the base 'zu' locale with South Africa-specific data
  */
-export const zu_ZA: Partial<LocaleDefinition> = {
+export const zu_ZA: DeepPartial<LocaleDefinition> = {
   title: 'Zulu (South Africa)',
 
   // South Africa-specific cities (Zulu names where applicable)

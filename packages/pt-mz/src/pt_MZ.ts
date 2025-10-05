@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * Portuguese (Mozambique) locale
  * Extends the base 'pt' locale with Mozambique-specific data
  */
-export const pt_MZ: Partial<LocaleDefinition> = {
+export const pt_MZ: DeepPartial<LocaleDefinition> = {
   title: 'Portuguese (Mozambique)',
 
   // Mozambique-specific person names

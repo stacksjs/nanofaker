@@ -1,10 +1,10 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'nanofaker'
 
 /**
  * German (Switzerland) locale
  * Extends the base 'de' locale with Switzerland-specific data
  */
-export const de_CH: Partial<LocaleDefinition> = {
+export const de_CH: DeepPartial<LocaleDefinition> = {
   title: 'German (Switzerland)',
 
   // Switzerland-specific address data

@@ -4,7 +4,7 @@ import type { ColorOptions, LocaleDefinition } from '../types'
 export class ColorModule {
   constructor(
     private random: Random,
-    private locale?: LocaleDefinition,
+    private locale?: LocaleDefinition | undefined,
   ) {}
 
   /**
