@@ -339,9 +339,9 @@ nanofaker is designed for performance and efficiency:
 
 **Performance:**
 - ✅ **9 out of 9 benchmarks won** (100% win rate!)
-- ⚡ **6.57x faster than @faker-js/faker** on average
-- 🚀 **39.63M ops/s** for city generation
-- 📊 **7.97ms** to generate 10,000 complex user objects
+- ⚡ **6.92x faster than @faker-js/faker** on average
+- 🚀 **33.56M ops/s** for city generation
+- 📊 **8.26ms** to generate 10,000 complex user objects
 
 **Package Size:**
 - 📦 **174 KB** published (core package only)
@@ -353,11 +353,11 @@ nanofaker is designed for performance and efficiency:
 
 | Operation | nanofaker | @faker-js/faker | Speedup |
 |-----------|-----------|-----------------|---------|
-| Full Name Generation | 31.35M ops/s | 537.95K ops/s | **58x faster** |
-| Phone Number Generation | 9.77M ops/s | 2.05M ops/s | **4.8x faster** |
-| City Generation | 39.63M ops/s | 779.69K ops/s | **51x faster** |
-| Email Generation | 1.96M ops/s | 567.44K ops/s | **3.5x faster** |
-| Complex Objects (10k) | 7.97ms | 52.39ms | **6.6x faster** |
+| Full Name Generation | 24.31M ops/s | 663.17K ops/s | **36.7x faster** |
+| Phone Number Generation | 11.79M ops/s | 2.63M ops/s | **4.5x faster** |
+| City Generation | 33.56M ops/s | 1.08M ops/s | **31.1x faster** |
+| Email Generation | 2.49M ops/s | 647.77K ops/s | **3.8x faster** |
+| Complex Objects (10k) | 8.26ms | 57.16ms | **6.9x faster** |
 
 ### Running Benchmarks
 

@@ -6,18 +6,18 @@ Comprehensive benchmarks comparing nanofaker against other popular JavaScript/Ty
 
 | Library | Version | Installed Size | Files | Performance | Notes |
 |---------|---------|----------------|-------|-------------|-------|
-| **nanofaker** | latest | 632 KB | 37 | ⚡ Fastest | 26 locales, full coverage |
-| **@faker-js/faker** | v10.0.0 | 4.9 MB | 231 | Medium | 70+ locales, partial coverage |
+| **nanofaker** | latest | 174 KB | 38 | ⚡ Fastest | 26 locales, full coverage |
+| **@faker-js/faker** | v10.0.0 | 4.29 MB | 231 | Medium | 70+ locales, partial coverage |
 | **chance** | v1.1.13 | 2.6 MB | 164 | Medium | English only |
 | **casual** | v1.6.2 | 584 KB | 75 | Medium | Limited locales |
-| **@ngneat/falso** | v7.4.0 | 2.6 MB | 399 | Medium | TypeScript-first |
+| **@ngneat/falso** | v8.0.2 | 2.6 MB | 399 | Medium | TypeScript-first |
 
 ### Key Advantages
 
 **nanofaker offers:**
-- ✅ **Fastest performance** - 6.57x faster than @faker-js/faker
-- ✅ **Smallest size** - 7.8x smaller than @faker-js/faker (4.3 MB savings)
-- ✅ **Fewest files** - 6.2x fewer files than @faker-js/faker
+- ✅ **Fastest performance** - 6.92x faster than @faker-js/faker
+- ✅ **Smallest size** - 24.7x smaller than @faker-js/faker (4.1 MB savings)
+- ✅ **Fewest files** - 6.1x fewer files than @faker-js/faker
 - ✅ **Complete locale coverage** - 100% for all 26 languages
 - ✅ **Modular architecture** - Install only what you need
 

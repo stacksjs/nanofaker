@@ -88,7 +88,6 @@ async function runBenchmarks() {
       randFullName()
     })
 
-  await nameBench.warmup()
   await nameBench.run()
   printResults(nameBench, '📛 Full Name Generation')
 
@@ -111,7 +110,6 @@ async function runBenchmarks() {
       randEmail()
     })
 
-  await emailBench.warmup()
   await emailBench.run()
   printResults(emailBench, '📧 Email Generation')
 
@@ -134,7 +132,6 @@ async function runBenchmarks() {
       randPhoneNumber()
     })
 
-  await phoneBench.warmup()
   await phoneBench.run()
   printResults(phoneBench, '📞 Phone Number Generation')
 
@@ -157,7 +154,6 @@ async function runBenchmarks() {
       randCity()
     })
 
-  await cityBench.warmup()
   await cityBench.run()
   printResults(cityBench, '🏙️  City Generation')
 
@@ -180,7 +176,6 @@ async function runBenchmarks() {
       randCountry()
     })
 
-  await countryBench.warmup()
   await countryBench.run()
   printResults(countryBench, '🌍 Country Generation')
 
@@ -203,7 +198,6 @@ async function runBenchmarks() {
       randCompanyName()
     })
 
-  await companyBench.warmup()
   await companyBench.run()
   printResults(companyBench, '🏢 Company Name Generation')
 
@@ -223,7 +217,6 @@ async function runBenchmarks() {
       randProduct()
     })
 
-  await productBench.warmup()
   await productBench.run()
   printResults(productBench, '🛍️  Product Generation')
 
@@ -246,7 +239,6 @@ async function runBenchmarks() {
       randUuid()
     })
 
-  await uuidBench.warmup()
   await uuidBench.run()
   printResults(uuidBench, '🔑 UUID Generation')
 
