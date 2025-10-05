@@ -18,6 +18,8 @@ export default {
 } satisfies MockConfig
 ```
 
+_Alternatively, you could also use the alias `faker.config.ts` if you prefer._
+
 ### Method 2: Programmatic
 
 Enable auto-install when creating a Faker instance:
