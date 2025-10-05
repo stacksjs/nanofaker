@@ -1,0 +1,71 @@
+import type { LocaleDefinition } from 'nanofaker'
+
+/**
+ * English (South Africa) locale
+ * Extends the base 'en' locale with South Africa-specific data
+ */
+export const en_ZA: Partial<LocaleDefinition> = {
+  title: 'English (South Africa)',
+
+  person: {
+    firstNameMale: [
+      'Thabo', 'Sipho', 'Mandla', 'Bongani', 'Tshepo', 'Kagiso', 'Mpho',
+      'Lebogang', 'Tumelo', 'Kgotso', 'Lerato', 'Thabiso', 'Karabo',
+      'James', 'John', 'David', 'Michael', 'Daniel', 'Matthew', 'Christopher',
+    ],
+    firstNameFemale: [
+      'Thandiwe', 'Nombuso', 'Zanele', 'Precious', 'Thandeka', 'Nomvula',
+      'Nokuthula', 'Palesa', 'Lindiwe', 'Kelebogile', 'Refilwe', 'Dineo',
+      'Sarah', 'Elizabeth', 'Mary', 'Jennifer', 'Michelle', 'Nicole', 'Jessica',
+    ],
+    lastName: [
+      'Nkosi', 'Dlamini', 'Mkhize', 'Ndlovu', 'Zulu', 'Khumalo', 'Sithole',
+      'Van der Merwe', 'Botha', 'Pretorius', 'Smith', 'Jones', 'Williams',
+      'Brown', 'Jacobs', 'Pieterse', 'Du Plessis', 'Van Zyl', 'Nel', 'Kruger',
+    ],
+  },
+
+  address: {
+    city: [
+      'Johannesburg', 'Cape Town', 'Durban', 'Pretoria', 'Port Elizabeth',
+      'Bloemfontein', 'East London', 'Nelspruit', 'Polokwane', 'Kimberley',
+      'Pietermaritzburg', 'Soweto', 'Benoni', 'Tembisa', 'Vereeniging',
+      'Boksburg', 'Welkom', 'Newcastle', 'Krugersdorp', 'Midrand',
+    ],
+    state: [
+      'Gauteng', 'Western Cape', 'KwaZulu-Natal', 'Eastern Cape', 'Free State',
+      'Limpopo', 'Mpumalanga', 'North West', 'Northern Cape',
+    ],
+    stateAbbr: ['GP', 'WC', 'KZN', 'EC', 'FS', 'LP', 'MP', 'NW', 'NC'],
+    country: ['South Africa', 'RSA'],
+    countryCode: ['ZA'],
+    zipCode: ['####'],
+  },
+
+  phone: {
+    formats: [
+      '0## ### ####',
+      '+27 ## ### ####',
+      '082 ### ####',
+      '071 ### ####',
+    ],
+  },
+
+  food: {
+    dish: [
+      'Braai', 'Bobotie', 'Bunny Chow', 'Boerewors', 'Biltong', 'Pap and Vleis',
+      'Potjiekos', 'Chakalaka', 'Vetkoek', 'Koeksisters', 'Melktert', 'Malva Pudding',
+      'Sosaties', 'Bredie', 'Waterblommetjie Bredie', 'Samp and Beans',
+      'Umngqusho', 'Amadumbe', 'Morogo', 'Peri-Peri Chicken',
+    ],
+    cuisine: [
+      'South African', 'Cape Malay', 'Afrikaans', 'Zulu', 'Indian',
+      'Portuguese', 'Braai', 'Rainbow Cuisine',
+    ],
+  },
+
+  internet: {
+    domainSuffix: ['za', 'co.za', 'org.za', 'gov.za', 'ac.za', 'net.za'],
+    freeEmail: ['gmail.com', 'yahoo.co.za', 'webmail.co.za', 'mweb.co.za'],
+  },
+}

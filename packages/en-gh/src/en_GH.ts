@@ -1,0 +1,65 @@
+import type { LocaleDefinition } from 'nanofaker'
+
+/**
+ * English (Ghana) locale
+ * Extends the base 'en' locale with Ghana-specific data
+ */
+export const en_GH: Partial<LocaleDefinition> = {
+  title: 'English (Ghana)',
+
+  person: {
+    firstNameMale: [
+      'Kwame', 'Kofi', 'Kwasi', 'Kwadwo', 'Yaw', 'Kojo', 'Emmanuel', 'Samuel',
+      'Isaac', 'Daniel', 'Michael', 'Joseph', 'Francis', 'Prince', 'Justice',
+    ],
+    firstNameFemale: [
+      'Akua', 'Ama', 'Afia', 'Yaa', 'Abena', 'Akosua', 'Grace', 'Patience',
+      'Joyce', 'Comfort', 'Mercy', 'Beatrice', 'Esther', 'Ruth', 'Mary',
+    ],
+    lastName: [
+      'Mensah', 'Owusu', 'Osei', 'Boateng', 'Asante', 'Adjei', 'Appiah',
+      'Darko', 'Ofori', 'Agyei', 'Opoku', 'Frimpong', 'Amoah', 'Yeboah',
+    ],
+  },
+
+  address: {
+    city: [
+      'Accra', 'Kumasi', 'Tamale', 'Takoradi', 'Ashaiman', 'Sunyani',
+      'Cape Coast', 'Obuasi', 'Teshie', 'Tema', 'Madina', 'Koforidua',
+      'Wa', 'Techiman', 'Ho', 'Nungua', 'Lashibi', 'Dome', 'Gbawe',
+    ],
+    state: [
+      'Greater Accra', 'Ashanti', 'Western', 'Central', 'Northern', 'Eastern',
+      'Volta', 'Upper East', 'Upper West', 'Brong-Ahafo', 'Savannah',
+      'Bono East', 'Ahafo', 'Oti', 'Western North', 'North East',
+    ],
+    country: ['Ghana'],
+    countryCode: ['GH'],
+    zipCode: ['??-####-####'],
+  },
+
+  phone: {
+    formats: [
+      '0## ### ####',
+      '+233 ## ### ####',
+      '024 ### ####',
+      '054 ### ####',
+    ],
+  },
+
+  food: {
+    dish: [
+      'Jollof Rice', 'Banku', 'Fufu', 'Kenkey', 'Waakye', 'Red Red',
+      'Groundnut Soup', 'Palm Nut Soup', 'Light Soup', 'Kontomire Stew',
+      'Kelewele', 'Bofrot', 'Tatale', 'Kokonte', 'Eto', 'Tuo Zaafi',
+    ],
+    cuisine: [
+      'Ghanaian', 'West African', 'Akan', 'Ga', 'Ewe', 'African',
+    ],
+  },
+
+  internet: {
+    domainSuffix: ['gh', 'com.gh', 'org.gh', 'edu.gh', 'gov.gh'],
+    freeEmail: ['gmail.com', 'yahoo.com', 'hotmail.com'],
+  },
+}

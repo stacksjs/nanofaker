@@ -4,7 +4,7 @@ nanofaker provides comprehensive locale support with **complete translations** a
 
 ## Supported Locales
 
-All 20 locales have full coverage across all 16 data categories:
+All 26 locales have full coverage across all 16 data categories:
 
 ### English (en)
 
@@ -267,6 +267,84 @@ console.log(faker.person.fullName()) // "Jan Novák"
 console.log(faker.address.city()) // "Praha"
 ```
 
+### Esperanto (eo)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'eo'
+console.log(faker.person.fullName()) // "Johano Zamenhof"
+console.log(faker.address.city()) // "Varsovio"
+```
+
+### Persian/Farsi (fa)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'fa'
+console.log(faker.person.fullName()) // "محمد احمدی"
+console.log(faker.address.city()) // "تهران"
+```
+
+### Hebrew (he)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'he'
+console.log(faker.person.fullName()) // "דוד כהן"
+console.log(faker.address.city()) // "תל אביב"
+```
+
+### Arabic (ar)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'ar'
+console.log(faker.person.fullName()) // "أحمد محمد"
+console.log(faker.address.city()) // "القاهرة"
+```
+
+### Afrikaans (af)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'af'
+console.log(faker.person.fullName()) // "Pieter van der Merwe"
+console.log(faker.address.city()) // "Kaapstad"
+```
+
+### Azerbaijani (az)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+
+```ts
+import { faker } from 'nanofaker'
+
+faker.locale = 'az'
+console.log(faker.person.fullName()) // "Əli Məmmədov"
+console.log(faker.address.city()) // "Bakı"
+```
+
 ## Multi-Locale Applications
 
 For applications that need to support multiple locales simultaneously, create separate instances:
@@ -285,35 +363,3 @@ const users = [
   { name: jaFaker.person.fullName(), locale: 'ja' },
 ]
 ```
-
-## Locale Coverage Comparison
-
-Unlike other faker libraries, nanofaker provides **complete** translations:
-
-| Category | nanofaker | Other Libraries |
-|----------|-----------|----------------|
-| Person | ✓ All locales | Partial |
-| Address | ✓ All locales | Partial |
-| Company | ✓ All locales | Partial |
-| Internet | ✓ All locales | Partial |
-| Phone | ✓ All locales | Partial |
-| Food | ✓ All locales | Limited |
-| Animals | ✓ All locales | Limited |
-| Sports | ✓ All locales | Limited |
-| Music | ✓ All locales | Limited |
-| Commerce | ✓ All locales | Limited |
-| Books | ✓ All locales | Limited |
-| Vehicles | ✓ All locales | Limited |
-| Words | ✓ All locales | Limited |
-| Hacker/Tech | ✓ All locales | Limited |
-| System | ✓ All locales | Limited |
-| Science | ✓ All locales | Limited |
-
-## Why Complete Coverage Matters
-
-Having complete translations ensures:
-
-1. **Consistency** - All data categories work in all locales
-2. **No Fallbacks** - No unexpected English words in non-English data
-3. **Cultural Accuracy** - Data that makes sense in each locale
-4. **Professional Quality** - Test data that looks authentic

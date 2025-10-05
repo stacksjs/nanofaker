@@ -1,0 +1,72 @@
+import type { LocaleDefinition } from 'nanofaker'
+
+/**
+ * English (Nigeria) locale
+ * Extends the base 'en' locale with Nigeria-specific data
+ */
+export const en_NG: Partial<LocaleDefinition> = {
+  title: 'English (Nigeria)',
+
+  person: {
+    firstNameMale: [
+      'Chukwudi', 'Oluwaseun', 'Chinedu', 'Emeka', 'Adeola', 'Obiora', 'Tunde',
+      'Babatunde', 'Chibueze', 'Ikenna', 'Nnamdi', 'Chidi', 'Obinna', 'Eze',
+      'Kayode', 'Femi', 'Segun', 'Kunle', 'Wale', 'Dele',
+    ],
+    firstNameFemale: [
+      'Chioma', 'Ngozi', 'Adaeze', 'Chiamaka', 'Nneka', 'Amaka', 'Blessing',
+      'Funmi', 'Yetunde', 'Bukola', 'Folake', 'Omolara', 'Titilayo', 'Bisi',
+      'Kehinde', 'Taiwo', 'Omotola', 'Abosede', 'Zainab', 'Fatima',
+    ],
+    lastName: [
+      'Okafor', 'Okonkwo', 'Eze', 'Nwosu', 'Okoro', 'Adeyemi', 'Williams',
+      'Johnson', 'Adebayo', 'Oluwole', 'Ibrahim', 'Mohammed', 'Bello', 'Musa',
+      'Abubakar', 'Usman', 'Aliyu', 'Suleiman', 'Abdullahi', 'Hassan',
+    ],
+  },
+
+  address: {
+    city: [
+      'Lagos', 'Abuja', 'Kano', 'Ibadan', 'Port Harcourt', 'Benin City',
+      'Kaduna', 'Enugu', 'Zaria', 'Warri', 'Ilorin', 'Aba', 'Jos',
+      'Onitsha', 'Calabar', 'Akure', 'Abeokuta', 'Owerri', 'Uyo', 'Maiduguri',
+    ],
+    state: [
+      'Lagos', 'Kano', 'Kaduna', 'Oyo', 'Rivers', 'Edo', 'Anambra', 'Enugu',
+      'Abia', 'Delta', 'Ogun', 'Ondo', 'Osun', 'Kwara', 'Imo', 'Akwa Ibom',
+      'Bauchi', 'Borno', 'Cross River', 'Ebonyi', 'Ekiti', 'Gombe', 'Jigawa',
+      'Kebbi', 'Kogi', 'Nasarawa', 'Niger', 'Plateau', 'Sokoto', 'Taraba',
+      'Yobe', 'Zamfara', 'FCT Abuja',
+    ],
+    country: ['Nigeria'],
+    countryCode: ['NG'],
+    zipCode: ['######'],
+  },
+
+  phone: {
+    formats: [
+      '0### ### ####',
+      '+234 ### ### ####',
+      '080# ### ####',
+      '070# ### ####',
+      '090# ### ####',
+    ],
+  },
+
+  food: {
+    dish: [
+      'Jollof Rice', 'Egusi Soup', 'Pounded Yam', 'Suya', 'Moi Moi', 'Akara',
+      'Pepper Soup', 'Efo Riro', 'Banga Soup', 'Afang Soup', 'Edikang Ikong',
+      'Ofada Rice', 'Amala', 'Tuwo', 'Fufu', 'Eba', 'Ogbono Soup', 'Bitterleaf Soup',
+      'Nkwobi', 'Pepper Chicken', 'Fried Rice', 'Chin Chin', 'Puff Puff', 'Meat Pie',
+    ],
+    cuisine: [
+      'Nigerian', 'West African', 'Yoruba', 'Igbo', 'Hausa', 'African',
+    ],
+  },
+
+  internet: {
+    domainSuffix: ['ng', 'com.ng', 'org.ng', 'gov.ng', 'edu.ng', 'com'],
+    freeEmail: ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com'],
+  },
+}

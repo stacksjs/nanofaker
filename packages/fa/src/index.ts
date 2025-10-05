@@ -1,0 +1,1 @@
+export { fa } from './fa'

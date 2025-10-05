@@ -35,10 +35,17 @@ Locale variants use the format `{language}_{REGION}` or `{language}-{REGION}`:
 - `pt_PT` / `pt-PT` - Portuguese (Portugal)
 - `pt_MZ` / `pt-MZ` - Portuguese (Mozambique)
 
-### Other Variants
+### French Variants
 
 - `fr_FR` / `fr-FR` - French (France)
+- `fr_BE` / `fr-BE` - French (Belgium)
 - `fr_CA` / `fr-CA` - French (Canada)
+- `fr_CH` / `fr-CH` - French (Switzerland)
+- `fr_LU` / `fr-LU` - French (Luxembourg)
+- `fr_SN` / `fr-SN` - French (Senegal)
+
+### Other Variants
+
 - `zu_ZA` / `zu-ZA` - Zulu (South Africa)
 
 ## Usage

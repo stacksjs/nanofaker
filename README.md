@@ -13,7 +13,7 @@ A performance-focused and lightweight faker library for TypeScript with comprehe
 ## Features
 
 - ⚡️ **Performance-focused** - Built with speed and efficiency in mind
-- 🌍 **Multi-locale Support** - Complete translations for 20 languages:
+- 🌍 **Multi-locale Support** - Complete translations for 26 languages:
   - English (en)
   - Spanish (es)
   - French (fr)
@@ -34,6 +34,12 @@ A performance-focused and lightweight faker library for TypeScript with comprehe
   - Turkish (tr)
   - Polish (pl)
   - Czech (cs)
+  - Esperanto (eo)
+  - Persian/Farsi (fa)
+  - Hebrew (he)
+  - Arabic (ar)
+  - Afrikaans (af)
+  - Azerbaijani (az)
 - 📦 **Lightweight** - Minimal dependencies and small bundle size
 - 💪 **Fully Typed** - Written in TypeScript with comprehensive type definitions
 - 🎯 **Comprehensive Data** - 16+ data categories including:
@@ -126,6 +132,12 @@ console.log(chineseFaker.person.fullName()) // "王伟"
 - `tr` - Turkish
 - `pl` - Polish
 - `cs` - Czech
+- `eo` - Esperanto
+- `fa` - Persian/Farsi
+- `he` - Hebrew
+- `ar` - Arabic
+- `af` - Afrikaans
+- `az` - Azerbaijani
 
 ### API Examples
 
@@ -297,7 +309,7 @@ nanofaker methods food
 
 ### Options
 
-- `--locale <locale>` - Use a specific locale (en, es, fr, de, it, pt, ja, tl, zh)
+- `--locale <locale>` - Use a specific locale (en, es, fr, de, it, pt, ja, tl, zh, nl, ko, no, sv, da, uk, hi, fi, tr, pl, cs, eo, fa, he, ar, af, az)
 - `--count <count>` - Number of items to generate
 - `--seed <seed>` - Seed for reproducible results
 - `--json` - Output as JSON

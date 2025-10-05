@@ -36,6 +36,12 @@ export class LocaleLoader {
     'tr',
     'pl',
     'cs',
+    'eo',
+    'fa',
+    'he',
+    'ar',
+    'af',
+    'az',
   ] as const
 
   /**
@@ -46,10 +52,20 @@ export class LocaleLoader {
     'en_GB',
     'en_CA',
     'en_AU',
+    'en_NG',
+    'en_ZA',
+    'en_IN',
+    'en_GH',
+    'en_HK',
+    'en_IE',
     'es_MX',
     'es_ES',
     'fr_FR',
+    'fr_BE',
     'fr_CA',
+    'fr_CH',
+    'fr_LU',
+    'fr_SN',
     'de_DE',
     'de_AT',
     'de_CH',
@@ -59,6 +75,7 @@ export class LocaleLoader {
     'zh_CN',
     'zh_TW',
     'zu_ZA',
+    'af_ZA',
   ] as const
 
   /**

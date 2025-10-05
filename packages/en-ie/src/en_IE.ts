@@ -1,0 +1,62 @@
+import type { LocaleDefinition } from 'nanofaker'
+
+export const en_IE: Partial<LocaleDefinition> = {
+  title: 'English (Ireland)',
+
+  person: {
+    firstNameMale: [
+      'Liam', 'Conor', 'Sean', 'Oisin', 'Cian', 'Darragh', 'Cathal', 'Eoin',
+      'Finn', 'Cillian', 'Tadhg', 'Rory', 'Padraig', 'Niall', 'Declan',
+    ],
+    firstNameFemale: [
+      'Aoife', 'Ciara', 'Niamh', 'Saoirse', 'Orla', 'Caoimhe', 'Aisling',
+      'Siobhan', 'Roisin', 'Sinead', 'Grainne', 'Emer', 'Clodagh', 'Mairead',
+    ],
+    lastName: [
+      'Murphy', 'Kelly', 'O\'Sullivan', 'Walsh', 'Smith', 'O\'Brien', 'Byrne',
+      'Ryan', 'O\'Connor', 'O\'Neill', 'Doyle', 'McCarthy', 'Gallagher',
+      'Doherty', 'Kennedy', 'Lynch', 'Murray', 'Quinn', 'Moore', 'McLaughlin',
+    ],
+  },
+
+  address: {
+    city: [
+      'Dublin', 'Cork', 'Limerick', 'Galway', 'Waterford', 'Drogheda', 'Dundalk',
+      'Swords', 'Bray', 'Navan', 'Ennis', 'Kilkenny', 'Carlow', 'Tralee',
+      'Newbridge', 'Portlaoise', 'Balbriggan', 'Naas', 'Athlone', 'Mullingar',
+    ],
+    state: [
+      'Dublin', 'Cork', 'Galway', 'Limerick', 'Kerry', 'Mayo', 'Donegal',
+      'Meath', 'Kildare', 'Wicklow', 'Wexford', 'Waterford', 'Clare',
+      'Tipperary', 'Kilkenny', 'Louth', 'Westmeath', 'Offaly', 'Carlow',
+      'Sligo', 'Leitrim', 'Roscommon', 'Cavan', 'Monaghan', 'Laois', 'Longford',
+    ],
+    country: ['Ireland', 'Éire'],
+    countryCode: ['IE'],
+    zipCode: ['??? ????'],
+  },
+
+  phone: {
+    formats: [
+      '0## ### ####',
+      '+353 ## ### ####',
+      '08# ### ####',
+    ],
+  },
+
+  food: {
+    dish: [
+      'Irish Stew', 'Colcannon', 'Boxty', 'Coddle', 'Black Pudding', 'White Pudding',
+      'Soda Bread', 'Barmbrack', 'Guinness Stew', 'Shepherd\'s Pie', 'Bacon and Cabbage',
+      'Champ', 'Seafood Chowder', 'Fish and Chips', 'Apple Tart', 'Porter Cake',
+    ],
+    cuisine: [
+      'Irish', 'Celtic', 'Traditional Irish', 'Modern Irish', 'Gastropub',
+    ],
+  },
+
+  internet: {
+    domainSuffix: ['ie', 'com', 'eu'],
+    freeEmail: ['gmail.com', 'yahoo.ie', 'hotmail.com', 'eircom.net'],
+  },
+}

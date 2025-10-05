@@ -1,0 +1,73 @@
+import type { LocaleDefinition } from 'nanofaker'
+
+/**
+ * French (Switzerland) locale
+ * Extends the base 'fr' locale with Switzerland-specific data
+ */
+export const fr_CH: Partial<LocaleDefinition> = {
+  title: 'French (Switzerland)',
+
+  // Switzerland-specific address data (French-speaking regions)
+  address: {
+    city: [
+      'Genève', 'Lausanne', 'Neuchâtel', 'Fribourg', 'Sion', 'Monthey',
+      'La Chaux-de-Fonds', 'Yverdon-les-Bains', 'Vevey', 'Montreux',
+      'Nyon', 'Morges', 'Renens', 'Pully', 'Bulle', 'Martigny',
+      'Sierre', 'Le Locle', 'Delémont', 'Porrentruy', 'Moutier',
+      'Bienne', 'Biel', 'Carouge', 'Vernier', 'Onex', 'Lancy',
+    ],
+    state: [
+      'Genève', 'Vaud', 'Neuchâtel', 'Fribourg', 'Valais', 'Jura',
+      'Berne', 'Bern', 'Freiburg',
+    ],
+    stateAbbr: ['GE', 'VD', 'NE', 'FR', 'VS', 'JU', 'BE'],
+    country: ['Suisse', 'Switzerland', 'Schweiz', 'Svizzera'],
+    countryCode: ['CH'],
+    zipCode: ['####'],
+  },
+
+  // Swiss phone formats
+  phone: {
+    formats: [
+      '0## ### ## ##',
+      '+41 ## ### ## ##',
+      '0### ### ###',
+      '+41 ### ### ###',
+    ],
+  },
+
+  // Swiss-French cuisine
+  food: {
+    dish: [
+      'Fondue', 'Raclette', 'Rösti', 'Malakoff', 'Papet vaudois',
+      'Fondue moitié-moitié', 'Fondue fribourgeoise', 'Fondue neuchâteloise',
+      'Saucisse aux choux', 'Taillaule', 'Gâteau du Vully', 'Tarte aux pruneaux',
+      'Meringues à la crème double', 'Cuchaule', 'Vin chaud', 'Polenta',
+      'Croûte au fromage', 'Brisolée', 'Cholera', 'Damassine',
+    ],
+    ingredient: [
+      'Gruyère', 'Vacherin', 'Emmental', 'Raclette', 'Tomme', 'Tête de Moine',
+      'Crème double', 'Vin blanc', 'Kirsch', 'Pommes de terre', 'Poireaux',
+      'Saucisse vaudoise', 'Poire à Botzi', 'Damassine', 'Abricots du Valais',
+    ],
+    dessert: [
+      'Meringues à la crème double', 'Taillé aux greubons', 'Tarte aux pruneaux',
+      'Gâteau du Vully', 'Taillaule', 'Cuchaule', 'Tourte de truite',
+      'Vin cuit', 'Vermicelles', 'Totenbeinli',
+    ],
+    cuisine: [
+      'Suisse romande', 'Vaudoise', 'Genevoise', 'Fribourgeoise',
+      'Neuchâteloise', 'Valaisanne', 'Jurassienne', 'Montagnarde',
+    ],
+    spice: [
+      'Sel de Guérande', 'Poivre', 'Cumin', 'Ail des ours',
+      'Herbes de montagne', 'Génépi',
+    ],
+  },
+
+  // Swiss internet domains
+  internet: {
+    domainSuffix: ['ch', 'com', 'li', 'eu'],
+    freeEmail: ['gmail.com', 'bluewin.ch', 'gmx.ch', 'hotmail.com', 'swissonline.ch'],
+  },
+}
