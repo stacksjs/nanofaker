@@ -4,12 +4,12 @@
     "lib": [
       "esnext"
     ],
-    "paths": {
-      "nanofaker": ["./packages/core/src/index.ts"]
-    },
     "moduleDetection": "force",
     "module": "esnext",
     "moduleResolution": "bundler",
+    "paths": {
+      "nanofaker": ["./packages/core/src/index.ts"]
+    },
     "resolveJsonModule": true,
     "types": [
       "bun"
@@ -27,5 +27,5 @@
     "verbatimModuleSyntax": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
-  },
+  }
 }
