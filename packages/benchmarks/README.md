@@ -15,7 +15,7 @@ Comprehensive benchmarks comparing nanofaker against other popular JavaScript/Ty
 ### Key Advantages
 
 **nanofaker offers:**
-- ✅ **Fastest performance** - 11.68x faster than @faker-js/faker on average
+- ✅ **Fastest performance** - 9.28x faster than @faker-js/faker on average
 - ✅ **Smallest size** - 24.7x smaller than @faker-js/faker (4.1 MB savings)
 - ✅ **Fewest files** - 6.1x fewer files than @faker-js/faker
 - ✅ **Complete locale coverage** - 100% for all 26 languages

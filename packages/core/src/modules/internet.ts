@@ -2,10 +2,26 @@ import type { Random } from '../random'
 import type { LocaleDefinition, PasswordOptions } from '../types'
 
 export class InternetModule {
+  private static readonly SEPARATORS = ['.', '_', '-', '']
+  private domainWordsCache: string[] | null = null
+
   constructor(
     private random: Random,
     private locale: LocaleDefinition,
   ) {}
+
+  /**
+   * Get cached lowercase domain words
+   */
+  private getDomainWords(): string[] {
+    if (!this.domainWordsCache) {
+      const companyNames = this.locale.company.name ?? ['company', 'tech', 'digital']
+      this.domainWordsCache = companyNames.map(name =>
+        name.toLowerCase().replace(/[^a-z0-9]/g, ''),
+      ).filter(name => name.length > 0)
+    }
+    return this.domainWordsCache
+  }
 
   /**
    * Generate a random email address
@@ -15,7 +31,7 @@ export class InternetModule {
     // Optimized: avoid array spreading by selecting from combined length
     let firstName: string
     if (options?.firstName) {
-      firstName = options.firstName
+      firstName = options.firstName.toLowerCase()
     }
     else {
       const maleLen = this.locale.person.firstNameMale.length
@@ -37,11 +53,10 @@ export class InternetModule {
 
     const lastName = options?.lastName ?? this.random.arrayElement(this.locale.person.lastName).toLowerCase()
     const provider = options?.provider ?? this.random.arrayElement(this.locale.internet.domainSuffix ?? ['com', 'net', 'org'])
+    const separator = this.random.arrayElement(InternetModule.SEPARATORS)
+    const domain = this.random.arrayElement(this.getDomainWords())
 
-    const separators = ['.', '_', '-', '']
-    const separator = this.random.arrayElement(separators)
-
-    return `${firstName}${separator}${lastName}@${this.domainWord()}.${provider}`
+    return `${firstName}${separator}${lastName}@${domain}.${provider}`
   }
 
   /**
@@ -182,9 +197,7 @@ export class InternetModule {
    * @example faker.internet.domainWord() // 'example'
    */
   domainWord(): string {
-    return this.random.arrayElement(this.locale.company.name ?? ['Company', 'Tech', 'Digital'])
-      .toLowerCase()
-      .replace(/[^a-z0-9]/g, '')
+    return this.random.arrayElement(this.getDomainWords())
   }
 
   /**
