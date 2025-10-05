@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'bun:test'
-import { getLocaleFallbackChain, getLocalePackageName, mergeLocales, parseLocale } from '../packages/core/src/utils/locale-utils'
 import { Faker } from '../packages/core/src/faker'
+import { getLocaleFallbackChain, getLocalePackageName, mergeLocales, parseLocale } from '../packages/core/src/utils/locale-utils'
 
 describe('Locale Variant Utilities', () => {
   describe('parseLocale', () => {

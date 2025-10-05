@@ -213,7 +213,7 @@ const esFaker = new Faker({ locale: 'es' })
 ```ts
 import { faker } from '@faker-js/faker'
 // Or import specific locale
-import { fakerES } from '@faker-js/faker'
+// import { fakerES } from '@faker-js/faker'
 
 import { es } from '@faker-js/faker/locale/es'
 

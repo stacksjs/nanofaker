@@ -1,1 +1,1 @@
-export { en_HK } from "./en_HK"
+export { en_HK } from './en_HK'

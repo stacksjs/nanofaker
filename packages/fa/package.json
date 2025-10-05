@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/stacksjs/nanofaker/issues"
   },
-  "keywords": ["nanofaker","locale","fa","farsi","persian","iran","fake-data","test-data"],
+  "keywords": ["nanofaker", "locale", "fa", "farsi", "persian", "iran", "fake-data", "test-data"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

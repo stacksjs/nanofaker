@@ -1,6 +1,7 @@
-import { existsSync } from 'node:fs'
 import { spawnSync } from 'node:child_process'
+import { existsSync } from 'node:fs'
 import { join } from 'node:path'
+import process from 'node:process'
 
 export type PackageManager = 'bun' | 'npm' | 'yarn' | 'pnpm'
 
@@ -36,6 +37,7 @@ export function installPackage(packageName: string, options: { silent?: boolean 
   const { silent = false } = options
 
   if (!silent) {
+    // eslint-disable-next-line no-console
     console.log(`\n📦 Installing ${packageName} using ${pm}...`)
   }
 
@@ -56,6 +58,7 @@ export function installPackage(packageName: string, options: { silent?: boolean 
 
     if (result.status === 0) {
       if (!silent) {
+        // eslint-disable-next-line no-console
         console.log(`✓ Successfully installed ${packageName}`)
       }
       return true

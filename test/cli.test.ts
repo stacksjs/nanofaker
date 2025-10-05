@@ -446,13 +446,13 @@ describe('CLI', () => {
     })
 
     test('handles invalid count values', async () => {
-      const { stdout, exitCode } = await execCLI(['generate', 'person', 'firstName', '--count', 'invalid'])
+      const { exitCode } = await execCLI(['generate', 'person', 'firstName', '--count', 'invalid'])
       // Should either error or default to 1
       expect([0, 1]).toContain(exitCode)
     })
 
     test('handles invalid seed values', async () => {
-      const { stdout, exitCode } = await execCLI(['generate', 'person', 'firstName', '--seed', 'invalid'])
+      const { exitCode } = await execCLI(['generate', 'person', 'firstName', '--seed', 'invalid'])
       // Should handle gracefully
       expect([0, 1]).toContain(exitCode)
     })

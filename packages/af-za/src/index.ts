@@ -1,1 +1,1 @@
-export { af_ZA } from "./af_ZA"
+export { af_ZA } from './af_ZA'

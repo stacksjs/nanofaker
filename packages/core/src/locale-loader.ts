@@ -1,8 +1,8 @@
 import type { LocaleDefinition } from './types'
-import { en } from './en'
 import { config } from './config'
-import { installPackage } from './utils/package-manager'
+import { en } from './en'
 import { getLocaleFallbackChain, getLocalePackageName, mergeLocales, parseLocale } from './utils/locale-utils'
+import { installPackage } from './utils/package-manager'
 
 /**
  * Locale loader with dynamic import support and caching
@@ -202,7 +202,7 @@ export class LocaleLoader {
     for (let i = 0; i < fallbackChain.length; i++) {
       const currentLocale = fallbackChain[i]
       const isVariant = i === 0 && fallbackChain.length > 1
-      const isBaseLocale = !isVariant
+      const _isBaseLocale = !isVariant
 
       try {
         if (isVariant) {
@@ -258,9 +258,9 @@ export class LocaleLoader {
 
       // Check if it's a module not found error
       if (errorMessage.includes('Cannot find') || errorMessage.includes('not found') || errorMessage.includes('ModuleNotFound')) {
-
         // Try to auto-install if enabled
         if (config.autoInstallLocales) {
+          // eslint-disable-next-line no-console
           console.log(`\n🔍 Locale '${locale}' not found. Auto-installing ${packageName}...`)
 
           const installed = installPackage(packageName)
@@ -285,9 +285,9 @@ export class LocaleLoader {
         }
 
         throw new Error(
-          `Locale '${locale}' is not installed. Install it with: bun add ${packageName}\n` +
-          `Or install all locales with: bun add @nanofaker/locale-{af,ar,az,cs,da,de,en,eo,es,fa,fi,fr,he,hi,it,ja,ko,nl,no,pl,pt,sv,tl,tr,uk,zh,zu}\n` +
-          `Or enable auto-install in your faker.config.ts: { autoInstallLocales: true }`,
+          `Locale '${locale}' is not installed. Install it with: bun add ${packageName}\n`
+          + `Or install all locales with: bun add @nanofaker/locale-{af,ar,az,cs,da,de,en,eo,es,fa,fi,fr,he,hi,it,ja,ko,nl,no,pl,pt,sv,tl,tr,uk,zh,zu}\n`
+          + `Or enable auto-install in your faker.config.ts: { autoInstallLocales: true }`,
         )
       }
 

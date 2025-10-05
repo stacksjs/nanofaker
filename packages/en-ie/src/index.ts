@@ -1,1 +1,1 @@
-export { en_IE } from "./en_IE"
+export { en_IE } from './en_IE'

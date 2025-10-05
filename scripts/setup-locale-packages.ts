@@ -13,8 +13,10 @@ for (const locale of locales) {
   const srcDir = join(localeDir, 'src')
 
   // Create directories
-  if (!existsSync(localeDir)) mkdirSync(localeDir, { recursive: true })
-  if (!existsSync(srcDir)) mkdirSync(srcDir, { recursive: true })
+  if (!existsSync(localeDir))
+    mkdirSync(localeDir, { recursive: true })
+  if (!existsSync(srcDir))
+    mkdirSync(srcDir, { recursive: true })
 
   // Copy locale file from core
   const localeFile = join(coreLocalesDir, `${locale}.ts`)
@@ -65,12 +67,12 @@ for (const locale of locales) {
     devDependencies: {
       '@types/bun': '^1.2.23',
       'bun-plugin-dtsx': '0.9.5',
-      bunfig: '^0.15.0',
-      typescript: '^5.9.3',
+      'bunfig': '^0.15.0',
+      'typescript': '^5.9.3',
     },
   }
 
-  await Bun.write(join(localeDir, 'package.json'), JSON.stringify(packageJson, null, 2) + '\n')
+  await Bun.write(join(localeDir, 'package.json'), `${JSON.stringify(packageJson, null, 2)}\n`)
 
   // Create build.ts
   const buildContent = `import { dts } from 'bun-plugin-dtsx'
@@ -92,7 +94,7 @@ await Bun.build({
     },
     include: ['src/**/*'],
   }
-  await Bun.write(join(localeDir, 'tsconfig.json'), JSON.stringify(tsconfigContent, null, 2) + '\n')
+  await Bun.write(join(localeDir, 'tsconfig.json'), `${JSON.stringify(tsconfigContent, null, 2)}\n`)
 
   console.log(`✓ Created package @nanofaker/locale-${locale}`)
 }

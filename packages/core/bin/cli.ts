@@ -1,7 +1,7 @@
+import process from 'node:process'
 import { CAC } from 'cac'
 import { version } from '../package.json'
 import { Faker, faker } from '../src/index'
-import process from 'node:process'
 
 const cli = new CAC('nanofaker')
 
@@ -106,12 +106,14 @@ cli
 
     if (methods.length === 0) {
       console.log('  No methods found')
-    } else {
+    }
+    else {
       methods.forEach((method) => {
         try {
           const example = fakerCategory[method].call(fakerCategory)
           console.log(`  ${method.padEnd(20)} // "${example}"`)
-        } catch (e) {
+        }
+        catch (e) {
           console.log(`  ${method.padEnd(20)} // Error: ${e}`)
         }
       })

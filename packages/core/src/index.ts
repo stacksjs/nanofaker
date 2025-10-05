@@ -4,11 +4,10 @@ import { Faker } from './faker'
 export * from './config'
 export * from './faker'
 export * from './locale-loader'
-export * from './utils/package-manager'
 export { AddressModule } from './modules/address'
 export { AnimalModule } from './modules/animal'
-
 export { BookModule } from './modules/book'
+
 export { ColorModule } from './modules/color'
 export { CommerceModule } from './modules/commerce'
 export { CompanyModule } from './modules/company'
@@ -34,6 +33,7 @@ export { VehicleModule } from './modules/vehicle'
 export { WordModule } from './modules/word'
 export * from './random'
 export * from './types'
+export * from './utils/package-manager'
 export const faker: Faker = new Faker()
 
 // Default export

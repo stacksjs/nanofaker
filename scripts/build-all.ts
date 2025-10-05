@@ -1,8 +1,9 @@
 #!/usr/bin/env bun
 
+import { spawnSync } from 'node:child_process'
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
-import { spawnSync } from 'node:child_process'
+import process from 'node:process'
 
 const packagesDir = join(import.meta.dir, '../packages')
 const packages = [

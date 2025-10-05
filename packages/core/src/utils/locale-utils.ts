@@ -102,7 +102,8 @@ export function mergeLocales<T extends Record<string, any>>(base: T, variant: Pa
       && !Array.isArray(baseValue)
     ) {
       result[key] = mergeLocales(baseValue, variantValue) as any
-    } else {
+    }
+    else {
       // Otherwise, variant value takes precedence
       result[key] = variantValue as any
     }

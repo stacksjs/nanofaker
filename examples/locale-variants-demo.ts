@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Demo: Locale Variants
  *
@@ -9,7 +10,7 @@ import { Faker } from '../packages/core/src/index'
 
 async function demonstrateLocaleVariants() {
   console.log('🌍 Locale Variants Demo\n')
-  console.log('='  .repeat(60))
+  console.log('='.repeat(60))
 
   // English variants
   console.log('\n📍 English Variants:\n')
@@ -79,7 +80,7 @@ async function demonstrateLocaleVariants() {
     console.log(`  ${i + 1}. ${ukFaker.address.city()}, ${ukFaker.address.state()} ${ukFaker.address.zipCode()}`)
   }
 
-  console.log('\n' + '='.repeat(60))
+  console.log(`\n${'='.repeat(60)}`)
   console.log('✨ Demo complete!')
 }
 

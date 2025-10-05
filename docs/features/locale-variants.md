@@ -62,20 +62,20 @@ import { Faker } from 'nanofaker'
 
 // US English
 const usFaker = await Faker.create({ locale: 'en_US' })
-console.log(usFaker.address.city())     // "New York"
-console.log(usFaker.address.state())    // "California"
-console.log(usFaker.address.zipCode())  // "90210"
+console.log(usFaker.address.city()) // "New York"
+console.log(usFaker.address.state()) // "California"
+console.log(usFaker.address.zipCode()) // "90210"
 
 // UK English
 const ukFaker = await Faker.create({ locale: 'en_GB' })
-console.log(ukFaker.address.city())     // "London"
-console.log(ukFaker.address.state())    // "England"
-console.log(ukFaker.address.zipCode())  // "SW1A 1AA"
+console.log(ukFaker.address.city()) // "London"
+console.log(ukFaker.address.state()) // "England"
+console.log(ukFaker.address.zipCode()) // "SW1A 1AA"
 
 // Mexican Spanish
 const mxFaker = await Faker.create({ locale: 'es_MX' })
-console.log(mxFaker.address.city())       // "Ciudad de México"
-console.log(mxFaker.person.firstName())   // "Miguel"
+console.log(mxFaker.address.city()) // "Ciudad de México"
+console.log(mxFaker.person.firstName()) // "Miguel"
 ```
 
 ## Separator Flexibility
@@ -83,8 +83,8 @@ console.log(mxFaker.person.firstName())   // "Miguel"
 Both underscore and hyphen separators are supported:
 
 ```typescript
-const faker1 = await Faker.create({ locale: 'en_US' })  // ✅ Underscore
-const faker2 = await Faker.create({ locale: 'en-US' })  // ✅ Hyphen
+const faker1 = await Faker.create({ locale: 'en_US' }) // ✅ Underscore
+const faker2 = await Faker.create({ locale: 'en-US' }) // ✅ Hyphen
 // Both create the same locale
 ```
 
@@ -112,8 +112,8 @@ This means:
 // Everything else (person names, etc.) comes from base 'en' locale
 
 const faker = await Faker.create({ locale: 'en_US' })
-faker.person.firstName()  // From base 'en' locale
-faker.address.city()      // From 'en_US' variant
+faker.person.firstName() // From base 'en' locale
+faker.address.city() // From 'en_US' variant
 ```
 
 ## Installation
@@ -159,10 +159,10 @@ export const en_CA: Partial<LocaleDefinition> = {
   title: 'English (Canada)',
 
   address: {
-    city: ['Toronto', 'Montreal', 'Vancouver', /* ... */],
-    state: ['Ontario', 'Quebec', 'British Columbia', /* ... */],
+    city: ['Toronto', 'Montreal', 'Vancouver',],
+    state: ['Ontario', 'Quebec', 'British Columbia',],
     country: ['Canada'],
-    zipCode: ['?#? #?#'],  // Canadian postal code format
+    zipCode: ['?#? #?#'], // Canadian postal code format
   },
 
   phone: {
@@ -219,13 +219,13 @@ console.log('MX:', mx.address.city(), mx.phone.number())
 
 ```typescript
 const faker = await Faker.create({ locale: 'en_US' })
-console.log(faker.address.city())  // "Chicago"
+console.log(faker.address.city()) // "Chicago"
 
 await faker.setLocale('en_GB')
-console.log(faker.address.city())  // "London"
+console.log(faker.address.city()) // "London"
 
 await faker.setLocale('es_MX')
-console.log(faker.address.city())  // "Monterrey"
+console.log(faker.address.city()) // "Monterrey"
 ```
 
 ## See Also
