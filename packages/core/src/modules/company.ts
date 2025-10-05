@@ -12,8 +12,8 @@ export class CompanyModule {
    * @example faker.company.name() // 'TechCorp Inc'
    */
   name(): string {
-    const name = this.random.arrayElement(this.locale.company.name ?? ["Company"])
-    const suffix = this.random.arrayElement(this.locale.company.suffix ?? ["Inc", "LLC", "Corp"])
+    const name = this.random.arrayElement(this.locale.company.name ?? ['Company'])
+    const suffix = this.random.arrayElement(this.locale.company.suffix ?? ['Inc', 'LLC', 'Corp'])
     return `${name} ${suffix}`
   }
 
@@ -22,7 +22,7 @@ export class CompanyModule {
    * @example faker.company.suffix() // 'Inc'
    */
   suffix(): string {
-    return this.random.arrayElement(this.locale.company.suffix ?? ["Inc", "LLC", "Corp"])
+    return this.random.arrayElement(this.locale.company.suffix ?? ['Inc', 'LLC', 'Corp'])
   }
 
   /**
@@ -30,7 +30,7 @@ export class CompanyModule {
    * @example faker.company.industry() // 'Technology'
    */
   industry(): string {
-    return this.random.arrayElement(this.locale.company.industry ?? ["Technology"])
+    return this.random.arrayElement(this.locale.company.industry ?? ['Technology'])
   }
 
   /**
@@ -38,9 +38,9 @@ export class CompanyModule {
    * @example faker.company.catchphrase() // 'Innovative cloud-based solutions'
    */
   catchphrase(): string {
-    const adjective = this.random.arrayElement(this.locale.company.adjective ?? ["innovative"])
-    const descriptor = this.random.arrayElement(this.locale.company.descriptor ?? ["digital"])
-    const noun = this.random.arrayElement(this.locale.company.noun ?? ["solution"])
+    const adjective = this.random.arrayElement(this.locale.company.adjective ?? ['innovative'])
+    const descriptor = this.random.arrayElement(this.locale.company.descriptor ?? ['digital'])
+    const noun = this.random.arrayElement(this.locale.company.noun ?? ['solution'])
     return `${adjective} ${descriptor} ${noun}`
   }
 
@@ -49,7 +49,7 @@ export class CompanyModule {
    * @example faker.company.buzzword() // 'synergize'
    */
   buzzword(): string {
-    return this.random.arrayElement(this.locale.company.buzzwords ?? ["innovation"])
+    return this.random.arrayElement(this.locale.company.buzzwords ?? ['innovation'])
   }
 
   /**
@@ -58,8 +58,8 @@ export class CompanyModule {
    */
   bs(): string {
     const buzzword = this.buzzword()
-    const descriptor = this.random.arrayElement(this.locale.company.descriptor ?? ["digital"])
-    const noun = this.random.arrayElement(this.locale.company.noun ?? ["solution"])
+    const descriptor = this.random.arrayElement(this.locale.company.descriptor ?? ['digital'])
+    const noun = this.random.arrayElement(this.locale.company.noun ?? ['solution'])
     return `${buzzword} ${descriptor} ${noun}`
   }
 }

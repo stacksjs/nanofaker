@@ -20,7 +20,7 @@ export class InternetModule {
     ]
     const firstName = options?.firstName ?? this.random.arrayElement(allFirstNames).toLowerCase()
     const lastName = options?.lastName ?? this.random.arrayElement(this.locale.person.lastName).toLowerCase()
-    const provider = options?.provider ?? this.random.arrayElement(this.locale.internet.domainSuffix ?? ["com", "net", "org"])
+    const provider = options?.provider ?? this.random.arrayElement(this.locale.internet.domainSuffix ?? ['com', 'net', 'org'])
 
     const separators = ['.', '_', '-', '']
     const separator = this.random.arrayElement(separators)
@@ -49,7 +49,7 @@ export class InternetModule {
     ]
     const firstName = this.random.arrayElement(allFirstNames).toLowerCase()
     const lastName = this.random.arrayElement(this.locale.person.lastName).toLowerCase()
-    const provider = this.random.arrayElement(this.locale.internet.freeEmail ?? ["gmail.com", "yahoo.com", "hotmail.com"])
+    const provider = this.random.arrayElement(this.locale.internet.freeEmail ?? ['gmail.com', 'yahoo.com', 'hotmail.com'])
 
     const separators = ['.', '_', '']
     const separator = this.random.arrayElement(separators)
@@ -139,7 +139,7 @@ export class InternetModule {
    * @example faker.internet.domainWord() // 'example'
    */
   domainWord(): string {
-    return this.random.arrayElement(this.locale.company.name ?? ["Company", "Tech", "Digital"])
+    return this.random.arrayElement(this.locale.company.name ?? ['Company', 'Tech', 'Digital'])
       .toLowerCase()
       .replace(/[^a-z0-9]/g, '')
   }
@@ -149,7 +149,7 @@ export class InternetModule {
    * @example faker.internet.domainSuffix() // 'com'
    */
   domainSuffix(): string {
-    return this.random.arrayElement(this.locale.internet.domainSuffix ?? ["com", "net", "org"])
+    return this.random.arrayElement(this.locale.internet.domainSuffix ?? ['com', 'net', 'org'])
   }
 
   /**
@@ -206,7 +206,7 @@ export class InternetModule {
   slug(wordCount = 3): string {
     const words: string[] = []
     for (let i = 0; i < wordCount; i++) {
-      words.push(this.random.arrayElement(this.locale.company.buzzwords ?? ["innovation", "technology", "solution"]))
+      words.push(this.random.arrayElement(this.locale.company.buzzwords ?? ['innovation', 'technology', 'solution']))
     }
     return words.join('-').toLowerCase()
   }

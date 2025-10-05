@@ -12,7 +12,7 @@ export class PhoneModule {
    * @example faker.phone.number() // '555-123-4567'
    */
   number(format?: string): string {
-    const selectedFormat = format ?? this.random.arrayElement(this.locale.phone.formats ?? ["###-###-####"])
+    const selectedFormat = format ?? this.random.arrayElement(this.locale.phone.formats ?? ['###-###-####'])
     return this.random.replaceSymbols(selectedFormat)
   }
 

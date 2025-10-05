@@ -5,6 +5,7 @@ import casual from 'casual'
 import Chance from 'chance'
 import { Bench } from 'tinybench'
 // @ts-expect-error nanofaker is typed
+// eslint-disable-next-line antfu/no-import-dist
 import { faker as nanofaker } from '../../core/dist/src/index.js'
 
 const chance = new Chance()
