@@ -1,3 +1,44 @@
+[Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.1...v0.1.2)
+
+### 🧹 Chores
+
+- release v0.1.2 ([dd4de18](https://github.com/stacksjs/ts-mocker/commit/dd4de18))
+- wip ([de760d7](https://github.com/stacksjs/ts-mocker/commit/de760d7))
+- wip ([497e44e](https://github.com/stacksjs/ts-mocker/commit/497e44e))
+- wip ([145a9bc](https://github.com/stacksjs/ts-mocker/commit/145a9bc))
+- wip ([80092e3](https://github.com/stacksjs/ts-mocker/commit/80092e3))
+- wip ([22f3a4d](https://github.com/stacksjs/ts-mocker/commit/22f3a4d))
+- wip ([648f964](https://github.com/stacksjs/ts-mocker/commit/648f964))
+- wip ([be91a94](https://github.com/stacksjs/ts-mocker/commit/be91a94))
+- wip ([31c2a3c](https://github.com/stacksjs/ts-mocker/commit/31c2a3c))
+- rename ([9f3753f](https://github.com/stacksjs/ts-mocker/commit/9f3753f))
+- wip ([8fe9f3e](https://github.com/stacksjs/ts-mocker/commit/8fe9f3e))
+- wip ([2123092](https://github.com/stacksjs/ts-mocker/commit/2123092))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
+[Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.1...HEAD)
+
+### 🧹 Chores
+
+- wip ([de760d7](https://github.com/stacksjs/ts-mocker/commit/de760d7))
+- wip ([497e44e](https://github.com/stacksjs/ts-mocker/commit/497e44e))
+- wip ([145a9bc](https://github.com/stacksjs/ts-mocker/commit/145a9bc))
+- wip ([80092e3](https://github.com/stacksjs/ts-mocker/commit/80092e3))
+- wip ([22f3a4d](https://github.com/stacksjs/ts-mocker/commit/22f3a4d))
+- wip ([648f964](https://github.com/stacksjs/ts-mocker/commit/648f964))
+- wip ([be91a94](https://github.com/stacksjs/ts-mocker/commit/be91a94))
+- wip ([31c2a3c](https://github.com/stacksjs/ts-mocker/commit/31c2a3c))
+- rename ([9f3753f](https://github.com/stacksjs/ts-mocker/commit/9f3753f))
+- wip ([8fe9f3e](https://github.com/stacksjs/ts-mocker/commit/8fe9f3e))
+- wip ([2123092](https://github.com/stacksjs/ts-mocker/commit/2123092))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 [Compare changes](https://github.com/stacksjs/nanofaker/compare/v0.1.0...v0.1.1)
 
 ### 🧹 Chores
