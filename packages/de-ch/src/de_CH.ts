@@ -1,0 +1,83 @@
+import type { LocaleDefinition } from 'nanofaker'
+
+/**
+ * German (Switzerland) locale
+ * Extends the base 'de' locale with Switzerland-specific data
+ */
+export const de_CH: Partial<LocaleDefinition> = {
+  title: 'German (Switzerland)',
+
+  // Switzerland-specific address data
+  address: {
+    city: [
+      'Zürich', 'Genf', 'Basel', 'Bern', 'Lausanne', 'Winterthur', 'Luzern',
+      'St. Gallen', 'Lugano', 'Biel', 'Thun', 'Köniz', 'La Chaux-de-Fonds',
+      'Schaffhausen', 'Freiburg', 'Chur', 'Vernier', 'Neuenburg', 'Uster',
+      'Sion', 'Emmen', 'Zug', 'Yverdon-les-Bains', 'Kriens', 'Rapperswil',
+    ],
+    state: [
+      'Zürich', 'Bern', 'Luzern', 'Uri', 'Schwyz', 'Obwalden', 'Nidwalden',
+      'Glarus', 'Zug', 'Freiburg', 'Solothurn', 'Basel-Stadt', 'Basel-Landschaft',
+      'Schaffhausen', 'Appenzell Ausserrhoden', 'Appenzell Innerrhoden',
+      'St. Gallen', 'Graubünden', 'Aargau', 'Thurgau', 'Tessin', 'Waadt',
+      'Wallis', 'Neuenburg', 'Genf', 'Jura',
+    ],
+    stateAbbr: [
+      'ZH', 'BE', 'LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO',
+      'BS', 'BL', 'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD',
+      'VS', 'NE', 'GE', 'JU',
+    ],
+    country: ['Schweiz', 'Switzerland', 'Suisse', 'Svizzera'],
+    countryCode: ['CH'],
+    zipCode: ['####'],
+    buildingNumber: ['###', '##', '#', '##a', '#a'],
+  },
+
+  // Swiss phone formats
+  phone: {
+    formats: [
+      '0## ### ## ##',
+      '+41 ## ### ## ##',
+      '0### ### ###',
+      '+41 ### ### ###',
+    ],
+  },
+
+  // Swiss cuisine (German-speaking regions focus)
+  food: {
+    dish: [
+      'Fondue', 'Raclette', 'Rösti', 'Zürcher Geschnetzeltes', 'Älplermagronen',
+      'Käsefondue', 'Fleischfondue', 'Cervelat', 'Bratwurst', 'Schüblig',
+      'Bündnerfleisch', 'Capuns', 'Pizokel', 'Gerstensuppe', 'Basler Läckerli',
+      'Biberli', 'Tirggel', 'Züri Gschnätzlets', 'Berner Platte', 'Luzerner Chügelipastete',
+      'St. Galler Schüblig', 'Appenzeller Siedwurst', 'Cholera (Gemüsekuchen)',
+      'Maluns', 'Ribel', 'Schaffhauser Bölletünne', 'Basler Mehlsuppe',
+      'Engadiner Nusstorte', 'Rüeblitorte', 'Zuger Kirschtorte',
+    ],
+    ingredient: [
+      'Gruyère', 'Emmentaler', 'Appenzeller', 'Sbrinz', 'Raclette-Käse',
+      'Rahm', 'Butter', 'Kartoffeln', 'Zwiebeln', 'Speck', 'Mehl',
+      'Milch', 'Eier', 'Weisswein', 'Kirschwasser', 'Gewürze',
+      'Knoblauch', 'Majoran', 'Muskatnuss', 'Pfeffer',
+    ],
+    dessert: [
+      'Basler Läckerli', 'Biberli', 'Tirggel', 'Engadiner Nusstorte',
+      'Rüeblitorte', 'Zuger Kirschtorte', 'Vermicelles', 'Meringue mit Rahm',
+      'Nidelzältli', 'Totenbeinli', 'Leckerli', 'Magenbrot',
+    ],
+    cuisine: [
+      'Schweizerisch', 'Alpenküche', 'Zürcher Küche', 'Berner Küche',
+      'Bündner Küche', 'Französisch', 'Italienisch', 'Deutsch',
+    ],
+    spice: [
+      'Majoran', 'Muskatnuss', 'Pfeffer', 'Salz', 'Petersilie',
+      'Schnittlauch', 'Thymian', 'Lorbeer', 'Nelken', 'Zimt',
+    ],
+  },
+
+  // Swiss internet domains
+  internet: {
+    domainSuffix: ['ch', 'com', 'li', 'eu'],
+    freeEmail: ['gmail.com', 'bluewin.ch', 'gmx.ch', 'hotmail.com', 'swissonline.ch'],
+  },
+}

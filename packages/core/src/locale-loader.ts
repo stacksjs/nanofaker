@@ -24,6 +24,7 @@ export class LocaleLoader {
     'ja',
     'tl',
     'zh',
+    'zu',
     'nl',
     'ko',
     'no',
@@ -57,6 +58,7 @@ export class LocaleLoader {
     'pt_MZ',
     'zh_CN',
     'zh_TW',
+    'zu_ZA',
   ] as const
 
   /**

@@ -1,0 +1,68 @@
+import type { LocaleDefinition } from 'nanofaker'
+
+/**
+ * Zulu (South Africa) locale
+ * Extends the base 'zu' locale with South Africa-specific data
+ */
+export const zu_ZA: Partial<LocaleDefinition> = {
+  title: 'Zulu (South Africa)',
+
+  // South Africa-specific cities (Zulu names where applicable)
+  address: {
+    city: [
+      'eThekwini', 'Durban', 'Pietermaritzburg', 'Ulundi', 'Richards Bay',
+      'Empangeni', 'Newcastle', 'Ladysmith', 'Vryheid', 'Eshowe',
+      'KwaDukuza', 'Stanger', 'Port Shepstone', 'Kokstad', 'Dundee',
+      'Greytown', 'Estcourt', 'Howick', 'uMlazi', 'KwaMashu',
+      'Inanda', 'Phoenix', 'Chatsworth', 'Pinetown', 'Westville',
+    ],
+    state: [
+      'KwaZulu-Natali', 'eGoli', 'eMpumalanga', 'Free State', 'Limpopo',
+      'eMpuma Koloni', 'eNtshonalanga Koloni', 'eNyakatho Koloni', 'eNyakatho Ntshonalanga',
+    ],
+    country: ['iNingizimu Afrika', 'South Africa', 'Mzansi'],
+    countryCode: ['ZA'],
+    zipCode: ['####'],
+  },
+
+  // South African phone formats
+  phone: {
+    formats: [
+      '0##-###-####',
+      '+27 ## ### ####',
+      '0### ### ###',
+      '+27 ### ### ###',
+    ],
+  },
+
+  // South African cuisine with Zulu influences
+  food: {
+    dish: [
+      'Pap ne-shisanyama', 'Amasi ne-pap', 'Umngqusho', 'Isijingi', 'Uphuthu',
+      'Amadumbe', 'Bunny chow', 'Vetkoek', 'Boerewors', 'Chakalaka',
+      'Morogo', 'Umleqwa', 'Umfino', 'Ujeqe', 'Isidudu',
+      'Koeksisters', 'Melktert', 'Bobotie', 'Sosatie', 'Biltong', 'Droewors',
+    ],
+    ingredient: [
+      'Ummbila', 'Izinkobe', 'Amasi', 'Inyama', 'Ubisi', 'Amaqanda',
+      'Utamatisi', 'U-anyanisi', 'Igalikhi', 'Upelepele', 'Usawoti',
+      'Ushukela', 'Amafutha', 'Ubhontshisi', 'Amazambane', 'Imifino',
+      'Amadumbe', 'Uphuthu', 'Izinkobe', 'Amakhowe',
+    ],
+    cuisine: [
+      'IsiZulu', 'i-South African', 'i-African', 'i-Indian', 'i-Cape Malay',
+      'i-Portuguese', 'i-Afrikaans', 'i-British', 'i-Fusion',
+    ],
+    dessert: [
+      'Koeksisters', 'Melktert', 'Malva pudding', 'Peppermint crisp tart',
+      'Hertzoggies', 'Crunchies', 'Vetkoek with jam', 'Milk tart',
+      'Dom Pedros', 'Peppermint crisp fridge tart',
+    ],
+  },
+
+  // South African internet domains
+  internet: {
+    domainSuffix: ['za', 'co.za', 'org.za', 'gov.za', 'ac.za', 'net.za'],
+    freeEmail: ['gmail.com', 'yahoo.co.za', 'webmail.co.za', 'mweb.co.za', 'vodamail.co.za'],
+  },
+}

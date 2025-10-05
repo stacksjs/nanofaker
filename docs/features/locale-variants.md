@@ -18,16 +18,28 @@ Locale variants use the format `{language}_{REGION}` or `{language}-{REGION}`:
 - `es_ES` / `es-ES` - Spanish (Spain)
 - `es_MX` / `es-MX` - Spanish (Mexico)
 
+### German Variants
+
+- `de_DE` / `de-DE` - German (Germany)
+- `de_AT` / `de-AT` - German (Austria)
+- `de_CH` / `de-CH` - German (Switzerland)
+
+### Chinese Variants
+
+- `zh_CN` / `zh-CN` - Chinese (Simplified, China)
+- `zh_TW` / `zh-TW` - Chinese (Traditional, Taiwan)
+
+### Portuguese Variants
+
+- `pt_BR` / `pt-BR` - Portuguese (Brazil)
+- `pt_PT` / `pt-PT` - Portuguese (Portugal)
+- `pt_MZ` / `pt-MZ` - Portuguese (Mozambique)
+
 ### Other Variants
 
 - `fr_FR` / `fr-FR` - French (France)
 - `fr_CA` / `fr-CA` - French (Canada)
-- `de_DE` / `de-DE` - German (Germany)
-- `de_AT` / `de-AT` - German (Austria)
-- `de_CH` / `de-CH` - German (Switzerland)
-- `pt_BR` / `pt-BR` - Portuguese (Brazil)
-- `zh_CN` / `zh-CN` - Chinese (Simplified)
-- `zh_TW` / `zh-TW` - Chinese (Traditional)
+- `zu_ZA` / `zu-ZA` - Zulu (South Africa)
 
 ## Usage
 

@@ -28,11 +28,17 @@ const packages = [
   'tr',
   'uk',
   'zh',
+  'zu',
   // Locale variants
   'en-us',
   'en-gb',
   'es-mx',
   'pt-mz',
+  'de-at',
+  'de-ch',
+  'zh-cn',
+  'zh-tw',
+  'zu-za',
 ]
 
 for (const pkg of packages) {
