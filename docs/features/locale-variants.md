@@ -1,6 +1,6 @@
 # Locale Variants
 
-Nanofaker supports **locale variants** to provide region-specific data for the same language. For example, English has different formats and data for the United States, United Kingdom, Canada, and Australia.
+ts-mocker supports **locale variants** to provide region-specific data for the same language. For example, English has different formats and data for the United States, United Kingdom, Canada, and Australia.
 
 ## Supported Locale Variants
 
@@ -58,7 +58,7 @@ Locale variants use the format `{language}_{REGION}` or `{language}-{REGION}`:
 ## Usage
 
 ```typescript
-import { Faker } from 'nanofaker'
+import { Faker } from 'ts-mocker'
 
 // US English
 const usFaker = await Faker.create({ locale: 'en_US' })
@@ -92,8 +92,8 @@ const faker2 = await Faker.create({ locale: 'en-US' }) // ✅ Hyphen
 
 Locale variants automatically fall back to the base locale when needed:
 
-1. **Try variant first**: `en_US` → load `@nanofaker/locale-en-us`
-2. **Load base locale**: `en` → load `@nanofaker/locale-en`
+1. **Try variant first**: `en_US` → load `@ts-mocker/locale-en-us`
+2. **Load base locale**: `en` → load `@ts-mocker/locale-en`
 3. **Merge**: Variant data overrides base data
 
 This means:
@@ -122,10 +122,10 @@ faker.address.city() // From 'en_US' variant
 
 ```bash
 # Install a specific variant
-bun add @nanofaker/locale-en-us
+bun add @ts-mocker/locale-en-us
 
 # Install multiple variants
-bun add @nanofaker/locale-{en-us,en-gb,es-mx}
+bun add @ts-mocker/locale-{en-us,en-gb,es-mx}
 ```
 
 ### Auto-Install
@@ -143,8 +143,8 @@ Then just use any variant:
 
 ```typescript
 const faker = await Faker.create({ locale: 'en_GB' })
-// 🔍 Locale 'en_GB' not found. Auto-installing @nanofaker/locale-en-gb...
-// ✓ Successfully installed @nanofaker/locale-en-gb
+// 🔍 Locale 'en_GB' not found. Auto-installing @ts-mocker/locale-en-gb...
+// ✓ Successfully installed @ts-mocker/locale-en-gb
 ```
 
 ## Creating Custom Variants
@@ -153,7 +153,7 @@ You can create your own locale variants by extending base locales:
 
 ```typescript
 // packages/en-ca/src/en_CA.ts
-import type { LocaleDefinition } from 'nanofaker'
+import type { LocaleDefinition } from 'ts-mocker'
 
 export const en_CA: Partial<LocaleDefinition> = {
   title: 'English (Canada)',
@@ -186,7 +186,7 @@ Key points:
 Locale variant packages follow the naming convention:
 
 - Locale code: `en_US` or `en-US` (both work)
-- Package name: `@nanofaker/locale-en-us` (lowercase, hyphen-separated)
+- Package name: `@ts-mocker/locale-en-us` (lowercase, hyphen-separated)
 
 ## Benefits
 

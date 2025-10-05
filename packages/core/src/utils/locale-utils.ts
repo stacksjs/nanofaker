@@ -68,13 +68,13 @@ export function getLocaleFallbackChain(locale: string): string[] {
  * Get the package name for a locale
  *
  * @example
- * getLocalePackageName("en_US") // "@nanofaker/locale-en-us"
- * getLocalePackageName("es-MX") // "@nanofaker/locale-es-mx"
- * getLocalePackageName("fr")    // "@nanofaker/locale-fr"
+ * getLocalePackageName("en_US") // "@mock-locale/en-us"
+ * getLocalePackageName("es-MX") // "@mock-locale/es-mx"
+ * getLocalePackageName("fr")    // "@mock-locale/fr"
  */
 export function getLocalePackageName(locale: string): string {
   const info = parseLocale(locale)
-  return `@nanofaker/locale-${info.packageName}`
+  return `@ts-mocker/locale-${info.packageName}`
 }
 
 /**

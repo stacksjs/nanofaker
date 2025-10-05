@@ -8,7 +8,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "paths": {
-      "nanofaker": ["./packages/core/src/index.ts"]
+      "ts-mocker": ["./packages/core/src/index.ts"]
     },
     "resolveJsonModule": true,
     "types": [

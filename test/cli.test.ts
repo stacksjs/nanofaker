@@ -35,7 +35,7 @@ describe('CLI', () => {
     test('shows version number', async () => {
       const { stdout, exitCode } = await execCLI(['version'])
       expect(exitCode).toBe(0)
-      expect(stdout).toContain('nanofaker v')
+      expect(stdout).toContain('ts-mocker v')
     })
 
     test('--version flag shows version', async () => {
@@ -49,7 +49,7 @@ describe('CLI', () => {
     test('--help shows help information', async () => {
       const { stdout, exitCode } = await execCLI(['--help'])
       expect(exitCode).toBe(0)
-      expect(stdout).toContain('nanofaker')
+      expect(stdout).toContain('ts-mocker')
       expect(stdout).toContain('generate')
       expect(stdout).toContain('categories')
       expect(stdout).toContain('locales')

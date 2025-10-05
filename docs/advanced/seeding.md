@@ -13,7 +13,7 @@ Seeding sets the initial state of the random number generator, ensuring that the
 Create consistent test data across test runs:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Without seeding - different data each time
 test('user validation', () => {
@@ -40,7 +40,7 @@ test('user validation', () => {
 Reproduce bugs consistently:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // When you find a bug, you can reproduce it exactly
 faker.seed(42)
@@ -53,7 +53,7 @@ const problematicData = generateTestData()
 Generate the same dataset for demos or documentation:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Always generate the same demo users
 faker.seed(1000)
@@ -69,7 +69,7 @@ const demoUsers = Array.from({ length: 10 }, () => ({
 ### Basic Seeding
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Set a seed
 faker.seed(12345)
@@ -82,7 +82,7 @@ console.log(faker.person.fullName()) // Always returns the same name (different 
 ### Different Seeds, Different Data
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Seed 1
 faker.seed(100)
@@ -104,7 +104,7 @@ const name3 = faker.person.fullName() // "Alice Johnson" (same as name1)
 Use different seeds for each test:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('User tests', () => {
   test('test 1', () => {
@@ -124,7 +124,7 @@ describe('User tests', () => {
 Use the same seed for all tests in a suite:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('User validation suite', () => {
   beforeEach(() => {
@@ -148,7 +148,7 @@ describe('User validation suite', () => {
 Use the current date as a seed for daily-changing data:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Changes once per day
 const today = new Date().toISOString().split('T')[0]
@@ -163,7 +163,7 @@ const dailyData = generateData()
 Different seeds for different environments:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const seeds = {
   development: 1000,
@@ -181,7 +181,7 @@ faker.seed(seeds[process.env.NODE_ENV || 'development'])
 Reset to a specific point in the sequence:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 faker.seed(100)
 const name1 = faker.person.fullName()
@@ -198,7 +198,7 @@ const name4 = faker.person.fullName() // Same as name2
 Use different seeds for different faker instances:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const faker1 = faker.locale('en')
 faker1.seed(100)
@@ -216,7 +216,7 @@ const esName = faker2.person.fullName()
 Use seeding with snapshot tests:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 test('generates user snapshot', () => {
   faker.seed(42)
@@ -320,7 +320,7 @@ const realPassword = faker.internet.email() // NOT SECURE!
 ### Test Fixtures
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 export function createTestUsers(count: number) {
   faker.seed(1000)
@@ -337,7 +337,7 @@ const users = createTestUsers(10)
 ### Demo Data
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 export function generateDemoData() {
   faker.seed(2024)
@@ -357,7 +357,7 @@ export function generateDemoData() {
 ### Regression Testing
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 test('data transformation regression', () => {
   faker.seed(42)

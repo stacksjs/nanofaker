@@ -1,8 +1,8 @@
-# Testing with nanofaker
+# Testing with ts-mocker
 
-Learn how to use nanofaker effectively in your test suites for unit tests, integration tests, and end-to-end tests.
+Learn how to use ts-mocker effectively in your test suites for unit tests, integration tests, and end-to-end tests.
 
-## Why Use nanofaker for Testing?
+## Why Use ts-mocker for Testing?
 
 1. **Realistic data** - Generate data that looks authentic
 2. **Reproducible** - Use seeding for consistent test results
@@ -16,7 +16,7 @@ Learn how to use nanofaker effectively in your test suites for unit tests, integ
 
 ```ts
 import { describe, expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('User validation', () => {
   test('validates email format', () => {
@@ -37,7 +37,7 @@ describe('User validation', () => {
 
 ```ts
 import { beforeEach, describe, expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('User service', () => {
   beforeEach(() => {
@@ -72,7 +72,7 @@ describe('User service', () => {
 
 ```ts
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('User repository', () => {
   let db: Database
@@ -117,7 +117,7 @@ describe('User repository', () => {
 
 ```ts
 import { describe, expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('User API', () => {
   test('POST /users creates new user', async () => {
@@ -162,7 +162,7 @@ describe('User API', () => {
 ### Creating Reusable Fixtures
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 export class UserFixture {
   static create(overrides: Partial<User> = {}): User {
@@ -197,7 +197,7 @@ test('user service', () => {
 ### Factory Builder Pattern
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 class ProductBuilder {
   private product: Partial<Product> = {
@@ -244,7 +244,7 @@ test('product pricing', () => {
 
 ```ts
 import { expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 test('user profile matches snapshot', () => {
   faker.seed(42) // Always use same seed for snapshots
@@ -263,7 +263,7 @@ test('user profile matches snapshot', () => {
 
 ```ts
 import { expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 test('generates consistent user list', () => {
   faker.seed(100)
@@ -283,7 +283,7 @@ test('generates consistent user list', () => {
 
 ```ts
 import { test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 test('handles 10,000 user creation', async () => {
   const startTime = performance.now()
@@ -306,7 +306,7 @@ test('handles 10,000 user creation', async () => {
 
 ```ts
 import { test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 test('memory usage remains stable', () => {
   const initialMemory = process.memoryUsage().heapUsed
@@ -330,7 +330,7 @@ test('memory usage remains stable', () => {
 
 ```ts
 import { expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 test('handles various name formats', () => {
   faker.seed(1)
@@ -359,12 +359,12 @@ test('handles all locales', () => {
 })
 ```
 
-## Mocking with nanofaker
+## Mocking with ts-mocker
 
 ### Mock API Responses
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 function mockUserAPI() {
   return {
@@ -444,7 +444,7 @@ test('handles international users', () => {
 ### 5. Combine with Property-Based Testing
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 test('email validation works for all generated emails', () => {
   const emails = Array.from({ length: 100 }, () =>
@@ -456,4 +456,4 @@ test('email validation works for all generated emails', () => {
 })
 ```
 
-nanofaker makes testing easier by providing realistic, reproducible, and comprehensive test data across all your testing needs.
+ts-mocker makes testing easier by providing realistic, reproducible, and comprehensive test data across all your testing needs.

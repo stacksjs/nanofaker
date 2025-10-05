@@ -1,4 +1,4 @@
-import type { LocaleDefinition } from 'nanofaker'
+import type { LocaleDefinition } from 'ts-mocker'
 
 export const fi: LocaleDefinition = {
   title: 'Finnish',

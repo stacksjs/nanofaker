@@ -1,4 +1,4 @@
-import type { FakerOptions, LocaleDefinition } from './types'
+import type { MockOptions, LocaleDefinition } from './types'
 import { LocaleLoader } from './locale-loader'
 import { AddressModule } from './modules/address'
 import { AnimalModule } from './modules/animal'
@@ -33,7 +33,7 @@ import { Random } from './random'
  *
  * @example
  * ```ts
- * import { Faker } from 'nanofaker'
+ * import { Faker } from 'ts-mocker'
  *
  * const faker = new Faker()
  * console.log(faker.person.firstName()) // 'John'
@@ -72,7 +72,7 @@ export class Faker {
   public readonly system: SystemModule
   public readonly word: WordModule
 
-  constructor(options?: FakerOptions) {
+  constructor(options?: MockOptions) {
     const locale = options?.locale ?? 'en'
     const seed = options?.seed
     this._autoInstallLocales = options?.autoInstallLocales ?? false
@@ -80,7 +80,7 @@ export class Faker {
     // For non-English locales, warn about async loading
     if (locale !== 'en' && !LocaleLoader.isCached(locale)) {
       console.warn(
-        `[nanofaker] Locale '${locale}' requires async loading. Use 'await Faker.create({ locale: "${locale}" })' for better performance. Falling back to English.`,
+        `[ts-mocker] Locale '${locale}' requires async loading. Use 'await Faker.create({ locale: "${locale}" })' for better performance. Falling back to English.`,
       )
       this._locale = LocaleLoader.loadSync('en')
     }
@@ -123,7 +123,7 @@ export class Faker {
    * Create a Faker instance with async locale loading
    * @example await Faker.create({ locale: 'es' })
    */
-  static async create(options?: FakerOptions): Promise<Faker> {
+  static async create(options?: MockOptions): Promise<Faker> {
     const locale = options?.locale ?? 'en'
 
     // Preload the locale if needed (this handles normalization internally)
@@ -191,7 +191,7 @@ export class Faker {
   setLocaleSync(locale: string): this {
     if (!LocaleLoader.isCached(locale) && locale !== 'en') {
       console.warn(
-        `[nanofaker] Locale '${locale}' is not loaded. Use 'await faker.setLocale("${locale}")' or preload it first.`,
+        `[ts-mocker] Locale '${locale}' is not loaded. Use 'await faker.setLocale("${locale}")' or preload it first.`,
       )
       return this
     }

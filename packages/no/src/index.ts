@@ -1,2 +1,2 @@
 export { no } from './no'
-export type { LocaleDefinition } from 'nanofaker'
+export type { LocaleDefinition } from 'ts-mocker'

@@ -1,2 +1,2 @@
 export { uk } from './uk'
-export type { LocaleDefinition } from 'nanofaker'
+export type { LocaleDefinition } from 'ts-mocker'

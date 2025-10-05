@@ -1,10 +1,10 @@
 # Comparison
 
-How nanofaker compares to other popular faker libraries.
+How ts-mocker compares to other popular faker libraries.
 
 ## Quick Overview
 
-| Feature | nanofaker | @faker-js/faker | Laravel Faker | Chance.js | Casual |
+| Feature | ts-mocker | @faker-js/faker | Laravel Faker | Chance.js | Casual |
 |---------|-----------|-----------------|---------------|-----------|--------|
 | **Published Size** | 174 KB | 4.29 MB | N/A (PHP) | 2.08 MB | 408 KB |
 | **File Count** | 38 files | 231 files | N/A | 164 files | 75 files |
@@ -24,26 +24,26 @@ Smaller packages = faster installation and better user experience.
 ### Published Package Size (npm download)
 
 ```
-nanofaker:           174KB  ████
+ts-mocker:           174KB  ████
 Casual:              408KB  ████████████
 @ngneat/falso:      1.16MB  ████████████████████████████████████████
 Chance.js:          2.08MB  ████████████████████████████████████████████████████████████████████
 @faker-js/faker:    4.29MB  ████████████████████████████████████████████████████████████████████████████████████████████████████████████
 ```
 
-**Impact**: nanofaker is **24.7x smaller** than @faker-js/faker (saves 4.12 MB, 96% reduction).
+**Impact**: ts-mocker is **24.7x smaller** than @faker-js/faker (saves 4.12 MB, 96% reduction).
 
 ### File Count
 
 ```
-nanofaker:            38 files  ████
+ts-mocker:            38 files  ████
 Casual:               75 files  ████████
 Chance.js:           164 files  ███████████████████
 @faker-js/faker:     231 files  ████████████████████████████
 @ngneat/falso:       399 files  ████████████████████████████████████████████████
 ```
 
-**Impact**: nanofaker has **6.1x fewer files** than @faker-js/faker.
+**Impact**: ts-mocker has **6.1x fewer files** than @faker-js/faker.
 
 ### Real-World Impact
 
@@ -54,8 +54,8 @@ Chance.js:           164 files  ████████████████
 npm install @faker-js/faker  # Downloads 4.29 MB
 Time: ~2-3 seconds
 
-# nanofaker
-npm install nanofaker  # Downloads 174 KB
+# ts-mocker
+npm install ts-mocker  # Downloads 174 KB
 Time: ~0.3 seconds
 
 # Savings: 4.12 MB (96% reduction), ~2.5 seconds faster
@@ -68,7 +68,7 @@ For projects with frequent builds:
 ```bash
 # 100 CI runs per day
 @faker-js/faker: 100 × 4.29 MB = 429 MB/day
-nanofaker: 100 × 174 KB = 17.4 MB/day
+ts-mocker: 100 × 174 KB = 17.4 MB/day
 
 # Monthly bandwidth savings: ~12.3 GB (96% reduction)
 ```
@@ -76,6 +76,7 @@ nanofaker: 100 × 174 KB = 17.4 MB/day
 #### Development Experience
 
 Smaller package means:
+
 - ✅ Faster `npm install` / `bun install`
 - ✅ Faster module resolution
 - ✅ Less disk space usage
@@ -89,7 +90,7 @@ All benchmarks run on the same machine generating 10,000 items.
 ### Name Generation (10,000 items)
 
 ```
-nanofaker:           0.32ms  ████
+ts-mocker:           0.32ms  ████
 @faker-js/faker:    ~18.6ms  ██████████████████████████████████████████████████████████
 Chance.js:           ~3.9ms  ████████████
 Casual:              ~3.8ms  ████████████
@@ -98,7 +99,7 @@ Casual:              ~3.8ms  ████████████
 ### Email Generation (10,000 items)
 
 ```
-nanofaker:           5.1ms   ████
+ts-mocker:           5.1ms   ████
 @faker-js/faker:    ~17.6ms  ██████████████
 Chance.js:          ~11.8ms  █████████
 ```
@@ -116,12 +117,12 @@ const user = {
 ```
 
 ```
-nanofaker:           7.97ms  ████
+ts-mocker:           7.97ms  ████
 @faker-js/faker:    ~52.4ms  ██████████████████████████
 Chance.js:          ~33.1ms  ████████████████
 ```
 
-**Result**: nanofaker is **6.6x faster** than @faker-js/faker for complex operations.
+**Result**: ts-mocker is **6.6x faster** than @faker-js/faker for complex operations.
 
 ## Locale Support Comparison
 
@@ -129,7 +130,7 @@ Chance.js:          ~33.1ms  ████████████████
 
 | Library | Locales | Coverage |
 |---------|---------|----------|
-| **nanofaker** | 16 | 100% for all |
+| **ts-mocker** | 16 | 100% for all |
 | @faker-js/faker | 70+ | 30-80% varies by locale |
 | Laravel Faker | 50+ | 50-90% varies by locale |
 | Chance.js | 1 | EN only |
@@ -137,9 +138,9 @@ Chance.js:          ~33.1ms  ████████████████
 
 ### Coverage Quality
 
-nanofaker provides **complete** translations for all categories in all locales:
+ts-mocker provides **complete** translations for all categories in all locales:
 
-| Category | nanofaker | @faker-js/faker | Laravel Faker |
+| Category | ts-mocker | @faker-js/faker | Laravel Faker |
 |----------|-----------|-----------------|---------------|
 | Person | ✅ 100% | ✅ 90% | ✅ 95% |
 | Address | ✅ 100% | ✅ 80% | ✅ 85% |
@@ -159,7 +160,7 @@ nanofaker provides **complete** translations for all categories in all locales:
 - ❌ No sports data
 - ⚠️ Partial company data
 
-**In nanofaker Spanish locale**:
+**In ts-mocker Spanish locale**:
 
 - ✅ Full food translations (Paella, Gazpacho, etc.)
 - ✅ Full music data
@@ -170,7 +171,7 @@ nanofaker provides **complete** translations for all categories in all locales:
 
 ### Core Features
 
-| Feature | nanofaker | @faker-js/faker | Chance.js |
+| Feature | ts-mocker | @faker-js/faker | Chance.js |
 |---------|-----------|-----------------|-----------|
 | Person data | ✅ | ✅ | ✅ |
 | Address data | ✅ | ✅ | ✅ |
@@ -187,7 +188,7 @@ nanofaker provides **complete** translations for all categories in all locales:
 
 ### Advanced Features
 
-| Feature | nanofaker | @faker-js/faker | Chance.js |
+| Feature | ts-mocker | @faker-js/faker | Chance.js |
 |---------|-----------|-----------------|-----------|
 | Seeding | ✅ | ✅ | ✅ |
 | Helpers | ✅ | ✅ | ✅ |
@@ -201,10 +202,10 @@ nanofaker provides **complete** translations for all categories in all locales:
 
 ### Type Safety
 
-**nanofaker**:
+**ts-mocker**:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Fully typed, autocomplete works perfectly
 const name: string = faker.person.fullName()
@@ -227,7 +228,7 @@ const name: string = faker.person.fullName()
 
 ### IDE Performance
 
-Due to smaller codebase, nanofaker provides:
+Due to smaller codebase, ts-mocker provides:
 
 - ✅ Faster autocomplete
 - ✅ Quicker type checking
@@ -237,10 +238,10 @@ Due to smaller codebase, nanofaker provides:
 
 ### Creating Instances
 
-**nanofaker**:
+**ts-mocker**:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Default instance ready to use
 faker.person.fullName()
@@ -263,7 +264,7 @@ faker.locale = es
 faker.person.fullName()
 ```
 
-**nanofaker is simpler** with less configuration needed.
+**ts-mocker is simpler** with less configuration needed.
 
 ### Method Naming
 
@@ -278,7 +279,7 @@ faker.address.city()
 
 ## Use Case Recommendations
 
-### Choose nanofaker if you need
+### Choose ts-mocker if you need
 
 ✅ **Performance** - Fastest faker library
 ✅ **Small bundle size** - Minimize your app size
@@ -302,7 +303,7 @@ faker.address.city()
 
 ## Migration Difficulty
 
-How hard is it to switch to nanofaker?
+How hard is it to switch to ts-mocker?
 
 ### From @faker-js/faker
 
@@ -357,11 +358,11 @@ const users = Array.from({ length: 1000 }, () => ({
 
 | Library | Time | Memory |
 |---------|------|--------|
-| nanofaker | 7.35ms | ~2MB |
+| ts-mocker | 7.35ms | ~2MB |
 | @faker-js/faker | ~60ms | ~8MB |
 | Chance.js | ~50ms | ~5MB |
 
-**Winner**: nanofaker (4x faster, 4x less memory)
+**Winner**: ts-mocker (4x faster, 4x less memory)
 
 ### Production Bundle Impact
 
@@ -369,7 +370,7 @@ Real app bundle sizes (minified + gzipped):
 
 ```
 Before (with @faker-js/faker):  1.2MB
-After (with nanofaker):         0.9MB
+After (with ts-mocker):         0.9MB
 
 Savings: 300KB = 25% reduction!
 ```
@@ -380,14 +381,14 @@ Test suite with 500 test cases using faker:
 
 | Library | Test Duration |
 |---------|--------------|
-| nanofaker | ~2.5s |
+| ts-mocker | ~2.5s |
 | @faker-js/faker | ~4.2s |
 
 **Savings**: 1.7s per test run = Faster CI/CD
 
 ## Conclusion
 
-nanofaker is the **best choice** when you need:
+ts-mocker is the **best choice** when you need:
 
 - ⚡ **Performance**
 - 📦 **Small bundle size**
@@ -395,23 +396,23 @@ nanofaker is the **best choice** when you need:
 - 🎯 **TypeScript-first development**
 - 🛠️ **CLI tooling**
 
-For most modern TypeScript projects, nanofaker provides the best balance of features, performance, and developer experience.
+For most modern TypeScript projects, ts-mocker provides the best balance of features, performance, and developer experience.
 
 ## Try It Yourself
 
 ```bash
 # Quick comparison
-npm install nanofaker
+npm install ts-mocker
 ```
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
-console.time('nanofaker')
+console.time('ts-mocker')
 for (let i = 0; i < 10000; i++) {
   faker.person.fullName()
 }
-console.timeEnd('nanofaker')
+console.timeEnd('ts-mocker')
 
 // Compare with your current library!
 ```

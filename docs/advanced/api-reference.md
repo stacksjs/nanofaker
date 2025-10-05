@@ -1,6 +1,6 @@
 # API Reference
 
-Complete API reference for nanofaker with all available methods and their return types.
+Complete API reference for ts-mocker with all available methods and their return types.
 
 ## Core
 
@@ -9,7 +9,7 @@ Complete API reference for nanofaker with all available methods and their return
 The main faker instance with default locale (English).
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 ```
 
 ### faker.locale
@@ -33,6 +33,7 @@ const spanishFaker = faker.locale('es')
 ```
 
 **Parameters**:
+
 - `locale: string` - The locale code
 
 **Returns**: `Faker` - New faker instance
@@ -46,6 +47,7 @@ faker.seed(12345)
 ```
 
 **Parameters**:
+
 - `seed: number | undefined` - Seed value (undefined for random)
 
 **Returns**: `void`
@@ -66,6 +68,7 @@ faker.person.firstName({ gender: 'neutral' }) // "Alex"
 ```
 
 **Parameters**:
+
 - `options?: PersonNameOptions` - Optional gender configuration
   - `gender?: 'male' | 'female' | 'neutral'` - Gender of the name
 
@@ -127,6 +130,7 @@ faker.person.fullName({ gender: 'female', prefix: true, suffix: true }) // "Ms. 
 ```
 
 **Parameters**:
+
 - `options?: PersonFullNameOptions` - Optional configuration
   - `gender?: 'male' | 'female' | 'neutral'` - Gender of the first name
   - `prefix?: boolean` - Include a prefix (Mr., Mrs., etc.)

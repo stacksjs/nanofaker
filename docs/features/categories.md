@@ -1,6 +1,6 @@
 # Data Categories
 
-nanofaker provides 16 comprehensive data categories, each with multiple data types. All categories are fully supported across all 9 locales.
+ts-mocker provides 16 comprehensive data categories, each with multiple data types. All categories are fully supported across all 9 locales.
 
 ## Person
 
@@ -229,7 +229,7 @@ faker.science.field() // "Physics"
 All categories are accessible through the faker instance and automatically use the current locale:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // English (default)
 console.log(faker.food.dish()) // "Hamburger"

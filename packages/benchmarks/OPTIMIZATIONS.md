@@ -1,10 +1,10 @@
 # Performance Optimizations
 
-This document details the optimizations made to achieve nanofaker's exceptional performance.
+This document details the optimizations made to achieve ts-mocker's exceptional performance.
 
 ## Summary
 
-**Result**: nanofaker now wins **ALL 9 benchmarks** (100% win rate) and is **6.57x faster** than @faker-js/faker on average.
+**Result**: ts-mocker now wins **ALL 9 benchmarks** (100% win rate) and is **6.57x faster** than @faker-js/faker on average.
 
 ### Key Improvements
 
@@ -17,6 +17,7 @@ This document details the optimizations made to achieve nanofaker's exceptional 
 ### 1. Direct Array Access (Random.arrayElement)
 
 **Before:**
+
 ```ts
 arrayElement<T>(array: readonly T[]): T {
   return array[this.int(0, array.length - 1)]
@@ -24,6 +25,7 @@ arrayElement<T>(array: readonly T[]): T {
 ```
 
 **After:**
+
 ```ts
 arrayElement<T>(array: readonly T[]): T {
   // Optimize for unseeded random - avoid int() overhead
@@ -39,6 +41,7 @@ arrayElement<T>(array: readonly T[]): T {
 ### 2. Optimized replaceSymbols (Phone Numbers)
 
 **Before:**
+
 ```ts
 replaceSymbols(format: string): string {
   return format.replace(/[#?]/g, (match) => {
@@ -51,6 +54,7 @@ replaceSymbols(format: string): string {
 ```
 
 **After:**
+
 ```ts
 replaceSymbols(format: string): string {
   if (this.seed === undefined) {
@@ -74,6 +78,7 @@ replaceSymbols(format: string): string {
 ```
 
 **Impact**:
+
 - Eliminates regex overhead
 - Uses pre-computed alphabet array (static readonly)
 - Avoids string split on every call
@@ -82,6 +87,7 @@ replaceSymbols(format: string): string {
 ### 3. Template Literals for fullName()
 
 **Before:**
+
 ```ts
 fullName(options?: PersonFullNameOptions): string {
   const parts: string[] = []
@@ -101,6 +107,7 @@ fullName(options?: PersonFullNameOptions): string {
 ```
 
 **After:**
+
 ```ts
 fullName(options?: PersonFullNameOptions): string {
   // Optimized: avoid array creation for common case
@@ -126,6 +133,7 @@ fullName(options?: PersonFullNameOptions): string {
 ```
 
 **Impact**:
+
 - Eliminates array creation and join overhead
 - Uses direct template literals
 - **Result**: Full name generation is 11.4x faster (31.35M ops/s)
@@ -133,6 +141,7 @@ fullName(options?: PersonFullNameOptions): string {
 ### 4. Avoid Array Spreading in firstName()
 
 **Before:**
+
 ```ts
 firstName(options?: PersonNameOptions): string {
   if (options?.gender) {
@@ -151,6 +160,7 @@ firstName(options?: PersonNameOptions): string {
 ```
 
 **After:**
+
 ```ts
 firstName(options?: PersonNameOptions): string {
   if (options?.gender) {
@@ -176,6 +186,7 @@ firstName(options?: PersonNameOptions): string {
 ```
 
 **Impact**:
+
 - Eliminates array spreading overhead
 - Direct index calculation
 - Contributes to overall fullName() speed improvement
@@ -183,6 +194,7 @@ firstName(options?: PersonNameOptions): string {
 ### 5. Pre-computed Static Arrays
 
 **Before:**
+
 ```ts
 class Random {
   replaceSymbols(format: string): string {
@@ -197,6 +209,7 @@ class Random {
 ```
 
 **After:**
+
 ```ts
 class Random {
   private static readonly ALPHABET = 'abcdefghijklmnopqrstuvwxyz'.split('')
@@ -256,6 +269,7 @@ bun run bench
 ```
 
 All optimizations maintain:
+
 - ✅ Seeded reproducibility
 - ✅ API compatibility
 - ✅ Type safety

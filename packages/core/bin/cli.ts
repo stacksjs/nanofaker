@@ -3,7 +3,7 @@ import { CAC } from 'cac'
 import { version } from '../package.json'
 import { Faker, faker } from '../src/index'
 
-const cli = new CAC('nanofaker')
+const cli = new CAC('ts-mocker')
 
 // Generate command - generate random data
 cli
@@ -12,9 +12,9 @@ cli
   .option('--count <count>', 'Number of items to generate', { default: 1 })
   .option('--seed <seed>', 'Seed for reproducible results')
   .option('--json', 'Output as JSON')
-  .example('nanofaker generate person fullName')
-  .example('nanofaker generate person fullName --locale es --count 5')
-  .example('nanofaker generate address city --seed 12345 --json')
+  .example('ts-mocker generate person fullName')
+  .example('ts-mocker generate person fullName --locale es --count 5')
+  .example('ts-mocker generate address city --seed 12345 --json')
   .action(async (category: string, method: string, options: any) => {
     try {
       // Create faker with async locale loading
@@ -83,19 +83,19 @@ cli
 
     console.log('\nAvailable Categories:\n')
     categories.forEach(cat => console.log(`  ${cat}`))
-    console.log('\nUse "nanofaker methods <category>" to see available methods for a category')
+    console.log('\nUse "ts-mocker methods <category>" to see available methods for a category')
   })
 
 // Methods command - list methods for a category
 cli
   .command('methods <category>', 'List all methods for a category')
-  .example('nanofaker methods person')
-  .example('nanofaker methods food')
+  .example('ts-mocker methods person')
+  .example('ts-mocker methods food')
   .action((category: string) => {
     const fakerCategory = (faker as any)[category]
     if (!fakerCategory) {
       console.error(`Error: Category '${category}' not found`)
-      console.log('\nUse "nanofaker categories" to see all available categories')
+      console.log('\nUse "ts-mocker categories" to see all available categories')
       process.exit(1)
     }
 
@@ -166,15 +166,15 @@ cli
       console.log('\nℹ️  Only English (en) is bundled by default.')
       console.log('   Other locales are loaded dynamically when first used.')
       console.log('\nUse --locale <code> with the generate command')
-      console.log('Example: nanofaker generate person fullName --locale es')
+      console.log('Example: ts-mocker generate person fullName --locale es')
     }
   })
 
 // Preload locales command
 cli
   .command('locales:preload [locales...]', 'Preload specific locales for faster access')
-  .example('nanofaker locales:preload es fr de')
-  .example('nanofaker locales:preload all')
+  .example('ts-mocker locales:preload es fr de')
+  .example('ts-mocker locales:preload all')
   .action(async (locales: string[]) => {
     try {
       const localesToLoad = locales.includes('all')
@@ -183,8 +183,8 @@ cli
 
       if (localesToLoad.length === 0) {
         console.error('Error: Please specify locales to preload or use "all"')
-        console.log('\nExample: nanofaker locales:preload es fr de')
-        console.log('Example: nanofaker locales:preload all')
+        console.log('\nExample: ts-mocker locales:preload es fr de')
+        console.log('Example: ts-mocker locales:preload all')
         process.exit(1)
       }
 
@@ -207,9 +207,9 @@ cli
   .option('--locale <locale>', 'Locale to use', { default: 'en' })
   .option('--seed <seed>', 'Seed for reproducible results')
   .option('--template <template>', 'Template: user, product, address, company', { default: 'user' })
-  .example('nanofaker batch 10')
-  .example('nanofaker batch 5 --template product --locale es')
-  .example('nanofaker batch 3 --template user --seed 12345')
+  .example('ts-mocker batch 10')
+  .example('ts-mocker batch 5 --template product --locale es')
+  .example('ts-mocker batch 3 --template user --seed 12345')
   .action(async (count: string, options: any) => {
     try {
       // Set locale
@@ -278,8 +278,8 @@ cli
   .option('--category <category>', 'Category to use', { default: 'person' })
   .option('--method <method>', 'Method to use')
   .option('--count <count>', 'Number of items to generate', { default: 5 })
-  .example('nanofaker seed 12345')
-  .example('nanofaker seed 42 --category food --method dish --count 3')
+  .example('ts-mocker seed 12345')
+  .example('ts-mocker seed 42 --category food --method dish --count 3')
   .action(async (seed: string, options: any) => {
     try {
       faker.seed(Number(seed))
@@ -318,8 +318,8 @@ cli
     }
   })
 
-cli.command('version', 'Show the version of nanofaker').action(() => {
-  console.log(`nanofaker v${version}`)
+cli.command('version', 'Show the version of ts-mocker').action(() => {
+  console.log(`ts-mocker v${version}`)
 })
 
 cli.version(version)

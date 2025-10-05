@@ -9,7 +9,7 @@ The helpers module provides utility functions for working with random data, arra
 Pick a random element from an array.
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const colors = ['red', 'blue', 'green', 'yellow']
 const color = faker.helpers.arrayElement(colors)
@@ -416,7 +416,7 @@ const shuffledCities = faker.helpers.shuffle([
 
 ```ts
 import { describe, expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('User tests', () => {
   test('creates valid users', () => {

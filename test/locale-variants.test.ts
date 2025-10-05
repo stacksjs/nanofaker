@@ -55,14 +55,14 @@ describe('Locale Variant Utilities', () => {
 
   describe('getLocalePackageName', () => {
     it('should return correct package name for variant', () => {
-      expect(getLocalePackageName('en_US')).toBe('@nanofaker/locale-en-us')
-      expect(getLocalePackageName('en-GB')).toBe('@nanofaker/locale-en-gb')
-      expect(getLocalePackageName('es-MX')).toBe('@nanofaker/locale-es-mx')
+      expect(getLocalePackageName('en_US')).toBe('@mock-locale/en-us')
+      expect(getLocalePackageName('en-GB')).toBe('@mock-locale/en-gb')
+      expect(getLocalePackageName('es-MX')).toBe('@mock-locale/es-mx')
     })
 
     it('should return correct package name for base locale', () => {
-      expect(getLocalePackageName('es')).toBe('@nanofaker/locale-es')
-      expect(getLocalePackageName('fr')).toBe('@nanofaker/locale-fr')
+      expect(getLocalePackageName('es')).toBe('@mock-locale/es')
+      expect(getLocalePackageName('fr')).toBe('@mock-locale/fr')
     })
   })
 

@@ -18,8 +18,8 @@
       },
     },
     "packages/af": {
-      "name": "@nanofaker/locale-af",
-      "version": "0.0.0",
+      "name": "@mock-locale/af",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -27,12 +27,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/af-za": {
-      "name": "@nanofaker/locale-af-za",
-      "version": "0.0.0",
+      "name": "@mock-locale/af-za",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -40,12 +40,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/ar": {
-      "name": "@nanofaker/locale-ar",
-      "version": "0.0.0",
+      "name": "@mock-locale/ar",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -53,12 +53,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/az": {
-      "name": "@nanofaker/locale-az",
-      "version": "0.0.0",
+      "name": "@mock-locale/az",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -66,29 +66,30 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/benchmarks": {
-      "name": "@nanofaker/benchmarks",
-      "version": "0.0.0",
+      "name": "@ts-mocker/benchmarks",
+      "version": "0.1.1",
       "dependencies": {
         "@faker-js/faker": "^10.0.0",
         "@ngneat/falso": "^8.0.2",
         "casual": "^1.6.2",
         "chance": "^1.1.13",
-        "nanofaker": "workspace:*",
         "tinybench": "^5.0.1",
+        "ts-mocker": "workspace:*",
       },
       "devDependencies": {
         "@types/chance": "^1.1.6",
       },
     },
     "packages/core": {
-      "name": "nanofaker",
-      "version": "0.0.0",
+      "name": "ts-mocker",
+      "version": "0.1.1",
       "bin": {
-        "nanofaker": "./dist/bin/cli.js",
+        "ts-mocker": "./dist/bin/cli.js",
+        "mock": "./dist/bin/cli.js",
       },
       "devDependencies": {
         "@types/bun": "^1.2.23",
@@ -96,8 +97,8 @@
       },
     },
     "packages/cs": {
-      "name": "@nanofaker/locale-cs",
-      "version": "0.0.0",
+      "name": "@mock-locale/cs",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -105,12 +106,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/da": {
-      "name": "@nanofaker/locale-da",
-      "version": "0.0.0",
+      "name": "@mock-locale/da",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -118,12 +119,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/de": {
-      "name": "@nanofaker/locale-de",
-      "version": "0.0.0",
+      "name": "@mock-locale/de",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -131,12 +132,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/de-at": {
-      "name": "@nanofaker/locale-de-at",
-      "version": "0.0.0",
+      "name": "@mock-locale/de-at",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -144,12 +145,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/de-ch": {
-      "name": "@nanofaker/locale-de-ch",
-      "version": "0.0.0",
+      "name": "@mock-locale/de-ch",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -157,12 +158,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en": {
-      "name": "@nanofaker/locale-en",
-      "version": "0.0.0",
+      "name": "@mock-locale/en",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -170,12 +171,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en-ca": {
-      "name": "@nanofaker/locale-en-ca",
-      "version": "0.0.0",
+      "name": "@mock-locale/en-ca",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -183,12 +184,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en-gb": {
-      "name": "@nanofaker/locale-en-gb",
-      "version": "0.0.0",
+      "name": "@mock-locale/en-gb",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -196,12 +197,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en-gh": {
-      "name": "@nanofaker/locale-en-gh",
-      "version": "0.0.0",
+      "name": "@mock-locale/en-gh",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -209,12 +210,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en-hk": {
-      "name": "@nanofaker/locale-en-hk",
-      "version": "0.0.0",
+      "name": "@mock-locale/en-hk",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -222,12 +223,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en-ie": {
-      "name": "@nanofaker/locale-en-ie",
-      "version": "0.0.0",
+      "name": "@mock-locale/en-ie",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -235,12 +236,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en-in": {
-      "name": "@nanofaker/locale-en-in",
-      "version": "0.0.0",
+      "name": "@mock-locale/en-in",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -248,12 +249,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en-ng": {
-      "name": "@nanofaker/locale-en-ng",
-      "version": "0.0.0",
+      "name": "@mock-locale/en-ng",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -261,12 +262,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en-us": {
-      "name": "@nanofaker/locale-en-us",
-      "version": "0.0.0",
+      "name": "@mock-locale/en-us",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -274,12 +275,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/en-za": {
-      "name": "@nanofaker/locale-en-za",
-      "version": "0.0.0",
+      "name": "@mock-locale/en-za",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -287,12 +288,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/eo": {
-      "name": "@nanofaker/locale-eo",
-      "version": "0.0.0",
+      "name": "@mock-locale/eo",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -300,12 +301,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/es": {
-      "name": "@nanofaker/locale-es",
-      "version": "0.0.0",
+      "name": "@mock-locale/es",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -313,12 +314,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/es-mx": {
-      "name": "@nanofaker/locale-es-mx",
-      "version": "0.0.0",
+      "name": "@mock-locale/es-mx",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -326,12 +327,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/fa": {
-      "name": "@nanofaker/locale-fa",
-      "version": "0.0.0",
+      "name": "@mock-locale/fa",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -339,12 +340,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/fi": {
-      "name": "@nanofaker/locale-fi",
-      "version": "0.0.0",
+      "name": "@mock-locale/fi",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -352,12 +353,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/fr": {
-      "name": "@nanofaker/locale-fr",
-      "version": "0.0.0",
+      "name": "@mock-locale/fr",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -365,12 +366,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/fr-be": {
-      "name": "@nanofaker/locale-fr-be",
-      "version": "0.0.0",
+      "name": "@mock-locale/fr-be",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -378,12 +379,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/fr-ca": {
-      "name": "@nanofaker/locale-fr-ca",
-      "version": "0.0.0",
+      "name": "@mock-locale/fr-ca",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -391,12 +392,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/fr-ch": {
-      "name": "@nanofaker/locale-fr-ch",
-      "version": "0.0.0",
+      "name": "@mock-locale/fr-ch",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -404,12 +405,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/fr-lu": {
-      "name": "@nanofaker/locale-fr-lu",
-      "version": "0.0.0",
+      "name": "@mock-locale/fr-lu",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -417,12 +418,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/fr-sn": {
-      "name": "@nanofaker/locale-fr-sn",
-      "version": "0.0.0",
+      "name": "@mock-locale/fr-sn",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -430,12 +431,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/he": {
-      "name": "@nanofaker/locale-he",
-      "version": "0.0.0",
+      "name": "@mock-locale/he",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -443,12 +444,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/hi": {
-      "name": "@nanofaker/locale-hi",
-      "version": "0.0.0",
+      "name": "@mock-locale/hi",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -456,12 +457,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/it": {
-      "name": "@nanofaker/locale-it",
-      "version": "0.0.0",
+      "name": "@mock-locale/it",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -469,12 +470,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/ja": {
-      "name": "@nanofaker/locale-ja",
-      "version": "0.0.0",
+      "name": "@mock-locale/ja",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -482,12 +483,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/ko": {
-      "name": "@nanofaker/locale-ko",
-      "version": "0.0.0",
+      "name": "@mock-locale/ko",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -495,12 +496,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/nl": {
-      "name": "@nanofaker/locale-nl",
-      "version": "0.0.0",
+      "name": "@mock-locale/nl",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -508,12 +509,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/no": {
-      "name": "@nanofaker/locale-no",
-      "version": "0.0.0",
+      "name": "@mock-locale/no",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -521,12 +522,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/pl": {
-      "name": "@nanofaker/locale-pl",
-      "version": "0.0.0",
+      "name": "@mock-locale/pl",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -534,12 +535,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/pt": {
-      "name": "@nanofaker/locale-pt",
-      "version": "0.0.0",
+      "name": "@mock-locale/pt",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -547,12 +548,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/pt-mz": {
-      "name": "@nanofaker/locale-pt-mz",
-      "version": "0.0.0",
+      "name": "@mock-locale/pt-mz",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -560,12 +561,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/sv": {
-      "name": "@nanofaker/locale-sv",
-      "version": "0.0.0",
+      "name": "@mock-locale/sv",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -573,12 +574,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/tl": {
-      "name": "@nanofaker/locale-tl",
-      "version": "0.0.0",
+      "name": "@mock-locale/tl",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -586,12 +587,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/tr": {
-      "name": "@nanofaker/locale-tr",
-      "version": "0.0.0",
+      "name": "@mock-locale/tr",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -599,12 +600,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/uk": {
-      "name": "@nanofaker/locale-uk",
-      "version": "0.0.0",
+      "name": "@mock-locale/uk",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -612,12 +613,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/zh": {
-      "name": "@nanofaker/locale-zh",
-      "version": "0.0.0",
+      "name": "@mock-locale/zh",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -625,12 +626,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/zh-cn": {
-      "name": "@nanofaker/locale-zh-cn",
-      "version": "0.0.0",
+      "name": "@mock-locale/zh-cn",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -638,12 +639,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/zh-tw": {
-      "name": "@nanofaker/locale-zh-tw",
-      "version": "0.0.0",
+      "name": "@mock-locale/zh-tw",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -651,12 +652,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/zu": {
-      "name": "@nanofaker/locale-zu",
-      "version": "0.0.0",
+      "name": "@mock-locale/zu",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -664,12 +665,12 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
     "packages/zu-za": {
-      "name": "@nanofaker/locale-zu-za",
-      "version": "0.0.0",
+      "name": "@mock-locale/zu-za",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/bun": "^1.2.23",
         "bun-plugin-dtsx": "0.9.5",
@@ -677,7 +678,7 @@
         "typescript": "^5.9.3",
       },
       "peerDependencies": {
-        "nanofaker": "workspace:*",
+        "ts-mocker": "workspace:*",
       },
     },
   },
@@ -1067,105 +1068,103 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.25", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ=="],
 
-    "@nanofaker/benchmarks": ["@nanofaker/benchmarks@workspace:packages/benchmarks"],
+    "@mock-locale/af": ["@mock-locale/af@workspace:packages/af"],
 
-    "@nanofaker/locale-af": ["@nanofaker/locale-af@workspace:packages/af"],
+    "@mock-locale/af-za": ["@mock-locale/af-za@workspace:packages/af-za"],
 
-    "@nanofaker/locale-af-za": ["@nanofaker/locale-af-za@workspace:packages/af-za"],
+    "@mock-locale/ar": ["@mock-locale/ar@workspace:packages/ar"],
 
-    "@nanofaker/locale-ar": ["@nanofaker/locale-ar@workspace:packages/ar"],
+    "@mock-locale/az": ["@mock-locale/az@workspace:packages/az"],
 
-    "@nanofaker/locale-az": ["@nanofaker/locale-az@workspace:packages/az"],
+    "@mock-locale/cs": ["@mock-locale/cs@workspace:packages/cs"],
 
-    "@nanofaker/locale-cs": ["@nanofaker/locale-cs@workspace:packages/cs"],
+    "@mock-locale/da": ["@mock-locale/da@workspace:packages/da"],
 
-    "@nanofaker/locale-da": ["@nanofaker/locale-da@workspace:packages/da"],
+    "@mock-locale/de": ["@mock-locale/de@workspace:packages/de"],
 
-    "@nanofaker/locale-de": ["@nanofaker/locale-de@workspace:packages/de"],
+    "@mock-locale/de-at": ["@mock-locale/de-at@workspace:packages/de-at"],
 
-    "@nanofaker/locale-de-at": ["@nanofaker/locale-de-at@workspace:packages/de-at"],
+    "@mock-locale/de-ch": ["@mock-locale/de-ch@workspace:packages/de-ch"],
 
-    "@nanofaker/locale-de-ch": ["@nanofaker/locale-de-ch@workspace:packages/de-ch"],
+    "@mock-locale/en": ["@mock-locale/en@workspace:packages/en"],
 
-    "@nanofaker/locale-en": ["@nanofaker/locale-en@workspace:packages/en"],
+    "@mock-locale/en-ca": ["@mock-locale/en-ca@workspace:packages/en-ca"],
 
-    "@nanofaker/locale-en-ca": ["@nanofaker/locale-en-ca@workspace:packages/en-ca"],
+    "@mock-locale/en-gb": ["@mock-locale/en-gb@workspace:packages/en-gb"],
 
-    "@nanofaker/locale-en-gb": ["@nanofaker/locale-en-gb@workspace:packages/en-gb"],
+    "@mock-locale/en-gh": ["@mock-locale/en-gh@workspace:packages/en-gh"],
 
-    "@nanofaker/locale-en-gh": ["@nanofaker/locale-en-gh@workspace:packages/en-gh"],
+    "@mock-locale/en-hk": ["@mock-locale/en-hk@workspace:packages/en-hk"],
 
-    "@nanofaker/locale-en-hk": ["@nanofaker/locale-en-hk@workspace:packages/en-hk"],
+    "@mock-locale/en-ie": ["@mock-locale/en-ie@workspace:packages/en-ie"],
 
-    "@nanofaker/locale-en-ie": ["@nanofaker/locale-en-ie@workspace:packages/en-ie"],
+    "@mock-locale/en-in": ["@mock-locale/en-in@workspace:packages/en-in"],
 
-    "@nanofaker/locale-en-in": ["@nanofaker/locale-en-in@workspace:packages/en-in"],
+    "@mock-locale/en-ng": ["@mock-locale/en-ng@workspace:packages/en-ng"],
 
-    "@nanofaker/locale-en-ng": ["@nanofaker/locale-en-ng@workspace:packages/en-ng"],
+    "@mock-locale/en-us": ["@mock-locale/en-us@workspace:packages/en-us"],
 
-    "@nanofaker/locale-en-us": ["@nanofaker/locale-en-us@workspace:packages/en-us"],
+    "@mock-locale/en-za": ["@mock-locale/en-za@workspace:packages/en-za"],
 
-    "@nanofaker/locale-en-za": ["@nanofaker/locale-en-za@workspace:packages/en-za"],
+    "@mock-locale/eo": ["@mock-locale/eo@workspace:packages/eo"],
 
-    "@nanofaker/locale-eo": ["@nanofaker/locale-eo@workspace:packages/eo"],
+    "@mock-locale/es": ["@mock-locale/es@workspace:packages/es"],
 
-    "@nanofaker/locale-es": ["@nanofaker/locale-es@workspace:packages/es"],
+    "@mock-locale/es-mx": ["@mock-locale/es-mx@workspace:packages/es-mx"],
 
-    "@nanofaker/locale-es-mx": ["@nanofaker/locale-es-mx@workspace:packages/es-mx"],
+    "@mock-locale/fa": ["@mock-locale/fa@workspace:packages/fa"],
 
-    "@nanofaker/locale-fa": ["@nanofaker/locale-fa@workspace:packages/fa"],
+    "@mock-locale/fi": ["@mock-locale/fi@workspace:packages/fi"],
 
-    "@nanofaker/locale-fi": ["@nanofaker/locale-fi@workspace:packages/fi"],
+    "@mock-locale/fr": ["@mock-locale/fr@workspace:packages/fr"],
 
-    "@nanofaker/locale-fr": ["@nanofaker/locale-fr@workspace:packages/fr"],
+    "@mock-locale/fr-be": ["@mock-locale/fr-be@workspace:packages/fr-be"],
 
-    "@nanofaker/locale-fr-be": ["@nanofaker/locale-fr-be@workspace:packages/fr-be"],
+    "@mock-locale/fr-ca": ["@mock-locale/fr-ca@workspace:packages/fr-ca"],
 
-    "@nanofaker/locale-fr-ca": ["@nanofaker/locale-fr-ca@workspace:packages/fr-ca"],
+    "@mock-locale/fr-ch": ["@mock-locale/fr-ch@workspace:packages/fr-ch"],
 
-    "@nanofaker/locale-fr-ch": ["@nanofaker/locale-fr-ch@workspace:packages/fr-ch"],
+    "@mock-locale/fr-lu": ["@mock-locale/fr-lu@workspace:packages/fr-lu"],
 
-    "@nanofaker/locale-fr-lu": ["@nanofaker/locale-fr-lu@workspace:packages/fr-lu"],
+    "@mock-locale/fr-sn": ["@mock-locale/fr-sn@workspace:packages/fr-sn"],
 
-    "@nanofaker/locale-fr-sn": ["@nanofaker/locale-fr-sn@workspace:packages/fr-sn"],
+    "@mock-locale/he": ["@mock-locale/he@workspace:packages/he"],
 
-    "@nanofaker/locale-he": ["@nanofaker/locale-he@workspace:packages/he"],
+    "@mock-locale/hi": ["@mock-locale/hi@workspace:packages/hi"],
 
-    "@nanofaker/locale-hi": ["@nanofaker/locale-hi@workspace:packages/hi"],
+    "@mock-locale/it": ["@mock-locale/it@workspace:packages/it"],
 
-    "@nanofaker/locale-it": ["@nanofaker/locale-it@workspace:packages/it"],
+    "@mock-locale/ja": ["@mock-locale/ja@workspace:packages/ja"],
 
-    "@nanofaker/locale-ja": ["@nanofaker/locale-ja@workspace:packages/ja"],
+    "@mock-locale/ko": ["@mock-locale/ko@workspace:packages/ko"],
 
-    "@nanofaker/locale-ko": ["@nanofaker/locale-ko@workspace:packages/ko"],
+    "@mock-locale/nl": ["@mock-locale/nl@workspace:packages/nl"],
 
-    "@nanofaker/locale-nl": ["@nanofaker/locale-nl@workspace:packages/nl"],
+    "@mock-locale/no": ["@mock-locale/no@workspace:packages/no"],
 
-    "@nanofaker/locale-no": ["@nanofaker/locale-no@workspace:packages/no"],
+    "@mock-locale/pl": ["@mock-locale/pl@workspace:packages/pl"],
 
-    "@nanofaker/locale-pl": ["@nanofaker/locale-pl@workspace:packages/pl"],
+    "@mock-locale/pt": ["@mock-locale/pt@workspace:packages/pt"],
 
-    "@nanofaker/locale-pt": ["@nanofaker/locale-pt@workspace:packages/pt"],
+    "@mock-locale/pt-mz": ["@mock-locale/pt-mz@workspace:packages/pt-mz"],
 
-    "@nanofaker/locale-pt-mz": ["@nanofaker/locale-pt-mz@workspace:packages/pt-mz"],
+    "@mock-locale/sv": ["@mock-locale/sv@workspace:packages/sv"],
 
-    "@nanofaker/locale-sv": ["@nanofaker/locale-sv@workspace:packages/sv"],
+    "@mock-locale/tl": ["@mock-locale/tl@workspace:packages/tl"],
 
-    "@nanofaker/locale-tl": ["@nanofaker/locale-tl@workspace:packages/tl"],
+    "@mock-locale/tr": ["@mock-locale/tr@workspace:packages/tr"],
 
-    "@nanofaker/locale-tr": ["@nanofaker/locale-tr@workspace:packages/tr"],
+    "@mock-locale/uk": ["@mock-locale/uk@workspace:packages/uk"],
 
-    "@nanofaker/locale-uk": ["@nanofaker/locale-uk@workspace:packages/uk"],
+    "@mock-locale/zh": ["@mock-locale/zh@workspace:packages/zh"],
 
-    "@nanofaker/locale-zh": ["@nanofaker/locale-zh@workspace:packages/zh"],
+    "@mock-locale/zh-cn": ["@mock-locale/zh-cn@workspace:packages/zh-cn"],
 
-    "@nanofaker/locale-zh-cn": ["@nanofaker/locale-zh-cn@workspace:packages/zh-cn"],
+    "@mock-locale/zh-tw": ["@mock-locale/zh-tw@workspace:packages/zh-tw"],
 
-    "@nanofaker/locale-zh-tw": ["@nanofaker/locale-zh-tw@workspace:packages/zh-tw"],
+    "@mock-locale/zu": ["@mock-locale/zu@workspace:packages/zu"],
 
-    "@nanofaker/locale-zu": ["@nanofaker/locale-zu@workspace:packages/zu"],
-
-    "@nanofaker/locale-zu-za": ["@nanofaker/locale-zu-za@workspace:packages/zu-za"],
+    "@mock-locale/zu-za": ["@mock-locale/zu-za@workspace:packages/zu-za"],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@0.2.12", "", { "dependencies": { "@emnapi/core": "^1.4.3", "@emnapi/runtime": "^1.4.3", "@tybys/wasm-util": "^0.10.0" } }, "sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ=="],
 
@@ -1280,6 +1279,8 @@
     "@surma/rollup-plugin-off-main-thread": ["@surma/rollup-plugin-off-main-thread@2.2.3", "", { "dependencies": { "ejs": "^3.1.6", "json5": "^2.2.0", "magic-string": "^0.25.0", "string.prototype.matchall": "^4.0.6" } }, "sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ=="],
 
     "@szmarczak/http-timer": ["@szmarczak/http-timer@4.0.6", "", { "dependencies": { "defer-to-connect": "^2.0.0" } }, "sha512-4BAffykYOgO+5nzBWYwE3W90sBgLJoUPRWWcL8wlyiM8IB8ipJz3UMJ9KXQd1RKQXpKp8Tutn80HZtWsu2u76w=="],
+
+    "@ts-mocker/benchmarks": ["@ts-mocker/benchmarks@workspace:packages/benchmarks"],
 
     "@tybys/wasm-util": ["@tybys/wasm-util@0.10.1", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg=="],
 
@@ -2247,8 +2248,6 @@
 
     "muggle-string": ["muggle-string@0.4.1", "", {}, "sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ=="],
 
-    "nanofaker": ["nanofaker@workspace:packages/core"],
-
     "nanoid": ["nanoid@3.3.8", "", { "bin": { "nanoid": "bin/nanoid.cjs" } }, "sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w=="],
 
     "napi-build-utils": ["napi-build-utils@2.0.0", "", {}, "sha512-GEbrYkbfF7MoNaoh2iGG84Mnf/WZfB0GdGEsM8wz7Expx/LlWf5U8t9nvJKXSp3qr5IsEbK04cBGhol/KwOsWA=="],
@@ -2594,6 +2593,8 @@
     "ts-api-utils": ["ts-api-utils@2.1.0", "", { "peerDependencies": { "typescript": ">=4.8.4" } }, "sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ=="],
 
     "ts-declaration-location": ["ts-declaration-location@1.0.7", "", { "dependencies": { "picomatch": "^4.0.2" }, "peerDependencies": { "typescript": ">=4.0.0" } }, "sha512-EDyGAwH1gO0Ausm9gV6T2nUvBgXT5kGoCMJPllOaooZ+4VvJiKBdZE7wK18N1deEowhcUptS+5GXZK8U/fvpwA=="],
+
+    "ts-mocker": ["ts-mocker@workspace:packages/core"],
 
     "ts-pkgx": ["ts-pkgx@0.4.52", "", { "dependencies": { "chromium-bidi": "^7.2.0", "electron": "^37.4.0", "js-yaml": "^4.1.0", "playwright": "^1.55.0" }, "bin": { "ts-pkgx": "dist/bin/cli.js" } }, "sha512-YDuXweSXHXk3Me1Q/wI0mTpl4e0GQpiZfqAckPZ9d/PwLbFCQSjinSmTj6n8pnSj0XXs5/kw9z8aLZfSZtBzmw=="],
 

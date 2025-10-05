@@ -4,7 +4,7 @@ import { Faker } from '../packages/core/src/faker'
 import { LocaleLoader } from '../packages/core/src/locale-loader'
 
 /**
- * Performance benchmarks for nanofaker
+ * Performance benchmarks for ts-mocker
  * These tests ensure the library maintains good performance characteristics
  */
 

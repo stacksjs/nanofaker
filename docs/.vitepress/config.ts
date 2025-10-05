@@ -22,7 +22,7 @@ const nav = [
   { text: 'News', link: 'https://stacksjs.org/news' },
   {
     text: 'Changelog',
-    link: 'https://github.com/stacksjs/nanofaker/blob/main/CHANGELOG.md',
+    link: 'https://github.com/stacksjs/ts-mocker/blob/main/CHANGELOG.md',
   },
   // { text: 'Blog', link: 'https://updates.ow3.org' },
   {
@@ -91,12 +91,12 @@ const sidebar = [
   },
 ]
 const description = 'A performance-focused and lightweight faker library for TypeScript with comprehensive locale support.'
-const title = 'nanofaker | A performance-focused and lightweight faker library for TypeScript'
+const title = 'ts-mocker | A performance-focused and lightweight faker library for TypeScript'
 
 export default withPwa(
   defineConfig({
     lang: 'en-US',
-    title: 'nanofaker',
+    title: 'ts-mocker',
     description,
     metaChunk: true,
     cleanUrls: true,
@@ -111,7 +111,7 @@ export default withPwa(
       ['meta', { name: 'author', content: 'Stacks.js, Inc.' }],
       ['meta', {
         name: 'tags',
-        content: 'nanofaker, faker, fake data, typescript, stacksjs, locale support, performance, lightweight',
+        content: 'ts-mocker, faker, fake data, typescript, stacksjs, locale support, performance, lightweight',
       }],
 
       ['meta', { property: 'og:type', content: 'website' }],
@@ -119,9 +119,9 @@ export default withPwa(
       ['meta', { property: 'og:title', content: title }],
       ['meta', { property: 'og:description', content: description }],
 
-      ['meta', { property: 'og:site_name', content: 'nanofaker' }],
+      ['meta', { property: 'og:site_name', content: 'ts-mocker' }],
       ['meta', { property: 'og:image', content: './images/og-image.jpg' }],
-      ['meta', { property: 'og:url', content: 'https://nanofaker.stacksjs.org/' }],
+      ['meta', { property: 'og:url', content: 'https://ts-mocker.netlify.app/' }],
       // ['script', { 'src': 'https://cdn.usefathom.com/script.js', 'data-site': '', 'data-spa': 'auto', 'defer': '' }],
       ...analyticsHead,
     ],
@@ -139,7 +139,7 @@ export default withPwa(
       sidebar,
 
       editLink: {
-        pattern: 'https://github.com/stacksjs/nanofaker/edit/main/docs/:path',
+        pattern: 'https://github.com/stacksjs/ts-mocker/edit/main/docs/:path',
         text: 'Edit this page on GitHub',
       },
 
@@ -151,7 +151,7 @@ export default withPwa(
       socialLinks: [
         { icon: 'twitter', link: 'https://twitter.com/stacksjs' },
         { icon: 'bluesky', link: 'https://bsky.app/profile/chrisbreuer.dev' },
-        { icon: 'github', link: 'https://github.com/stacksjs/nanofaker' },
+        { icon: 'github', link: 'https://github.com/stacksjs/ts-mocker' },
         { icon: 'discord', link: 'https://discord.gg/stacksjs' },
       ],
 

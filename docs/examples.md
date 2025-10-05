@@ -1,13 +1,13 @@
 # Usage Examples
 
-Real-world examples of using nanofaker in different scenarios.
+Real-world examples of using ts-mocker in different scenarios.
 
 ## Database Seeding
 
 ### Basic User Seeding
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 import { db } from './database'
 
 async function seedUsers(count: number) {
@@ -29,7 +29,7 @@ seedUsers(100)
 ### Relational Data
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 async function seedDatabase() {
   // Create users first
@@ -60,7 +60,7 @@ async function seedDatabase() {
 ### With Locale-Specific Data
 
 ```ts
-import { faker, Faker } from 'nanofaker'
+import { faker, Faker } from 'ts-mocker'
 
 async function seedInternationalUsers() {
   const locales = ['en', 'es', 'fr', 'de', 'ja']
@@ -88,7 +88,7 @@ async function seedInternationalUsers() {
 
 ```ts
 import { beforeEach, describe, expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('User service', () => {
   beforeEach(() => {
@@ -122,7 +122,7 @@ describe('User service', () => {
 
 ```ts
 import { expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 test('API creates user', async () => {
   const userData = {
@@ -149,7 +149,7 @@ test('API creates user', async () => {
 ### Factory Pattern for Tests
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 class UserFactory {
   static create(overrides = {}) {
@@ -188,7 +188,7 @@ test('admin can delete users', () => {
 
 ```ts
 import express from 'express'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const app = express()
 
@@ -237,7 +237,7 @@ app.listen(3000, () => {
 ```ts
 import { ApolloServer } from '@apollo/server'
 import { startStandaloneServer } from '@apollo/server/standalone'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const typeDefs = `#graphql
   type User {
@@ -295,7 +295,7 @@ console.log(`Mock GraphQL API running at ${url}`)
 
 ```ts
 import { writeFileSync } from 'node:fs'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 function generateCSV(rows: number) {
   const header = 'Name,Email,Phone,City,Company\n'
@@ -320,7 +320,7 @@ generateCSV(1000)
 ### CSV with Quoted Fields
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 function escapeCSV(value: string): string {
   if (value.includes(',') || value.includes('"') || value.includes('\n')) {
@@ -356,7 +356,7 @@ console.log(csv)
 ### Nested JSON Structure
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 function generateUser() {
   return {
@@ -406,7 +406,7 @@ console.log(JSON.stringify(users, null, 2))
 ### E-commerce Product Data
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 function generateProduct() {
   const basePrice = Number(faker.commerce.price({ min: 10, max: 1000 }))
@@ -458,7 +458,7 @@ const products = Array.from({ length: 50 }, generateProduct)
 
 ```ts
 import { writeFileSync } from 'node:fs'
-import { Faker } from 'nanofaker'
+import { Faker } from 'ts-mocker'
 
 async function generateMultiLocaleData() {
   const locales = ['en', 'es', 'fr', 'de', 'ja']
@@ -489,7 +489,7 @@ generateMultiLocaleData()
 ### Time-Series Data
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 function generateTimeSeries(days: number) {
   const startDate = new Date()
@@ -519,7 +519,7 @@ console.log(JSON.stringify(analytics, null, 2))
 
 ```ts
 // scripts/seed.ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 import { db } from '../src/database'
 
 async function main() {
@@ -573,7 +573,7 @@ main()
 ### Storybook Mock Data
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 export function mockUser(overrides = {}) {
   return {
@@ -602,7 +602,7 @@ export const Default = {
 ### Weighted Distribution
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 function generateWithDistribution() {
   const tier = faker.helpers.arrayElement([
@@ -627,7 +627,7 @@ function generateWithDistribution() {
 ### Conditional Data
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 function generateOrder() {
   const status = faker.helpers.arrayElement(['pending', 'shipped', 'delivered'])

@@ -1,2 +1,2 @@
 export { cs } from './cs'
-export type { LocaleDefinition } from 'nanofaker'
+export type { LocaleDefinition } from 'ts-mocker'

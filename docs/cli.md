@@ -1,19 +1,19 @@
 # Command Line Interface
 
-nanofaker includes a powerful CLI for generating fake data directly from your terminal. Perfect for quick data generation, testing, and scripting.
+ts-mocker includes a powerful CLI for generating fake data directly from your terminal. Perfect for quick data generation, testing, and scripting.
 
 ## Installation
 
-If you installed nanofaker globally, the CLI is available as `nanofaker`:
+If you installed ts-mocker globally, the CLI is available as `ts-mocker`:
 
 ```bash
-npm install -g nanofaker
+npm install -g ts-mocker
 ```
 
 For local installations, use `npx`:
 
 ```bash
-npx nanofaker [command]
+npx ts-mocker [command]
 ```
 
 ## Commands
@@ -23,7 +23,7 @@ npx nanofaker [command]
 Generate random data from any category and method.
 
 ```bash
-nanofaker generate <category> <method> [options]
+ts-mocker generate <category> <method> [options]
 ```
 
 **Options:**
@@ -37,16 +37,16 @@ nanofaker generate <category> <method> [options]
 
 ```bash
 # Generate a single name
-nanofaker generate person fullName
+ts-mocker generate person fullName
 
 # Generate 5 Spanish names
-nanofaker generate person fullName --locale es --count 5
+ts-mocker generate person fullName --locale es --count 5
 
 # Generate reproducible data with seed
-nanofaker generate address city --seed 12345
+ts-mocker generate address city --seed 12345
 
 # Output as JSON
-nanofaker generate person firstName --count 3 --json
+ts-mocker generate person firstName --count 3 --json
 ```
 
 ### categories
@@ -54,7 +54,7 @@ nanofaker generate person firstName --count 3 --json
 List all available data categories.
 
 ```bash
-nanofaker categories
+ts-mocker categories
 ```
 
 Shows all 16 categories:
@@ -81,17 +81,17 @@ Shows all 16 categories:
 List all methods available for a specific category.
 
 ```bash
-nanofaker methods <category>
+ts-mocker methods <category>
 ```
 
 **Examples:**
 
 ```bash
 # List all person methods
-nanofaker methods person
+ts-mocker methods person
 
 # List all food methods
-nanofaker methods food
+ts-mocker methods food
 ```
 
 Shows each method with a live example:
@@ -113,7 +113,7 @@ Available methods in 'person':
 List all available locales.
 
 ```bash
-nanofaker locales
+ts-mocker locales
 ```
 
 Shows all 26 supported locales:
@@ -150,7 +150,7 @@ Shows all 26 supported locales:
 Generate multiple complete records using predefined templates.
 
 ```bash
-nanofaker batch <count> [options]
+ts-mocker batch <count> [options]
 ```
 
 **Options:**
@@ -163,13 +163,13 @@ nanofaker batch <count> [options]
 
 ```bash
 # Generate 10 users
-nanofaker batch 10
+ts-mocker batch 10
 
 # Generate 5 products in Spanish
-nanofaker batch 5 --template product --locale es
+ts-mocker batch 5 --template product --locale es
 
 # Generate reproducible data
-nanofaker batch 3 --template user --seed 12345
+ts-mocker batch 3 --template user --seed 12345
 ```
 
 **Templates:**
@@ -227,7 +227,7 @@ nanofaker batch 3 --template user --seed 12345
 Generate data with a specific seed to demonstrate reproducibility.
 
 ```bash
-nanofaker seed <seed> [options]
+ts-mocker seed <seed> [options]
 ```
 
 **Options:**
@@ -240,16 +240,16 @@ nanofaker seed <seed> [options]
 
 ```bash
 # Generate 5 names with seed
-nanofaker seed 12345
+ts-mocker seed 12345
 
 # Generate 3 food dishes with seed
-nanofaker seed 42 --category food --method dish --count 3
+ts-mocker seed 42 --category food --method dish --count 3
 ```
 
 Running the same command again will produce the exact same results:
 
 ```bash
-$ nanofaker seed 12345
+$ ts-mocker seed 12345
 
 Generating with seed 12345:
 
@@ -264,10 +264,10 @@ Run the same command again to get the same results!
 
 ### version
 
-Show the version of nanofaker.
+Show the version of ts-mocker.
 
 ```bash
-nanofaker version
+ts-mocker version
 ```
 
 ## Usage Examples
@@ -276,60 +276,60 @@ nanofaker version
 
 ```bash
 # Get a random name
-nanofaker generate person fullName
+ts-mocker generate person fullName
 
 # Get a random email
-nanofaker generate internet email
+ts-mocker generate internet email
 
 # Get a random city
-nanofaker generate address city
+ts-mocker generate address city
 ```
 
 ### Multiple Items
 
 ```bash
 # Generate 10 names
-nanofaker generate person fullName --count 10
+ts-mocker generate person fullName --count 10
 
 # Generate 5 emails as JSON
-nanofaker generate internet email --count 5 --json
+ts-mocker generate internet email --count 5 --json
 ```
 
 ### Localization
 
 ```bash
 # Spanish name
-nanofaker generate person fullName --locale es
+ts-mocker generate person fullName --locale es
 
 # French address
-nanofaker generate address city --locale fr
+ts-mocker generate address city --locale fr
 
 # Japanese food
-nanofaker generate food dish --locale ja
+ts-mocker generate food dish --locale ja
 ```
 
 ### Reproducible Data
 
 ```bash
 # Same seed = same results
-nanofaker generate person fullName --seed 12345
-nanofaker generate person fullName --seed 12345  # Same output
+ts-mocker generate person fullName --seed 12345
+ts-mocker generate person fullName --seed 12345  # Same output
 
 # Different seed = different results
-nanofaker generate person fullName --seed 100
-nanofaker generate person fullName --seed 200
+ts-mocker generate person fullName --seed 100
+ts-mocker generate person fullName --seed 200
 ```
 
 ### Batch Generation
 
 ```bash
 # Generate 10 test users
-nanofaker batch 10 > users.json
+ts-mocker batch 10 > users.json
 
 # Generate products for different locales
-nanofaker batch 5 --template product --locale en > products-en.json
-nanofaker batch 5 --template product --locale es > products-es.json
-nanofaker batch 5 --template product --locale ja > products-ja.json
+ts-mocker batch 5 --template product --locale en > products-en.json
+ts-mocker batch 5 --template product --locale es > products-es.json
+ts-mocker batch 5 --template product --locale ja > products-ja.json
 ```
 
 ### Scripting
@@ -341,8 +341,8 @@ Use the CLI in shell scripts:
 
 # Generate test data
 for i in {1..10}; do
-  name=$(nanofaker generate person fullName)
-  email=$(nanofaker generate internet email)
+  name=$(ts-mocker generate person fullName)
+  email=$(ts-mocker generate internet email)
   echo "$name,$email" >> users.csv
 done
 ```
@@ -351,11 +351,11 @@ Or with JSON output:
 
 ```bash
 # Generate 100 users and save to file
-nanofaker batch 100 --template user > test-data.json
+ts-mocker batch 100 --template user > test-data.json
 
 # Generate products in multiple locales
 for locale in en es fr de; do
-  nanofaker batch 50 --template product --locale $locale > "products-$locale.json"
+  ts-mocker batch 50 --template product --locale $locale > "products-$locale.json"
 done
 ```
 
@@ -365,13 +365,13 @@ Use with `jq` for advanced JSON processing:
 
 ```bash
 # Generate users and extract just emails
-nanofaker batch 10 | jq '.[].email'
+ts-mocker batch 10 | jq '.[].email'
 
 # Generate products and filter by price
-nanofaker batch 100 --template product | jq '.[] | select(.price | tonumber > 500)'
+ts-mocker batch 100 --template product | jq '.[] | select(.price | tonumber > 500)'
 
 # Generate addresses and format
-nanofaker batch 5 --template address | jq '.[] | "\(.city), \(.state) \(.zipCode)"'
+ts-mocker batch 5 --template address | jq '.[] | "\(.city), \(.state) \(.zipCode)"'
 ```
 
 ## Error Handling
@@ -380,19 +380,19 @@ The CLI provides helpful error messages:
 
 ```bash
 # Invalid category
-$ nanofaker generate invalid method
+$ ts-mocker generate invalid method
 Error: Category 'invalid' not found
 
 Available categories: person, address, company, internet, phone, ...
 
 # Invalid method
-$ nanofaker generate person invalid
+$ ts-mocker generate person invalid
 Error: Method 'invalid' not found in category 'person'
 
 Available methods in person: firstName, lastName, fullName, ...
 
 # Invalid template
-$ nanofaker batch 10 --template invalid
+$ ts-mocker batch 10 --template invalid
 Error: Template 'invalid' not found
 
 Available templates: user, product, address, company
@@ -405,9 +405,9 @@ Available templates: user, product, address, company
 Use the `methods` command to discover what each category offers:
 
 ```bash
-nanofaker methods food
-nanofaker methods animal
-nanofaker methods commerce
+ts-mocker methods food
+ts-mocker methods animal
+ts-mocker methods commerce
 ```
 
 ### 2. Use Seeds for Testing
@@ -416,7 +416,7 @@ Seeds ensure consistent test data:
 
 ```bash
 # Always get the same test user
-nanofaker batch 1 --seed 42 > test-user.json
+ts-mocker batch 1 --seed 42 > test-user.json
 ```
 
 ### 3. Pipe to Files
@@ -424,39 +424,39 @@ nanofaker batch 1 --seed 42 > test-user.json
 Save generated data to files:
 
 ```bash
-nanofaker batch 1000 --template user > users.json
-nanofaker generate person fullName --count 100 > names.txt
+ts-mocker batch 1000 --template user > users.json
+ts-mocker generate person fullName --count 100 > names.txt
 ```
 
 ### 4. Combine with Other Tools
 
 ```bash
 # Count unique first names
-nanofaker generate person firstName --count 1000 | sort | uniq -c
+ts-mocker generate person firstName --count 1000 | sort | uniq -c
 
 # Generate CSV data
 echo "name,email,city" > data.csv
 for i in {1..100}; do
-  nanofaker batch 1 | jq -r '.[] | [.name, .email, .city] | @csv' >> data.csv
+  ts-mocker batch 1 | jq -r '.[] | [.name, .email, .city] | @csv' >> data.csv
 done
 ```
 
 ## Global Installation
 
-For easier access, install nanofaker globally:
+For easier access, install ts-mocker globally:
 
 ```bash
-npm install -g nanofaker
+npm install -g ts-mocker
 # or
-bun add -g nanofaker
+bun add -g ts-mocker
 ```
 
 Then use it anywhere:
 
 ```bash
-nanofaker generate person fullName
-nanofaker batch 10
-nanofaker methods food
+ts-mocker generate person fullName
+ts-mocker batch 10
+ts-mocker methods food
 ```
 
 ## Shell Aliases
@@ -465,9 +465,9 @@ Create aliases for frequently used commands:
 
 ```bash
 # Add to ~/.bashrc or ~/.zshrc
-alias fake-name='nanofaker generate person fullName'
-alias fake-email='nanofaker generate internet email'
-alias fake-users='nanofaker batch 10'
+alias fake-name='ts-mocker generate person fullName'
+alias fake-email='ts-mocker generate internet email'
+alias fake-users='ts-mocker batch 10'
 
 # Usage
 fake-name
@@ -475,4 +475,4 @@ fake-email
 fake-users
 ```
 
-The nanofaker CLI is a powerful tool for quickly generating test data, seeding databases, creating mock APIs, and more!
+The ts-mocker CLI is a powerful tool for quickly generating test data, seeding databases, creating mock APIs, and more!

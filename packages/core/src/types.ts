@@ -1,4 +1,4 @@
-export interface FakerConfig {
+export interface MockConfig {
   verbose: boolean
   locale: string
   seed?: number
@@ -9,7 +9,7 @@ export interface FakerConfig {
   autoInstallLocales?: boolean
 }
 
-export type FakerOptions = Partial<FakerConfig>
+export type MockOptions = Partial<MockConfig>
 
 // Deep partial type utility for locale variants
 export type DeepPartial<T> = T extends any[] ? T : {

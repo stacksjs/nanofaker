@@ -1,6 +1,6 @@
 # Install
 
-Installing `nanofaker` is easy. Simply pull it in via your package manager of choice.
+Installing `ts-mocker` is easy. Simply pull it in via your package manager of choice.
 
 ## Package Managers
 
@@ -9,19 +9,19 @@ Choose your package manager of choice:
 ::: code-group
 
 ```sh [npm]
-npm install nanofaker
+npm install ts-mocker
 ```
 
 ```sh [bun]
-bun add nanofaker
+bun add ts-mocker
 ```
 
 ```sh [pnpm]
-pnpm add nanofaker
+pnpm add ts-mocker
 ```
 
 ```sh [yarn]
-yarn add nanofaker
+yarn add ts-mocker
 ```
 
 :::

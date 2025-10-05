@@ -28,26 +28,26 @@ for (const locale of locales) {
   }
 
   // Create index.ts
-  const indexContent = `export { ${locale} } from './${locale}'\nexport type { LocaleDefinition } from 'nanofaker'\n`
+  const indexContent = `export { ${locale} } from './${locale}'\nexport type { LocaleDefinition } from 'ts-mocker'\n`
   await Bun.write(join(srcDir, 'index.ts'), indexContent)
 
   // Create package.json
   const packageJson = {
-    name: `@nanofaker/locale-${locale}`,
+    name: `@mock-locale/${locale}`,
     type: 'module',
     version: '0.0.0',
-    description: `${locale.toUpperCase()} locale data for nanofaker`,
+    description: `${locale.toUpperCase()} locale data for ts-mocker`,
     author: 'Chris Breuer <chris@stacksjs.org>',
     license: 'MIT',
-    homepage: 'https://github.com/stacksjs/nanofaker#readme',
+    homepage: 'https://github.com/stacksjs/ts-mocker#readme',
     repository: {
       type: 'git',
-      url: 'git+https://github.com/stacksjs/nanofaker.git',
+      url: 'git+https://github.com/stacksjs/ts-mocker.git',
     },
     bugs: {
-      url: 'https://github.com/stacksjs/nanofaker/issues',
+      url: 'https://github.com/stacksjs/ts-mocker/issues',
     },
-    keywords: ['nanofaker', 'locale', locale, 'fake-data', 'test-data'],
+    keywords: ['ts-mocker', 'locale', locale, 'fake-data', 'test-data'],
     exports: {
       '.': {
         types: './dist/index.d.ts',
@@ -62,7 +62,7 @@ for (const locale of locales) {
       typecheck: 'bun --bun tsc --noEmit',
     },
     peerDependencies: {
-      nanofaker: 'workspace:*',
+      'ts-mocker': 'workspace:*',
     },
     devDependencies: {
       '@types/bun': '^1.2.23',
@@ -96,7 +96,7 @@ await Bun.build({
   }
   await Bun.write(join(localeDir, 'tsconfig.json'), `${JSON.stringify(tsconfigContent, null, 2)}\n`)
 
-  console.log(`✓ Created package @nanofaker/locale-${locale}`)
+  console.log(`✓ Created package @mock-locale/${locale}`)
 }
 
 console.log(`\n✨ Successfully created ${locales.length} locale packages!`)

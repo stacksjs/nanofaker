@@ -8,7 +8,7 @@ describe('Auto-Install Utilities', () => {
       expect(['bun', 'npm', 'yarn', 'pnpm']).toContain(pm)
     })
 
-    it('should default to bun when in nanofaker project', () => {
+    it('should default to bun when in ts-mocker project', () => {
       // Our project uses bun, so it should detect it
       const pm = detectPackageManager()
       expect(pm).toBe('bun')
@@ -26,7 +26,7 @@ describe('Auto-Install Utilities', () => {
 })
 
 describe('Auto-Install Config', () => {
-  it('should have autoInstallLocales in FakerConfig type', async () => {
+  it('should have autoInstallLocales in MockConfig type', async () => {
     const { defaultConfig } = await import('../packages/core/src/config')
     expect(defaultConfig).toHaveProperty('autoInstallLocales')
     expect(defaultConfig.autoInstallLocales).toBe(false)

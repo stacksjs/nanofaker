@@ -1,13 +1,13 @@
 # TypeScript Support
 
-nanofaker is written in TypeScript from the ground up, providing excellent type safety and IDE support out of the box.
+ts-mocker is written in TypeScript from the ground up, providing excellent type safety and IDE support out of the box.
 
 ## Fully Typed API
 
-Every method in nanofaker is fully typed:
+Every method in ts-mocker is fully typed:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // TypeScript knows the return types
 const name: string = faker.person.fullName()
@@ -20,7 +20,7 @@ const city: string = faker.address.city()
 
 ## Type Definitions
 
-nanofaker exports comprehensive type definitions:
+ts-mocker exports comprehensive type definitions:
 
 ```ts
 import type {
@@ -30,7 +30,7 @@ import type {
   LocaleDefinition,
   PersonDefinition,
   // ... all other types
-} from 'nanofaker'
+} from 'ts-mocker'
 ```
 
 ## Locale Type Safety
@@ -38,7 +38,7 @@ import type {
 Locales are strongly typed:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Type-safe locale setting
 faker.locale = 'en' // ✓ Valid
@@ -53,10 +53,10 @@ const badFaker = faker.locale('xx') // ✗ TypeScript error
 
 ## Custom Type Extensions
 
-You can extend nanofaker types for your specific needs:
+You can extend ts-mocker types for your specific needs:
 
 ```ts
-import type { Faker } from 'nanofaker'
+import type { Faker } from 'ts-mocker'
 
 // Extend with your custom types
 interface ExtendedFaker extends Faker {
@@ -74,7 +74,7 @@ const customFaker = faker as ExtendedFaker
 Use generics for type-safe data generation:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 interface User {
   name: string
@@ -96,10 +96,10 @@ const user = generateUser()
 
 ## Type Inference
 
-nanofaker leverages TypeScript's type inference:
+ts-mocker leverages TypeScript's type inference:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // TypeScript infers the type automatically
 const userData = {
@@ -121,7 +121,7 @@ const userData = {
 Create custom locale definitions with full type safety:
 
 ```ts
-import type { LocaleDefinition } from 'nanofaker'
+import type { LocaleDefinition } from 'ts-mocker'
 
 const customLocale: LocaleDefinition = {
   title: 'Custom',
@@ -139,7 +139,7 @@ const customLocale: LocaleDefinition = {
 
 ## Strict Null Checks
 
-nanofaker works perfectly with strict null checks:
+ts-mocker works perfectly with strict null checks:
 
 ```json
 {
@@ -151,7 +151,7 @@ nanofaker works perfectly with strict null checks:
 ```
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // All methods return non-nullable strings
 const name: string = faker.person.fullName() // ✓ No null/undefined
@@ -192,7 +192,7 @@ Any editor with TypeScript support will work:
 ### Factory Pattern
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 interface Product {
   id: string
@@ -223,7 +223,7 @@ const products: Product[] = ProductFactory.createMany(10)
 ### Builder Pattern
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 class UserBuilder {
   private user: Partial<User> = {}
@@ -252,10 +252,10 @@ const user = new UserBuilder()
 
 ## Type Guards
 
-Use type guards with nanofaker:
+Use type guards with ts-mocker:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 type SupportedLocale = 'en' | 'es' | 'fr' | 'de' | 'it' | 'pt' | 'ja' | 'tl' | 'zh'
 
@@ -323,7 +323,7 @@ function getFaker(locale: Locale) {
 
 ## Zero Configuration
 
-nanofaker works with TypeScript without any configuration:
+ts-mocker works with TypeScript without any configuration:
 
 ```json
 {
@@ -336,4 +336,4 @@ nanofaker works with TypeScript without any configuration:
 }
 ```
 
-nanofaker's TypeScript support ensures type safety, excellent IDE experience, and catches errors at compile time rather than runtime.
+ts-mocker's TypeScript support ensures type safety, excellent IDE experience, and catches errors at compile time rather than runtime.

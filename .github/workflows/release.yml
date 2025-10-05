@@ -47,10 +47,10 @@ jobs:
         uses: stacksjs/action-releaser@v1.1.0
         with:
           files: |
-            packages/core/bin/nanofaker-linux-x64.zip
-            packages/core/bin/nanofaker-linux-arm64.zip
-            packages/core/bin/nanofaker-windows-x64.zip
-            packages/core/bin/nanofaker-darwin-x64.zip
-            packages/core/bin/nanofaker-darwin-arm64.zip
+            packages/core/bin/mock-linux-x64.zip
+            packages/core/bin/mock-linux-arm64.zip
+            packages/core/bin/mock-windows-x64.zip
+            packages/core/bin/mock-darwin-x64.zip
+            packages/core/bin/mock-darwin-arm64.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

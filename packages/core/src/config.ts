@@ -1,15 +1,15 @@
-import type { FakerConfig } from './types'
+import type { MockConfig } from './types'
 import { loadConfig } from 'bunfig'
 
-export const defaultConfig: FakerConfig = {
+export const defaultConfig: MockConfig = {
   verbose: false,
   locale: 'en',
   autoInstallLocales: false,
 }
 
 // eslint-disable-next-line antfu/no-top-level-await
-export const config: FakerConfig = await loadConfig({
-  name: 'faker',
-  alias: 'nanofaker',
+export const config: MockConfig = await loadConfig({
+  name: 'mock',
+  alias: 'faker',
   defaultConfig,
 })

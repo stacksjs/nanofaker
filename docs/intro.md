@@ -1,22 +1,22 @@
-<p align="center"><img src="https://github.com/stacksjs/nanofaker/blob/main/.github/art/cover.jpg?raw=true" alt="Social Card of this repo"></p>
+<p align="center"><img src="https://github.com/stacksjs/ts-mocker/blob/main/.github/art/cover.jpg?raw=true" alt="Social Card of this repo"></p>
 
 # Introduction
 
 > A performance-focused and lightweight faker library for TypeScript with comprehensive locale support.
 
-# nanofaker
+# ts-mocker
 
-nanofaker is a modern, lightweight TypeScript library for generating fake data. Built with performance and developer experience in mind, it provides comprehensive locale support across 16 languages with complete translations for all data categories.
+ts-mocker is a modern, lightweight TypeScript library for generating fake data. Built with performance and developer experience in mind, it provides comprehensive locale support across 16 languages with complete translations for all data categories.
 
-## Why nanofaker?
+## Why ts-mocker?
 
 ### Performance First
 
-Built with performance as a top priority, nanofaker is optimized for speed and efficiency with minimal overhead.
+Built with performance as a top priority, ts-mocker is optimized for speed and efficiency with minimal overhead.
 
 ### Comprehensive Locale Support
 
-Unlike other faker libraries with limited or incomplete translations, nanofaker provides **complete** translations across all 16 data categories for 16 different languages:
+Unlike other faker libraries with limited or incomplete translations, ts-mocker provides **complete** translations across all 16 data categories for 16 different languages:
 
 - **English (en)** - Full coverage
 - **Spanish (es)** - Full coverage
@@ -37,7 +37,7 @@ Unlike other faker libraries with limited or incomplete translations, nanofaker 
 
 ### Rich Data Categories
 
-nanofaker includes 16+ comprehensive data categories:
+ts-mocker includes 16+ comprehensive data categories:
 
 1. **Person** - Names, genders, job titles, prefixes, suffixes
 2. **Address** - Streets, cities, states, countries, postal codes
@@ -62,11 +62,11 @@ Written in TypeScript with comprehensive type definitions for excellent IDE supp
 
 ## Get Started
 
-Check out the [Installation Guide](/install) to get started with nanofaker.
+Check out the [Installation Guide](/install) to get started with ts-mocker.
 
 ## Changelog
 
-Please see our [releases](https://github.com/stacksjs/nanofaker/releases) page for more information on what has changed recently.
+Please see our [releases](https://github.com/stacksjs/ts-mocker/releases) page for more information on what has changed recently.
 
 ## Contributing
 
@@ -76,7 +76,7 @@ Please review the [Contributing Guide](https://github.com/stacksjs/contributing)
 
 For help, discussion about best practices, or any other conversation that would benefit from being searchable:
 
-[Discussions on GitHub](https://github.com/stacksjs/nanofaker/discussions)
+[Discussions on GitHub](https://github.com/stacksjs/ts-mocker/discussions)
 
 For casual chit-chat with others using this package:
 
@@ -91,6 +91,6 @@ We would like to extend our thanks to the following sponsors for funding Stacks 
 
 ## License
 
-The MIT License (MIT). Please see [LICENSE](https://github.com/stacksjs/nanofaker/tree/main/LICENSE.md) for more information.
+The MIT License (MIT). Please see [LICENSE](https://github.com/stacksjs/ts-mocker/tree/main/LICENSE.md) for more information.
 
 Made with 💙

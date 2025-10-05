@@ -2,7 +2,7 @@
 /**
  * Demo: Auto-installing locale packages
  *
- * This example demonstrates how nanofaker can automatically install
+ * This example demonstrates how ts-mocker can automatically install
  * missing locale packages when autoInstallLocales is enabled.
  */
 

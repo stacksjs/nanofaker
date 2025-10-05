@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "nanofaker"
+  name: "ts-mocker"
   text: "Performance-focused faker library"
   tagline: "Lightweight TypeScript faker with complete locale coverage. Blazing fast, type-safe, and comprehensive."
   image: /images/logo-white.png
@@ -13,7 +13,7 @@ hero:
       link: /intro
     - theme: alt
       text: View on GitHub
-      link: https://github.com/stacksjs/nanofaker
+      link: https://github.com/stacksjs/ts-mocker
 
 features:
   - title: "Performance-First"

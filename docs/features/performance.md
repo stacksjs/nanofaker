@@ -1,12 +1,12 @@
 # Performance
 
-nanofaker is built with performance as a top priority. It's designed to be fast, lightweight, and efficient for all your fake data generation needs.
+ts-mocker is built with performance as a top priority. It's designed to be fast, lightweight, and efficient for all your fake data generation needs.
 
 ## Key Performance Features
 
 ### Lightweight Bundle Size
 
-nanofaker has minimal dependencies and a tiny footprint:
+ts-mocker has minimal dependencies and a tiny footprint:
 
 - **Small core** - Only essential code, no bloat
 - **Modular locales** - Each locale is a separate package, load only what you need
@@ -26,7 +26,7 @@ Optimized for speed with sub-millisecond generation:
 
 ## Benchmarks
 
-Based on our performance test suite, nanofaker delivers exceptional speed:
+Based on our performance test suite, ts-mocker delivers exceptional speed:
 
 ```ts
 // Generate 1,000 names
@@ -56,7 +56,7 @@ console.timeEnd('50k names')
 
 ### Performance Comparison
 
-| Operation | nanofaker | @faker-js/faker | Speedup |
+| Operation | ts-mocker | @faker-js/faker | Speedup |
 |-----------|-----------|-----------------|---------|
 | 1k names | **0.032ms** | ~1.86ms | 58x faster |
 | 10k names | **0.32ms** | ~18.6ms | 58x faster |
@@ -73,7 +73,7 @@ console.timeEnd('50k names')
 For the fastest performance, preload locales before using them:
 
 ```ts
-import { Faker } from 'nanofaker'
+import { Faker } from 'ts-mocker'
 
 // Preload locales once at startup
 await Faker.preloadLocales(['en', 'es', 'fr', 'de'])
@@ -133,11 +133,11 @@ for (let i = 0; i < 10000; i++) {
 
 ### 4. Import Only Required Locales
 
-nanofaker uses modular locale packages - only install what you need:
+ts-mocker uses modular locale packages - only install what you need:
 
 ```bash
 # Install only the locales you need
-bun add @nanofaker/locale-en @nanofaker/locale-es @nanofaker/locale-fr
+bun add @ts-mocker/locale-en @ts-mocker/locale-es @ts-mocker/locale-fr
 
 # Or use auto-install (requires configuration)
 # Automatically downloads locales on first use
@@ -174,7 +174,7 @@ faker.person.fullName().split(' ')[0] // ❌ Slower, wasteful
 
 ## Memory Usage
 
-nanofaker is highly memory-efficient:
+ts-mocker is highly memory-efficient:
 
 - **Lazy loading** - Locales loaded only when needed
 - **Shared data** - Locale data is loaded once and shared across instances
@@ -184,11 +184,11 @@ nanofaker is highly memory-efficient:
 
 ## Locale Loading Strategy
 
-nanofaker uses a smart locale loading system:
+ts-mocker uses a smart locale loading system:
 
 ```ts
 // Dynamic imports for optimal bundle splitting
-const locale = await import('@nanofaker/locale-es')
+const locale = await import('@ts-mocker/locale-es')
 
 // Locales are cached after first load
 // Subsequent imports are instant
@@ -206,7 +206,7 @@ const locale = await import('@nanofaker/locale-es')
 For production builds:
 
 ```ts
-import { Faker } from 'nanofaker'
+import { Faker } from 'ts-mocker'
 
 // 1. Preload all required locales at startup
 await Faker.preloadLocales(['en', 'es', 'fr'])
@@ -226,7 +226,7 @@ export default {
   build: {
     rollupOptions: {
       // Exclude locale packages from bundle if using CDN
-      external: [/@nanofaker\/locale-/],
+      external: [/@ts-mocker\/locale-/],
     },
   },
 }
@@ -234,10 +234,10 @@ export default {
 
 ## Performance Monitoring
 
-Track nanofaker performance in your application:
+Track ts-mocker performance in your application:
 
 ```ts
-import { Faker } from 'nanofaker'
+import { Faker } from 'ts-mocker'
 
 // Measure locale loading time
 const loadStart = performance.now()
@@ -256,7 +256,7 @@ console.log(`Generated 10k records in ${performance.now() - genStart}ms`)
 // ⏱️ 33.4ms (3.34ms per 1000 records)
 ```
 
-## Why nanofaker is Blazing Fast
+## Why ts-mocker is Blazing Fast
 
 1. **Simple architecture** - No complex class hierarchies or inheritance
 2. **Direct data access** - Straight to the data arrays with O(1) lookups
@@ -269,7 +269,7 @@ console.log(`Generated 10k records in ${performance.now() - genStart}ms`)
 
 ## Multi-Locale Performance
 
-nanofaker handles multiple locales efficiently:
+ts-mocker handles multiple locales efficiently:
 
 ```ts
 // Concurrent locale loading
@@ -290,7 +290,7 @@ const multiLocaleData = Array.from({ length: 1000 }, () => ({
 
 ## Scaling
 
-nanofaker scales excellently for various use cases:
+ts-mocker scales excellently for various use cases:
 
 - **Unit tests** - Sub-millisecond generation won't slow down test suites
 - **Integration tests** - Generate 10,000+ records in under 50ms
@@ -309,4 +309,4 @@ nanofaker scales excellently for various use cases:
 6. ✅ **Monitor performance** in production
 7. ✅ **Install only needed locales** to keep bundle lean
 
-nanofaker is designed to be the **fastest faker library** while maintaining minimal footprint, including comprehensive locale coverage (26 languages) and data categories (16+).
+ts-mocker is designed to be the **fastest faker library** while maintaining minimal footprint, including comprehensive locale coverage (26 languages) and data categories (16+).

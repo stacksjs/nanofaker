@@ -1,4 +1,4 @@
-import type { DeepPartial, LocaleDefinition } from 'nanofaker'
+import type { DeepPartial, LocaleDefinition } from 'ts-mocker'
 
 /**
  * Chinese (Traditional, Taiwan) locale

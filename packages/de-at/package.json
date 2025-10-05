@@ -1,20 +1,22 @@
 {
-  "name": "@nanofaker/locale-de-at",
+  "name": "@mock-locale/de-at",
   "type": "module",
   "version": "0.1.1",
-  "description": "German (Austria) locale data for nanofaker",
+  "description": "German (Austria) locale data for ts-mocker",
   "author": "Chris Breuer <chris@stacksjs.org>",
   "license": "MIT",
-  "homepage": "https://github.com/stacksjs/nanofaker#readme",
+  "homepage": "https://github.com/stacksjs/ts-mocker#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stacksjs/nanofaker.git"
+    "url": "git+https://github.com/stacksjs/ts-mocker.git"
   },
   "bugs": {
-    "url": "https://github.com/stacksjs/nanofaker/issues"
+    "url": "https://github.com/stacksjs/ts-mocker/issues"
   },
   "keywords": [
-    "nanofaker",
+    "ts-mocker",
+    "ts-faker",
+    "ts-mocker",
     "locale",
     "de-at",
     "german",
@@ -38,7 +40,7 @@
     "typecheck": "bun --bun tsc --noEmit"
   },
   "peerDependencies": {
-    "nanofaker": "workspace:*"
+    "ts-mocker": "workspace:*"
   },
   "devDependencies": {
     "@types/bun": "^1.2.23",

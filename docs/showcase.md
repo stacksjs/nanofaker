@@ -1,6 +1,6 @@
 # Showcase
 
-Here are all the cool projects that people have built using `nanofaker`.
+Here are all the cool projects that people have built using `ts-mocker`.
 
 ## Community Projects
 
@@ -10,9 +10,9 @@ If you authored a project you’d like to showcase, please share it with us in a
 
 ## First-Party
 
-nanofaker is part of the Stacks ecosystem. Here are some related projects:
+ts-mocker is part of the Stacks ecosystem. Here are some related projects:
 
-- [`nanofaker`](https://github.com/stacksjs/nanofaker) _(A performance-focused faker library with comprehensive locale support)_
+- [`ts-mocker`](https://github.com/stacksjs/ts-mocker) _(A performance-focused faker library with comprehensive locale support)_
 - [`rpx`](https://github.com/stacksjs/rpx) _(A modern, fast reverse proxy)_
 - [`tlsx`](https://github.com/stacksjs/tlsx) _(A TLS library with automation. HTTPS by default through a light-weight library. Similar to mkcert.)_
 - [`dtsx`](https://github.com/stacksjs/dtsx) _(Extremely fast & configurable DTS emitter)_

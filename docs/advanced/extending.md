@@ -1,13 +1,13 @@
-# Extending nanofaker
+# Extending ts-mocker
 
-Learn how to extend nanofaker with custom data, locales, and functionality to fit your specific needs.
+Learn how to extend ts-mocker with custom data, locales, and functionality to fit your specific needs.
 
 ## Custom Data Arrays
 
 Add custom data to existing categories:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Extend with custom data
 const customFaker = {
@@ -36,8 +36,8 @@ console.log(customFaker.person.superheroName()) // "Batman"
 Create your own locale with complete data:
 
 ```ts
-import type { LocaleDefinition } from 'nanofaker'
-import { faker } from 'nanofaker'
+import type { LocaleDefinition } from 'ts-mocker'
+import { faker } from 'ts-mocker'
 
 const customLocale: LocaleDefinition = {
   title: 'Custom English',
@@ -70,7 +70,7 @@ const customFaker = faker.locale('custom' as any)
 Add entirely new categories:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 interface ExtendedFaker {
   fantasy: {
@@ -103,10 +103,10 @@ console.log(extendedFaker.fantasy.spell()) // "Fireball"
 
 ## Wrapper Functions
 
-Create utility functions around nanofaker:
+Create utility functions around ts-mocker:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Full address generator
 function generateFullAddress() {
@@ -145,7 +145,7 @@ const user = generateUserProfile()
 Create formatters for specific data patterns:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Credit card formatter
 function generateCreditCard() {
@@ -182,7 +182,7 @@ console.log(generateCreditCard())
 Create reusable mixins:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Mixin for timestamps
 const timestampMixin = {
@@ -214,7 +214,7 @@ const entity = createEntity()
 Create a simple plugin system:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 type Plugin = (faker: any) => void
 
@@ -258,7 +258,7 @@ console.log((faker as any).gaming.gamertag()) // "EpicWarrior1234"
 Build complex objects with factories:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 class UserFactory {
   private overrides: Partial<User> = {}
@@ -299,12 +299,12 @@ const users = new UserFactory().buildMany(10)
 
 ## Type-Safe Extensions
 
-Extend nanofaker with full TypeScript support:
+Extend ts-mocker with full TypeScript support:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
-declare module 'nanofaker' {
+declare module 'ts-mocker' {
   interface Faker {
     custom: {
       uuid: () => string
@@ -328,7 +328,7 @@ const slug = faker.custom.slug()
 Create locale-aware helpers:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 function generateLocalizedUser(locale: string) {
   const originalLocale = faker.locale
@@ -358,7 +358,7 @@ const users = ['en', 'es', 'fr', 'de'].map(locale => ({
 ```ts
 // extensions/gaming.ts
 // main.ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 import { gamingExtension } from './extensions/gaming'
 
 export const gamingExtension = {
@@ -381,7 +381,7 @@ Object.assign(faker, { gaming: gamingExtension })
 
 ```ts
 /**
- * Gaming extension for nanofaker
+ * Gaming extension for ts-mocker
  *
  * @example
  * ```ts
@@ -396,7 +396,7 @@ export const gamingExtension = {
 ### 3. Maintain Consistency
 
 ```ts
-// Good - Follows nanofaker patterns
+// Good - Follows ts-mocker patterns
 faker.custom.methodName()
 
 // Avoid - Different patterns
@@ -407,7 +407,7 @@ faker.CustomCategory.MethodName()
 
 ```ts
 import { describe, expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('Custom extensions', () => {
   test('generates valid gamertag', () => {
@@ -418,4 +418,4 @@ describe('Custom extensions', () => {
 })
 ```
 
-Extending nanofaker allows you to create domain-specific fake data generators that perfectly match your application's needs.
+Extending ts-mocker allows you to create domain-specific fake data generators that perfectly match your application's needs.

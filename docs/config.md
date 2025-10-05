@@ -1,13 +1,13 @@
 # Configuration
 
-nanofaker is designed to work out of the box with minimal configuration. However, you can customize its behavior to suit your needs.
+ts-mocker is designed to work out of the box with minimal configuration. However, you can customize its behavior to suit your needs.
 
 ## Setting Default Locale
 
 You can set a default locale that will be used for all faker operations:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Set default locale to Spanish
 faker.locale = 'es'
@@ -22,7 +22,7 @@ const city = faker.address.city() // "Madrid"
 For applications that need to generate data in multiple locales simultaneously, create separate instances:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const enFaker = faker.locale('en')
 const esFaker = faker.locale('es')
@@ -36,18 +36,18 @@ const japaneseName = jaFaker.person.fullName() // "田中太郎"
 
 ## Using with TypeScript
 
-nanofaker is written in TypeScript and provides full type definitions. You can import types for better IDE support:
+ts-mocker is written in TypeScript and provides full type definitions. You can import types for better IDE support:
 
 ```ts
-import type { Faker, LocaleDefinition } from 'nanofaker'
-import { faker } from 'nanofaker'
+import type { Faker, LocaleDefinition } from 'ts-mocker'
+import { faker } from 'ts-mocker'
 
 const customFaker: Faker = faker.locale('en')
 ```
 
 ## Available Locales
 
-nanofaker supports the following locales with complete translations across all categories:
+ts-mocker supports the following locales with complete translations across all categories:
 
 - `en` - English
 - `es` - Spanish
@@ -70,7 +70,7 @@ All locales have full coverage across all 16 data categories.
 
 ## Performance Considerations
 
-nanofaker is designed for performance:
+ts-mocker is designed for performance:
 
 - **Lightweight** - Minimal dependencies and small bundle size
 - **Fast** - Optimized for speed with efficient random selection
@@ -79,8 +79,8 @@ nanofaker is designed for performance:
 To optimize bundle size, you can import only the locales you need:
 
 ```ts
-import { faker } from 'nanofaker'
-import { es } from 'nanofaker/locales'
+import { faker } from 'ts-mocker'
+import { es } from 'ts-mocker/locales'
 
 // Use only Spanish locale
 const spanishFaker = faker.locale('es')

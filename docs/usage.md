@@ -1,13 +1,13 @@
 # Usage
 
-There are two main ways of using nanofaker: _with the default locale or with a specific locale._
+There are two main ways of using ts-mocker: _with the default locale or with a specific locale._
 
 ## Basic Usage
 
 Given the npm package is installed:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Generate random data with default locale (English)
 const name = faker.person.fullName()
@@ -24,7 +24,7 @@ console.log(city) // "New York"
 You can set the locale globally or use a specific locale instance:
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Set locale globally
 faker.locale = 'es' // Spanish

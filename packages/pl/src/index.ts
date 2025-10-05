@@ -1,2 +1,2 @@
 export { pl } from './pl'
-export type { LocaleDefinition } from 'nanofaker'
+export type { LocaleDefinition } from 'ts-mocker'

@@ -10,5 +10,5 @@ logs
 node_modules
 temp
 docs/.vitepress/cache
-bin/nanofaker
-packages/core/bin/nanofaker
+bin/ts-mocker
+packages/core/bin/ts-mocker

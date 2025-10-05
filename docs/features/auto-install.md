@@ -1,6 +1,6 @@
 # Auto-Install Locale Packages
 
-Nanofaker can automatically install missing locale packages when you try to use them. This feature makes it easier to work with different locales without manually managing dependencies.
+ts-mocker can automatically install missing locale packages when you try to use them. This feature makes it easier to work with different locales without manually managing dependencies.
 
 ## Configuration
 
@@ -9,13 +9,13 @@ Nanofaker can automatically install missing locale packages when you try to use 
 Create a `faker.config.ts` file in your project root:
 
 ```typescript
-import type { FakerConfig } from 'nanofaker'
+import type { MockConfig } from 'ts-mocker'
 
 export default {
   autoInstallLocales: true,
   locale: 'en',
   verbose: false,
-} satisfies FakerConfig
+} satisfies MockConfig
 ```
 
 ### Method 2: Programmatic
@@ -23,7 +23,7 @@ export default {
 Enable auto-install when creating a Faker instance:
 
 ```typescript
-import { Faker } from 'nanofaker'
+import { Faker } from 'ts-mocker'
 
 // Using the async factory
 const faker = await Faker.create({
@@ -43,22 +43,24 @@ const faker = new Faker({
 When you try to use a locale that isn't installed:
 
 1. **Without auto-install** (default):
+
    ```
    Error: Locale 'es' is not installed.
-   Install it with: bun add @nanofaker/locale-es
+   Install it with: bun add @ts-mocker/locale-es
    Or enable auto-install in your faker.config.ts
    ```
 
 2. **With auto-install enabled**:
+
    ```
-   🔍 Locale 'es' not found. Auto-installing @nanofaker/locale-es...
-   📦 Installing @nanofaker/locale-es using bun...
-   ✓ Successfully installed @nanofaker/locale-es
+   🔍 Locale 'es' not found. Auto-installing @ts-mocker/locale-es...
+   📦 Installing @ts-mocker/locale-es using bun...
+   ✓ Successfully installed @ts-mocker/locale-es
    ```
 
 ## Package Manager Detection
 
-Nanofaker automatically detects your package manager based on lock files:
+ts-mocker automatically detects your package manager based on lock files:
 
 - `bun.lockb` → uses `bun add`
 - `pnpm-lock.yaml` → uses `pnpm add`
@@ -69,10 +71,10 @@ Nanofaker automatically detects your package manager based on lock files:
 ## Example
 
 ```typescript
-import { Faker } from 'nanofaker'
+import { Faker } from 'ts-mocker'
 
 async function main() {
-  // First time: installs @nanofaker/locale-fr
+  // First time: installs @ts-mocker/locale-fr
   const frenchFaker = await Faker.create({
     locale: 'fr',
     autoInstallLocales: true
@@ -93,13 +95,13 @@ You can always manually install locale packages:
 
 ```bash
 # Install a specific locale
-bun add @nanofaker/locale-es
+bun add @ts-mocker/locale-es
 
 # Install multiple locales
-bun add @nanofaker/locale-{es,fr,de}
+bun add @ts-mocker/locale-{es,fr,de}
 
 # Install all locales
-bun add @nanofaker/locale-{cs,da,de,en,es,fi,fr,hi,it,ja,ko,nl,no,pl,pt,sv,tl,tr,uk,zh}
+bun add @ts-mocker/locale-{cs,da,de,en,es,fi,fr,hi,it,ja,ko,nl,no,pl,pt,sv,tl,tr,uk,zh}
 ```
 
 ## Performance Considerations
@@ -118,4 +120,4 @@ In CI/CD environments, it's recommended to:
 
 ## Security
 
-Auto-install only works for official `@nanofaker/locale-*` packages published by the nanofaker team. It will not install arbitrary packages.
+Auto-install only works for official `@ts-mocker/locale-*` packages published by the ts-mocker team. It will not install arbitrary packages.

@@ -1,6 +1,6 @@
 # Migration Guide
 
-Migrating to nanofaker from other faker libraries is straightforward. This guide helps you transition from popular alternatives.
+Migrating to ts-mocker from other faker libraries is straightforward. This guide helps you transition from popular alternatives.
 
 ## From Faker.js / @faker-js/faker
 
@@ -12,8 +12,8 @@ npm uninstall faker
 # or
 npm uninstall @faker-js/faker
 
-# Install nanofaker
-npm install nanofaker
+# Install ts-mocker
+npm install ts-mocker
 ```
 
 ### Import Changes
@@ -24,10 +24,10 @@ npm install nanofaker
 import { faker } from '@faker-js/faker'
 ```
 
-**After (nanofaker):**
+**After (ts-mocker):**
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 ```
 
 ### API Differences
@@ -48,7 +48,7 @@ faker.locale = es
 **After:**
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 faker.setLocale('es')
 // or create new instance
@@ -73,7 +73,7 @@ faker.seed(123) // Same!
 
 Most methods work the same:
 
-| faker.js | nanofaker | Notes |
+| faker.js | ts-mocker | Notes |
 |----------|-----------|-------|
 | `faker.name.firstName()` | `faker.person.firstName()` | Use `person` instead of `name` |
 | `faker.name.lastName()` | `faker.person.lastName()` | Use `person` instead of `name` |
@@ -102,10 +102,10 @@ const user = {
 }
 ```
 
-**After (nanofaker):**
+**After (ts-mocker):**
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const user = {
   id: crypto.randomUUID(), // Use native crypto
@@ -119,7 +119,7 @@ const user = {
 
 ### Not Yet Supported
 
-Some faker.js features aren't in nanofaker yet:
+Some faker.js features aren't in ts-mocker yet:
 
 - `faker.datatype.uuid()` → Use `crypto.randomUUID()`
 - `faker.datatype.datetime()` → Use `faker.date.*` methods
@@ -138,10 +138,10 @@ $name = $faker->name;
 $email = $faker->email;
 ```
 
-**After (nanofaker/TypeScript):**
+**After (ts-mocker/TypeScript):**
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const name = faker.person.fullName()
 const email = faker.internet.email()
@@ -163,7 +163,7 @@ const faker = new Faker({ locale: 'es' })
 
 ### Common Methods
 
-| Laravel Faker (PHP) | nanofaker (TypeScript) |
+| Laravel Faker (PHP) | ts-mocker (TypeScript) |
 |---------------------|------------------------|
 | `$faker->name` | `faker.person.fullName()` |
 | `$faker->firstName` | `faker.person.firstName()` |
@@ -216,7 +216,7 @@ for ($i = 0; $i < 50; $i++) {
 **After (TypeScript/Node.js):**
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Generate data
 const users = Array.from({ length: 50 }, () => ({
@@ -234,12 +234,12 @@ await db.users.insertMany(users)
 
 ```bash
 npm uninstall chance
-npm install nanofaker
+npm install ts-mocker
 ```
 
 ### API Mapping
 
-| Chance.js | nanofaker |
+| Chance.js | ts-mocker |
 |-----------|-----------|
 | `chance.name()` | `faker.person.fullName()` |
 | `chance.first()` | `faker.person.firstName()` |
@@ -268,10 +268,10 @@ const name = casual.full_name
 const email = casual.email
 ```
 
-**After (nanofaker):**
+**After (ts-mocker):**
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const name = faker.person.fullName()
 const email = faker.internet.email()
@@ -279,7 +279,7 @@ const email = faker.internet.email()
 
 ### Common Methods
 
-| Casual | nanofaker |
+| Casual | ts-mocker |
 |--------|-----------|
 | `casual.full_name` | `faker.person.fullName()` |
 | `casual.first_name` | `faker.person.firstName()` |
@@ -311,7 +311,7 @@ class UserFactory {
 **After:**
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 class UserFactory {
   static create() {
@@ -340,7 +340,7 @@ for (let i = 0; i < 100; i++) {
 **After:**
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 const users = Array.from({ length: 100 }, () => ({
   name: faker.person.fullName(),
@@ -364,7 +364,7 @@ beforeEach(() => {
 **After:**
 
 ```ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 beforeEach(() => {
   faker.seed(12345) // Reproducible!
@@ -399,7 +399,7 @@ Migrate one module at a time and test:
 
 ```ts
 // Step 1: Migrate imports
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Step 2: Migrate one function
 function createUser() {
@@ -422,7 +422,7 @@ If you have complex legacy code:
 
 ```ts
 // adapter.ts
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 export const legacyFaker = {
   name: () => faker.person.fullName(),
@@ -439,7 +439,7 @@ Ensure your tests work with the new library:
 
 ```ts
 import { describe, expect, test } from 'bun:test'
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 describe('Migration tests', () => {
   test('generates valid user data', () => {
@@ -458,7 +458,7 @@ describe('Migration tests', () => {
 
 ## Benefits After Migration
 
-After migrating to nanofaker, you'll get:
+After migrating to ts-mocker, you'll get:
 
 ✅ **Smaller bundle size** - Significantly lighter than faker.js
 ✅ **Better performance** - Faster data generation
@@ -473,7 +473,7 @@ If you encounter issues during migration:
 
 1. Check the [API Reference](/advanced/api-reference)
 2. See [Usage Examples](/examples)
-3. Ask on [GitHub Discussions](https://github.com/stacksjs/nanofaker/discussions)
+3. Ask on [GitHub Discussions](https://github.com/stacksjs/ts-mocker/discussions)
 4. Join the [Discord](https://discord.gg/stacksjs)
 
 Happy migrating! 🚀

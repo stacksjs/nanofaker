@@ -6,7 +6,7 @@
 <!-- [![npm downloads][npm-downloads-src]][npm-downloads-href] -->
 <!-- [![Codecov][codecov-src]][codecov-href] -->
 
-# nanofaker
+# ts-mocker
 
 A performance-focused and lightweight faker library for TypeScript with comprehensive locale support.
 
@@ -64,22 +64,22 @@ A performance-focused and lightweight faker library for TypeScript with comprehe
 
 ```bash
 # npm
-npm install nanofaker
+npm install ts-mocker
 
 # pnpm
-pnpm add nanofaker
+pnpm add ts-mocker
 
 # bun
-bun add nanofaker
+bun add ts-mocker
 
 # yarn
-yarn add nanofaker
+yarn add ts-mocker
 ```
 
 ## Usage
 
 ```typescript
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Generate random data with default locale (English)
 const name = faker.person.fullName()
@@ -94,7 +94,7 @@ console.log(address) // "New York"
 ### Using Different Locales
 
 ```typescript
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Set locale globally
 faker.setLocale('es') // Spanish
@@ -142,7 +142,7 @@ console.log(chineseFaker.person.fullName()) // "王伟"
 ### API Examples
 
 ```typescript
-import { faker } from 'nanofaker'
+import { faker } from 'ts-mocker'
 
 // Person
 faker.person.firstName() // Random first name
@@ -266,35 +266,35 @@ faker.science.field() // Random scientific field
 
 ## Command Line Interface
 
-nanofaker includes a powerful CLI for generating fake data from the terminal.
+ts-mocker includes a powerful CLI for generating fake data from the terminal.
 
 ### Installation
 
 ```bash
 # Global installation
-npm install -g nanofaker
+npm install -g ts-mocker
 
 # Or use with npx
-npx nanofaker [command]
+npx ts-mocker [command]
 ```
 
 ### Quick Examples
 
 ```bash
 # Generate a random name
-nanofaker generate person fullName
+ts-mocker generate person fullName
 
 # Generate 5 emails in Spanish
-nanofaker generate internet email --locale es --count 5
+ts-mocker generate internet email --locale es --count 5
 
 # Generate 10 test users as JSON
-nanofaker batch 10
+ts-mocker batch 10
 
 # List all available categories
-nanofaker categories
+ts-mocker categories
 
 # List methods for a category
-nanofaker methods food
+ts-mocker methods food
 ```
 
 ### Available Commands
@@ -319,23 +319,23 @@ nanofaker methods food
 
 ```bash
 # Reproducible data with seed
-nanofaker generate person fullName --seed 12345
+ts-mocker generate person fullName --seed 12345
 
 # Generate products in JSON
-nanofaker batch 5 --template product --json
+ts-mocker batch 5 --template product --json
 
 # Generate Japanese food items
-nanofaker generate food dish --locale ja --count 10
+ts-mocker generate food dish --locale ja --count 10
 
 # Save to file
-nanofaker batch 100 --template user > users.json
+ts-mocker batch 100 --template user > users.json
 ```
 
-See the [CLI documentation](https://nanofaker.stacksjs.org/cli) for complete details.
+See the [CLI documentation](https://ts-mocker.stacksjs.org/cli) for complete details.
 
 ## Performance Benchmarks
 
-nanofaker is designed for performance and efficiency:
+ts-mocker is designed for performance and efficiency:
 
 **Performance:**
 
@@ -355,7 +355,7 @@ nanofaker is designed for performance and efficiency:
 
 ### Quick Comparison
 
-| Operation | nanofaker | @faker-js/faker | Speedup |
+| Operation | ts-mocker | @faker-js/faker | Speedup |
 |-----------|-----------|-----------------|---------|
 | UUID Generation | 20.50M ops/s | 497.69K ops/s | **41.2x faster** |
 | Full Name Generation | 24.76M ops/s | 678.37K ops/s | **36.5x faster** |
@@ -404,7 +404,7 @@ bun run lint
 
 ## Changelog
 
-Please see our [releases](https://github.com/stacksjs/nanofaker/releases) page for more information on what has changed recently.
+Please see our [releases](https://github.com/stacksjs/ts-mocker/releases) page for more information on what has changed recently.
 
 ## Contributing
 
@@ -414,7 +414,7 @@ We welcome contributions! Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for
 
 For help, discussion about best practices, or any other conversation that would benefit from being searchable:
 
-[Discussions on GitHub](https://github.com/stacksjs/nanofaker/discussions)
+[Discussions on GitHub](https://github.com/stacksjs/ts-mocker/discussions)
 
 For casual chit-chat with others using this package:
 
@@ -440,10 +440,10 @@ The MIT License (MIT). Please see [LICENSE](LICENSE.md) for more information.
 Made with 💙
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/nanofaker?style=flat-square
-[npm-version-href]: https://npmjs.com/package/nanofaker
-[github-actions-src]: https://img.shields.io/github/actions/workflow/status/stacksjs/nanofaker/ci.yml?style=flat-square&branch=main
-[github-actions-href]: https://github.com/stacksjs/nanofaker/actions?query=workflow%3Aci
+[npm-version-src]: https://img.shields.io/npm/v/ts-mocker?style=flat-square
+[npm-version-href]: https://npmjs.com/package/ts-mocker
+[github-actions-src]: https://img.shields.io/github/actions/workflow/status/stacksjs/ts-mocker/ci.yml?style=flat-square&branch=main
+[github-actions-href]: https://github.com/stacksjs/ts-mocker/actions?query=workflow%3Aci
 
-<!-- [codecov-src]: https://img.shields.io/codecov/c/gh/stacksjs/nanofaker/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/stacksjs/nanofaker -->
+<!-- [codecov-src]: https://img.shields.io/codecov/c/gh/stacksjs/ts-mocker/main?style=flat-square
+[codecov-href]: https://codecov.io/gh/stacksjs/ts-mocker -->
