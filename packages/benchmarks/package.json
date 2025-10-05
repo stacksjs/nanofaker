@@ -1,7 +1,7 @@
 {
   "name": "@nanofaker/benchmarks",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Benchmarks comparing nanofaker against other faker libraries",
   "author": "Chris Breuer <chris@stacksjs.org>",

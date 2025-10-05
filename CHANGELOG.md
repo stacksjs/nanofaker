@@ -1,3 +1,26 @@
+[Compare changes](https://github.com/stacksjs/nanofaker/compare/v0.1.0...v0.1.1)
+
+### 🧹 Chores
+
+- release v0.1.1 ([e62e449](https://github.com/stacksjs/nanofaker/commit/e62e449))
+- make publish executable ([cc5bc28](https://github.com/stacksjs/nanofaker/commit/cc5bc28))
+- add `isSeeded` method ([736dfac](https://github.com/stacksjs/nanofaker/commit/736dfac))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
+[Compare changes](https://github.com/stacksjs/nanofaker/compare/v0.1.0...HEAD)
+
+### 🧹 Chores
+
+- make publish executable ([cc5bc28](https://github.com/stacksjs/nanofaker/commit/cc5bc28))
+- add `isSeeded` method ([736dfac](https://github.com/stacksjs/nanofaker/commit/736dfac))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 ### 🧹 Chores
 
 - wip ([480a5b4](https://github.com/stacksjs/nanofaker/commit/480a5b4))

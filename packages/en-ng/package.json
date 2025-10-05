@@ -1,7 +1,7 @@
 {
   "name": "@nanofaker/locale-en-ng",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "English (Nigeria) locale data for nanofaker",
   "author": "Chris Breuer <chris@stacksjs.org>",
   "license": "MIT",
