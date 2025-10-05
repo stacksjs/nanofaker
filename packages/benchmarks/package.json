@@ -1,7 +1,7 @@
 {
   "name": "@nanofaker/benchmarks",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Benchmarks comparing nanofaker against other faker libraries",
   "author": "Chris Breuer <chris@stacksjs.org>",
@@ -12,11 +12,11 @@
   },
   "dependencies": {
     "@faker-js/faker": "^10.0.0",
-    "@ngneat/falso": "^7.3.0",
+    "@ngneat/falso": "^8.0.2",
     "casual": "^1.6.2",
     "chance": "^1.1.13",
     "nanofaker": "workspace:*",
-    "tinybench": "^2.9.0"
+    "tinybench": "^5.0.1"
   },
   "devDependencies": {
     "@types/chance": "^1.1.7"

@@ -1,7 +1,7 @@
 {
   "name": "nanofaker",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -80,7 +80,7 @@
     "lint:fix": "bunx --bun eslint . --fix",
     "changelog": "bunx logsmith --verbose",
     "changelog:generate": "bunx logsmith --output CHANGELOG.md",
-    "release": "bun run changelog:generate && bunx bumpx prompt --recursive",
+    "release": "bun run changelog:generate && bunx bumpx -r",
     "postinstall": "bunx git-hooks",
     "dev:docs": "bun --bun vitepress dev docs",
     "build:docs": "bun --bun vitepress build docs",
