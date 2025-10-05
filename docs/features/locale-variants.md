@@ -12,6 +12,12 @@ Locale variants use the format `{language}_{REGION}` or `{language}-{REGION}`:
 - `en_GB` / `en-GB` - English (United Kingdom)
 - `en_CA` / `en-CA` - English (Canada)
 - `en_AU` / `en-AU` - English (Australia)
+- `en_NG` / `en-NG` - English (Nigeria)
+- `en_ZA` / `en-ZA` - English (South Africa)
+- `en_IN` / `en-IN` - English (India)
+- `en_GH` / `en-GH` - English (Ghana)
+- `en_HK` / `en-HK` - English (Hong Kong)
+- `en_IE` / `en-IE` - English (Ireland)
 
 ### Spanish Variants
 
@@ -47,6 +53,7 @@ Locale variants use the format `{language}_{REGION}` or `{language}-{REGION}`:
 ### Other Variants
 
 - `zu_ZA` / `zu-ZA` - Zulu (South Africa)
+- `af_ZA` / `af-ZA` - Afrikaans (South Africa)
 
 ## Usage
 

@@ -17,6 +17,58 @@
         "typescript": "^5.9.3",
       },
     },
+    "packages/af": {
+      "name": "@nanofaker/locale-af",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/af-za": {
+      "name": "@nanofaker/locale-af-za",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/ar": {
+      "name": "@nanofaker/locale-ar",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/az": {
+      "name": "@nanofaker/locale-az",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
     "packages/core": {
       "name": "nanofaker",
       "version": "0.0.0",
@@ -67,8 +119,47 @@
         "nanofaker": "workspace:*",
       },
     },
+    "packages/de-at": {
+      "name": "@nanofaker/locale-de-at",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/de-ch": {
+      "name": "@nanofaker/locale-de-ch",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
     "packages/en": {
       "name": "@nanofaker/locale-en",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/en-ca": {
+      "name": "@nanofaker/locale-en-ca",
       "version": "0.0.0",
       "devDependencies": {
         "@types/bun": "^1.2.23",
@@ -93,8 +184,99 @@
         "nanofaker": "workspace:*",
       },
     },
+    "packages/en-gh": {
+      "name": "@nanofaker/locale-en-gh",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/en-hk": {
+      "name": "@nanofaker/locale-en-hk",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/en-ie": {
+      "name": "@nanofaker/locale-en-ie",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/en-in": {
+      "name": "@nanofaker/locale-en-in",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/en-ng": {
+      "name": "@nanofaker/locale-en-ng",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
     "packages/en-us": {
       "name": "@nanofaker/locale-en-us",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/en-za": {
+      "name": "@nanofaker/locale-en-za",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/eo": {
+      "name": "@nanofaker/locale-eo",
       "version": "0.0.0",
       "devDependencies": {
         "@types/bun": "^1.2.23",
@@ -132,6 +314,19 @@
         "nanofaker": "workspace:*",
       },
     },
+    "packages/fa": {
+      "name": "@nanofaker/locale-fa",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
     "packages/fi": {
       "name": "@nanofaker/locale-fi",
       "version": "0.0.0",
@@ -147,6 +342,84 @@
     },
     "packages/fr": {
       "name": "@nanofaker/locale-fr",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/fr-be": {
+      "name": "@nanofaker/locale-fr-be",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/fr-ca": {
+      "name": "@nanofaker/locale-fr-ca",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/fr-ch": {
+      "name": "@nanofaker/locale-fr-ch",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/fr-lu": {
+      "name": "@nanofaker/locale-fr-lu",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/fr-sn": {
+      "name": "@nanofaker/locale-fr-sn",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/he": {
+      "name": "@nanofaker/locale-he",
       "version": "0.0.0",
       "devDependencies": {
         "@types/bun": "^1.2.23",
@@ -262,6 +535,19 @@
         "nanofaker": "workspace:*",
       },
     },
+    "packages/pt-mz": {
+      "name": "@nanofaker/locale-pt-mz",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
     "packages/sv": {
       "name": "@nanofaker/locale-sv",
       "version": "0.0.0",
@@ -316,6 +602,58 @@
     },
     "packages/zh": {
       "name": "@nanofaker/locale-zh",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/zh-cn": {
+      "name": "@nanofaker/locale-zh-cn",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/zh-tw": {
+      "name": "@nanofaker/locale-zh-tw",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/zu": {
+      "name": "@nanofaker/locale-zu",
+      "version": "0.0.0",
+      "devDependencies": {
+        "@types/bun": "^1.2.23",
+        "bun-plugin-dtsx": "0.9.5",
+        "bunfig": "^0.15.0",
+        "typescript": "^5.9.3",
+      },
+      "peerDependencies": {
+        "nanofaker": "workspace:*",
+      },
+    },
+    "packages/zu-za": {
+      "name": "@nanofaker/locale-zu-za",
       "version": "0.0.0",
       "devDependencies": {
         "@types/bun": "^1.2.23",
@@ -712,25 +1050,67 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.25", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ=="],
 
+    "@nanofaker/locale-af": ["@nanofaker/locale-af@workspace:packages/af"],
+
+    "@nanofaker/locale-af-za": ["@nanofaker/locale-af-za@workspace:packages/af-za"],
+
+    "@nanofaker/locale-ar": ["@nanofaker/locale-ar@workspace:packages/ar"],
+
+    "@nanofaker/locale-az": ["@nanofaker/locale-az@workspace:packages/az"],
+
     "@nanofaker/locale-cs": ["@nanofaker/locale-cs@workspace:packages/cs"],
 
     "@nanofaker/locale-da": ["@nanofaker/locale-da@workspace:packages/da"],
 
     "@nanofaker/locale-de": ["@nanofaker/locale-de@workspace:packages/de"],
 
+    "@nanofaker/locale-de-at": ["@nanofaker/locale-de-at@workspace:packages/de-at"],
+
+    "@nanofaker/locale-de-ch": ["@nanofaker/locale-de-ch@workspace:packages/de-ch"],
+
     "@nanofaker/locale-en": ["@nanofaker/locale-en@workspace:packages/en"],
+
+    "@nanofaker/locale-en-ca": ["@nanofaker/locale-en-ca@workspace:packages/en-ca"],
 
     "@nanofaker/locale-en-gb": ["@nanofaker/locale-en-gb@workspace:packages/en-gb"],
 
+    "@nanofaker/locale-en-gh": ["@nanofaker/locale-en-gh@workspace:packages/en-gh"],
+
+    "@nanofaker/locale-en-hk": ["@nanofaker/locale-en-hk@workspace:packages/en-hk"],
+
+    "@nanofaker/locale-en-ie": ["@nanofaker/locale-en-ie@workspace:packages/en-ie"],
+
+    "@nanofaker/locale-en-in": ["@nanofaker/locale-en-in@workspace:packages/en-in"],
+
+    "@nanofaker/locale-en-ng": ["@nanofaker/locale-en-ng@workspace:packages/en-ng"],
+
     "@nanofaker/locale-en-us": ["@nanofaker/locale-en-us@workspace:packages/en-us"],
+
+    "@nanofaker/locale-en-za": ["@nanofaker/locale-en-za@workspace:packages/en-za"],
+
+    "@nanofaker/locale-eo": ["@nanofaker/locale-eo@workspace:packages/eo"],
 
     "@nanofaker/locale-es": ["@nanofaker/locale-es@workspace:packages/es"],
 
     "@nanofaker/locale-es-mx": ["@nanofaker/locale-es-mx@workspace:packages/es-mx"],
 
+    "@nanofaker/locale-fa": ["@nanofaker/locale-fa@workspace:packages/fa"],
+
     "@nanofaker/locale-fi": ["@nanofaker/locale-fi@workspace:packages/fi"],
 
     "@nanofaker/locale-fr": ["@nanofaker/locale-fr@workspace:packages/fr"],
+
+    "@nanofaker/locale-fr-be": ["@nanofaker/locale-fr-be@workspace:packages/fr-be"],
+
+    "@nanofaker/locale-fr-ca": ["@nanofaker/locale-fr-ca@workspace:packages/fr-ca"],
+
+    "@nanofaker/locale-fr-ch": ["@nanofaker/locale-fr-ch@workspace:packages/fr-ch"],
+
+    "@nanofaker/locale-fr-lu": ["@nanofaker/locale-fr-lu@workspace:packages/fr-lu"],
+
+    "@nanofaker/locale-fr-sn": ["@nanofaker/locale-fr-sn@workspace:packages/fr-sn"],
+
+    "@nanofaker/locale-he": ["@nanofaker/locale-he@workspace:packages/he"],
 
     "@nanofaker/locale-hi": ["@nanofaker/locale-hi@workspace:packages/hi"],
 
@@ -748,6 +1128,8 @@
 
     "@nanofaker/locale-pt": ["@nanofaker/locale-pt@workspace:packages/pt"],
 
+    "@nanofaker/locale-pt-mz": ["@nanofaker/locale-pt-mz@workspace:packages/pt-mz"],
+
     "@nanofaker/locale-sv": ["@nanofaker/locale-sv@workspace:packages/sv"],
 
     "@nanofaker/locale-tl": ["@nanofaker/locale-tl@workspace:packages/tl"],
@@ -757,6 +1139,14 @@
     "@nanofaker/locale-uk": ["@nanofaker/locale-uk@workspace:packages/uk"],
 
     "@nanofaker/locale-zh": ["@nanofaker/locale-zh@workspace:packages/zh"],
+
+    "@nanofaker/locale-zh-cn": ["@nanofaker/locale-zh-cn@workspace:packages/zh-cn"],
+
+    "@nanofaker/locale-zh-tw": ["@nanofaker/locale-zh-tw@workspace:packages/zh-tw"],
+
+    "@nanofaker/locale-zu": ["@nanofaker/locale-zu@workspace:packages/zu"],
+
+    "@nanofaker/locale-zu-za": ["@nanofaker/locale-zu-za@workspace:packages/zu-za"],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@0.2.12", "", { "dependencies": { "@emnapi/core": "^1.4.3", "@emnapi/runtime": "^1.4.3", "@tybys/wasm-util": "^0.10.0" } }, "sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ=="],
 

@@ -27,8 +27,8 @@ describe('LocaleLoader', () => {
       expect(locale.title).toBe('French')
     })
 
-    it('should load all 20 locales successfully', async () => {
-      const locales = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ja', 'tl', 'zh', 'nl', 'ko', 'no', 'sv', 'da', 'uk', 'hi', 'fi', 'tr', 'pl', 'cs']
+    it('should load all 26 locales successfully', async () => {
+      const locales = ['af', 'ar', 'az', 'cs', 'da', 'de', 'en', 'eo', 'es', 'fa', 'fi', 'fr', 'he', 'hi', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'sv', 'tl', 'tr', 'uk', 'zh']
 
       for (const localeCode of locales) {
         const locale = await LocaleLoader.load(localeCode)
@@ -139,27 +139,33 @@ describe('LocaleLoader', () => {
   describe('getAvailableLocales', () => {
     it('should return all available locales (base + variants)', () => {
       const locales = LocaleLoader.getAvailableLocales()
-      expect(locales.length).toBeGreaterThanOrEqual(20) // 20 base locales + variants
-      expect(locales).toContain('en')
-      expect(locales).toContain('es')
-      expect(locales).toContain('fr')
-      expect(locales).toContain('de')
-      expect(locales).toContain('it')
-      expect(locales).toContain('pt')
-      expect(locales).toContain('ja')
-      expect(locales).toContain('tl')
-      expect(locales).toContain('zh')
-      expect(locales).toContain('nl')
-      expect(locales).toContain('ko')
-      expect(locales).toContain('no')
-      expect(locales).toContain('sv')
-      expect(locales).toContain('da')
-      expect(locales).toContain('uk')
-      expect(locales).toContain('hi')
-      expect(locales).toContain('fi')
-      expect(locales).toContain('tr')
-      expect(locales).toContain('pl')
+      expect(locales.length).toBeGreaterThanOrEqual(26) // 26 base locales + variants
+      expect(locales).toContain('af')
+      expect(locales).toContain('ar')
+      expect(locales).toContain('az')
       expect(locales).toContain('cs')
+      expect(locales).toContain('da')
+      expect(locales).toContain('de')
+      expect(locales).toContain('en')
+      expect(locales).toContain('eo')
+      expect(locales).toContain('es')
+      expect(locales).toContain('fa')
+      expect(locales).toContain('fi')
+      expect(locales).toContain('fr')
+      expect(locales).toContain('he')
+      expect(locales).toContain('hi')
+      expect(locales).toContain('it')
+      expect(locales).toContain('ja')
+      expect(locales).toContain('ko')
+      expect(locales).toContain('nl')
+      expect(locales).toContain('no')
+      expect(locales).toContain('pl')
+      expect(locales).toContain('pt')
+      expect(locales).toContain('sv')
+      expect(locales).toContain('tl')
+      expect(locales).toContain('tr')
+      expect(locales).toContain('uk')
+      expect(locales).toContain('zh')
     })
   })
 })
@@ -209,8 +215,8 @@ describe('Faker with Dynamic Locale Loading', () => {
       expect(deFaker.locale).toBe('German')
     })
 
-    it('should work with all 20 locales', async () => {
-      const locales = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ja', 'tl', 'zh', 'nl', 'ko', 'no', 'sv', 'da', 'uk', 'hi', 'fi', 'tr', 'pl', 'cs']
+    it('should work with all 26 locales', async () => {
+      const locales = ['af', 'ar', 'az', 'cs', 'da', 'de', 'en', 'eo', 'es', 'fa', 'fi', 'fr', 'he', 'hi', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'sv', 'tl', 'tr', 'uk', 'zh']
 
       for (const localeCode of locales) {
         const faker = await Faker.create({ locale: localeCode })
@@ -295,7 +301,7 @@ describe('Faker with Dynamic Locale Loading', () => {
   describe('Faker.availableLocales', () => {
     it('should return all available locales (base + variants)', () => {
       const locales = Faker.availableLocales
-      expect(locales.length).toBeGreaterThanOrEqual(20) // 20 base locales + variants
+      expect(locales.length).toBeGreaterThanOrEqual(26) // 26 base locales + variants
     })
   })
 

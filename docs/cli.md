@@ -28,7 +28,7 @@ nanofaker generate <category> <method> [options]
 
 **Options:**
 
-- `--locale <locale>` - Locale to use (en, es, fr, de, it, pt, ja, tl, zh, nl, ko, no, sv, da, uk, hi)
+- `--locale <locale>` - Locale to use (af, ar, az, cs, da, de, en, eo, es, fa, fi, fr, he, hi, it, ja, ko, nl, no, pl, pt, sv, tl, tr, uk, zh)
 - `--count <count>` - Number of items to generate (default: 1)
 - `--seed <seed>` - Seed for reproducible results
 - `--json` - Output as JSON
@@ -116,24 +116,34 @@ List all available locales.
 nanofaker locales
 ```
 
-Shows all 16 supported locales:
+Shows all 26 supported locales:
 
-- en - English
-- es - Spanish
-- fr - French
-- de - German
-- it - Italian
-- pt - Portuguese
-- ja - Japanese
-- tl - Filipino
-- zh - Chinese
-- nl - Dutch
-- ko - Korean
-- no - Norwegian
-- sv - Swedish
+- af - Afrikaans
+- ar - Arabic
+- az - Azerbaijani
+- cs - Czech
 - da - Danish
-- uk - Ukrainian
+- de - German
+- en - English
+- eo - Esperanto
+- es - Spanish
+- fa - Persian/Farsi
+- fi - Finnish
+- fr - French
+- he - Hebrew
 - hi - Hindi
+- it - Italian
+- ja - Japanese
+- ko - Korean
+- nl - Dutch
+- no - Norwegian
+- pl - Polish
+- pt - Portuguese
+- sv - Swedish
+- tl - Filipino
+- tr - Turkish
+- uk - Ukrainian
+- zh - Chinese
 
 ### batch
 

@@ -14,32 +14,32 @@ A performance-focused and lightweight faker library for TypeScript with comprehe
 
 - ⚡️ **Performance-focused** - Built with speed and efficiency in mind
 - 🌍 **Multi-locale Support** - Complete translations for 26 languages:
-  - English (en)
-  - Spanish (es)
-  - French (fr)
-  - German (de)
-  - Italian (it)
-  - Portuguese (pt)
-  - Japanese (ja)
-  - Filipino (tl)
-  - Chinese (zh)
-  - Dutch (nl)
-  - Korean (ko)
-  - Norwegian (no)
-  - Swedish (sv)
-  - Danish (da)
-  - Ukrainian (uk)
-  - Hindi (hi)
-  - Finnish (fi)
-  - Turkish (tr)
-  - Polish (pl)
-  - Czech (cs)
-  - Esperanto (eo)
-  - Persian/Farsi (fa)
-  - Hebrew (he)
-  - Arabic (ar)
   - Afrikaans (af)
+  - Arabic (ar)
   - Azerbaijani (az)
+  - Czech (cs)
+  - Danish (da)
+  - German (de)
+  - English (en)
+  - Esperanto (eo)
+  - Spanish (es)
+  - Persian/Farsi (fa)
+  - Finnish (fi)
+  - French (fr)
+  - Hebrew (he)
+  - Hindi (hi)
+  - Italian (it)
+  - Japanese (ja)
+  - Korean (ko)
+  - Dutch (nl)
+  - Norwegian (no)
+  - Polish (pl)
+  - Portuguese (pt)
+  - Swedish (sv)
+  - Filipino (tl)
+  - Turkish (tr)
+  - Ukrainian (uk)
+  - Chinese (zh)
 - 📦 **Lightweight** - Minimal dependencies and small bundle size
 - 💪 **Fully Typed** - Written in TypeScript with comprehensive type definitions
 - 🎯 **Comprehensive Data** - 16+ data categories including:
@@ -112,32 +112,32 @@ console.log(chineseFaker.person.fullName()) // "王伟"
 
 ### Available Locales
 
-- `en` - English
-- `es` - Spanish
-- `fr` - French
-- `de` - German
-- `it` - Italian
-- `pt` - Portuguese
-- `ja` - Japanese
-- `tl` - Filipino
-- `zh` - Chinese
-- `nl` - Dutch
-- `ko` - Korean
-- `no` - Norwegian
-- `sv` - Swedish
-- `da` - Danish
-- `uk` - Ukrainian
-- `hi` - Hindi
-- `fi` - Finnish
-- `tr` - Turkish
-- `pl` - Polish
-- `cs` - Czech
-- `eo` - Esperanto
-- `fa` - Persian/Farsi
-- `he` - Hebrew
-- `ar` - Arabic
 - `af` - Afrikaans
+- `ar` - Arabic
 - `az` - Azerbaijani
+- `cs` - Czech
+- `da` - Danish
+- `de` - German
+- `en` - English
+- `eo` - Esperanto
+- `es` - Spanish
+- `fa` - Persian/Farsi
+- `fi` - Finnish
+- `fr` - French
+- `he` - Hebrew
+- `hi` - Hindi
+- `it` - Italian
+- `ja` - Japanese
+- `ko` - Korean
+- `nl` - Dutch
+- `no` - Norwegian
+- `pl` - Polish
+- `pt` - Portuguese
+- `sv` - Swedish
+- `tl` - Filipino
+- `tr` - Turkish
+- `uk` - Ukrainian
+- `zh` - Chinese
 
 ### API Examples
 
@@ -309,7 +309,7 @@ nanofaker methods food
 
 ### Options
 
-- `--locale <locale>` - Use a specific locale (en, es, fr, de, it, pt, ja, tl, zh, nl, ko, no, sv, da, uk, hi, fi, tr, pl, cs, eo, fa, he, ar, af, az)
+- `--locale <locale>` - Use a specific locale (af, ar, az, cs, da, de, en, eo, es, fa, fi, fr, he, hi, it, ja, ko, nl, no, pl, pt, sv, tl, tr, uk, zh)
 - `--count <count>` - Number of items to generate
 - `--seed <seed>` - Seed for reproducible results
 - `--json` - Output as JSON
