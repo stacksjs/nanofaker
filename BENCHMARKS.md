@@ -116,11 +116,26 @@ Generates 10,000 complete user objects with:
 
 ## Libraries Tested
 
-- **nanofaker** (this library) - Performance-focused faker with 26 locales
-- **@faker-js/faker** v10.0.0 - Most popular faker library
-- **chance** v1.1.13 - Popular random generator
-- **casual** v1.6.2 - Lightweight fake data generator
-- **@ngneat/falso** v7.4.0 - TypeScript-first random data generator
+| Library | Version | Published Size | Files |
+|---------|---------|----------------|-------|
+| **nanofaker** | (core) | **174 KB** | **38** |
+| **casual** | v1.6.2 | 408 KB | 75 |
+| **@ngneat/falso** | v7.4.0 | 1.16 MB | 399 |
+| **chance** | v1.1.13 | 2.08 MB | 164 |
+| **@faker-js/faker** | v10.0.0 | 4.29 MB | 231 |
+
+### Package Size Advantages
+
+nanofaker is **dramatically smaller** than all competitors:
+
+- **24.7x smaller** than @faker-js/faker (saves 4.12 MB)
+- **12.0x smaller** than chance (saves 1.91 MB)
+- **6.7x smaller** than @ngneat/falso (saves 1.01 MB)
+- **2.4x smaller** than casual (saves 234 KB)
+
+Even compared to the smallest competitor (casual), nanofaker is **2.4x smaller** while offering 26 full locales vs limited support.
+
+📦 See [PACKAGE-SIZES.md](./PACKAGE-SIZES.md) for detailed size comparison and analysis.
 
 ## Key Takeaways
 

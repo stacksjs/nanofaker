@@ -258,7 +258,7 @@ async function runBenchmarks() {
   // nanofaker
   const nanoStart = performance.now()
   for (let i = 0; i < iterations; i++) {
-    const user = {
+    const _user = {
       name: nanofaker.person.fullName(),
       email: nanofaker.internet.email(),
       phone: nanofaker.phone.number(),
@@ -271,7 +271,7 @@ async function runBenchmarks() {
   // @faker-js/faker
   const fakerjsStart = performance.now()
   for (let i = 0; i < iterations; i++) {
-    const user = {
+    const _user = {
       name: fakerjs.person.fullName(),
       email: fakerjs.internet.email(),
       phone: fakerjs.phone.number(),

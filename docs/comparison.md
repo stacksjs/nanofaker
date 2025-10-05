@@ -6,40 +6,81 @@ How nanofaker compares to other popular faker libraries.
 
 | Feature | nanofaker | @faker-js/faker | Laravel Faker | Chance.js | Casual |
 |---------|-----------|-----------------|---------------|-----------|--------|
-| **Bundle Size** | ~50KB | ~200-500KB | N/A (PHP) | ~100KB | ~80KB |
+| **Published Size** | 174 KB | 4.29 MB | N/A (PHP) | 2.08 MB | 408 KB |
+| **File Count** | 38 files | 231 files | N/A | 164 files | 75 files |
 | **Performance** | ⚡️ Fastest | Medium | N/A | Medium | Medium |
 | **TypeScript** | ✅ Native | ✅ Yes | ❌ No (PHP) | ⚠️ Types available | ⚠️ Types available |
-| **Locales** | 20 (complete) | 70+ (partial) | 50+ | Limited | Limited |
+| **Locales** | 26 (complete) | 70+ (partial) | 50+ | Limited | Limited |
 | **Locale Coverage** | 100% | 30-80% | Varies | N/A | N/A |
 | **CLI Tool** | ✅ Yes | ❌ No | ❌ No | ❌ No | ❌ No |
 | **Tree Shaking** | ✅ Yes | ⚠️ Partial | N/A | ❌ No | ❌ No |
 | **Seeding** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ❌ No |
 | **Active Development** | ✅ Yes | ✅ Yes | ✅ Yes | ⚠️ Slow | ❌ Archived |
 
-## Bundle Size Comparison
+## Package Size Comparison
 
-Smaller bundles = faster loading times and better user experience.
+Smaller packages = faster installation and better user experience.
+
+### Published Package Size (npm download)
 
 ```
-nanofaker:           ~50KB  ████
-@faker-js/faker:    ~350KB  ██████████████████████████████████████
-Chance.js:          ~100KB  ████████████
-Casual:              ~80KB  ██████████
+nanofaker:           174KB  ████
+Casual:              408KB  ████████████
+@ngneat/falso:      1.16MB  ████████████████████████████████████████
+Chance.js:          2.08MB  ████████████████████████████████████████████████████████████████████
+@faker-js/faker:    4.29MB  ████████████████████████████████████████████████████████████████████████████████████████████████████████████
 ```
 
-**Impact**: nanofaker is **7x smaller** than @faker-js/faker.
+**Impact**: nanofaker is **24.7x smaller** than @faker-js/faker (saves 4.12 MB, 96% reduction).
+
+### File Count
+
+```
+nanofaker:            38 files  ████
+Casual:               75 files  ████████
+Chance.js:           164 files  ███████████████████
+@faker-js/faker:     231 files  ████████████████████████████
+@ngneat/falso:       399 files  ████████████████████████████████████████████████
+```
+
+**Impact**: nanofaker has **6.1x fewer files** than @faker-js/faker.
 
 ### Real-World Impact
 
-For a typical web application:
+#### Installation Time
 
-```ts
-// Bundle size impact
-import { faker } from '@faker-js/faker' // +350KB
-import { faker } from 'nanofaker' // +50KB
+```bash
+# @faker-js/faker
+npm install @faker-js/faker  # Downloads 4.29 MB
+Time: ~2-3 seconds
 
-// Savings: 300KB = Faster page loads!
+# nanofaker
+npm install nanofaker  # Downloads 174 KB
+Time: ~0.3 seconds
+
+# Savings: 4.12 MB (96% reduction), ~2.5 seconds faster
 ```
+
+#### CI/CD Bandwidth
+
+For projects with frequent builds:
+
+```bash
+# 100 CI runs per day
+@faker-js/faker: 100 × 4.29 MB = 429 MB/day
+nanofaker: 100 × 174 KB = 17.4 MB/day
+
+# Monthly bandwidth savings: ~12.3 GB (96% reduction)
+```
+
+#### Development Experience
+
+Smaller package means:
+- ✅ Faster `npm install` / `bun install`
+- ✅ Faster module resolution
+- ✅ Less disk space usage
+- ✅ Faster Docker image builds
+- ✅ Better tree-shaking potential
 
 ## Performance Benchmarks
 

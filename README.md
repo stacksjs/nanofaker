@@ -335,13 +335,19 @@ See the [CLI documentation](https://nanofaker.stacksjs.org/cli) for complete det
 
 ## Performance Benchmarks
 
-nanofaker is designed for performance. We benchmark against all major JavaScript/TypeScript faker libraries:
+nanofaker is designed for performance and efficiency:
 
-**Results Summary:**
+**Performance:**
 - ✅ **9 out of 9 benchmarks won** (100% win rate!)
 - ⚡ **6.57x faster than @faker-js/faker** on average
 - 🚀 **39.63M ops/s** for city generation
 - 📊 **7.97ms** to generate 10,000 complex user objects
+
+**Package Size:**
+- 📦 **174 KB** published (core package only)
+- 🎯 **24.7x smaller than @faker-js/faker** (4.29 MB)
+- 🪶 **38 files** vs 231 in @faker-js/faker
+- 🔌 **Modular locales** - install only what you need
 
 ### Quick Comparison
 
@@ -366,7 +372,8 @@ bun run bench
 # - @ngneat/falso
 ```
 
-📊 See [BENCHMARKS.md](./BENCHMARKS.md) for detailed results and methodology.
+**Detailed Documentation:**
+- 📊 [BENCHMARKS.md](./BENCHMARKS.md) - Complete performance results and methodology
 
 ## Testing
 

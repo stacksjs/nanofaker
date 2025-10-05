@@ -12,6 +12,7 @@ const config: ESLintConfig = stacks({
   yaml: true,
   ignores: [
     'fixtures/**',
+    'packages/benchmarks/OPTIMIZATIONS.md',
   ],
 })
 
