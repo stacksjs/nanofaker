@@ -14,51 +14,51 @@ A performance-focused and lightweight faker library for TypeScript with comprehe
 
 - ⚡️ **Performance-focused** - Built with speed and efficiency in mind
 - 🌍 **Multi-locale Support** - Complete translations for 26 languages:
-  - Afrikaans (af)
-  - Arabic (ar)
-  - Azerbaijani (az)
-  - Czech (cs)
-  - Danish (da)
-  - German (de)
-  - English (en)
-  - Esperanto (eo)
-  - Spanish (es)
-  - Persian/Farsi (fa)
-  - Finnish (fi)
-  - French (fr)
-  - Hebrew (he)
-  - Hindi (hi)
-  - Italian (it)
-  - Japanese (ja)
-  - Korean (ko)
-  - Dutch (nl)
-  - Norwegian (no)
-  - Polish (pl)
-  - Portuguese (pt)
-  - Swedish (sv)
-  - Filipino (tl)
-  - Turkish (tr)
-  - Ukrainian (uk)
-  - Chinese (zh)
+  - Afrikaans _(af)_
+  - Arabic _(ar)_
+  - Azerbaijani _(az)_
+  - Czech _(cs)_
+  - Danish _(da)_
+  - German _(de)_
+  - English _(en)_
+  - Esperanto _(eo)_
+  - Spanish _(es)_
+  - Persian/Farsi _(fa)_
+  - Finnish _(fi)_
+  - French _(fr)_
+  - Hebrew _(he)_
+  - Hindi _(hi)_
+  - Italian _(it)_
+  - Japanese _(ja)_
+  - Korean _(ko)_
+  - Dutch _(nl)_
+  - Norwegian _(no)_
+  - Polish _(pl)_
+  - Portuguese _(pt)_
+  - Swedish _(sv)_
+  - Filipino _(tl)_
+  - Turkish _(tr)_
+  - Ukrainian _(uk)_
+  - Chinese _(zh)_
 - 📦 **Lightweight** - Minimal dependencies and small bundle size
 - 💪 **Fully Typed** - Written in TypeScript with comprehensive type definitions
 - 🎯 **Comprehensive Data** - 16+ data categories including:
-  - Person (names, job titles, genders)
-  - Address (streets, cities, countries)
-  - Company (names, industries, buzzwords)
-  - Internet (emails, domains)
-  - Phone numbers
-  - Food (dishes, ingredients, cuisines)
-  - Animals (dogs, cats, birds, fish, etc.)
-  - Sports (teams, athletes)
-  - Music (genres, artists, songs)
-  - Commerce (products, colors, materials)
-  - Books (titles, authors, publishers)
-  - Vehicles (manufacturers, models, types)
-  - Words (adjectives, verbs, nouns, etc.)
-  - Hacker/Tech (abbreviations, phrases)
-  - System (file names, file types)
-  - Science (elements, units, constants)
+  - Person _(names, job titles, genders)_
+  - Address _(streets, cities, countries)_
+  - Company _(names, industries, buzzwords)_
+  - Internet _(emails, domains)_
+  - Phone numbers _(numbers)_
+  - Food _(dishes, ingredients, cuisines)_
+  - Animals _(dogs, cats, birds, fish, etc.)_
+  - Sports _(teams, athletes)_
+  - Music _(genres, artists, songs)_
+  - Commerce _(products, colors, materials)_
+  - Books _(titles, authors, publishers)_
+  - Vehicles _(manufacturers, models, types)_
+  - Words _(adjectives, verbs, nouns, etc.)_
+  - Hacker/Tech _(abbreviations, phrases)_
+  - System _(file names, file types)_
+  - Science _(elements, units, constants)_
 
 ## Installation
 
@@ -338,6 +338,7 @@ See the [CLI documentation](https://nanofaker.stacksjs.org/cli) for complete det
 nanofaker is designed for performance and efficiency:
 
 **Performance:**
+
 - ✅ **9 out of 9 benchmarks won** (100% win rate!)
 - ⚡ **9.28x faster than @faker-js/faker** on average
 - 🚀 **34.04M ops/s** for country generation
@@ -346,6 +347,7 @@ nanofaker is designed for performance and efficiency:
 - 📊 **6.90ms** to generate 10,000 complex user objects
 
 **Package Size:**
+
 - 📦 **174 KB** published (core package only)
 - 🎯 **24.7x smaller than @faker-js/faker** (4.29 MB)
 - 🪶 **38 files** vs 231 in @faker-js/faker
@@ -375,6 +377,7 @@ bun run bench
 ```
 
 **Detailed Documentation:**
+
 - 📊 [BENCHMARKS.md](./BENCHMARKS.md) - Complete performance results and methodology
 
 ## Testing
