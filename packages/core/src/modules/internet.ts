@@ -12,13 +12,29 @@ export class InternetModule {
    * @example faker.internet.email() // 'john.doe@example.com'
    */
   email(options?: { firstName?: string, lastName?: string, provider?: string }): string {
-    // Use all gendered names combined for email generation
-    const allFirstNames = [
-      ...this.locale.person.firstNameMale,
-      ...this.locale.person.firstNameFemale,
-      ...(this.locale.person.firstNameNeutral || []),
-    ]
-    const firstName = options?.firstName ?? this.random.arrayElement(allFirstNames).toLowerCase()
+    // Optimized: avoid array spreading by selecting from combined length
+    let firstName: string
+    if (options?.firstName) {
+      firstName = options.firstName
+    }
+    else {
+      const maleLen = this.locale.person.firstNameMale.length
+      const femaleLen = this.locale.person.firstNameFemale.length
+      const neutralLen = this.locale.person.firstNameNeutral?.length || 0
+      const totalLen = maleLen + femaleLen + neutralLen
+      const index = this.random.int(0, totalLen - 1)
+
+      if (index < maleLen) {
+        firstName = this.locale.person.firstNameMale[index].toLowerCase()
+      }
+      else if (index < maleLen + femaleLen) {
+        firstName = this.locale.person.firstNameFemale[index - maleLen].toLowerCase()
+      }
+      else {
+        firstName = this.locale.person.firstNameNeutral![index - maleLen - femaleLen].toLowerCase()
+      }
+    }
+
     const lastName = options?.lastName ?? this.random.arrayElement(this.locale.person.lastName).toLowerCase()
     const provider = options?.provider ?? this.random.arrayElement(this.locale.internet.domainSuffix ?? ['com', 'net', 'org'])
 
@@ -41,13 +57,24 @@ export class InternetModule {
    * @example faker.internet.freeEmail() // 'john.doe@gmail.com'
    */
   freeEmail(): string {
-    // Use all gendered names combined for email generation
-    const allFirstNames = [
-      ...this.locale.person.firstNameMale,
-      ...this.locale.person.firstNameFemale,
-      ...(this.locale.person.firstNameNeutral || []),
-    ]
-    const firstName = this.random.arrayElement(allFirstNames).toLowerCase()
+    // Optimized: avoid array spreading by selecting from combined length
+    const maleLen = this.locale.person.firstNameMale.length
+    const femaleLen = this.locale.person.firstNameFemale.length
+    const neutralLen = this.locale.person.firstNameNeutral?.length || 0
+    const totalLen = maleLen + femaleLen + neutralLen
+    const index = this.random.int(0, totalLen - 1)
+
+    let firstName: string
+    if (index < maleLen) {
+      firstName = this.locale.person.firstNameMale[index].toLowerCase()
+    }
+    else if (index < maleLen + femaleLen) {
+      firstName = this.locale.person.firstNameFemale[index - maleLen].toLowerCase()
+    }
+    else {
+      firstName = this.locale.person.firstNameNeutral![index - maleLen - femaleLen].toLowerCase()
+    }
+
     const lastName = this.random.arrayElement(this.locale.person.lastName).toLowerCase()
     const provider = this.random.arrayElement(this.locale.internet.freeEmail ?? ['gmail.com', 'yahoo.com', 'hotmail.com'])
 
@@ -62,14 +89,30 @@ export class InternetModule {
    * @example faker.internet.username() // 'john_doe123'
    */
   username(options?: { firstName?: string, lastName?: string }): string {
-    // Use all gendered names combined for username generation
-    const allFirstNames = [
-      ...this.locale.person.firstNameMale,
-      ...this.locale.person.firstNameFemale,
-      ...(this.locale.person.firstNameNeutral || []),
-    ]
-    const firstName = options?.firstName ?? this.random.arrayElement(allFirstNames).toLowerCase()
-    const lastName = options?.lastName ?? this.random.arrayElement(this.locale.person.lastName).toLowerCase()
+    // Optimized: avoid array spreading by selecting from combined length
+    let firstName: string
+    if (options?.firstName) {
+      firstName = options.firstName.toLowerCase()
+    }
+    else {
+      const maleLen = this.locale.person.firstNameMale.length
+      const femaleLen = this.locale.person.firstNameFemale.length
+      const neutralLen = this.locale.person.firstNameNeutral?.length || 0
+      const totalLen = maleLen + femaleLen + neutralLen
+      const index = this.random.int(0, totalLen - 1)
+
+      if (index < maleLen) {
+        firstName = this.locale.person.firstNameMale[index].toLowerCase()
+      }
+      else if (index < maleLen + femaleLen) {
+        firstName = this.locale.person.firstNameFemale[index - maleLen].toLowerCase()
+      }
+      else {
+        firstName = this.locale.person.firstNameNeutral![index - maleLen - femaleLen].toLowerCase()
+      }
+    }
+
+    const lastName = options?.lastName?.toLowerCase() ?? this.random.arrayElement(this.locale.person.lastName).toLowerCase()
 
     const patterns = [
       `${firstName}${lastName}`,

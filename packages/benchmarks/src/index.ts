@@ -70,7 +70,7 @@ async function runBenchmarks() {
   console.log(colors.reset)
 
   // Benchmark 1: Full Name Generation
-  const nameBench = new Bench({ time: 500 })
+  const nameBench = new Bench({ time: 750 })
   nameBench
     .add('nanofaker', () => {
       nanofaker.person.fullName()
@@ -92,7 +92,7 @@ async function runBenchmarks() {
   printResults(nameBench, '📛 Full Name Generation')
 
   // Benchmark 2: Email Generation
-  const emailBench = new Bench({ time: 500 })
+  const emailBench = new Bench({ time: 750 })
   emailBench
     .add('nanofaker', () => {
       nanofaker.internet.email()
@@ -114,7 +114,7 @@ async function runBenchmarks() {
   printResults(emailBench, '📧 Email Generation')
 
   // Benchmark 3: Phone Number Generation
-  const phoneBench = new Bench({ time: 500 })
+  const phoneBench = new Bench({ time: 750 })
   phoneBench
     .add('nanofaker', () => {
       nanofaker.phone.number()
@@ -136,7 +136,7 @@ async function runBenchmarks() {
   printResults(phoneBench, '📞 Phone Number Generation')
 
   // Benchmark 4: City Generation
-  const cityBench = new Bench({ time: 500 })
+  const cityBench = new Bench({ time: 750 })
   cityBench
     .add('nanofaker', () => {
       nanofaker.address.city()
@@ -158,7 +158,7 @@ async function runBenchmarks() {
   printResults(cityBench, '🏙️  City Generation')
 
   // Benchmark 5: Country Generation
-  const countryBench = new Bench({ time: 500 })
+  const countryBench = new Bench({ time: 750 })
   countryBench
     .add('nanofaker', () => {
       nanofaker.address.country()
@@ -180,7 +180,7 @@ async function runBenchmarks() {
   printResults(countryBench, '🌍 Country Generation')
 
   // Benchmark 6: Company Name Generation
-  const companyBench = new Bench({ time: 500 })
+  const companyBench = new Bench({ time: 750 })
   companyBench
     .add('nanofaker', () => {
       nanofaker.company.name()
@@ -202,7 +202,7 @@ async function runBenchmarks() {
   printResults(companyBench, '🏢 Company Name Generation')
 
   // Benchmark 7: Product Generation
-  const productBench = new Bench({ time: 500 })
+  const productBench = new Bench({ time: 750 })
   productBench
     .add('nanofaker', () => {
       nanofaker.commerce.product()
@@ -221,7 +221,7 @@ async function runBenchmarks() {
   printResults(productBench, '🛍️  Product Generation')
 
   // Benchmark 8: UUID Generation
-  const uuidBench = new Bench({ time: 500 })
+  const uuidBench = new Bench({ time: 750 })
   uuidBench
     .add('nanofaker', () => {
       nanofaker.string.uuid()

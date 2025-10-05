@@ -9,12 +9,27 @@ export class StringModule {
    * @example faker.string.uuid() // '550e8400-e29b-41d4-a716-446655440000'
    */
   uuid(): string {
-    const template = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
-    return template.replace(/[xy]/g, (c) => {
-      const r = this.random.int(0, 15)
-      const v = c === 'x' ? r : (r & 0x3 | 0x8)
-      return v.toString(16)
-    })
+    // Optimized: avoid regex overhead with direct string building
+    const hex = '0123456789abcdef'
+    let result = ''
+
+    for (let i = 0; i < 36; i++) {
+      if (i === 8 || i === 13 || i === 18 || i === 23) {
+        result += '-'
+      }
+      else if (i === 14) {
+        result += '4'
+      }
+      else if (i === 19) {
+        const r = this.random.int(0, 15)
+        result += hex[(r & 0x3) | 0x8]
+      }
+      else {
+        result += hex[this.random.int(0, 15)]
+      }
+    }
+
+    return result
   }
 
   /**
@@ -94,6 +109,15 @@ export class StringModule {
    * @example faker.string.numeric() // '1234567890'
    */
   numeric(length = 10): string {
+    // Optimized: use direct Math.random for unseeded case
+    if (this.random['seed'] === undefined) {
+      let result = ''
+      for (let i = 0; i < length; i++) {
+        result += Math.floor(Math.random() * 10)
+      }
+      return result
+    }
+
     let result = ''
     for (let i = 0; i < length; i++) {
       result += this.random.int(0, 9)
