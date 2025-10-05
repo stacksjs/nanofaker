@@ -137,7 +137,7 @@ ts-mocker uses modular locale packages - only install what you need:
 
 ```bash
 # Install only the locales you need
-bun add @ts-mocker/locale-en @ts-mocker/locale-es @ts-mocker/locale-fr
+bun add @mock-locale/en @mock-locale/es @mock-locale/fr
 
 # Or use auto-install (requires configuration)
 # Automatically downloads locales on first use
@@ -188,7 +188,7 @@ ts-mocker uses a smart locale loading system:
 
 ```ts
 // Dynamic imports for optimal bundle splitting
-const locale = await import('@ts-mocker/locale-es')
+const locale = await import('@mock-locale/es')
 
 // Locales are cached after first load
 // Subsequent imports are instant

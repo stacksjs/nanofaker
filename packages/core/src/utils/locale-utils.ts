@@ -74,7 +74,7 @@ export function getLocaleFallbackChain(locale: string): string[] {
  */
 export function getLocalePackageName(locale: string): string {
   const info = parseLocale(locale)
-  return `@ts-mocker/locale-${info.packageName}`
+  return `@mock-locale/${info.packageName}`
 }
 
 /**

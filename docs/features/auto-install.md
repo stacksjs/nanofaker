@@ -46,16 +46,16 @@ When you try to use a locale that isn't installed:
 
    ```
    Error: Locale 'es' is not installed.
-   Install it with: bun add @ts-mocker/locale-es
+   Install it with: bun add @mock-locale/es
    Or enable auto-install in your faker.config.ts
    ```
 
 2. **With auto-install enabled**:
 
    ```
-   🔍 Locale 'es' not found. Auto-installing @ts-mocker/locale-es...
-   📦 Installing @ts-mocker/locale-es using bun...
-   ✓ Successfully installed @ts-mocker/locale-es
+   🔍 Locale 'es' not found. Auto-installing @mock-locale/es...
+   📦 Installing @mock-locale/es using bun...
+   ✓ Successfully installed @mock-locale/es
    ```
 
 ## Package Manager Detection
@@ -74,7 +74,7 @@ ts-mocker automatically detects your package manager based on lock files:
 import { Faker } from 'ts-mocker'
 
 async function main() {
-  // First time: installs @ts-mocker/locale-fr
+  // First time: installs @mock-locale/fr
   const frenchFaker = await Faker.create({
     locale: 'fr',
     autoInstallLocales: true
@@ -95,13 +95,13 @@ You can always manually install locale packages:
 
 ```bash
 # Install a specific locale
-bun add @ts-mocker/locale-es
+bun add @mock-locale/es
 
 # Install multiple locales
-bun add @ts-mocker/locale-{es,fr,de}
+bun add @mock-locale/{es,fr,de}
 
 # Install all locales
-bun add @ts-mocker/locale-{cs,da,de,en,es,fi,fr,hi,it,ja,ko,nl,no,pl,pt,sv,tl,tr,uk,zh}
+bun add @mock-locale/{cs,da,de,en,es,fi,fr,hi,it,ja,ko,nl,no,pl,pt,sv,tl,tr,uk,zh}
 ```
 
 ## Performance Considerations
@@ -120,4 +120,4 @@ In CI/CD environments, it's recommended to:
 
 ## Security
 
-Auto-install only works for official `@ts-mocker/locale-*` packages published by the ts-mocker team. It will not install arbitrary packages.
+Auto-install only works for official `@mock-locale/*` packages published by the ts-mocker team. It will not install arbitrary packages.

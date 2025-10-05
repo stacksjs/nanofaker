@@ -268,7 +268,7 @@ export class LocaleLoader {
           if (installed) {
             // Try importing again after installation
             try {
-              const module = await import(`@ts-mocker/locale-${locale}`)
+              const module = await import(`@mock-locale/${locale}`)
               return module[locale]
             }
             catch (retryError) {
@@ -286,7 +286,7 @@ export class LocaleLoader {
 
         throw new Error(
           `Locale '${locale}' is not installed. Install it with: bun add ${packageName}\n`
-          + `Or install all locales with: bun add @ts-mocker/locale-{af,ar,az,cs,da,de,en,eo,es,fa,fi,fr,he,hi,it,ja,ko,nl,no,pl,pt,sv,tl,tr,uk,zh,zu}\n`
+          + `Or install all locales with: bun add @mock-locale/{af,ar,az,cs,da,de,en,eo,es,fa,fi,fr,he,hi,it,ja,ko,nl,no,pl,pt,sv,tl,tr,uk,zh,zu}\n`
           + `Or enable auto-install in your faker.config.ts: { autoInstallLocales: true }`,
         )
       }

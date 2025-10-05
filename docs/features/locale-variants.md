@@ -92,8 +92,8 @@ const faker2 = await Faker.create({ locale: 'en-US' }) // ✅ Hyphen
 
 Locale variants automatically fall back to the base locale when needed:
 
-1. **Try variant first**: `en_US` → load `@ts-mocker/locale-en-us`
-2. **Load base locale**: `en` → load `@ts-mocker/locale-en`
+1. **Try variant first**: `en_US` → load `@mock-locale/en-us`
+2. **Load base locale**: `en` → load `@mock-locale/en`
 3. **Merge**: Variant data overrides base data
 
 This means:
@@ -122,10 +122,10 @@ faker.address.city() // From 'en_US' variant
 
 ```bash
 # Install a specific variant
-bun add @ts-mocker/locale-en-us
+bun add @mock-locale/en-us
 
 # Install multiple variants
-bun add @ts-mocker/locale-{en-us,en-gb,es-mx}
+bun add @mock-locale/{en-us,en-gb,es-mx}
 ```
 
 ### Auto-Install
@@ -143,8 +143,8 @@ Then just use any variant:
 
 ```typescript
 const faker = await Faker.create({ locale: 'en_GB' })
-// 🔍 Locale 'en_GB' not found. Auto-installing @ts-mocker/locale-en-gb...
-// ✓ Successfully installed @ts-mocker/locale-en-gb
+// 🔍 Locale 'en_GB' not found. Auto-installing @mock-locale/en-gb...
+// ✓ Successfully installed @mock-locale/en-gb
 ```
 
 ## Creating Custom Variants
@@ -186,7 +186,7 @@ Key points:
 Locale variant packages follow the naming convention:
 
 - Locale code: `en_US` or `en-US` (both work)
-- Package name: `@ts-mocker/locale-en-us` (lowercase, hyphen-separated)
+- Package name: `@mock-locale/en-us` (lowercase, hyphen-separated)
 
 ## Benefits
 
