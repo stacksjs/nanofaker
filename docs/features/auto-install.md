@@ -122,4 +122,4 @@ In CI/CD environments, it's recommended to:
 
 ## Security
 
-Auto-install only works for official `@mock-locale/*` packages published by the ts-mocker team. It will not install arbitrary packages.
+Auto-install only works for official `@mock-locale/*` packages published by the `ts-mocker` team. It will not install arbitrary packages.
