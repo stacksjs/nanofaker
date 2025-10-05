@@ -10,7 +10,7 @@ export class StringModule {
    */
   uuid(): string {
     // Optimized: use native crypto.randomUUID() when available and not seeded
-    if (this.random.seed === undefined && typeof crypto !== 'undefined' && crypto.randomUUID) {
+    if (!this.random.isSeeded() && typeof crypto !== 'undefined' && crypto.randomUUID) {
       return crypto.randomUUID()
     }
 
@@ -115,7 +115,7 @@ export class StringModule {
    */
   numeric(length = 10): string {
     // Optimized: use direct Math.random for unseeded case
-    if (this.random.seed === undefined) {
+    if (!this.random.isSeeded()) {
       let result = ''
       for (let i = 0; i < length; i++) {
         result += Math.floor(Math.random() * 10)

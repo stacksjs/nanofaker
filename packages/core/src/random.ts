@@ -11,6 +11,13 @@ export class Random {
   }
 
   /**
+   * Check if this Random instance is seeded
+   */
+  isSeeded(): boolean {
+    return this.seed !== undefined
+  }
+
+  /**
    * Generate a random number between 0 and 1
    */
   number(): number {
