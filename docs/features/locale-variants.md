@@ -133,7 +133,7 @@ bun add @mock-locale/{en-us,en-gb,es-mx}
 Enable auto-install to automatically download variants when needed:
 
 ```typescript
-// faker.config.ts
+// mock.config.ts
 export default {
   autoInstallLocales: true
 }

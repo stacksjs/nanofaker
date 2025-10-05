@@ -8,7 +8,7 @@
 
 import { Faker } from '../packages/core/src/index'
 
-// Method 1: Enable via config file (faker.config.ts)
+// Method 1: Enable via config file (mock.config.ts)
 // See faker.config.example.ts for configuration options
 
 // Method 2: Enable programmatically

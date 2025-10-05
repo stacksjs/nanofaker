@@ -6,7 +6,7 @@ ts-mocker can automatically install missing locale packages when you try to use 
 
 ### Method 1: Config File (Recommended)
 
-Create a `faker.config.ts` file in your project root:
+Create a `mock.config.ts` file in your project root:
 
 ```typescript
 import type { MockConfig } from 'ts-mocker'
@@ -47,7 +47,7 @@ When you try to use a locale that isn't installed:
    ```
    Error: Locale 'es' is not installed.
    Install it with: bun add @mock-locale/es
-   Or enable auto-install in your faker.config.ts
+   Or enable auto-install in your mock.config.ts
    ```
 
 2. **With auto-install enabled**:

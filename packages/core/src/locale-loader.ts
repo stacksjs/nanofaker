@@ -287,7 +287,7 @@ export class LocaleLoader {
         throw new Error(
           `Locale '${locale}' is not installed. Install it with: bun add ${packageName}\n`
           + `Or install all locales with: bun add @mock-locale/{af,ar,az,cs,da,de,en,eo,es,fa,fi,fr,he,hi,it,ja,ko,nl,no,pl,pt,sv,tl,tr,uk,zh,zu}\n`
-          + `Or enable auto-install in your faker.config.ts: { autoInstallLocales: true }`,
+          + `Or enable auto-install in your mock.config.ts: { autoInstallLocales: true }`,
         )
       }
 
