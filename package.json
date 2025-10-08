@@ -40,13 +40,13 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/src/index.js"
     },
     "./*": {
       "import": "./dist/*"
     }
   },
-  "module": "./dist/index.js",
+  "module": "./dist/src/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
     "ts-mocker": "./packages/core/dist/bin/cli.js",
