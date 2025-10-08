@@ -1,3 +1,26 @@
+[Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.2...v0.1.3)
+
+### 🧹 Chores
+
+- release v0.1.3 ([2af952d](https://github.com/stacksjs/ts-mocker/commit/2af952d))
+- adjust dist path ([220a498](https://github.com/stacksjs/ts-mocker/commit/220a498))
+- adjust meta image ([d816912](https://github.com/stacksjs/ts-mocker/commit/d816912))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
+[Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.2...HEAD)
+
+### 🧹 Chores
+
+- adjust dist path ([220a498](https://github.com/stacksjs/ts-mocker/commit/220a498))
+- adjust meta image ([d816912](https://github.com/stacksjs/ts-mocker/commit/d816912))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+
 [Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.1...v0.1.2)
 
 ### 🧹 Chores
