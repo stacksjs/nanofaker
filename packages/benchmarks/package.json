@@ -19,6 +19,6 @@
     "ts-mocker": "workspace:*"
   },
   "devDependencies": {
-    "@types/chance": "^1.1.6"
+    "@types/chance": "^1.1.7"
   }
 }
