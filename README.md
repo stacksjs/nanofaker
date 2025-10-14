@@ -13,33 +13,9 @@ A performance-focused and lightweight faker library for TypeScript with comprehe
 ## Features
 
 - ⚡️ **Performance-focused** - Built with speed and efficiency in mind
-- 🌍 **Multi-locale Support** - Complete translations for 26 languages:
-  - Afrikaans _(af)_
-  - Arabic _(ar)_
-  - Azerbaijani _(az)_
-  - Czech _(cs)_
-  - Danish _(da)_
-  - German _(de)_
-  - English _(en)_
-  - Esperanto _(eo)_
-  - Spanish _(es)_
-  - Persian/Farsi _(fa)_
-  - Finnish _(fi)_
-  - French _(fr)_
-  - Hebrew _(he)_
-  - Hindi _(hi)_
-  - Italian _(it)_
-  - Japanese _(ja)_
-  - Korean _(ko)_
-  - Dutch _(nl)_
-  - Norwegian _(no)_
-  - Polish _(pl)_
-  - Portuguese _(pt)_
-  - Swedish _(sv)_
-  - Filipino _(tl)_
-  - Turkish _(tr)_
-  - Ukrainian _(uk)_
-  - Chinese _(zh)_
+- 🌍 **Multi-locale Support** - Complete translations for 28 languages with 22+ regional variants:
+  - Afrikaans _(af)_, Arabic _(ar)_, Azerbaijani _(az)_, Czech _(cs)_, Danish _(da)_, German _(de)_, English _(en)_, Esperanto _(eo)_, Spanish _(es)_, Persian/Farsi _(fa)_, Finnish _(fi)_, French _(fr)_, Hebrew _(he)_, Hindi _(hi)_, Italian _(it)_, Japanese _(ja)_, Korean _(ko)_, Dutch _(nl)_, Norwegian _(no)_, Polish _(pl)_, Portuguese _(pt)_, Swedish _(sv)_, Filipino _(tl)_, Turkish _(tr)_, Ukrainian _(uk)_, Chinese Simplified _(zh-cn)_, Chinese Traditional _(zh-tw)_, Zulu _(zu)_
+  - Plus regional variants: `en-us`, `en-gb`, `en-ca`, `en-ie`, `en-in`, `en-za`, `en-gh`, `en-ng`, `en-hk`, `fr-ca`, `fr-ch`, `fr-be`, `fr-lu`, `fr-sn`, `de-at`, `de-ch`, `es-mx`, `pt-mz`, `af-za`, `zu-za`, and more!
 - 📦 **Lightweight** - Minimal dependencies and small bundle size
 - 💪 **Fully Typed** - Written in TypeScript with comprehensive type definitions
 - 🎯 **Comprehensive Data** - 16+ data categories including:
@@ -103,11 +79,22 @@ console.log(faker.person.fullName()) // "María García"
 // Or create a new instance with a specific locale
 const spanishFaker = new Faker({ locale: 'es' })
 const japaneseFaker = new Faker({ locale: 'ja' })
-const chineseFaker = new Faker({ locale: 'zh' })
+const chineseSimplifiedFaker = new Faker({ locale: 'zh-cn' })
+const chineseTraditionalFaker = new Faker({ locale: 'zh-tw' })
 
 console.log(spanishFaker.person.fullName()) // "Carlos López"
 console.log(japaneseFaker.person.fullName()) // "田中太郎"
-console.log(chineseFaker.person.fullName()) // "王伟"
+console.log(chineseSimplifiedFaker.person.fullName()) // "王伟"
+console.log(chineseTraditionalFaker.person.fullName()) // "陳小明"
+
+// Regional variants provide localized data
+const usFaker = new Faker({ locale: 'en-us' })
+const ukFaker = new Faker({ locale: 'en-gb' })
+const canadianFrenchFaker = new Faker({ locale: 'fr-ca' })
+
+console.log(usFaker.address.city()) // "New York"
+console.log(ukFaker.address.city()) // "London"
+console.log(canadianFrenchFaker.address.city()) // "Montréal"
 ```
 
 ### Available Locales
@@ -137,7 +124,56 @@ console.log(chineseFaker.person.fullName()) // "王伟"
 - `tl` - Filipino
 - `tr` - Turkish
 - `uk` - Ukrainian
-- `zh` - Chinese
+- `zh-cn` - Chinese (Simplified)
+- `zh-tw` - Chinese (Traditional)
+- `zu` - Zulu
+
+#### Regional Variants
+
+Many languages also have regional variants with localized data for specific countries:
+
+**English Variants:**
+
+- `en-us` - English (United States)
+- `en-gb` - English (United Kingdom)
+- `en-ca` - English (Canada)
+- `en-ie` - English (Ireland)
+- `en-in` - English (India)
+- `en-za` - English (South Africa)
+- `en-gh` - English (Ghana)
+- `en-ng` - English (Nigeria)
+- `en-hk` - English (Hong Kong)
+
+**French Variants:**
+
+- `fr-ca` - French (Canada)
+- `fr-ch` - French (Switzerland)
+- `fr-be` - French (Belgium)
+- `fr-lu` - French (Luxembourg)
+- `fr-sn` - French (Senegal)
+
+**German Variants:**
+
+- `de-at` - German (Austria)
+- `de-ch` - German (Switzerland)
+
+**Spanish Variants:**
+
+- `es-mx` - Spanish (Mexico)
+
+**Portuguese Variants:**
+
+- `pt-mz` - Portuguese (Mozambique)
+
+**Afrikaans Variants:**
+
+- `af-za` - Afrikaans (South Africa)
+
+**Zulu Variants:**
+
+- `zu-za` - Zulu (South Africa)
+
+These regional variants include country-specific data such as local cities, addresses, phone formats, and cultural references.
 
 ### API Examples
 
@@ -309,7 +345,7 @@ ts-mocker methods food
 
 ### Options
 
-- `--locale <locale>` - Use a specific locale (af, ar, az, cs, da, de, en, eo, es, fa, fi, fr, he, hi, it, ja, ko, nl, no, pl, pt, sv, tl, tr, uk, zh)
+- `--locale <locale>` - Use a specific locale (af, ar, az, cs, da, de, en, eo, es, fa, fi, fr, he, hi, it, ja, ko, nl, no, pl, pt, sv, tl, tr, uk, zh-cn, zh-tw, zu)
 - `--count <count>` - Number of items to generate
 - `--seed <seed>` - Seed for reproducible results
 - `--json` - Output as JSON

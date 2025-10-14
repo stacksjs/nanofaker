@@ -28,7 +28,7 @@ ts-mocker generate <category> <method> [options]
 
 **Options:**
 
-- `--locale <locale>` - Locale to use (af, ar, az, cs, da, de, en, eo, es, fa, fi, fr, he, hi, it, ja, ko, nl, no, pl, pt, sv, tl, tr, uk, zh)
+- `--locale <locale>` - Locale to use (af, ar, az, cs, da, de, en, eo, es, fa, fi, fr, he, hi, it, ja, ko, nl, no, pl, pt, sv, tl, tr, uk, zh-cn, zh-tw, zu)
 - `--count <count>` - Number of items to generate (default: 1)
 - `--seed <seed>` - Seed for reproducible results
 - `--json` - Output as JSON
@@ -116,7 +116,7 @@ List all available locales.
 ts-mocker locales
 ```
 
-Shows all 26 supported locales:
+Shows all 28 supported locales:
 
 - af - Afrikaans
 - ar - Arabic
@@ -143,7 +143,9 @@ Shows all 26 supported locales:
 - tl - Filipino
 - tr - Turkish
 - uk - Ukrainian
-- zh - Chinese
+- zh-cn - Chinese (Simplified)
+- zh-tw - Chinese (Traditional)
+- zu - Zulu
 
 ### batch
 

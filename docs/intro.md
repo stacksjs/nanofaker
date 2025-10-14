@@ -6,7 +6,7 @@
 
 # ts-mocker
 
-ts-mocker is a modern, lightweight TypeScript library for generating fake data. Built with performance and developer experience in mind, it provides comprehensive locale support across 16 languages with complete translations for all data categories.
+ts-mocker is a modern, lightweight TypeScript library for generating fake data. Built with performance and developer experience in mind, it provides comprehensive locale support across 28 languages with complete translations for all data categories.
 
 ## Why ts-mocker?
 
@@ -16,24 +16,36 @@ Built with performance as a top priority, ts-mocker is optimized for speed and e
 
 ### Comprehensive Locale Support
 
-Unlike other faker libraries with limited or incomplete translations, ts-mocker provides **complete** translations across all 16 data categories for 16 different languages:
+Unlike other faker libraries with limited or incomplete translations, ts-mocker provides **complete** translations across all 16 data categories for 28 different languages:
 
-- **English (en)** - Full coverage
-- **Spanish (es)** - Full coverage
-- **French (fr)** - Full coverage
-- **German (de)** - Full coverage
-- **Italian (it)** - Full coverage
-- **Portuguese (pt)** - Full coverage
-- **Japanese (ja)** - Full coverage
-- **Filipino (tl)** - Full coverage
-- **Chinese (zh)** - Full coverage
-- **Dutch (nl)** - Full coverage
-- **Korean (ko)** - Full coverage
-- **Norwegian (no)** - Full coverage
-- **Swedish (sv)** - Full coverage
+- **Afrikaans (af)** - Full coverage
+- **Arabic (ar)** - Full coverage
+- **Azerbaijani (az)** - Full coverage
+- **Czech (cs)** - Full coverage
 - **Danish (da)** - Full coverage
-- **Ukrainian (uk)** - Full coverage
+- **German (de)** - Full coverage
+- **English (en)** - Full coverage
+- **Esperanto (eo)** - Full coverage
+- **Spanish (es)** - Full coverage
+- **Persian/Farsi (fa)** - Full coverage
+- **Finnish (fi)** - Full coverage
+- **French (fr)** - Full coverage
+- **Hebrew (he)** - Full coverage
 - **Hindi (hi)** - Full coverage
+- **Italian (it)** - Full coverage
+- **Japanese (ja)** - Full coverage
+- **Korean (ko)** - Full coverage
+- **Dutch (nl)** - Full coverage
+- **Norwegian (no)** - Full coverage
+- **Polish (pl)** - Full coverage
+- **Portuguese (pt)** - Full coverage
+- **Swedish (sv)** - Full coverage
+- **Filipino (tl)** - Full coverage
+- **Turkish (tr)** - Full coverage
+- **Ukrainian (uk)** - Full coverage
+- **Chinese Simplified (zh-cn)** - Full coverage
+- **Chinese Traditional (zh-tw)** - Full coverage
+- **Zulu (zu)** - Full coverage
 
 ### Rich Data Categories
 

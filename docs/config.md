@@ -47,24 +47,36 @@ const customFaker: Faker = faker.locale('en')
 
 ## Available Locales
 
-ts-mocker supports the following locales with complete translations across all categories:
+ts-mocker supports 28 locales with complete translations across all categories:
 
-- `en` - English
-- `es` - Spanish
-- `fr` - French
-- `de` - German
-- `it` - Italian
-- `pt` - Portuguese
-- `ja` - Japanese
-- `tl` - Filipino
-- `zh` - Chinese
-- `nl` - Dutch
-- `ko` - Korean
-- `no` - Norwegian
-- `sv` - Swedish
+- `af` - Afrikaans
+- `ar` - Arabic
+- `az` - Azerbaijani
+- `cs` - Czech
 - `da` - Danish
-- `uk` - Ukrainian
+- `de` - German
+- `en` - English
+- `eo` - Esperanto
+- `es` - Spanish
+- `fa` - Persian/Farsi
+- `fi` - Finnish
+- `fr` - French
+- `he` - Hebrew
 - `hi` - Hindi
+- `it` - Italian
+- `ja` - Japanese
+- `ko` - Korean
+- `nl` - Dutch
+- `no` - Norwegian
+- `pl` - Polish
+- `pt` - Portuguese
+- `sv` - Swedish
+- `tl` - Filipino
+- `tr` - Turkish
+- `uk` - Ukrainian
+- `zh-cn` - Chinese (Simplified)
+- `zh-tw` - Chinese (Traditional)
+- `zu` - Zulu
 
 All locales have full coverage across all 16 data categories.
 

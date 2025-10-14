@@ -4,7 +4,7 @@ ts-mocker provides comprehensive locale support with **complete translations** a
 
 ## Supported Locales
 
-All 26 locales have full coverage across all 16 data categories:
+All 28 locales have full coverage across all 16 data categories:
 
 ### Afrikaans (af)
 
@@ -332,17 +332,46 @@ console.log(faker.person.fullName()) // "Олександр Шевченко"
 console.log(faker.address.city()) // "Київ"
 ```
 
-### Chinese (zh)
+### Chinese Simplified (zh-cn)
 
 - **Status**: Full coverage ✓
 - **Categories**: All 16 categories fully translated
+- **Region**: Mainland China
 
 ```ts
 import { faker } from 'ts-mocker'
 
-faker.locale = 'zh'
+faker.locale = 'zh-cn'
 console.log(faker.person.fullName()) // "王伟"
 console.log(faker.address.city()) // "北京"
+```
+
+### Chinese Traditional (zh-tw)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+- **Region**: Taiwan
+
+```ts
+import { faker } from 'ts-mocker'
+
+faker.locale = 'zh-tw'
+console.log(faker.person.fullName()) // "陳小明"
+console.log(faker.address.city()) // "台北"
+```
+
+### Zulu (zu)
+
+- **Status**: Full coverage ✓
+- **Categories**: All 16 categories fully translated
+- **Region**: South Africa
+
+```ts
+import { faker } from 'ts-mocker'
+
+faker.locale = 'zu'
+console.log(faker.person.fullName()) // "Sipho Dlamini"
+console.log(faker.address.city()) // "Durban"
 ```
 
 ## Multi-Locale Applications

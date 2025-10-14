@@ -33,35 +33,45 @@ console.log(faker.person.fullName()) // "María García"
 // Or create a locale-specific instance
 const spanishFaker = faker.locale('es')
 const japaneseFaker = faker.locale('ja')
-const chineseFaker = faker.locale('zh')
+const chineseSimplifiedFaker = faker.locale('zh-cn')
+const chineseTraditionalFaker = faker.locale('zh-tw')
 
 console.log(spanishFaker.person.fullName()) // "Carlos López"
 console.log(japaneseFaker.person.fullName()) // "田中太郎"
-console.log(chineseFaker.person.fullName()) // "王伟"
+console.log(chineseSimplifiedFaker.person.fullName()) // "王伟"
+console.log(chineseTraditionalFaker.person.fullName()) // "陳小明"
 ```
 
 ## Available Locales
 
-- `en` - English
-- `es` - Spanish
-- `fr` - French
-- `de` - German
-- `it` - Italian
-- `pt` - Portuguese
-- `ja` - Japanese
-- `tl` - Filipino
-- `zh` - Chinese
-- `nl` - Dutch
-- `ko` - Korean
-- `no` - Norwegian
-- `sv` - Swedish
-- `da` - Danish
-- `uk` - Ukrainian
-- `hi` - Hindi
-- `fi` - Finnish
-- `tr` - Turkish
-- `pl` - Polish
+- `af` - Afrikaans
+- `ar` - Arabic
+- `az` - Azerbaijani
 - `cs` - Czech
+- `da` - Danish
+- `de` - German
+- `en` - English
+- `eo` - Esperanto
+- `es` - Spanish
+- `fa` - Persian/Farsi
+- `fi` - Finnish
+- `fr` - French
+- `he` - Hebrew
+- `hi` - Hindi
+- `it` - Italian
+- `ja` - Japanese
+- `ko` - Korean
+- `nl` - Dutch
+- `no` - Norwegian
+- `pl` - Polish
+- `pt` - Portuguese
+- `sv` - Swedish
+- `tl` - Filipino
+- `tr` - Turkish
+- `uk` - Ukrainian
+- `zh-cn` - Chinese (Simplified)
+- `zh-tw` - Chinese (Traditional)
+- `zu` - Zulu
 
 ## API Examples
 
