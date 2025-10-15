@@ -1,3 +1,52 @@
+[Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.3...v0.1.4)
+
+### 🐛 Bug Fixes
+
+- tests ([6f3005d](https://github.com/stacksjs/ts-mocker/commit/6f3005d))
+
+### 🧹 Chores
+
+- release v0.1.4 ([85f1b8a](https://github.com/stacksjs/ts-mocker/commit/85f1b8a))
+- wip ([79a934e](https://github.com/stacksjs/ts-mocker/commit/79a934e))
+- wip ([456edff](https://github.com/stacksjs/ts-mocker/commit/456edff))
+- **deps**: update dependency actions/checkout to v5.0.0 (#14) ([e41e998](https://github.com/stacksjs/ts-mocker/commit/e41e998)) ([#14](https://github.com/stacksjs/ts-mocker/issues/14), [#14](https://github.com/stacksjs/ts-mocker/issues/14))
+- **deps**: update all non-major dependencies (#15) ([c77a211](https://github.com/stacksjs/ts-mocker/commit/c77a211)) ([#15](https://github.com/stacksjs/ts-mocker/issues/15), [#15](https://github.com/stacksjs/ts-mocker/issues/15))
+- **deps**: update dependency buddy-bot to 0.9.7 (#5) ([69351b3](https://github.com/stacksjs/ts-mocker/commit/69351b3)) ([#5](https://github.com/stacksjs/ts-mocker/issues/5), [#5](https://github.com/stacksjs/ts-mocker/issues/5))
+- **deps**: update dependency @ngneat/falso to 8.0.2 (#11) ([d371ca0](https://github.com/stacksjs/ts-mocker/commit/d371ca0)) ([#11](https://github.com/stacksjs/ts-mocker/issues/11), [#11](https://github.com/stacksjs/ts-mocker/issues/11))
+- **deps**: update dependency actions/checkout to v5.0.0 (#4) ([9673eb9](https://github.com/stacksjs/ts-mocker/commit/9673eb9)) ([#4](https://github.com/stacksjs/ts-mocker/issues/4), [#4](https://github.com/stacksjs/ts-mocker/issues/4))
+- wip ([2f799cc](https://github.com/stacksjs/ts-mocker/commit/2f799cc))
+- wip ([46e76a1](https://github.com/stacksjs/ts-mocker/commit/46e76a1))
+- improve docs ([886d73f](https://github.com/stacksjs/ts-mocker/commit/886d73f))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+- glennmichael123 <gtorregosa@gmail.com>
+
+[Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.3...HEAD)
+
+### 🐛 Bug Fixes
+
+- tests ([6f3005d](https://github.com/stacksjs/ts-mocker/commit/6f3005d))
+
+### 🧹 Chores
+
+- wip ([79a934e](https://github.com/stacksjs/ts-mocker/commit/79a934e))
+- wip ([456edff](https://github.com/stacksjs/ts-mocker/commit/456edff))
+- **deps**: update dependency actions/checkout to v5.0.0 (#14) ([e41e998](https://github.com/stacksjs/ts-mocker/commit/e41e998)) ([#14](https://github.com/stacksjs/ts-mocker/issues/14), [#14](https://github.com/stacksjs/ts-mocker/issues/14))
+- **deps**: update all non-major dependencies (#15) ([c77a211](https://github.com/stacksjs/ts-mocker/commit/c77a211)) ([#15](https://github.com/stacksjs/ts-mocker/issues/15), [#15](https://github.com/stacksjs/ts-mocker/issues/15))
+- **deps**: update dependency buddy-bot to 0.9.7 (#5) ([69351b3](https://github.com/stacksjs/ts-mocker/commit/69351b3)) ([#5](https://github.com/stacksjs/ts-mocker/issues/5), [#5](https://github.com/stacksjs/ts-mocker/issues/5))
+- **deps**: update dependency @ngneat/falso to 8.0.2 (#11) ([d371ca0](https://github.com/stacksjs/ts-mocker/commit/d371ca0)) ([#11](https://github.com/stacksjs/ts-mocker/issues/11), [#11](https://github.com/stacksjs/ts-mocker/issues/11))
+- **deps**: update dependency actions/checkout to v5.0.0 (#4) ([9673eb9](https://github.com/stacksjs/ts-mocker/commit/9673eb9)) ([#4](https://github.com/stacksjs/ts-mocker/issues/4), [#4](https://github.com/stacksjs/ts-mocker/issues/4))
+- wip ([2f799cc](https://github.com/stacksjs/ts-mocker/commit/2f799cc))
+- wip ([46e76a1](https://github.com/stacksjs/ts-mocker/commit/46e76a1))
+- improve docs ([886d73f](https://github.com/stacksjs/ts-mocker/commit/886d73f))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+- glennmichael123 <gtorregosa@gmail.com>
+
 [Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.2...v0.1.3)
 
 ### 🧹 Chores
