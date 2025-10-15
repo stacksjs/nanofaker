@@ -251,23 +251,33 @@ export class LocaleLoader {
     }
 
     try {
-      // Try to find the workspace package directory
-      const workspaceRoot = process.cwd()
-      const packageDir = join(workspaceRoot, 'packages', localeInfo.packageName)
-
-      if (!existsSync(join(packageDir, 'dist', 'index.js'))) {
-        return null
-      }
-
-      // Try relative import from the workspace package
-      // We're in packages/core/src, so go up to packages and into the locale package
-      const relativePath = `../../../${localeInfo.packageName}/dist/index.js`
+      // Get the current file directory (packages/core/src)
+      const currentDir = import.meta.dirname || __dirname || new URL('.', import.meta.url).pathname
+      
+      // From packages/core/src, go up to packages/, then into the locale package
+      const relativePath = `../../${localeInfo.packageName}/dist/index.js`
       const module = await import(relativePath)
-
+      
       return module[localeInfo.normalized] || module[localeInfo.language] || module.default
     }
-    catch {
-      return null
+    catch (error) {
+      // If relative import fails, try with file:// protocol for absolute path
+      try {
+        const workspaceRoot = process.cwd()
+        const packageDir = join(workspaceRoot, 'packages', localeInfo.packageName, 'dist', 'index.js')
+        
+        if (!existsSync(packageDir)) {
+          return null
+        }
+
+        const absolutePath = `file://${packageDir}`
+        const module = await import(absolutePath)
+        
+        return module[localeInfo.normalized] || module[localeInfo.language] || module.default
+      }
+      catch {
+        return null
+      }
     }
   }
 
@@ -306,7 +316,17 @@ export class LocaleLoader {
           const installed = installPackage(packageName)
 
           if (installed) {
-            // Try importing again after installation
+            // If we're in a workspace and dealing with a mock-locale package,
+            // prefer workspace import first since installPackage might have returned true
+            // due to a dependency loop (which is expected in workspace environments)
+            if (isInWorkspace() && packageName.startsWith('@mock-locale/')) {
+              const workspaceResult = await this.tryWorkspaceImport(locale, localeInfo)
+              if (workspaceResult) {
+                return workspaceResult
+              }
+            }
+
+            // Try importing again after installation (fallback)
             try {
               // Use the same packageName that was attempted originally
               const module = await import(packageName)
@@ -315,7 +335,7 @@ export class LocaleLoader {
               return module[localeInfo.normalized] || module[localeInfo.language] || module.default
             }
             catch (retryError) {
-              // If we're in a workspace and the regular import failed, try workspace import as fallback
+              // Final fallback to workspace import if regular import failed
               if (isInWorkspace() && packageName.startsWith('@mock-locale/')) {
                 const workspaceResult = await this.tryWorkspaceImport(locale, localeInfo)
                 if (workspaceResult) {
