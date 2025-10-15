@@ -1,9 +1,29 @@
 import { spawnSync } from 'node:child_process'
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import process from 'node:process'
 
 export type PackageManager = 'bun' | 'npm' | 'yarn' | 'pnpm'
+
+/**
+ * Check if we're running in a workspace environment
+ */
+export function isInWorkspace(): boolean {
+  const cwd = process.cwd()
+  const packageJsonPath = join(cwd, 'package.json')
+
+  if (!existsSync(packageJsonPath)) {
+    return false
+  }
+
+  try {
+    const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf-8'))
+    return !!(packageJson.workspaces || packageJson.workspace)
+  }
+  catch {
+    return false
+  }
+}
 
 /**
  * Detect the package manager used in the current project
@@ -36,6 +56,9 @@ export function installPackage(packageName: string, options: { silent?: boolean 
   const pm = detectPackageManager()
   const { silent = false } = options
 
+  // Note: We don't skip installation for workspace packages here anymore.
+  // Instead, we let the installation attempt proceed and handle dependency loop errors gracefully.
+
   if (!silent) {
     // eslint-disable-next-line no-console
     console.log(`\n📦 Installing ${packageName} using ${pm}...`)
@@ -52,9 +75,25 @@ export function installPackage(packageName: string, options: { silent?: boolean 
 
   try {
     const result = spawnSync(cmd, args, {
-      stdio: silent ? 'pipe' : 'inherit',
+      stdio: 'pipe',
       shell: true,
     })
+
+    // Capture output regardless of silent mode for error analysis
+    const stdout = result.stdout?.toString() || ''
+    const stderr = result.stderr?.toString() || ''
+    const combinedOutput = stdout + stderr
+
+    if (!silent) {
+      // Show the output to user if not silent
+      if (stdout) {
+        // eslint-disable-next-line no-console
+        console.log(stdout)
+      }
+      if (stderr) {
+        console.error(stderr)
+      }
+    }
 
     if (result.status === 0) {
       if (!silent) {
@@ -64,6 +103,28 @@ export function installPackage(packageName: string, options: { silent?: boolean 
       return true
     }
     else {
+      // Get error output to check for specific error types
+      const errorOutput = combinedOutput
+
+      // Check for dependency loop error - be more comprehensive in matching
+      const hasDependencyLoop = errorOutput.toLowerCase().includes('dependency loop')
+        || errorOutput.includes('DependencyLoop')
+        || errorOutput.includes('has a dependency loop')
+        || errorOutput.includes('An internal error occurred (DependencyLoop)')
+
+      if (hasDependencyLoop) {
+        if (!silent) {
+          // eslint-disable-next-line no-console
+          console.log(`\n⚠️  Package ${packageName} is already available in the workspace and cannot be installed separately due to a dependency loop.`)
+          if (isInWorkspace()) {
+            // eslint-disable-next-line no-console
+            console.log(`   This is expected when running in a workspace environment. The package should be available for import.`)
+          }
+        }
+        // Return true since the package should be available in the workspace
+        return true
+      }
+
       if (!silent) {
         console.error(`✗ Failed to install ${packageName}`)
       }

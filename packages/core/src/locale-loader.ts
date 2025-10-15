@@ -1,8 +1,11 @@
 import type { LocaleDefinition } from './types'
+import { existsSync } from 'node:fs'
+import { join } from 'node:path'
+import process from 'node:process'
 import { config } from './config'
 import { en } from './en'
 import { getLocaleFallbackChain, getLocalePackageName, mergeLocales, parseLocale } from './utils/locale-utils'
-import { installPackage } from './utils/package-manager'
+import { installPackage, isInWorkspace } from './utils/package-manager'
 
 /**
  * Locale loader with dynamic import support and caching
@@ -240,6 +243,35 @@ export class LocaleLoader {
   }
 
   /**
+   * Try to import a locale from workspace packages using relative paths
+   */
+  private static async tryWorkspaceImport(locale: string, localeInfo: any): Promise<LocaleDefinition | null> {
+    if (!isInWorkspace()) {
+      return null
+    }
+
+    try {
+      // Try to find the workspace package directory
+      const workspaceRoot = process.cwd()
+      const packageDir = join(workspaceRoot, 'packages', localeInfo.packageName)
+
+      if (!existsSync(join(packageDir, 'dist', 'index.js'))) {
+        return null
+      }
+
+      // Try relative import from the workspace package
+      // We're in packages/core/src, so go up to packages and into the locale package
+      const relativePath = `../../../${localeInfo.packageName}/dist/index.js`
+      const module = await import(relativePath)
+
+      return module[localeInfo.normalized] || module[localeInfo.language] || module.default
+    }
+    catch {
+      return null
+    }
+  }
+
+  /**
    * Dynamically import a locale module
    */
   private static async loadLocaleModule(locale: string): Promise<LocaleDefinition> {
@@ -258,6 +290,14 @@ export class LocaleLoader {
 
       // Check if it's a module not found error
       if (errorMessage.includes('Cannot find') || errorMessage.includes('not found') || errorMessage.includes('ModuleNotFound')) {
+        // First, try workspace import if we're in a workspace
+        if (isInWorkspace() && packageName.startsWith('@mock-locale/')) {
+          const workspaceResult = await this.tryWorkspaceImport(locale, localeInfo)
+          if (workspaceResult) {
+            return workspaceResult
+          }
+        }
+
         // Try to auto-install if enabled
         if (config.autoInstallLocales) {
           // eslint-disable-next-line no-console
@@ -268,10 +308,23 @@ export class LocaleLoader {
           if (installed) {
             // Try importing again after installation
             try {
-              const module = await import(`@mock-locale/${locale}`)
-              return module[locale]
+              // Use the same packageName that was attempted originally
+              const module = await import(packageName)
+              // Try to get the locale data using the normalized name (e.g., en_US)
+              // or the language code (e.g., en)
+              return module[localeInfo.normalized] || module[localeInfo.language] || module.default
             }
             catch (retryError) {
+              // If we're in a workspace and the regular import failed, try workspace import as fallback
+              if (isInWorkspace() && packageName.startsWith('@mock-locale/')) {
+                const workspaceResult = await this.tryWorkspaceImport(locale, localeInfo)
+                if (workspaceResult) {
+                  return workspaceResult
+                }
+                throw new Error(
+                  `Locale '${locale}' workspace package is not properly built or linked. Please ensure the package is built with 'bun run build' in the ${packageName.replace('@mock-locale/', 'packages/')} directory.`,
+                )
+              }
               throw new Error(
                 `Failed to load locale '${locale}' after installation: ${retryError instanceof Error ? retryError.message : String(retryError)}`,
               )
