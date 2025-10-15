@@ -251,28 +251,25 @@ export class LocaleLoader {
     }
 
     try {
-      // Get the current file directory (packages/core/src)
-      const currentDir = import.meta.dirname || __dirname || new URL('.', import.meta.url).pathname
-      
       // From packages/core/src, go up to packages/, then into the locale package
       const relativePath = `../../${localeInfo.packageName}/dist/index.js`
       const module = await import(relativePath)
-      
+
       return module[localeInfo.normalized] || module[localeInfo.language] || module.default
     }
-    catch (error) {
+    catch {
       // If relative import fails, try with file:// protocol for absolute path
       try {
         const workspaceRoot = process.cwd()
         const packageDir = join(workspaceRoot, 'packages', localeInfo.packageName, 'dist', 'index.js')
-        
+
         if (!existsSync(packageDir)) {
           return null
         }
 
         const absolutePath = `file://${packageDir}`
         const module = await import(absolutePath)
-        
+
         return module[localeInfo.normalized] || module[localeInfo.language] || module.default
       }
       catch {
