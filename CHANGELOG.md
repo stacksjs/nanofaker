@@ -1,3 +1,30 @@
+[Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.4...v0.1.5)
+
+### 🧹 Chores
+
+- release v0.1.5 ([006e564](https://github.com/stacksjs/ts-mocker/commit/006e564))
+- wip ([947aa71](https://github.com/stacksjs/ts-mocker/commit/947aa71))
+- **deps**: update all non-major dependencies (#17) ([4eb39bd](https://github.com/stacksjs/ts-mocker/commit/4eb39bd)) ([#17](https://github.com/stacksjs/ts-mocker/issues/17), [#17](https://github.com/stacksjs/ts-mocker/issues/17))
+- **deps**: update dependency actions/checkout to v5.0.0 (#16) ([42942dd](https://github.com/stacksjs/ts-mocker/commit/42942dd)) ([#16](https://github.com/stacksjs/ts-mocker/issues/16), [#16](https://github.com/stacksjs/ts-mocker/issues/16))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+- glennmichael123 <gtorregosa@gmail.com>
+
+[Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.4...HEAD)
+
+### 🧹 Chores
+
+- wip ([947aa71](https://github.com/stacksjs/ts-mocker/commit/947aa71))
+- **deps**: update all non-major dependencies (#17) ([4eb39bd](https://github.com/stacksjs/ts-mocker/commit/4eb39bd)) ([#17](https://github.com/stacksjs/ts-mocker/issues/17), [#17](https://github.com/stacksjs/ts-mocker/issues/17))
+- **deps**: update dependency actions/checkout to v5.0.0 (#16) ([42942dd](https://github.com/stacksjs/ts-mocker/commit/42942dd)) ([#16](https://github.com/stacksjs/ts-mocker/issues/16), [#16](https://github.com/stacksjs/ts-mocker/issues/16))
+
+### Contributors
+
+- Chris <chrisbreuer93@gmail.com>
+- glennmichael123 <gtorregosa@gmail.com>
+
 [Compare changes](https://github.com/stacksjs/ts-mocker/compare/v0.1.3...v0.1.4)
 
 ### 🐛 Bug Fixes
