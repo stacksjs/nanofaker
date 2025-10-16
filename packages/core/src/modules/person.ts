@@ -1,5 +1,11 @@
 import type { Random } from '../random'
-import type { LocaleDefinition, PersonFullNameOptions, PersonNameOptions } from '../types'
+import type {
+  LocaleDefinition,
+  PersonAdvancedOptions,
+  PersonFullNameOptions,
+  PersonNameOptions,
+} from '../types'
+import { applyRelationships, selectWeightedItem, validateData } from '../utils/advanced-data'
 
 export class PersonModule {
   constructor(
@@ -150,5 +156,185 @@ export class PersonModule {
    */
   name(): string {
     return this.fullName()
+  }
+
+  /**
+   * Generate a first name with advanced options
+   * @example faker.person.firstNameAdvanced({ constraints: { gender: 'male' } })
+   * @example faker.person.firstNameAdvanced({ weighted: { items: [{ item: 'John', weight: 100 }] } })
+   */
+  firstNameAdvanced(options?: PersonAdvancedOptions): string {
+    let result: string
+
+    // Apply constraints first
+    if (options?.constraints) {
+      result = this.firstName({ gender: options.constraints.gender })
+    }
+    else {
+      result = this.firstName({ gender: options?.gender })
+    }
+
+    // Apply weighted selection if provided
+    if (options?.weighted) {
+      result = selectWeightedItem(this.random, options.weighted)
+    }
+
+    // Apply relationships
+    if (options?.relationships) {
+      const dataWithRelationships = applyRelationships(
+        { firstName: result, gender: options?.gender || options?.constraints?.gender },
+        options.relationships,
+      )
+      result = dataWithRelationships.firstName || result
+    }
+
+    // Validate the result
+    if (options?.validation) {
+      const validation = validateData(result, options.validation)
+      if (!validation.isValid) {
+        // If validation fails and strict mode is enabled, throw error
+        // Otherwise, fall back to regular generation
+        if (options.validation.strict) {
+          throw new Error(`Validation failed: ${validation.errors.join(', ')}`)
+        }
+        result = this.firstName({ gender: options?.gender || options?.constraints?.gender })
+      }
+    }
+
+    return result
+  }
+
+  /**
+   * Generate a full name with advanced options
+   * @example faker.person.fullNameAdvanced({ constraints: { gender: 'female' }, validation: { rules: [{ validator: (name) => name.length > 5 }] } })
+   */
+  fullNameAdvanced(options?: PersonAdvancedOptions): string {
+    let result: string
+
+    // Generate base name with constraints
+    if (options?.constraints) {
+      result = this.fullName({
+        gender: options.constraints.gender,
+        prefix: options.prefix,
+        suffix: options.suffix,
+      })
+    }
+    else {
+      result = this.fullName(options)
+    }
+
+    // Apply weighted selection if provided
+    if (options?.weighted) {
+      result = selectWeightedItem(this.random, options.weighted)
+    }
+
+    // Apply relationships
+    if (options?.relationships) {
+      const dataWithRelationships = applyRelationships(
+        { fullName: result, gender: options?.gender || options?.constraints?.gender },
+        options.relationships,
+      )
+      result = dataWithRelationships.fullName || result
+    }
+
+    // Validate the result
+    if (options?.validation) {
+      const validation = validateData(result, options.validation)
+      if (!validation.isValid) {
+        if (options.validation.strict) {
+          throw new Error(`Validation failed: ${validation.errors.join(', ')}`)
+        }
+        // Fall back to regular generation
+        result = this.fullName({
+          gender: options?.gender || options?.constraints?.gender,
+          prefix: options?.prefix,
+          suffix: options?.suffix,
+        })
+      }
+    }
+
+    return result
+  }
+
+  /**
+   * Generate a realistic person profile with related data
+   * @example faker.person.profile({ constraints: { country: 'United States' } })
+   */
+  profile(options?: PersonAdvancedOptions): {
+    firstName: string
+    lastName: string
+    fullName: string
+    gender: string
+    jobTitle: string
+    age?: number
+    email?: string
+  } {
+    const gender = options?.constraints?.gender || options?.gender || (this.gender() as 'male' | 'female' | 'neutral')
+    const firstName = this.firstNameAdvanced({ ...options, gender })
+    const lastName = this.lastName()
+    const fullName = `${firstName} ${lastName}`
+
+    // Generate related data
+    const profile = {
+      firstName,
+      lastName,
+      fullName,
+      gender,
+      jobTitle: this.jobTitle(),
+      age: options?.constraints?.ageRange
+        ? this.random.int(options.constraints.ageRange.min, options.constraints.ageRange.max)
+        : this.random.int(18, 80),
+    }
+
+    // Apply relationships if provided
+    if (options?.relationships) {
+      return applyRelationships(profile, options.relationships)
+    }
+
+    return profile
+  }
+
+  /**
+   * Generate multiple people with consistent relationships
+   * @example faker.person.family({ constraints: { country: 'United States' } })
+   */
+  family(options?: PersonAdvancedOptions & { size?: number }): {
+    members: Array<{
+      firstName: string
+      lastName: string
+      fullName: string
+      gender: string
+      relationship: string
+    }>
+    lastName: string
+  } {
+    const size = options?.size || this.random.int(2, 6)
+    const lastName = this.lastName()
+    const relationships = ['parent', 'parent', 'child', 'child', 'child', 'grandparent']
+
+    const members = []
+
+    for (let i = 0; i < size; i++) {
+      const relationship = relationships[i] || 'relative'
+      const gender = relationship === 'parent' || relationship === 'grandparent'
+        ? this.random.weightedBoolean(0.6) ? 'male' : 'female' // Slight bias toward male for older generations
+        : this.random.boolean() ? 'male' : 'female'
+
+      const firstName = this.firstNameAdvanced({
+        ...options,
+        gender,
+        constraints: { ...options?.constraints, gender },
+      })
+
+      members.push({
+        firstName,
+        lastName,
+        fullName: `${firstName} ${lastName}`,
+        gender,
+        relationship,
+      })
+    }
+
+    return { members, lastName }
   }
 }

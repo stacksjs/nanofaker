@@ -33,6 +33,7 @@ export { VehicleModule } from './modules/vehicle'
 export { WordModule } from './modules/word'
 export * from './random'
 export * from './types'
+export * from './utils/advanced-data'
 export * from './utils/package-manager'
 export const faker: Faker = new Faker()
 

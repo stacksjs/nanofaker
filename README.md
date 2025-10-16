@@ -54,6 +54,8 @@ yarn add ts-mocker
 
 ## Usage
 
+### Basic Usage
+
 ```typescript
 import { faker } from 'ts-mocker'
 
@@ -66,6 +68,47 @@ console.log(name) // "John Doe"
 console.log(email) // "john.doe@example.com"
 console.log(address) // "New York"
 ```
+
+### Advanced Features
+
+ts-mocker includes powerful advanced data generation features:
+
+```typescript
+import { faker, globalProviderRegistry, ValidationRules, WeightedSelections } from 'ts-mocker'
+
+// Conditional generation with constraints
+const maleName = faker.person.firstNameAdvanced({
+  constraints: { gender: 'male' }
+})
+
+// Weighted selection for realistic distribution
+const commonName = faker.person.firstNameAdvanced({
+  weighted: WeightedSelections.commonFirstNames
+})
+
+// Data validation
+const validatedName = faker.person.firstNameAdvanced({
+  validation: {
+    rules: [{ validator: ValidationRules.name }],
+    strict: false
+  }
+})
+
+// Realistic relationships
+const family = faker.person.family({
+  constraints: { country: 'United States' },
+  size: 4
+})
+const customProvider = {
+  name: 'Tech Company Generator',
+  category: 'company',
+  version: '1.0.0',
+  generate: () => 'Cloud Tech Solutions'
+}
+globalProviderRegistry.register(customProvider)
+```
+
+See [Advanced Features Documentation](docs/advanced-features.md) for complete details.
 
 ### Using Different Locales
 

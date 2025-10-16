@@ -127,4 +127,105 @@ export class Random {
   replaceCreditCardSymbols(format = '####-####-####-####', symbol = '#'): string {
     return format.replace(new RegExp(symbol, 'g'), () => String(this.int(0, 9)))
   }
+
+  /**
+   * Pick a weighted random element from an array of weighted items
+   * @param items Array of objects with 'item' and 'weight' properties
+   */
+  weightedArrayElement<T>(items: Array<{ item: T, weight: number }>): T {
+    if (items.length === 0) {
+      throw new Error('Cannot pick from empty weighted items array')
+    }
+
+    // Calculate total weight
+    const totalWeight = items.reduce((sum, item) => sum + item.weight, 0)
+
+    if (totalWeight <= 0) {
+      throw new Error('Total weight must be greater than 0')
+    }
+
+    // Generate random number between 0 and total weight
+    const randomValue = this.number() * totalWeight
+
+    // Find the selected item
+    let currentWeight = 0
+    for (const weightedItem of items) {
+      currentWeight += weightedItem.weight
+      if (randomValue <= currentWeight) {
+        return weightedItem.item
+      }
+    }
+
+    // Fallback to last item (should never reach here)
+    return items[items.length - 1].item
+  }
+
+  /**
+   * Pick multiple weighted random elements from an array
+   * @param items Array of weighted items
+   * @param count Number of items to pick
+   * @param allowDuplicates Whether to allow duplicate selections
+   */
+  weightedArrayElements<T>(
+    items: Array<{ item: T, weight: number }>,
+    count?: number,
+    allowDuplicates = false,
+  ): T[] {
+    if (items.length === 0) {
+      return []
+    }
+
+    const actualCount = count ?? this.int(1, items.length)
+    const result: T[] = []
+    const availableItems = [...items]
+
+    for (let i = 0; i < actualCount && availableItems.length > 0; i++) {
+      const selectedItem = this.weightedArrayElement(availableItems)
+      result.push(selectedItem)
+
+      if (!allowDuplicates) {
+        // Remove the selected item from available items
+        const index = availableItems.findIndex(item => item.item === selectedItem)
+        if (index !== -1) {
+          availableItems.splice(index, 1)
+        }
+      }
+    }
+
+    return result
+  }
+
+  /**
+   * Generate a weighted boolean with custom probability
+   * @param trueWeight Weight for true (0-1, where 0.5 = 50% chance)
+   */
+  weightedBoolean(trueWeight = 0.5): boolean {
+    return this.number() < trueWeight
+  }
+
+  /**
+   * Generate a random integer with weighted distribution
+   * @param min Minimum value
+   * @param max Maximum value
+   * @param weights Optional array of weights for each value (defaults to uniform distribution)
+   */
+  weightedInt(min: number, max: number, weights?: number[]): number {
+    const range = max - min + 1
+
+    if (weights) {
+      if (weights.length !== range) {
+        throw new Error('Weights array length must match the range size')
+      }
+
+      const weightedItems = weights.map((weight, index) => ({
+        item: min + index,
+        weight,
+      }))
+
+      return this.weightedArrayElement(weightedItems)
+    }
+
+    // Default to uniform distribution
+    return this.int(min, max)
+  }
 }

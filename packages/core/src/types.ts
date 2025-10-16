@@ -228,3 +228,98 @@ export interface FinanceOptions {
   dec?: number
   symbol?: string
 }
+
+// Advanced Data Generation Types
+
+/**
+ * Weighted selection options for more realistic data generation
+ */
+export interface WeightedItem<T> {
+  item: T
+  weight: number
+}
+
+export interface WeightedSelectionOptions<T> {
+  items: WeightedItem<T>[]
+}
+
+/**
+ * Conditional generation constraints
+ */
+export interface ConditionalConstraints {
+  gender?: 'male' | 'female' | 'neutral'
+  country?: string | string[]
+  region?: string | string[]
+  locale?: string
+  ageRange?: { min: number, max: number }
+  [key: string]: any
+}
+
+/**
+ * Data validation rules
+ */
+export interface ValidationRule<T> {
+  validator: (value: T) => boolean
+  errorMessage?: string
+}
+
+export interface ValidationOptions<T> {
+  rules: ValidationRule<T>[]
+  strict?: boolean // If true, throws on validation failure
+}
+
+/**
+ * Realistic data relationship configuration
+ */
+export interface DataRelationship {
+  field: string
+  dependsOn: string
+  mapping: Record<string, any>
+}
+
+export interface RealisticDataOptions {
+  relationships?: DataRelationship[]
+  constraints?: ConditionalConstraints
+}
+
+/**
+ * Custom data provider interface
+ */
+export interface DataProvider<T> {
+  name: string
+  generate: (options?: any) => T
+  validate?: (value: T) => boolean
+  getWeight?: (options?: any) => number
+}
+
+/**
+ * Plugin system for custom data providers
+ */
+export interface DataProviderPlugin<T> extends DataProvider<T> {
+  category: string
+  version: string
+  dependencies?: string[]
+  init?: (faker: any) => void
+}
+
+/**
+ * Extended options for person generation with constraints
+ */
+export interface PersonAdvancedOptions extends PersonFullNameOptions {
+  constraints?: ConditionalConstraints
+  relationships?: DataRelationship[]
+  validation?: ValidationOptions<string>
+  weighted?: WeightedSelectionOptions<string>
+}
+
+/**
+ * Extended options for address generation with constraints
+ */
+export interface AddressAdvancedOptions {
+  country?: string | string[]
+  region?: string | string[]
+  constraints?: ConditionalConstraints
+  relationships?: DataRelationship[]
+  validation?: ValidationOptions<string>
+  weighted?: WeightedSelectionOptions<string>
+}
